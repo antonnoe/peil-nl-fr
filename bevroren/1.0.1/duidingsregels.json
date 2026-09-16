@@ -1,0 +1,11 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "aantal": 0,
+ "duidingsregels": [],
+ "stand": "leeg: in taak 1 is alleen het schema opgeleverd. De vulling wordt later geïndexeerd over de handboeken van Café Claude."
+}

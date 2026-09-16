@@ -1,0 +1,97 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "xb.cak",
+  "naam": "CAK, verdragsbijdrage en woonlandfactor",
+  "belastingtype": null,
+  "socialelastentype": "verdragsbijdrage",
+  "vrijstellingstype": null,
+  "transactionele_basis": "inkomen"
+ },
+ "aantal": 4,
+ "parameters": [
+  {
+   "id": "p.xb.cak.bijdrage_gemiddeld_oud",
+   "naam_nl": "CAK-bijdrage, oude forfaitaire benadering",
+   "naam_fr": "Cotisation CAK, ancienne approche forfaitaire",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.cak",
+   "variabiliteitsklasse": "indicatief",
+   "status": "vervallen",
+   "waarde_weergave": null,
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2025",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.cak.bijdrage_gemiddeld_oud.json"
+  },
+  {
+   "id": "p.xb.cak.nominale_zvw_bijdrage_jaar",
+   "naam_nl": "Nominale Zvw-bijdrage verdragsgerechtigden per jaar",
+   "naam_fr": "Cotisation Zvw nominale annuelle, bénéficiaires conventionnés",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.cak",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "1.884 euro per jaar, 157,00 euro per maand",
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.cak.nominale_zvw_bijdrage_jaar.json"
+  },
+  {
+   "id": "p.xb.cak.rekenwijze_verdragsbijdrage",
+   "naam_nl": "Rekenwijze van de CAK-verdragsbijdrage",
+   "naam_fr": "Méthode de calcul de la cotisation conventionnelle",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.cak",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "tekst",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.cak.rekenwijze_verdragsbijdrage.json"
+  },
+  {
+   "id": "p.xb.cak.woonlandfactor_fr",
+   "naam_nl": "Woonlandfactor Frankrijk",
+   "naam_fr": "Coefficient pays de résidence, France",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.cak",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "0,8304",
+   "eenheid": "factor",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.cak.woonlandfactor_fr.json"
+  }
+ ]
+}

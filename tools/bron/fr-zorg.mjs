@@ -57,7 +57,7 @@ export const FR_ZORG = [
   freq: 'onregelmatig', lw: '2024-05-01',
   in: [[ 'cafeclaude', 'lib/audit/prompts/zorg.ts:67-68', '0,50 euro per medicijn', true ],
        [ 'cafeclaude', 'lib/audit/prompts/zorg.ts:146-147', '1 euro per doosje, verdubbeld per 1 mei 2024', true ]],
-  opm: 'Binnen dezelfde repo staan twee waarden naast elkaar. Regel 146 en 147 beschrijven de verdubbeling van 0,50 naar 1 euro, regel 67 en 68 hanteren nog 0,50. Een van beide is verouderd.' },
+  opm: 'Binnen dezelfde tool staan twee waarden naast elkaar: op de ene plaats de verdubbeling van 0,50 naar 1 euro, op de andere nog 0,50. Een van beide is verouderd.' },
 
 { id: 'p.fr.secu.franchise_transport', nl: 'Franchise medisch transport', fr: 'Franchise sur le transport sanitaire', off: 'Art. L160-13 III CSS',
   reg: 'fr.secu', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'EUR', jaar: '2026',
@@ -90,7 +90,7 @@ export const FR_ZORG = [
   reg: 'fr.zorg', klasse: 'indicatief', effect: 'verhoogt_last', eh: 'EUR', jaar: '2026',
   freq: 'onbekend',
   in: [[ 'cafeclaude', 'lib/domains/prompts/zorg.ts:146', 'sous seing prive gratis tot 100 euro; notarie 300 tot 500 euro', false ]],
-  opm: 'De niet-aangesloten repo dossierfrankrijk noemt dezelfde bandbreedte.' },
+  opm: 'Een niet-aangesloten tool noemt dezelfde bandbreedte.' },
 
 { id: 'p.fr.zorg.beschermingsmaatregel_kosten', nl: 'Rechterlijke beschermingsmaatregel, doorlooptijd en kosten', fr: 'Mesure de protection judiciaire, délai et coût', off: null,
   reg: 'fr.zorg', klasse: 'indicatief', effect: 'verhoogt_last', eh: 'maanden en EUR', jaar: '2026',

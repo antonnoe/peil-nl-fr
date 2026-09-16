@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.ps.opbouw",
+  "naam_nl": "Opbouw van de prélèvements sociaux",
+  "naam_fr": "Composition des prélèvements sociaux",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "fr.ps",
+   "naam": "Prélèvements sociaux sur les revenus du patrimoine",
+   "belastingtype": null,
+   "socialelastentype": "prelevement_social",
+   "vrijstellingstype": null,
+   "transactionele_basis": "vermogen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "informatief",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "fractie",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Café Claude",
+    "locatie": "lib/domains/prompts/geld.ts:108",
+    "waarde_in_tool": "CSG 9,2 plus CRDS 0,5 plus solidarité 7,5 is 17,2 procent",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De opbouw staat in het handboek maar zonder verificatiedatum bij de waarde. De uitkomst 17,2 procent staat wel vastgesteld, als p.fr.ps.taux_global. De niet-aangesloten begrippenlijst taalhulp-fr noemt dezelfde 17,2 procent; dat telt niet mee.",
+  "kandidaat": false
+ }
+}

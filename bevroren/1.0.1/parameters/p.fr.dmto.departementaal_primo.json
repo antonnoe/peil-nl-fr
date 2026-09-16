@@ -1,0 +1,68 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.dmto.departementaal_primo",
+  "naam_nl": "Departementaal DMTO-tarief, primo-accédant",
+  "naam_fr": "Taux départemental des DMTO, primo-accédant",
+  "naam_officieel": "Art. 116 II van wet 2025-127",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.dmto",
+   "naam": "Droits de mutation à titre onéreux",
+   "belastingtype": "overdrachtsbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "koopsom"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": {
+   "4,50": 99,
+   "3,80": 2,
+   "granulariteit": "departement, 101 codes"
+  },
+  "waarde_weergave": "4,50 procent in 99 departementen, 3,80 procent in 2 departementen",
+  "eenheid": "procent",
+  "geldig_jaar": "2026",
+  "geldig_van": "2025-04-01",
+  "geldig_tot": "2028-03-31",
+  "status": "vastgesteld",
+  "bron_url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/3_partenaire/notaires/dmto/dmto_2026-06.pdf",
+  "bron_kenmerk": "DGFiP, tarieven per 1 juni 2026; art. 116 II van wet 2025-127",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-06-01",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": "jaarlijks in mei of juni",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-06-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "dmto.json:departementen",
+    "waarde_in_tool": "101 departementen met een eigen primo-tarief",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De verhoging geldt niet voor wie in de twee jaar voor de akte geen eigenaar van zijn hoofdverblijf was.",
+  "kandidaat": false
+ }
+}

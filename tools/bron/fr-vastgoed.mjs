@@ -30,7 +30,7 @@ export const FR_VASTGOED = [
   reg: 'fr.notaris', klasse: 'indicatief', effect: 'verhoogt_last', eh: 'EUR', jaar: '2026',
   freq: 'onbekend',
   in: [[ 'Vastgoedtransactie', 'calc.js:134', '1200,0', false ]],
-  opm: 'Vastgoedtransactie noteert zelf dat hier geen wettelijk tarief bestaat en dat het een ervaringscijfer is. Peil neemt dat over: geen registerwaarde, klasse indicatief.' },
+  opm: 'Vastgoedtransacties in Frankrijk noteert zelf dat hier geen wettelijk tarief bestaat en dat het een ervaringscijfer is. Peil neemt dat over: geen registerwaarde, klasse indicatief.' },
 
 { id: 'p.fr.notaris.vuistregel_kosten_ancien', nl: 'Vuistregel notariskosten bestaande bouw', fr: 'Règle empirique des frais de notaire, ancien', off: null,
   reg: 'fr.notaris', klasse: 'indicatief', effect: 'verhoogt_last', eh: 'procent', jaar: '2026',
@@ -38,7 +38,7 @@ export const FR_VASTGOED = [
   in: [[ 'cafeclaude', 'lib/domains/prompts/wonen.ts:46', '7 tot 8 procent ancien, 2 tot 3 procent neuf', true ],
        [ 'if-tools-api', 'src/app/api/woning-analyse/route.ts:52', 'circa 7 tot 8 procent bij bestaande bouw', true ],
        [ 'woningzoeker-frankrijk', 'components/steps/StepBudget.tsx:52, 129 en 146', 'circa 8 procent, zonder onderscheid', true ]],
-  opm: 'Drie tools hanteren een vuistregel waar Vastgoedtransactie de kosten daadwerkelijk opbouwt uit emolumenten, DMTO per departement, taxe communale en frais d\'assiette. De 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste van de drie. Wie een bedrag nodig heeft, gebruikt de opgebouwde berekening.' },
+  opm: 'Drie tools hanteren een vuistregel waar Vastgoedtransacties in Frankrijk de kosten daadwerkelijk opbouwt uit emolumenten, DMTO per departement, taxe communale en frais d\'assiette. De 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste van de drie. Wie een bedrag nodig heeft, gebruikt de opgebouwde berekening.' },
 
 // --------------------------------------------------------------- DMTO
 { id: 'p.fr.dmto.departementaal_standaard', nl: 'Departementaal DMTO-tarief, standaard', fr: 'Taux départemental des DMTO, régime général', off: 'Art. 1594 D CGI',
@@ -51,7 +51,7 @@ export const FR_VASTGOED = [
   freq: 'jaarlijks', lw: '2026-06-01', pub: 'DGFiP publiceert de départementale tarieven jaarlijks in mei of juni; departementen besluiten voor 30 april',
   in: [[ 'Vastgoedtransactie', 'dmto.json:departementen', '101 departementen met een eigen tarief', false ]],
   uitz: ['In de bron staan bij Calvados een abattement van 46.000 euro en bij Savoie een verlaagd tarief van 4,00 procent. Uit de platte tekst is niet af te leiden op welke kolom die betrekking hebben. Niet ingebouwd; voor een concrete akte de notaris raadplegen.'],
-  opm: 'De volledige tabel per departement staat in Vastgoedtransactie/dmto.json. Peil legt hier de verdeling en de bron vast, niet de 101 losse waarden.' },
+  opm: 'De volledige tabel per departement staat in de tool Vastgoedtransacties in Frankrijk. Peil legt hier de verdeling en de bron vast, niet de 101 losse waarden.' },
 
 { id: 'p.fr.dmto.departementaal_primo', nl: 'Departementaal DMTO-tarief, primo-accédant', fr: 'Taux départemental des DMTO, primo-accédant', off: 'Art. 116 II van wet 2025-127',
   reg: 'fr.dmto', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', eh: 'procent', jaar: '2026',
@@ -178,7 +178,7 @@ export const FR_VASTGOED = [
   reg: 'fr.vastgoed', klasse: 'afgeleid', effect: 'informatief', eh: 'maanden', jaar: '2026',
   freq: 'onbekend',
   in: [[ 'Vastgoedtransactie', 'calc.js:61-62', 'actueel tot 2 maanden, controleren vanaf 6 maanden', false ]],
-  opm: 'Dit is geen overheidsgrootheid maar de eigen bewaking van Vastgoedtransactie. Peil legt hem vast omdat hij bepaalt wanneer de tool zelf een waarschuwing toont.' },
+  opm: 'Dit is geen overheidsgrootheid maar de eigen bewaking van Vastgoedtransacties in Frankrijk. Peil legt hem vast omdat hij bepaalt wanneer de tool zelf een waarschuwing toont.' },
 
 { id: 'p.fr.markt.dvf_transactieprijzen', nl: 'DVF, werkelijke transactieprijzen onroerend goed', fr: 'DVF, demandes de valeurs foncières', off: 'Demandes de valeurs foncières, DGFiP, open data',
   reg: 'fr.markt', klasse: 'marktindex', effect: 'bepaalt_grondslag', eh: 'EUR en EUR/m2', jaar: '2026',
@@ -190,7 +190,7 @@ export const FR_VASTGOED = [
   in: [[ 'Vastgoedtransactie', 'index.html, invoerveld aankoopprijs', 'gebruikersinvoer, DVF als naslag', false ],
        [ 'woningzoeker-frankrijk', 'components/steps/StepBudget.tsx, aankoopprijs', 'gebruikersinvoer', false ],
        [ 'if-tools-api', 'src/app/api/woning-analyse/route.ts, aankoopprijs', 'gebruikersinvoer', false ]],
-  opm: 'Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geïdentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. De niet-aangesloten repo\'s vastgoed-analyse en vastgoed-in-frankrijk halen DVF rechtstreeks op; die tellen hier niet mee.' },
+  opm: 'Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geïdentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. Twee niet-aangesloten tools halen deze open gegevens rechtstreeks op; die tellen hier niet mee.' },
 
 // --------------------------------------------------------------- erf- en schenkingsrecht
 { id: 'p.fr.succ.barema_lijn_directe', nl: 'Barema successierechten in rechte lijn', fr: 'Barème des droits de succession en ligne directe', off: 'Art. 777 CGI, tableau I',
@@ -251,13 +251,13 @@ export const FR_VASTGOED = [
   freq: 'zelden',
   in: [[ 'cafeclaude', 'lib/domains/prompts/wonen.ts:56', '1594 euro vrijstelling, daarna 60 procent', true ],
        [ 'erfrecht-en-testament', 'index.html:554', 'partner zonder huwelijk of PACS: vrijstelling 1594 euro', true ]],
-  opm: 'Het onderscheid tussen een stiefkind en een niet-verwante derde is bepalend en wordt niet in beide repo\'s gemaakt. Zie p.fr.succ.abattement_stiefkind.' },
+  opm: 'Het onderscheid tussen een stiefkind en een niet-verwante derde is bepalend en wordt niet door beide tools gemaakt. Zie p.fr.succ.abattement_stiefkind.' },
 
 { id: 'p.fr.succ.abattement_stiefkind', nl: 'Vrijstelling stiefkinderen bij overlijden', fr: 'Abattement pour les enfants du conjoint', off: null,
   reg: 'fr.succ', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'abattement', eh: 'EUR', jaar: '2026',
   freq: 'onregelmatig',
   in: [[ 'erfrecht-en-testament', 'index.html:351', 'verhoogd van 1594 naar 15932 euro', false ]],
-  opm: 'Geldt bij overlijden, niet bij schenking. De repo noemt de verhoging maar geen wetsartikel en geen datum.' },
+  opm: 'Geldt bij overlijden, niet bij schenking. De tool noemt de verhoging maar geen wetsartikel en geen datum.' },
 
 { id: 'p.fr.succ.tarief_stiefkind', nl: 'Tarief erfbelasting stiefkind', fr: 'Taux applicable aux enfants du conjoint', off: null,
   reg: 'fr.succ', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'procent', jaar: '2026',

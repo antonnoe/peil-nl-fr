@@ -1,0 +1,87 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.energie.standaardprijzen_invoer",
+  "naam_nl": "Standaard energieprijzen als invulwaarde",
+  "naam_fr": "Prix de l'énergie par défaut",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.energie",
+   "naam": "Energiekentallen en energieprijzen",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verbruik"
+  },
+  "variabiliteitsklasse": "gebruikersinvoer",
+  "effect": "bepaalt_grondslag",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR per eenheid",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onregelmatig",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "energieportaal",
+    "cockpit_onderdeel": "IF, EnergiePortaal",
+    "locatie": "engine/engine.js:26",
+    "waarde_in_tool": "elec 0,25 EUR/kWh; gas 1,20 EUR/m3; fioul 1,15 EUR/L; pellet 0,60 EUR/kg; hout 85 EUR/stere; propaan 1,80 EUR/L; petroleum 2,00 EUR/L",
+    "afwijkend": true
+   },
+   {
+    "repo": "if-mobiel",
+    "cockpit_onderdeel": "IF, mobiele schil",
+    "locatie": "engine/engine.js:26 (byte-identieke kopie)",
+    "waarde_in_tool": "identiek",
+    "afwijkend": true
+   },
+   {
+    "repo": "warmteverlies-calculator",
+    "cockpit_onderdeel": "IF, warmteverlies",
+    "locatie": "engine/engine.js:26",
+    "waarde_in_tool": "identiek",
+    "afwijkend": true
+   },
+   {
+    "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+    "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+    "locatie": "script.js:8",
+    "waarde_in_tool": "identiek",
+    "afwijkend": true
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Invulwaarden die de gebruiker kan overschrijven. Ze wijken af van de referentieprijzen met bron in p.fr.energie.referentieprijzen: propaan staat hier op 1,80 en daar op 1,90 EUR per liter, elektriciteit hier op 0,25 en daar op 0,194 EUR per kWh. Zolang de gebruiker niets invult, rekenen de tools met de invulwaarde.",
+  "kandidaat": false,
+  "verantwoordelijke": "Anton Noe, Communities Abroad",
+  "houdbaarheidsdatum": "2027-09-16"
+ }
+}

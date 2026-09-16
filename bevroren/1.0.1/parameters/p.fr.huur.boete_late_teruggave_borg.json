@@ -1,0 +1,78 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.huur.boete_late_teruggave_borg",
+  "naam_nl": "Boete bij te late teruggave van de huurborg",
+  "naam_fr": "Majoration en cas de restitution tardive du dépôt de garantie",
+  "naam_officieel": "Art. 22 al. 5 loi 89-462",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.huur",
+   "naam": "Loi 89-462, rapports locatifs",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verrichting"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": "art. 22 al. 5 van wet 89-462 van 6 juli 1989",
+  "bronsoort": "secundair: wetsartikel genoemd in de brieftemplate, de tekst niet als vindplaats vastgelegd",
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "briefhulp-fr",
+    "cockpit_onderdeel": "IF, Briefhulp",
+    "locatie": "cache/verhuurder/borg/niveau-2.json:29",
+    "waarde_in_tool": "10 procent van de kale maandhuur per begonnen maand",
+    "afwijkend": false
+   },
+   {
+    "repo": "briefhulp-fr",
+    "cockpit_onderdeel": "IF, Briefhulp",
+    "locatie": "cache/verhuurder/borg/niveau-3.json:33 en 83",
+    "waarde_in_tool": "identiek",
+    "afwijkend": false
+   },
+   {
+    "repo": "briefhulp-fr",
+    "cockpit_onderdeel": "IF, Briefhulp",
+    "locatie": "KLIKSTROMEN.md:233",
+    "waarde_in_tool": "10 procent per maand vertraging",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

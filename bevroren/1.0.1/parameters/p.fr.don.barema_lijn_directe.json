@@ -1,0 +1,93 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.don.barema_lijn_directe",
+  "naam_nl": "Barema schenkingsrechten in rechte lijn",
+  "naam_fr": "Barème des droits de donation en ligne directe",
+  "naam_officieel": "Art. 777 CGI, tableau I",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.don",
+   "naam": "Droits de donation",
+   "belastingtype": "erf_en_schenkbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "schenking"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": [
+   {
+    "tot": 8072,
+    "tarief": 0.05
+   },
+   {
+    "tot": 15932,
+    "tarief": 0.1
+   },
+   {
+    "tot": 31865,
+    "tarief": 0.15
+   },
+   {
+    "tot": 552324,
+    "tarief": 0.2
+   },
+   {
+    "tot": 902838,
+    "tarief": 0.3
+   },
+   {
+    "tot": 1805677,
+    "tarief": 0.4
+   },
+   {
+    "tot": null,
+    "tarief": 0.45
+   }
+  ],
+  "waarde_weergave": "5 procent tot 8.072 euro oplopend tot 45 procent boven 1.805.677 euro",
+  "eenheid": "EUR en fractie",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F14203",
+  "bron_kenmerk": "service-public.fr, fiche F14203",
+  "bronsoort": "secundair: samenvattende fiche van service-public.fr, art. 777 CGI niet zelf gelezen",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2024-11-07",
+  "verificatie_door": "erf-en-schenkingsrecht-nl-fr, app.js",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "erf-en-schenkingsrecht-nl-fr",
+    "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
+    "locatie": "app.js:72-78",
+    "waarde_in_tool": "zevenstaps barema",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De verificatiedatum is 7 november 2024 en daarmee bijna twee jaar oud. Dit is de oudste verificatie van het hele register.",
+  "kandidaat": false
+ }
+}

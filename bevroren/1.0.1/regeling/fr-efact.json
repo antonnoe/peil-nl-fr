@@ -1,0 +1,79 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.efact",
+  "naam": "Facturation électronique obligatoire",
+  "belastingtype": "omzetbelasting",
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "omzet"
+ },
+ "aantal": 3,
+ "parameters": [
+  {
+   "id": "p.fr.efact.datum_ontvangstplicht",
+   "naam_nl": "Invoeringsdatum ontvangstplicht e-facturatie",
+   "naam_fr": "Date d'entrée en vigueur de l'obligation de réception",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.efact",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "1 september 2026",
+   "eenheid": "datum",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-08",
+   "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
+   "gebruikt_in": [
+    "e-facturatie-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.efact.datum_ontvangstplicht.json"
+  },
+  {
+   "id": "p.fr.efact.datum_uitgifteplicht_pme",
+   "naam_nl": "Invoeringsdatum uitgifteplicht PME en TPE",
+   "naam_fr": "Date d'entrée en vigueur de l'obligation d'émission, PME et TPE",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.efact",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "1 september 2027",
+   "eenheid": "datum",
+   "geldig_jaar": "2027",
+   "verificatiedatum": "2026-07-08",
+   "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
+   "gebruikt_in": [
+    "e-facturatie-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.efact.datum_uitgifteplicht_pme.json"
+  },
+  {
+   "id": "p.fr.efact.grens_tpe",
+   "naam_nl": "Grens voor een TPE",
+   "naam_fr": "Seuil de la très petite entreprise",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.efact",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "minder dan 10 medewerkers en maximaal 2 miljoen euro omzet of balanstotaal",
+   "eenheid": "EUR en aantal",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-08",
+   "bron_url": null,
+   "gebruikt_in": [
+    "e-facturatie-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.efact.grens_tpe.json"
+  }
+ ]
+}

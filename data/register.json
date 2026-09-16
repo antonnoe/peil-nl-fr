@@ -1,11 +1,11 @@
 {
  "meta": {
   "titel": "Peil, openbaar parameterregister NL-FR",
-  "versie": "1.0.1",
+  "versie": "1.0.2",
   "versiedatum": "2026-09-16",
   "peildatum": "2026-09-16",
   "licentie": "CC BY 4.0",
-  "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+  "bronregel": "Peil, parameterregister NL-FR, een uitgave van Communities Abroad, versie 1.0.2, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
   "laag": "3, parameters",
   "afgeleid_uit": "data/inventarisatie.json (taak 0) en de bronvelden van de aangesloten repo's",
   "aangesloten_repos": [
@@ -1185,7 +1185,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "In de DGFiP-tabel staan bij Calvados een abattement van 46.000 euro en bij Savoie een verlaagd tarief van 4,00 procent. Uit de platte tekst is niet af te leiden op welke kolom die betrekking hebben. Vastgoedtransactie heeft ze daarom niet ingebouwd en meldt dat onder OPENSTAAND.",
+   "opmerkingen": "In de DGFiP-tabel staan bij Calvados een abattement van 46.000 euro en bij Savoie een verlaagd tarief van 4,00 procent. Uit de platte tekst is niet af te leiden op welke kolom die betrekking hebben. Vastgoedtransacties in Frankrijk heeft ze daarom niet ingebouwd en meldt dat zelf als openstaand punt.",
    "kandidaat": true
   },
   {
@@ -1308,7 +1308,7 @@
    "uitzonderingen": [
     "In de bron staan bij Calvados een abattement van 46.000 euro en bij Savoie een verlaagd tarief van 4,00 procent. Uit de platte tekst is niet af te leiden op welke kolom die betrekking hebben. Niet ingebouwd; voor een concrete akte de notaris raadplegen."
    ],
-   "opmerkingen": "De volledige tabel per departement staat in Vastgoedtransactie/dmto.json. Peil legt hier de verdeling en de bron vast, niet de 101 losse waarden.",
+   "opmerkingen": "De volledige tabel per departement staat in de tool Vastgoedtransacties in Frankrijk. Peil legt hier de verdeling en de bron vast, niet de 101 losse waarden.",
    "kandidaat": false
   },
   {
@@ -1716,7 +1716,7 @@
    "status": "te_verifieren",
    "bron_url": null,
    "bron_kenmerk": "arrêté du 13 août 2025, in werking per 1 januari 2026",
-   "bronsoort": "secundair: het arrêté is in de repo genoemd maar niet als vindplaats vastgelegd",
+   "bronsoort": "secundair: het arrêté wordt in de tool genoemd maar is niet als vindplaats vastgelegd",
    "instantie": "Ministère de la transition écologique",
    "verificatiedatum": null,
    "verificatie_door": null,
@@ -2532,7 +2532,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Vier aangesloten tools, identieke waarden. if-mobiel bevat een byte-identieke kopie van de hele engine van energieportaal; dat is een kopie, geen verwijzing, en dus een onderhoudsrisico.",
+   "opmerkingen": "Vier aangesloten tools, identieke waarden. Infopoche bevat een letterlijke kopie van de hele rekenmotor van het EnergiePortaal; dat is een kopie, geen verwijzing, en dus een onderhoudsrisico.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -3157,7 +3157,7 @@
   },
   {
    "id": "p.fr.gite.degressieve_reeks",
-   "naam_nl": "Degressieve reeks per bezitsjaar in GiteKompas",
+   "naam_nl": "Degressieve reeks per bezitsjaar in GîteKompas",
    "naam_fr": "Série dégressive par année de détention",
    "naam_officieel": null,
    "land": "FR",
@@ -3208,7 +3208,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De tool noemt deze reeks zelf indicatief. Welke wettelijke regeling erachter zit, is in de repo niet vastgelegd.",
+   "opmerkingen": "De tool noemt deze reeks zelf indicatief. Welke wettelijke regeling erachter zit, is bij de tool niet vastgelegd.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -4051,7 +4051,7 @@
    "uitzonderingen": [
     "Het plafond kent verhogingen per kind ten laste en bij handicap. Welke variant in een concreet geval geldt, hoort bij een belastingadviseur."
    ],
-   "opmerkingen": "De twee tools gebruiken verschillende plafonds voor dezelfde grootheid. Het percentage is wel gelijk. Welk plafond bedoeld is, basisplafond of een verhoogde variant, staat in geen van beide repo's.",
+   "opmerkingen": "De twee tools gebruiken verschillende plafonds voor dezelfde grootheid. Het percentage is wel gelijk. Welk plafond bedoeld is, basisplafond of een verhoogde variant, staat bij geen van beide tools.",
    "kandidaat": false
   },
   {
@@ -4413,7 +4413,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "GiteKompas toont hiervoor een bandbreedte van 20 tot 30 procent. De wettelijke staffel met de inkomensgrens waarboven 30 procent geldt, staat nergens vast.",
+   "opmerkingen": "GîteKompas toont hiervoor een bandbreedte van 20 tot 30 procent. De wettelijke staffel met de inkomensgrens waarboven 30 procent geldt, staat nergens vast.",
    "kandidaat": true
   },
   {
@@ -4469,7 +4469,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De tweede voorwaarde, dat de huuropbrengst de overige beroepsinkomsten overtreft, staat niet als aparte grootheid in de repo.",
+   "opmerkingen": "De tweede voorwaarde, dat de huuropbrengst de overige beroepsinkomsten overtreft, staat niet als aparte grootheid bij de tool.",
    "kandidaat": false
   },
   {
@@ -4539,7 +4539,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geïdentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. De niet-aangesloten repo's vastgoed-analyse en vastgoed-in-frankrijk halen DVF rechtstreeks op; die tellen hier niet mee.",
+   "opmerkingen": "Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geïdentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. Twee niet-aangesloten tools halen deze open gegevens rechtstreeks op; die tellen hier niet mee.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-04-01"
@@ -4660,7 +4660,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Handboek en GiteKompas zijn onderling gelijk. GiteKompas noemt zijn eigen waarden V1 en indicatief.",
+   "opmerkingen": "Handboek en GîteKompas zijn onderling gelijk. GîteKompas noemt zijn eigen waarden V1 en indicatief.",
    "kandidaat": false
   },
   {
@@ -4822,7 +4822,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Vastgoedtransactie noteert zelf dat hier geen wettelijk tarief bestaat en dat het een ervaringscijfer is. Peil neemt dat over: geen registerwaarde, klasse indicatief.",
+   "opmerkingen": "Vastgoedtransacties in Frankrijk noteert zelf dat hier geen wettelijk tarief bestaat en dat het een ervaringscijfer is. Peil neemt dat over: geen registerwaarde, klasse indicatief.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -5008,7 +5008,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Wie met een Franse hypotheek koopt, betaalt boven op de koopakte ook de kosten van de leningakte. Vastgoedtransactie rekent alleen de koopakte.",
+   "opmerkingen": "Wie met een Franse hypotheek koopt, betaalt boven op de koopakte ook de kosten van de leningakte. Vastgoedtransacties in Frankrijk rekent alleen de koopakte.",
    "kandidaat": true
   },
   {
@@ -5078,7 +5078,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Drie tools hanteren een vuistregel waar Vastgoedtransactie de kosten daadwerkelijk opbouwt uit emolumenten, DMTO per departement, taxe communale en frais d'assiette. De 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste van de drie. Wie een bedrag nodig heeft, gebruikt de opgebouwde berekening.",
+   "opmerkingen": "Drie tools hanteren een vuistregel waar Vastgoedtransacties in Frankrijk de kosten daadwerkelijk opbouwt uit emolumenten, DMTO per departement, taxe communale en frais d'assiette. De 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste van de drie. Wie een bedrag nodig heeft, gebruikt de opgebouwde berekening.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -5282,7 +5282,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het bestand zet het tarief op roerend inkomen op 0,186 tegenover 0,172 op onroerend inkomen. Voor dat onderscheid staat geen bron in de repo. Verificatie tegen art. L136-6 en L136-7 CSS is nodig voordat hier een registerwaarde komt.",
+   "opmerkingen": "Het bestand zet het tarief op roerend inkomen op 0,186 tegenover 0,172 op onroerend inkomen. Voor dat onderscheid staat bij de tool geen bron. Verificatie tegen art. L136-6 en L136-7 CSS is nodig voordat hier een registerwaarde komt.",
    "kandidaat": false
   },
   {
@@ -5465,7 +5465,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De meest gebruikte vrijstelling van allemaal, en de enige reden waarom de meeste verkopen onbelast blijven. Vastgoedtransactie kent wel de vrijstelling voor de voormalige hoofdwoning van een niet-resident, maar niet deze.",
+   "opmerkingen": "De meest gebruikte vrijstelling van allemaal, en de enige reden waarom de meeste verkopen onbelast blijven. Vastgoedtransacties in Frankrijk kent wel de vrijstelling voor de voormalige hoofdwoning van een niet-resident, maar niet deze.",
    "kandidaat": true
   },
   {
@@ -6738,7 +6738,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Binnen dezelfde repo staan twee waarden naast elkaar. Regel 146 en 147 beschrijven de verdubbeling van 0,50 naar 1 euro, regel 67 en 68 hanteren nog 0,50. Een van beide is verouderd.",
+   "opmerkingen": "Binnen dezelfde tool staan twee waarden naast elkaar: op de ene plaats de verdubbeling van 0,50 naar 1 euro, op de andere nog 0,50. Een van beide is verouderd.",
    "kandidaat": false
   },
   {
@@ -7284,7 +7284,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het handboek beschrijft de verhoging van 12,3 naar 21,2 procent per 1 januari 2026. Geen van beide repo's noemt een verificatiedatum bij de waarde.",
+   "opmerkingen": "Het handboek beschrijft de verhoging van 12,3 naar 21,2 procent per 1 januari 2026. Geen van beide tools noemt een verificatiedatum bij de waarde.",
    "kandidaat": false
   },
   {
@@ -7603,7 +7603,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het onderscheid tussen een stiefkind en een niet-verwante derde is bepalend en wordt niet in beide repo's gemaakt. Zie p.fr.succ.abattement_stiefkind.",
+   "opmerkingen": "Het onderscheid tussen een stiefkind en een niet-verwante derde is bepalend en wordt niet door beide tools gemaakt. Zie p.fr.succ.abattement_stiefkind.",
    "kandidaat": false
   },
   {
@@ -7777,7 +7777,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Geldt bij overlijden, niet bij schenking. De repo noemt de verhoging maar geen wetsartikel en geen datum.",
+   "opmerkingen": "Geldt bij overlijden, niet bij schenking. De tool noemt de verhoging maar geen wetsartikel en geen datum.",
    "kandidaat": false
   },
   {
@@ -8392,7 +8392,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Vastgoedtransactie noteert bij deze post uitdrukkelijk dat er geen eigen wetsartikel is: het algemene tarief geldt omdat de emolumenten een dienst zijn. De niet-aangesloten btw-tool ca-btw-oss-tool voert hetzelfde tarief met bron en datum; die repo is niet aangesloten, dus dat telt hier niet als verificatie.",
+   "opmerkingen": "Vastgoedtransacties in Frankrijk noteert bij deze post uitdrukkelijk dat er geen eigen wetsartikel is: het algemene tarief geldt omdat de emolumenten een dienst zijn. Een niet-aangesloten btw-tool voert hetzelfde tarief met bron en datum; die tool is niet aangesloten, dus dat telt hier niet als verificatie.",
    "kandidaat": false
   },
   {
@@ -8675,7 +8675,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Dit is geen overheidsgrootheid maar de eigen bewaking van Vastgoedtransactie. Peil legt hem vast omdat hij bepaalt wanneer de tool zelf een waarschuwing toont.",
+   "opmerkingen": "Dit is geen overheidsgrootheid maar de eigen bewaking van Vastgoedtransacties in Frankrijk. Peil legt hem vast omdat hij bepaalt wanneer de tool zelf een waarschuwing toont.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -8847,7 +8847,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De niet-aangesloten repo dossierfrankrijk noemt dezelfde bandbreedte.",
+   "opmerkingen": "Een niet-aangesloten tool noemt dezelfde bandbreedte.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -9486,7 +9486,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De niet-aangesloten repo ca-btw-oss-tool voert deze tarieven met bron en datum. Zodra die repo wordt aangesloten, kan de waarde hier terecht.",
+   "opmerkingen": "Een niet-aangesloten btw-tool voert deze tarieven met bron en datum. Zodra die tool is aangesloten, kan de waarde hier terecht.",
    "kandidaat": true
   },
   {
@@ -9790,7 +9790,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Ontbreekt in de voorganger financieel-kompas; die kent geen afzonderlijke afbouw van de arbeidskorting.",
+   "opmerkingen": "Ontbreekt in de voorganger van het Financieel Kompas; die kent geen afzonderlijke afbouw van de arbeidskorting.",
    "kandidaat": false
   },
   {
@@ -11635,7 +11635,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De voorganger financieel-kompas rekende met een vast gemiddeld bedrag van 4.500 euro per jaar. Die benadering is vervangen door een opgebouwde berekening met woonlandfactor, nominaal deel en inkomensafhankelijk deel. Hier vastgelegd zodat zichtbaar blijft dat de grootheid is opgevolgd, niet verdwenen.",
+   "opmerkingen": "De voorganger van het Financieel Kompas rekende met een vast gemiddeld bedrag van 4.500 euro per jaar. Die benadering is vervangen door een opgebouwde berekening met woonlandfactor, nominaal deel en inkomensafhankelijk deel. Hier vastgelegd zodat zichtbaar blijft dat de grootheid is opgevolgd, niet verdwenen.",
    "kandidaat": true,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
@@ -11748,7 +11748,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De losse bestanddelen staan wel in het register, de volgorde waarin het CAK ze toepast niet. Dat hoort in laag 2 thuis, als rekenregel.",
+   "opmerkingen": "De losse bestanddelen staan wel in het register, de volgorde waarin het CAK ze toepast niet. Die volgorde hoort bij de rekenregels thuis.",
    "kandidaat": true
   },
   {
@@ -11791,7 +11791,7 @@
       "waarde": "0,8251",
       "geldig_jaar": "2025",
       "herkomst": "Het CAK, woonlandfactor 2025",
-      "opmerking": "genoemd in financieel-kompas-ai als vorige waarde"
+      "opmerking": "in het Financieel Kompas genoemd als vorige waarde"
      }
     ]
    },
@@ -11885,7 +11885,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Bron aanwezig (LFSS 2019, art. 26) maar geen verificatiedatum bij de waarde in de repo. Daarom geen registerwaarde.",
+   "opmerkingen": "Bron aanwezig (LFSS 2019, art. 26) maar geen verificatiedatum bij de waarde in de tool. Daarom geen registerwaarde.",
    "kandidaat": false
   },
   {

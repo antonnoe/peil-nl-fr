@@ -2,6 +2,25 @@
 
 Elke publicatie krijgt een versienummer. Eerdere versies blijven opvraagbaar onder `/api/versies/<versie>/`.
 
+## 1.0.2, 16 september 2026
+
+De openbare site is gescheiden van de interne administratie. Geen waarde, geen status en geen bron gewijzigd; alleen weergavetekst, labels en documentatie.
+
+- `data/tools.json` toegevoegd: per repo de openbare toolnaam en, als hij aantoonbaar in die repo staat (homepage-veld, README of siteconfiguratie), het openbare adres met de vindplaats erbij. `tools/lib/tools.mjs` past die koppeling toe op de site.
+- Parameterpagina: `gebruikt_in` toont alleen nog de openbare toolnaam, met een link naar het openbare adres waar dat bestaat. Repo, `cockpit_onderdeel`, `locatie` en `waarde_in_tool` staan niet meer op de pagina; in `/api/v1/` en `register.csv` staan ze onverkort.
+- Parameterpagina: het blok "Signalen voor de Cockpit" is vervangen door "Let op", met neutrale zinnen per soort waarschuwing. Het niveau staat niet meer als woord in de tekst; de kleur van het blok volgt nog wel het zwaarste niveau.
+- `verificatie_door`, `herkomst` en `aangekondigde_wijziging.bron` worden op de site door `openbareHerkomst()` teruggebracht tot de toolnaam; `verantwoordelijke` toont de uitgever in plaats van de persoon. De velden zelf zijn niet gewijzigd.
+- Label `kandidaat` op de site vervangen door "nog niet in gebruik"; het veld heet in de gegevens nog steeds `kandidaat`.
+- Tabel: het filter `tool` en de kolom "Gebruikt in" werken met openbare toolnamen, ontdubbeld op naam. Het `data-tools`-attribuut en de zoekindex op de startpagina gebruiken dezelfde namen.
+- Startpagina: de teller "waarschuwingen rood" is "met een punt van aandacht" geworden en telt parameters, niet waarschuwingen. De regel onder de titel noemt het aantal aangesloten tools in plaats van het aantal repo's.
+- `docs/over-peil.md` volledig herschreven voor een zakelijk publiek: wat Peil is, voor wie, verificatie, statussen, versies, correctieprocedure, licentie en API met de vaste adressen en de bronregel. De uitleg over de drie lagen is van de openbare pagina af.
+- Voettekst op elke pagina uitgebreid met "Een uitgave van Communities Abroad, www.communitiesabroad.com".
+- `UITGEVER` en `UITGEVER_URL` toegevoegd aan `tools/lib/versie.mjs`. De bronregel luidt nu "Peil, parameterregister NL-FR, een uitgave van Communities Abroad, versie ..."; elk API-antwoord draagt daarnaast de velden `uitgever` en `uitgever_url`.
+- Interne verwijzingen uit de opmerkingen, `bronsoort` en de wijzigingshistorie in `tools/bron/` gehaald: repo-namen en bestandspaden vervangen door de openbare toolnaam. Geen waarde, status of bron geraakt.
+- `data/duidingsregels.json` en `data/documenten.json`: het veld `stand` noemt geen taaknummer meer.
+- Nieuwe test `geen interne aanduiding in de zichtbare tekst van de site`: wijst de gebouwde HTML af bij Anton, Cockpit, `peil/state.json`, Claude buiten Café Claude, repo of repository, een verwijzing naar broncode, een laagnummer, `kandidaat`, `gebruikt_in`, `waarde_in_tool`, `cockpit_onderdeel`, meetbron, een taaknummer of de naam van een repo uit `data/tools.json`. Alleen de zichtbare tekst telt, dus een `href` naar de broncode op GitHub blijft toegestaan.
+- Versie 1.0.1 bevroren onder `bevroren/1.0.1/` en opvraagbaar onder `/api/versies/1.0.1/`; 1.0.0 blijft staan.
+
 ## 1.0.1, 16 september 2026
 
 Herstel van de diakritische tekens in alle weergavetekst en een inklapbare startpagina. Geen waarde, geen status en geen bron gewijzigd.

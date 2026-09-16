@@ -1,0 +1,58 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.diagnostics.verplichte_diagnoses_kosten",
+  "naam_nl": "Kosten van het verplichte diagnosepakket",
+  "naam_fr": "Coût du dossier de diagnostic technique",
+  "naam_officieel": "Art. L271-4 Code de la construction",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.diagnostics",
+   "naam": "Diagnostics techniques obligatoires",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verrichting"
+  },
+  "variabiliteitsklasse": "marktindex",
+  "effect": "verhoogt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F16096",
+  "bron_kenmerk": "service-public.fr, dossier de diagnostic technique",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "Ministère de la transition écologique",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onregelmatig",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De verkoper betaalt het volledige diagnosepakket. Alleen het diagnostic électrique staat nu in het register, en dan nog alleen de geldigheidsduur.",
+  "kandidaat": true,
+  "verantwoordelijke": "Anton Noe, Communities Abroad",
+  "houdbaarheidsdatum": "2027-04-15"
+ }
+}

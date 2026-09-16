@@ -1,0 +1,82 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.pv.tarief_ir",
+  "naam_nl": "Tarief inkomstenbelasting op de meerwaarde",
+  "naam_fr": "Taux d'impôt sur le revenu sur la plus-value",
+  "naam_officieel": "Art. 200 B CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.pv",
+   "naam": "Plus-value immobilière des particuliers",
+   "belastingtype": "meerwaardeheffing",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "meerwaarde"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": 19,
+  "waarde_weergave": "19 procent",
+  "eenheid": "procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
+  "bron_kenmerk": "art. 200 B CGI; impots.gouv.fr, bijgewerkt 7 juli 2026",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:156",
+    "waarde_in_tool": "19,0",
+    "afwijkend": false
+   },
+   {
+    "repo": "Plus-Value-Calculator",
+    "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+    "locatie": "generate_pdf.py:127",
+    "waarde_in_tool": "0,19",
+    "afwijkend": false
+   },
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Café Claude",
+    "locatie": "lib/domains/prompts/wonen.ts:47",
+    "waarde_in_tool": "19 procent",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": {
+   "invoer": "belastbare meerwaarde 100.000 euro",
+   "verwachte_uitkomst": "19.000 euro inkomstenbelasting",
+   "toelichting": "Zonder aftrek voor bezitsduur en zonder surtaxe."
+  },
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

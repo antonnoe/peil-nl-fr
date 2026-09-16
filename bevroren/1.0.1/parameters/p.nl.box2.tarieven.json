@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.nl.box2.tarieven",
+  "naam_nl": "Tarieven box 2",
+  "naam_fr": "Taux box 2",
+  "naam_officieel": "Aanmerkelijk belang, tarieven en schijf",
+  "land": "NL",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "nl.box2",
+   "naam": "Inkomstenbelasting box 2",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR en fractie",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.belastingdienst.nl",
+  "bron_kenmerk": "Belastingdienst, box 2",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "Belastingdienst",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Relevant voor ondernemers met een BV die naar Frankrijk verhuizen. De verdragstoewijzing van dividend uit aanmerkelijk belang is een eigen vraagstuk.",
+  "kandidaat": true
+ }
+}

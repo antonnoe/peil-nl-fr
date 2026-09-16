@@ -10,7 +10,7 @@ export const XB = [
   bs: 'secundair: publicatiepagina van het CAK, de onderliggende ministeriële regeling niet zelf gelezen',
   inst: 'Het CAK', vd: VD_FKAI, vdoor: DOOR_FKAI,
   freq: 'jaarlijks', lw: '2026-01-01', pub: 'Het CAK, eind december voor het komende jaar',
-  hist: [{ waarde: '0,8251', geldig_jaar: '2025', herkomst: 'Het CAK, woonlandfactor 2025', opmerking: 'genoemd in financieel-kompas-ai als vorige waarde' }],
+  hist: [{ waarde: '0,8251', geldig_jaar: '2025', herkomst: 'Het CAK, woonlandfactor 2025', opmerking: 'in het Financieel Kompas genoemd als vorige waarde' }],
   in: [[ 'financieel-kompas-ai', 'config.json:248', '0,8304', false ], [ 'cafeclaude', 'lib/domains/prompts/verzekeren.ts:79', '0,8304', false ]],
   test: { invoer: 'nominale Zvw-bijdrage 157,00 euro per maand', verwachte_uitkomst: '130,37 euro per maand', toelichting: '157,00 maal 0,8304 is precies het maandbedrag dat het CAK voor Frankrijk publiceert.' },
   opm: 'De woonlandfactor vermenigvuldigt zowel het nominale deel als het inkomensafhankelijke deel van de verdragsbijdrage.' },
@@ -31,7 +31,7 @@ export const XB = [
   freq: 'onregelmatig', opgv: 'p.xb.cak.nominale_zvw_bijdrage_jaar',
   hist: oud(4500, 'een enkel gemiddeld bedrag, zonder opbouw'),
   kand: true,
-  opm: 'De voorganger financieel-kompas rekende met een vast gemiddeld bedrag van 4.500 euro per jaar. Die benadering is vervangen door een opgebouwde berekening met woonlandfactor, nominaal deel en inkomensafhankelijk deel. Hier vastgelegd zodat zichtbaar blijft dat de grootheid is opgevolgd, niet verdwenen.' },
+  opm: 'De voorganger van het Financieel Kompas rekende met een vast gemiddeld bedrag van 4.500 euro per jaar. Die benadering is vervangen door een opgebouwde berekening met woonlandfactor, nominaal deel en inkomensafhankelijk deel. Hier vastgelegd zodat zichtbaar blijft dat de grootheid is opgevolgd, niet verdwenen.' },
 
 { id: 'p.xb.deruyter.prelevement_solidarite', nl: 'Prélèvement de solidarité bij De Ruyter', fr: 'Prélèvement de solidarité, situation De Ruyter', off: 'Prélèvement de solidarité',
   reg: 'xb.deruyter', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
@@ -51,5 +51,5 @@ export const XB = [
   freq: 'zelden',
   in: [[ 'briefhulp-fr', 'ARGUMENTATIE.md:19', 'CSG 9,2 procent en CRDS 0,5 procent', false ],
        [ 'cafeclaude', 'lib/domains/prompts/geld.ts:108', 'CSG 9,2 plus CRDS 0,5', false ]],
-  opm: 'Bron aanwezig (LFSS 2019, art. 26) maar geen verificatiedatum bij de waarde in de repo. Daarom geen registerwaarde.' },
+  opm: 'Bron aanwezig (LFSS 2019, art. 26) maar geen verificatiedatum bij de waarde in de tool. Daarom geen registerwaarde.' },
 ];

@@ -1,0 +1,75 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.pv.abattement_ir_per_jaar",
+  "naam_nl": "Aftrek inkomstenbelasting per bezitsjaar",
+  "naam_fr": "Abattement pour durée de détention, impôt sur le revenu",
+  "naam_officieel": "Art. 150 VC CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.pv",
+   "naam": "Plus-value immobilière des particuliers",
+   "belastingtype": "meerwaardeheffing",
+   "socialelastentype": null,
+   "vrijstellingstype": "degressieve_aftrek",
+   "transactionele_basis": "meerwaarde"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": {
+   "jaar_6_tot_21": 6,
+   "jaar_22": 4,
+   "volledig_vrij_na": 22
+  },
+  "waarde_weergave": "6 procent per jaar vanaf jaar 6, 4 procent in jaar 22, volledig vrijgesteld na 22 jaar",
+  "eenheid": "procent per jaar",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
+  "bron_kenmerk": "art. 150 VC CGI; impots.gouv.fr, bijgewerkt 7 juli 2026",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:235-239",
+    "waarde_in_tool": "IB 6,0 per jaar en 4,0 in jaar 22",
+    "afwijkend": false
+   },
+   {
+    "repo": "Plus-Value-Calculator",
+    "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+    "locatie": "generate_pdf.py:43-45",
+    "waarde_in_tool": "100,0 procent na 22 jaar",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

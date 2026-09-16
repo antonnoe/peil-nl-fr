@@ -1,0 +1,136 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.sociaal",
+  "naam": "Cotisations sociales par type de revenu",
+  "belastingtype": null,
+  "socialelastentype": "csg_crds_casa",
+  "vrijstellingstype": null,
+  "transactionele_basis": "inkomen"
+ },
+ "aantal": 6,
+ "parameters": [
+  {
+   "id": "p.fr.sociaal.lasten_pensioen",
+   "naam_nl": "Sociale lasten op Frans pensioen, totaal",
+   "naam_fr": "Charges sociales sur pension, total",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.lasten_pensioen.json"
+  },
+  {
+   "id": "p.fr.sociaal.lasten_salaris",
+   "naam_nl": "Sociale lasten op salaris in Frankrijk",
+   "naam_fr": "Charges sociales sur salaire",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.lasten_salaris.json"
+  },
+  {
+   "id": "p.fr.sociaal.lasten_winst_diensten",
+   "naam_nl": "Sociale lasten op winst uit diensten",
+   "naam_fr": "Charges sociales sur prestations de services",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.lasten_winst_diensten.json"
+  },
+  {
+   "id": "p.fr.sociaal.lasten_winst_verhuur",
+   "naam_nl": "Sociale lasten op winst uit verhuur",
+   "naam_fr": "Charges sociales sur revenus locatifs meublés",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.lasten_winst_verhuur.json"
+  },
+  {
+   "id": "p.fr.sociaal.pass",
+   "naam_nl": "Plafond annuel de la sécurité sociale",
+   "naam_fr": "Plafond annuel de la sécurité sociale",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.urssaf.fr",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.pass.json"
+  },
+  {
+   "id": "p.fr.sociaal.smic",
+   "naam_nl": "SMIC, wettelijk minimumloon",
+   "naam_fr": "SMIC horaire et mensuel",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2300",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.smic.json"
+  }
+ ]
+}

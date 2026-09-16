@@ -77,7 +77,7 @@ export const NL = [
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', vt: 'drempel', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   in: [[ 'financieel-kompas-ai', 'config.json:42', '45592', false ]],
-  opm: 'Ontbreekt in de voorganger financieel-kompas; die kent geen afzonderlijke afbouw van de arbeidskorting.' },
+  opm: 'Ontbreekt in de voorganger van het Financieel Kompas; die kent geen afzonderlijke afbouw van de arbeidskorting.' },
 
 { id: 'p.nl.ib.ak_afbouw_factor', nl: 'Afbouwfactor arbeidskorting', fr: 'Taux de dégressivité du crédit d\'impôt sur le travail', off: 'Afbouwpercentage arbeidskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',

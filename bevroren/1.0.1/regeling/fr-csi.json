@@ -1,0 +1,39 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.csi",
+  "naam": "Contribution de sécurité immobilière",
+  "belastingtype": "heffing_bijzonder",
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "akte"
+ },
+ "aantal": 1,
+ "parameters": [
+  {
+   "id": "p.fr.csi.tarief_en_minimum",
+   "naam_nl": "Contribution de sécurité immobilière, tarief en minimum",
+   "naam_fr": "Contribution de sécurité immobilière",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.csi",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "0,10 procent, minimaal 15,00 euro per akte",
+   "eenheid": "procent en EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-08-12",
+   "bron_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022335681",
+   "gebruikt_in": [
+    "Vastgoedtransactie"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.csi.tarief_en_minimum.json"
+  }
+ ]
+}

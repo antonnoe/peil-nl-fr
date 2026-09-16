@@ -1,0 +1,68 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.cvae.drempel",
+  "naam_nl": "CVAE-drempel",
+  "naam_fr": "Seuil de la CVAE",
+  "naam_officieel": "Cotisation sur la valeur ajoutée des entreprises",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.cvae",
+   "naam": "Cotisation sur la valeur ajoutée des entreprises",
+   "belastingtype": "lokale_belasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "drempel",
+   "transactionele_basis": "omzet"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": {
+   "datum": "2030-01-01",
+   "omschrijving": "Afschaffing van de CVAE, uitgesteld naar 2030",
+   "bron": "cafeclaude, lib/audit/prompts/ondernemen.ts:72"
+  },
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onregelmatig",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Café Claude",
+    "locatie": "lib/audit/prompts/ondernemen.ts:72",
+    "waarde_in_tool": "152500 euro omzet",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

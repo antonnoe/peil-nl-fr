@@ -1,0 +1,67 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.csi.tarief_en_minimum",
+  "naam_nl": "Contribution de sécurité immobilière, tarief en minimum",
+  "naam_fr": "Contribution de sécurité immobilière",
+  "naam_officieel": "Art. 879, 881 F en 881 K CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.csi",
+   "naam": "Contribution de sécurité immobilière",
+   "belastingtype": "heffing_bijzonder",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "akte"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": {
+   "tarief_procent": 0.1,
+   "minimum_eur": 15
+  },
+  "waarde_weergave": "0,10 procent, minimaal 15,00 euro per akte",
+  "eenheid": "procent en EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022335681",
+  "bron_kenmerk": "art. 879 CGI (verschuldigdheid), art. 881 K CGI (tarief), art. 881 F CGI (ondergrens)",
+  "bronsoort": "primair",
+  "instantie": "Service de la publicité foncière",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:110-111",
+    "waarde_in_tool": "0,10 procent, minimaal 15,00 euro",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.don",
+  "naam": "Droits de donation",
+  "belastingtype": "erf_en_schenkbelasting",
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "schenking"
+ },
+ "aantal": 2,
+ "parameters": [
+  {
+   "id": "p.fr.don.barema_lijn_directe",
+   "naam_nl": "Barema schenkingsrechten in rechte lijn",
+   "naam_fr": "Barème des droits de donation en ligne directe",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.don",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "5 procent tot 8.072 euro oplopend tot 45 procent boven 1.805.677 euro",
+   "eenheid": "EUR en fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2024-11-07",
+   "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F14203",
+   "gebruikt_in": [
+    "erf-en-schenkingsrecht-nl-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.don.barema_lijn_directe.json"
+  },
+  {
+   "id": "p.fr.don.vrijstelling_geldschenking",
+   "naam_nl": "Extra vrijstelling geldschenking",
+   "naam_fr": "Don familial de somme d'argent",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.don",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "erf-en-schenkingsrecht-nl-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.don.vrijstelling_geldschenking.json"
+  }
+ ]
+}

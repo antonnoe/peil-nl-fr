@@ -1,0 +1,80 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.markt.dvf_transactieprijzen",
+  "naam_nl": "DVF, werkelijke transactieprijzen onroerend goed",
+  "naam_fr": "DVF, demandes de valeurs foncières",
+  "naam_officieel": "Demandes de valeurs foncières, DGFiP, open data",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.markt",
+   "naam": "Marktgegevens vastgoed",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "koopsom"
+  },
+  "variabiliteitsklasse": "marktindex",
+  "effect": "bepaalt_grondslag",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR en EUR/m2",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/",
+  "bron_kenmerk": "Demandes de valeurs foncières (DVF), open data van de DGFiP op data.gouv.fr",
+  "bronsoort": "primair",
+  "instantie": "DGFiP, via data.gouv.fr",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": "DGFiP publiceert DVF tweemaal per jaar, in april en in oktober, met een achterstand van ongeveer zes maanden op de akte",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "halfjaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "index.html, invoerveld aankoopprijs",
+    "waarde_in_tool": "gebruikersinvoer, DVF als naslag",
+    "afwijkend": false
+   },
+   {
+    "repo": "woningzoeker-frankrijk",
+    "cockpit_onderdeel": "IF, Woningzoeker",
+    "locatie": "components/steps/StepBudget.tsx, aankoopprijs",
+    "waarde_in_tool": "gebruikersinvoer",
+    "afwijkend": false
+   },
+   {
+    "repo": "if-tools-api",
+    "cockpit_onderdeel": "IF, tools-API",
+    "locatie": "src/app/api/woning-analyse/route.ts, aankoopprijs",
+    "waarde_in_tool": "gebruikersinvoer",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geïdentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. De niet-aangesloten repo's vastgoed-analyse en vastgoed-in-frankrijk halen DVF rechtstreeks op; die tellen hier niet mee.",
+  "kandidaat": false,
+  "verantwoordelijke": "Anton Noe, Communities Abroad",
+  "houdbaarheidsdatum": "2027-04-01"
+ }
+}

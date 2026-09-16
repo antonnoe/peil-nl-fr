@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.elec.consuel_geel_elektronisch",
+  "naam_nl": "Consuel-tarief attestation geel, elektronisch",
+  "naam_fr": "Tarif Consuel, attestation jaune, voie électronique",
+  "naam_officieel": "Barème Consuel",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.elec",
+   "naam": "Raccordement et tarifs électricité",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verrichting"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": 144.67,
+  "waarde_weergave": "144,67 euro",
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": "2025-09-02",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": null,
+  "bron_kenmerk": "barema bij arrêté van 4 augustus 2015, geïndexeerd met 0,64 procent per 2 september 2025",
+  "bronsoort": "secundair: barema van Consuel, het arrêté zelf niet gelezen",
+  "instantie": "Consuel",
+  "verificatiedatum": "2026-07-04",
+  "verificatie_door": "dossier-elektriciteit-if, hoofdstukken en verificatie",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2025-09-02",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "dossier-elektriciteit-if",
+    "cockpit_onderdeel": "IF, dossier Elektriciteit",
+    "locatie": "hoofdstukken/h8.md:12, 51 en 99",
+    "waarde_in_tool": "144,67",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

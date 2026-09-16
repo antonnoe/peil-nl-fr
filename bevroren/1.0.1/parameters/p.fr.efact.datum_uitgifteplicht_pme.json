@@ -1,0 +1,68 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.efact.datum_uitgifteplicht_pme",
+  "naam_nl": "Invoeringsdatum uitgifteplicht PME en TPE",
+  "naam_fr": "Date d'entrée en vigueur de l'obligation d'émission, PME et TPE",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.efact",
+   "naam": "Facturation électronique obligatoire",
+   "belastingtype": "omzetbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "omzet"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": "2027-09-01",
+  "waarde_weergave": "1 september 2027",
+  "eenheid": "datum",
+  "geldig_jaar": "2027",
+  "geldig_van": "2027-09-01",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
+  "bron_kenmerk": "impots.gouv.fr, facturation électronique, gecontroleerd 8 juli 2026",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-07-08",
+  "verificatie_door": "e-facturatie-frankrijk, data/rules.ts",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": {
+   "datum": "2027-09-01",
+   "omschrijving": "Uitgifteplicht gaat gelden voor PME en TPE",
+   "bron": "impots.gouv.fr, facturation électronique"
+  },
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onregelmatig",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "e-facturatie-frankrijk",
+    "cockpit_onderdeel": "IF / CA, e-facturatie",
+    "locatie": "data/rules.ts:54-56",
+    "waarde_in_tool": "1 september 2027",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

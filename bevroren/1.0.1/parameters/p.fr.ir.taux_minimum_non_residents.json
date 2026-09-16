@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.ir.taux_minimum_non_residents",
+  "naam_nl": "Minimumtarief voor niet-residenten",
+  "naam_fr": "Taux minimum d'imposition des non-résidents",
+  "naam_officieel": "Art. 197 A CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.ir",
+   "naam": "Impôt sur le revenu",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "procent en EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.impots.gouv.fr/particulier/non-resident",
+  "bron_kenmerk": "impots.gouv.fr, non-résidents; art. 197 A CGI",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "DGFiP",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "GiteKompas toont hiervoor een bandbreedte van 20 tot 30 procent. De wettelijke staffel met de inkomensgrens waarboven 30 procent geldt, staat nergens vast.",
+  "kandidaat": true
+ }
+}

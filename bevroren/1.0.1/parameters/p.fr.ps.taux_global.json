@@ -1,0 +1,98 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.ps.taux_global",
+  "naam_nl": "Prélèvements sociaux op vermogen, totaaltarief",
+  "naam_fr": "Prélèvements sociaux sur les revenus du patrimoine",
+  "naam_officieel": "Prélèvements sociaux, taux global",
+  "land": "FR",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "fr.ps",
+   "naam": "Prélèvements sociaux sur les revenus du patrimoine",
+   "belastingtype": null,
+   "socialelastentype": "prelevement_social",
+   "vrijstellingstype": null,
+   "transactionele_basis": "vermogen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": 0.172,
+  "waarde_weergave": "17,2 procent",
+  "eenheid": "fractie",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
+  "bron_kenmerk": "impots.gouv.fr, plus-value immobilière, bijgewerkt 7 juli 2026; opbouw CSG 9,2 plus CRDS 0,5 plus prélèvement de solidarité 7,5",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": "wijziging alleen bij een loi de finances of een LFSS",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": "2018-01-01",
+   "wijzigingshistorie": [
+    {
+     "waarde": "0,172",
+     "geldig_jaar": "2025",
+     "herkomst": "financieel-kompas, config.json (voorganger, niet aangesloten)",
+     "opmerking": "zelfde waarde in de voorganger"
+    }
+   ]
+  },
+  "levensduur_b": {
+   "ingevoerd": "2012-07-01",
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:80",
+    "waarde_in_tool": "0,172",
+    "afwijkend": false
+   },
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:157",
+    "waarde_in_tool": "17,2",
+    "afwijkend": false
+   },
+   {
+    "repo": "Plus-Value-Calculator",
+    "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+    "locatie": "generate_pdf.py:87",
+    "waarde_in_tool": "0,172",
+    "afwijkend": false
+   },
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Café Claude",
+    "locatie": "lib/domains/prompts/geld.ts:108",
+    "waarde_in_tool": "17,2",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": {
+   "invoer": "belastbare meerwaarde 100.000 euro",
+   "verwachte_uitkomst": "17.200 euro prélèvements sociaux",
+   "toelichting": "Zonder toepassing van De Ruyter en zonder aftrek voor bezitsduur."
+  },
+  "uitzonderingen": [
+   "Voor wie onder het arrest De Ruyter valt, blijft alleen het prélèvement de solidarité van 7,5 procent over. Zie p.xb.deruyter.prelevement_solidarite."
+  ],
+  "opmerkingen": "De meest verspreide parameter van het netwerk van platforms: vier aangesloten tools rekenen hiermee, allemaal met dezelfde waarde.",
+  "kandidaat": false
+ }
+}

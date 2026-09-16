@@ -1,0 +1,78 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.ifi.drempel",
+  "naam_nl": "IFI-drempel",
+  "naam_fr": "Seuil d'assujettissement à l'IFI",
+  "naam_officieel": "Seuil de 1.300.000 euros, art. 964 CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.ifi",
+   "naam": "Impôt sur la fortune immobilière",
+   "belastingtype": "vermogensbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "drempel",
+   "transactionele_basis": "vermogen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": [
+    {
+     "waarde": "1300000",
+     "geldig_jaar": "2025",
+     "herkomst": "financieel-kompas, config.json (voorganger, niet aangesloten)",
+     "opmerking": "ongewijzigd tussen de twee edities"
+    }
+   ]
+  },
+  "levensduur_b": {
+   "ingevoerd": "2018-01-01",
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:217",
+    "waarde_in_tool": "1300000",
+    "afwijkend": false
+   },
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Café Claude",
+    "locatie": "lib/domains/prompts/geld.ts:110",
+    "waarde_in_tool": "1,3 miljoen euro",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

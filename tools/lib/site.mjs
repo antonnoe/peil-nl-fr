@@ -3,7 +3,8 @@
 
 import { CSS } from './stijl.mjs';
 import { esc, slug, datumNl, waardeTekst, STATUSLABEL, LASTENSOORTLABEL, LANDLABEL, KLASSELABEL, EFFECTLABEL, MAANDNAMEN } from './hulp.mjs';
-import { VERSIE, PEILDATUM, LICENTIE_DATA, BRONREGEL, VOORBEHOUD } from './versie.mjs';
+import { VERSIE, PEILDATUM, LICENTIE_DATA, BRONREGEL, VOORBEHOUD, UITGEVER, UITGEVER_URL } from './versie.mjs';
+import { openbareTools, openbareNamen, openbareHerkomst, openbareVerantwoordelijke } from './tools.mjs';
 
 const MENU = [
   ['', 'Start'],
@@ -48,6 +49,7 @@ ${inhoud}
 <p>Peil, versie ${esc(VERSIE)}, peildatum ${esc(datumNl(PEILDATUM))}. Gegevens onder ${esc(LICENTIE_DATA)}, code onder MIT.
 <a href="${op}api/v1/index.json">API</a>, <a href="${op}api/v1/register.csv">CSV</a>,
 <a href="https://github.com/antonnoe/peil-nl-fr">broncode</a>.</p>
+<p>Een uitgave van ${esc(UITGEVER)}, <a href="${esc(UITGEVER_URL)}" rel="noopener">www.communitiesabroad.com</a>.</p>
 </div>
 </div></main>
 ${script}
@@ -57,6 +59,35 @@ ${script}
 }
 
 const merkje = (status) => `<span class="merkje ${status}">${esc(STATUSLABEL[status])}</span>`;
+
+// Het blok "Let op" op een parameterpagina. De signalen die Peil intern bijhoudt
+// dragen een sleutel en een niveau; naar buiten wordt daar een gewone zin van,
+// zonder niveau in de tekst. De kleur van het blok volgt het zwaarste signaal.
+const LET_OP = [
+  ['afwijkend:', 'In omloop zijn afwijkende waarden voor deze parameter.'],
+  ['gaat_veranderen:aankondiging:', 'Er is een wijziging aangekondigd.'],
+  ['gaat_veranderen:geldig_tot:', 'De geldigheid van deze waarde loopt binnenkort af.'],
+  ['gaat_veranderen:raming:', 'Naast de vastgestelde waarde staat een raming klaar. Zolang de raming niet is vastgesteld, blijft de vastgestelde waarde leidend.'],
+  ['verouderd:houdbaarheid:', 'De laatste verificatie is ouder dan de houdbaarheid die bij deze parameter hoort.'],
+  ['verouderd:ijkmoment:', 'Sinds het laatste ijkmoment is deze waarde niet opnieuw geverifieerd.'],
+  ['verouderd:niet_vastgesteld:', 'Deze waarde is nog niet geverifieerd.'],
+  ['verouderd:vervallen:', 'Deze grootheid is vervallen.'],
+];
+
+function letOpBlok(waarschuwingen) {
+  const regels = [];
+  let kleur = 'grijs';
+  for (const w of waarschuwingen) {
+    const treffer = LET_OP.find(([sleutel]) => w.sleutel.startsWith(sleutel));
+    if (!treffer) continue;
+    if (!regels.includes(treffer[1])) regels.push(treffer[1]);
+    if (w.niveau === 'rood') kleur = 'rood';
+    else if (w.niveau === 'oranje' && kleur !== 'rood') kleur = 'oranje';
+  }
+  if (!regels.length) return '';
+  return `<div class="melding ${kleur}"><strong>Let op</strong><ul class="plat">`
+    + regels.map((r) => `<li>${esc(r)}</li>`).join('') + '</ul></div>';
+}
 
 function waardeBlok(p) {
   const t = waardeTekst(p);
@@ -106,18 +137,19 @@ export function paginaStart(register, state) {
   const landen = [...new Set(ps.map((p) => p.land))].sort();
   const lasten = [...new Set(ps.map((p) => p.lastensoort))].sort();
   const regelingen = [...new Set(ps.map((p) => p.regeling.code))].sort();
+  const aantalTools = new Set(ps.flatMap((p) => openbareNamen(p.gebruikt_in))).size;
 
   const index = ps.map((p) => ({
     i: p.id, n: p.naam_nl, f: p.naam_fr || '', o: p.naam_officieel || '',
     s: p.status, w: waardeTekst(p) || '', e: p.eenheid || '', j: p.geldig_jaar || '',
     b: p.bron_url || '', k: p.bron_kenmerk || '', l: p.land, t: p.lastensoort, r: p.regeling.code,
-    v: p.verificatiedatum || '', g: p.gebruikt_in.map((x) => x.repo).join(', '),
+    v: p.verificatiedatum || '', g: openbareNamen(p.gebruikt_in).join(', '),
   }));
 
   const tellers = `<div class="tellers">
 ${statussen.map((s) => `<div class="teller"><b>${tel((p) => p.status === s)}</b><span>${esc(STATUSLABEL[s])}</span></div>`).join('')}
 <div class="teller"><b>${tel((p) => p.gebruikt_in.some((g) => g.afwijkend))}</b><span>afwijkend tussen tools</span></div>
-<div class="teller"><b>${state.waarschuwingen.filter((w) => w.niveau === 'rood').length}</b><span>waarschuwingen rood</span></div>
+<div class="teller"><b>${new Set(state.waarschuwingen.filter((w) => w.niveau === 'rood').map((w) => w.parameter)).size}</b><span>met een punt van aandacht</span></div>
 </div>`;
 
   const kant1 = kanteling('Per land', ps.length, landen.length + ' landen',
@@ -154,7 +186,7 @@ ${regelingen.map((code) => {
 </div>
 <div id="resultaat" hidden></div>
 <h1>Peil, openbaar parameterregister NL-FR</h1>
-<p class="leidend">Elke waarde met een bron, een verificatiedatum en de tools die ermee rekenen. ${ps.length} parameters, ${register.meta.aangesloten_repos.length} aangesloten repo's.</p>
+<p class="leidend">Elke waarde met een bron, een verificatiedatum en de tools die ermee rekenen. ${ps.length} parameters, ${aantalTools} aangesloten tools.</p>
 <div class="voorbehoud">${esc(VOORBEHOUD)}</div>
 ${tellers}
 <h2>Kantelingen</h2>
@@ -248,13 +280,14 @@ export function paginaTabel(register) {
   const statussen = [...new Set(ps.map((p) => p.status))].sort().map((s) => [s, STATUSLABEL[s]]);
   const effecten = [...new Set(ps.map((p) => p.effect))].sort().map((e) => [e, EFFECTLABEL[e]]);
   const jaren = [...new Set(ps.map((p) => p.geldig_jaar).filter(Boolean))].sort().map((j) => [j, j]);
-  const tools = [...new Set(ps.flatMap((p) => p.gebruikt_in.map((g) => g.repo)))].sort().map((t) => [t, t]);
+  const tools = [...new Set(ps.flatMap((p) => openbareNamen(p.gebruikt_in)))].sort((a, b) => a.localeCompare(b, 'nl')).map((t) => [t, t]);
 
   const rijen = ps.map((p) => {
     const afw = p.gebruikt_in.some((g) => g.afwijkend);
+    const namen = openbareNamen(p.gebruikt_in);
     return `<tr data-land="${esc(p.land)}" data-lastensoort="${esc(p.lastensoort)}" data-regeling="${esc(p.regeling.code)}"
  data-klasse="${esc(p.variabiliteitsklasse)}" data-status="${esc(p.status)}" data-effect="${esc(p.effect)}"
- data-jaar="${esc(p.geldig_jaar || '')}" data-tools="${esc(p.gebruikt_in.map((g) => g.repo).join('|'))}"
+ data-jaar="${esc(p.geldig_jaar || '')}" data-tools="${esc(namen.join('|'))}"
  data-afwijkend="${afw ? 'ja' : 'nee'}" data-zoek="${esc((p.id + ' ' + p.naam_nl + ' ' + (p.naam_fr || '') + ' ' + (p.naam_officieel || '')).toLowerCase())}">
 <td data-kop="Parameter"><a href="parameter/${esc(p.id)}.html">${esc(p.naam_nl)}</a><br><span class="id">${esc(p.id)}</span></td>
 <td data-kop="Waarde" class="${p.status === 'vervallen' ? 'waarde vervallen' : ''}">${p.status === 'te_verifieren' ? '<span class="waarde te_verifieren" style="font-size:.9rem">geen rekenwaarde</span>' : esc(waardeTekst(p) ?? '')}</td>
@@ -266,7 +299,7 @@ export function paginaTabel(register) {
 <td data-kop="Klasse">${esc(KLASSELABEL[p.variabiliteitsklasse])}</td>
 <td data-kop="Jaar">${esc(p.geldig_jaar || '')}</td>
 <td data-kop="Geverifieerd">${esc(p.verificatiedatum ? datumNl(p.verificatiedatum) : '')}</td>
-<td data-kop="Gebruikt in">${p.gebruikt_in.length ? esc(p.gebruikt_in.map((g) => g.repo).join(', ')) : '<em>kandidaat</em>'}</td>
+<td data-kop="Gebruikt in">${namen.length ? esc(namen.join(', ')) : '<em>nog niet in gebruik</em>'}</td>
 </tr>`;
   }).join('');
 
@@ -351,16 +384,15 @@ export function paginaParameter(p, state, rekenregels) {
   const rij = (label, waarde) => `<div><dt>${esc(label)}</dt><dd>${waarde}</dd></div>`;
   const of = (v, leeg = '<em>niet vastgelegd</em>') => (v === null || v === undefined || v === '' ? leeg : esc(v));
 
-  const gebruikt = p.gebruikt_in.length
-    ? `<div class="tabelhuls"><table class="kaartbaar"><thead><tr><th scope="col">Repo</th><th scope="col">Cockpit-onderdeel</th><th scope="col">Locatie</th><th scope="col">Waarde in de tool</th><th scope="col">Afwijkend</th></tr></thead><tbody>
-${p.gebruikt_in.map((g) => `<tr><td data-kop="Repo">${esc(g.repo)}</td><td data-kop="Cockpit-onderdeel">${esc(g.cockpit_onderdeel)}</td>
-<td data-kop="Locatie"><code>${esc(g.locatie)}</code></td><td data-kop="Waarde in de tool">${of(g.waarde_in_tool)}</td>
-<td data-kop="Afwijkend">${g.afwijkend ? '<span class="merkje rood">ja</span>' : 'nee'}</td></tr>`).join('')}
-</tbody></table></div>`
-    : '<p>Nog geen enkele aangesloten tool gebruikt deze parameter. De parameter staat hier als kandidaat.</p>';
+  const tools = openbareTools(p.gebruikt_in);
+  const gebruikt = tools.length
+    ? `<ul class="plat">${tools.map((t) => `<li>${t.url
+      ? `<a href="${esc(t.url)}" rel="nofollow noopener">${esc(t.naam)}</a>`
+      : esc(t.naam)}</li>`).join('')}</ul>`
+    : '<p>Deze parameter is nog niet in gebruik bij een van de aangesloten tools.</p>';
 
   const historie = p.levensduur_a.wijzigingshistorie.length
-    ? `<ul class="plat">${p.levensduur_a.wijzigingshistorie.map((h) => `<li><strong>${of(h.waarde)}</strong>${h.geldig_jaar ? ', jaar ' + esc(h.geldig_jaar) : ''}. ${esc(h.herkomst)}${h.opmerking ? '. ' + esc(h.opmerking) : ''}</li>`).join('')}</ul>`
+    ? `<ul class="plat">${p.levensduur_a.wijzigingshistorie.map((h) => `<li><strong>${of(h.waarde)}</strong>${h.geldig_jaar ? ', jaar ' + esc(h.geldig_jaar) : ''}. ${esc(openbareHerkomst(h.herkomst))}${h.opmerking ? '. ' + esc(openbareHerkomst(h.opmerking)) : ''}</li>`).join('')}</ul>`
     : '<p>Geen eerdere waarden vastgelegd.</p>';
 
   const inhoud = `
@@ -368,11 +400,11 @@ ${p.gebruikt_in.map((g) => `<tr><td data-kop="Repo">${esc(g.repo)}</td><td data-
 <h1>${esc(p.naam_nl)}</h1>
 <p class="id">${esc(p.id)}</p>
 ${waardeBlok(p)}
-<p>${merkje(p.status)} ${p.gebruikt_in.some((g) => g.afwijkend) ? '<span class="merkje rood">afwijkend tussen tools</span>' : ''}
-${p.kandidaat ? '<span class="merkje grijs">kandidaat</span>' : ''}</p>
-${p.status === 'te_verifieren' ? '<div class="melding grijs">Peil heeft voor deze grootheid nog geen waarde met bron en verificatiedatum. De waarden die de tools nu gebruiken staan hieronder bij <em>Gebruikt in</em>, maar zijn geen registerwaarde.</div>' : ''}
+<p>${merkje(p.status)} ${p.gebruikt_in.some((g) => g.afwijkend) ? '<span class="merkje rood">afwijkende waarden in omloop</span>' : ''}
+${p.kandidaat ? '<span class="merkje grijs">nog niet in gebruik</span>' : ''}</p>
+${p.status === 'te_verifieren' ? '<div class="melding grijs">Peil heeft voor deze grootheid nog geen waarde met een primaire bron en een verificatiedatum. Er is daarom geen registerwaarde die u kunt overnemen.</div>' : ''}
 ${p.status === 'raming' ? '<div class="melding grijs">Dit is een raming, geen vastgestelde waarde. Raming en vaststelling worden in Peil strikt gescheiden gehouden.</div>' : ''}
-${waarschuwingen.length ? `<div class="melding rood"><strong>Signalen voor de Cockpit</strong><ul class="plat">${waarschuwingen.map((w) => `<li><span class="merkje ${w.niveau}">${esc(w.niveau)}</span> ${esc(w.omschrijving)}</li>`).join('')}</ul></div>` : ''}
+${letOpBlok(waarschuwingen)}
 
 <h2>Namen</h2>
 <dl class="velden">
@@ -392,7 +424,7 @@ ${rij('Vrijstellingstype', of(p.regeling.vrijstellingstype, 'niet van toepassing
 ${rij('Transactionele basis', of(p.regeling.transactionele_basis, 'niet van toepassing'))}
 ${rij('Variabiliteitsklasse', esc(KLASSELABEL[p.variabiliteitsklasse]))}
 ${rij('Effect', esc(EFFECTLABEL[p.effect]))}
-${p.verantwoordelijke !== undefined ? rij('Verantwoordelijke', of(p.verantwoordelijke)) : ''}
+${p.verantwoordelijke !== undefined ? rij('Verantwoordelijke', of(openbareVerantwoordelijke(p.verantwoordelijke, UITGEVER))) : ''}
 ${p.houdbaarheidsdatum !== undefined ? rij('Houdbaar tot', of(datumNl(p.houdbaarheidsdatum))) : ''}
 </dl>
 
@@ -410,10 +442,10 @@ ${rij('Bron', bronTekst(p))}
 ${rij('Bronsoort', of(p.bronsoort))}
 ${rij('Instantie', of(p.instantie))}
 ${rij('Geverifieerd op', of(datumNl(p.verificatiedatum)))}
-${rij('Geverifieerd door', of(p.verificatie_door))}
+${rij('Geverifieerd door', of(openbareHerkomst(p.verificatie_door)))}
 ${rij('Publicatiemoment', of(p.publicatiemoment))}
 ${rij('Aangekondigde wijziging', p.aangekondigde_wijziging
-    ? esc((p.aangekondigde_wijziging.datum ? datumNl(p.aangekondigde_wijziging.datum) + ': ' : '') + p.aangekondigde_wijziging.omschrijving) + (p.aangekondigde_wijziging.bron ? ' (' + esc(p.aangekondigde_wijziging.bron) + ')' : '')
+    ? esc((p.aangekondigde_wijziging.datum ? datumNl(p.aangekondigde_wijziging.datum) + ': ' : '') + p.aangekondigde_wijziging.omschrijving) + (p.aangekondigde_wijziging.bron ? ' (' + esc(openbareHerkomst(p.aangekondigde_wijziging.bron)) + ')' : '')
     : '<em>geen</em>')}
 </dl>
 
@@ -535,11 +567,11 @@ export function paginaDocumenten(documenten) {
 <h1>Documentenregister</h1>
 <p class="leidend">${esc(documenten.meta.stand)}</p>
 ${documenten.documenten.length === 0
-    ? `<div class="melding grijs">Het documentenregister is nog leeg. Het schema staat vast in <code>schema/document.schema.json</code>: uitgever, titel, kenmerk, publicatiedatum, bron-URL, gebruikt in welk handboek, verwacht vervangingsmoment, vervangen door en status.</div>`
+    ? `<div class="melding grijs">Het documentenregister is nog leeg. De opzet ligt wel vast: per document de uitgever, de titel, het kenmerk, de publicatiedatum, het adres van de bron, waar het document wordt gebruikt, het verwachte vervangingsmoment, het document dat het vervangt en de status.</div>`
     : ''}
 <h2>Wat hier komt te staan</h2>
 <p>Officiële documenten waar handboeken en tools op steunen: brochures, arrêtés, circulaires en fiches. Per document wordt bijgehouden wanneer het naar verwachting wordt vervangen en door welk document, zodat een handboek dat nog naar een ingetrokken brochure verwijst zichtbaar wordt.</p>
-<p>De inventarisatie van de handboeken en PDF's van Café Claude valt buiten de opdracht waarmee dit register is gebouwd.</p>`;
+<p>Het vullen van dit register is voorzien voor een volgende uitgave van Peil.</p>`;
   return pagina({ titel: 'Documenten', beschrijving: 'Documentenregister van Peil: officiële documenten waar handboeken en tools op steunen.', actief: 'documenten.html', inhoud });
 }
 

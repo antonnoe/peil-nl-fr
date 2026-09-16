@@ -1,0 +1,39 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.cvae",
+  "naam": "Cotisation sur la valeur ajoutée des entreprises",
+  "belastingtype": "lokale_belasting",
+  "socialelastentype": null,
+  "vrijstellingstype": "drempel",
+  "transactionele_basis": "omzet"
+ },
+ "aantal": 1,
+ "parameters": [
+  {
+   "id": "p.fr.cvae.drempel",
+   "naam_nl": "CVAE-drempel",
+   "naam_fr": "Seuil de la CVAE",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.cvae",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.cvae.drempel.json"
+  }
+ ]
+}

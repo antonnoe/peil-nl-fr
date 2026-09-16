@@ -1,0 +1,353 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "nlfr-ai-agent",
+ "cockpit_onderdeel": "NLFR, AI-agent",
+ "aantal": 7,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.houtenergie_per_stere",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.houtenergie_per_stere",
+   "omschrijving": "1 tool rekent met een waarde voor Energie-inhoud hout per stère die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.omrekenfactoren_kwh",
+   "omschrijving": "5 tools rekent met een waarde voor Omrekenfactoren naar kWh per eenheid die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:28"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:28 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:28"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:10"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.besparing_per_graad",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.besparing_per_graad",
+   "omschrijving": "1 tool rekent met een waarde voor Besparing per graad lagere binnentemperatuur die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:286"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.ecoptz_maximum",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.ecoptz_maximum",
+   "omschrijving": "1 tool rekent met een waarde voor Eco-PTZ, maximum leenbedrag die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:233-234"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.maprimerenov_budget",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.maprimerenov_budget",
+   "omschrijving": "1 tool rekent met een waarde voor MaPrimeRénov, budget en achterstand die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:237"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.richtprijzen_maatregelen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.richtprijzen_maatregelen",
+   "omschrijving": "1 tool rekent met een waarde voor Richtprijzen renovatiemaatregelen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:272-279"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.tva.tarief_renovatie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.tva.tarief_renovatie",
+   "omschrijving": "2 tools rekent met een waarde voor Btw-tarief energetische renovatiewerken die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193-206"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:234"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.energie.houtenergie_per_stere",
+   "naam_nl": "Energie-inhoud hout per stère",
+   "naam_fr": "Contenu énergétique du bois par stère",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "kWh/stere",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.houtenergie_per_stere.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156",
+     "waarde_in_tool": "1800 kWh droog hardhout, 1400 kWh zachthout",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.energie.omrekenfactoren_kwh",
+   "naam_nl": "Omrekenfactoren naar kWh per eenheid",
+   "naam_fr": "Facteurs de conversion en kWh",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "afgeleid",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "kWh per eenheid",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal",
+    "if-mobiel",
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.omrekenfactoren_kwh.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156",
+     "waarde_in_tool": "hout 1800 kWh per stère",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.renov.besparing_per_graad",
+   "naam_nl": "Besparing per graad lagere binnentemperatuur",
+   "naam_fr": "Économie par degré de moins",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.besparing_per_graad.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:286",
+     "waarde_in_tool": "circa 7 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.renov.ecoptz_maximum",
+   "naam_nl": "Eco-PTZ, maximum leenbedrag",
+   "naam_fr": "Éco-prêt à taux zéro, montant maximal",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.ecoptz_maximum.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:233-234",
+     "waarde_in_tool": "tot 50000 euro renteloos",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.renov.maprimerenov_budget",
+   "naam_nl": "MaPrimeRénov, budget en achterstand",
+   "naam_fr": "MaPrimeRénov, budget et arriérés",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en aantal",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.maprimerenov_budget.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:237",
+     "waarde_in_tool": "3,6 miljard euro budget 2026, 83000 onbehandelde dossiers uit 2025",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.renov.richtprijzen_maatregelen",
+   "naam_nl": "Richtprijzen renovatiemaatregelen",
+   "naam_fr": "Prix indicatifs des travaux de rénovation",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.richtprijzen_maatregelen.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:272-279",
+     "waarde_in_tool": "dakisolatie 25-50 EUR/m2; ITI 50-90; ITE 100-200; vloerisolatie 30-60; raam HR++ 400-800 per stuk; warmtepomp lucht-water 8000-15000; geothermisch 15000-25000; PV 3 kWp 5000-8000",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.tva.tarief_renovatie",
+   "naam_nl": "Btw-tarief energetische renovatiewerken",
+   "naam_fr": "Taux de TVA sur les travaux de rénovation énergétique",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.tva",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energiebesparing-subsidie-en-fiscale-regelingen",
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.tva.tarief_renovatie.json",
+   "locaties": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:234",
+     "waarde_in_tool": "5,5 procent bij RGE-installateur",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

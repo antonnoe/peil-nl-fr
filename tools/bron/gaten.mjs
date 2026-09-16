@@ -71,7 +71,7 @@ G('p.nl.ovb.tarieven', 'Tarieven overdrachtsbelasting', 'Taux des droits de muta
 
 G('p.nl.btw.tarieven', 'Btw-tarieven Nederland', 'Taux de TVA, Pays-Bas', 'Algemeen en verlaagd btw-tarief', 'nl.btw', 'procent', 'verhoogt_last',
   'https://www.belastingdienst.nl', 'Belastingdienst, btw-tarieven', 'Belastingdienst', 'zelden',
-  'De niet-aangesloten repo ca-btw-oss-tool voert deze tarieven met bron en datum. Zodra die repo wordt aangesloten, kan de waarde hier terecht.'),
+  'Een niet-aangesloten btw-tool voert deze tarieven met bron en datum. Zodra die tool is aangesloten, kan de waarde hier terecht.'),
 
 // ------------------------------------------------------------------- FR fiscaal
 G('p.fr.sociaal.pass', 'Plafond annuel de la sécurité sociale', 'Plafond annuel de la sécurité sociale', 'PASS', 'fr.sociaal', 'EUR/jaar', 'bepaalt_grondslag',
@@ -92,12 +92,12 @@ G('p.fr.ir.contribution_haut_revenus', 'Contribution exceptionnelle sur les haut
 
 G('p.fr.ir.taux_minimum_non_residents', 'Minimumtarief voor niet-residenten', 'Taux minimum d\'imposition des non-résidents', 'Art. 197 A CGI', 'fr.ir', 'procent en EUR', 'verhoogt_last',
   'https://www.impots.gouv.fr/particulier/non-resident', 'impots.gouv.fr, non-résidents; art. 197 A CGI', 'DGFiP', 'jaarlijks',
-  'GiteKompas toont hiervoor een bandbreedte van 20 tot 30 procent. De wettelijke staffel met de inkomensgrens waarboven 30 procent geldt, staat nergens vast.'),
+  'GîteKompas toont hiervoor een bandbreedte van 20 tot 30 procent. De wettelijke staffel met de inkomensgrens waarboven 30 procent geldt, staat nergens vast.'),
 
 G('p.fr.pv.exoneration_residence_principale', 'Vrijstelling meerwaarde hoofdverblijf', 'Exonération de la résidence principale', 'Art. 150 U II 1 CGI', 'fr.pv', 'tekst', 'verlaagt_last',
   'https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere',
   'art. 150 U II 1 CGI; impots.gouv.fr', 'DGFiP', 'zelden',
-  'De meest gebruikte vrijstelling van allemaal, en de enige reden waarom de meeste verkopen onbelast blijven. Vastgoedtransactie kent wel de vrijstelling voor de voormalige hoofdwoning van een niet-resident, maar niet deze.', { vt: 'vrijstelling' }),
+  'De meest gebruikte vrijstelling van allemaal, en de enige reden waarom de meeste verkopen onbelast blijven. Vastgoedtransacties in Frankrijk kent wel de vrijstelling voor de voormalige hoofdwoning van een niet-resident, maar niet deze.', { vt: 'vrijstelling' }),
 
 G('p.fr.th.taxe_habitation_residence_secondaire', 'Taxe d\'habitation op een tweede woning', 'Taxe d\'habitation sur les résidences secondaires', 'THRS', 'fr.th', 'procent', 'verhoogt_last',
   SP('F42'), 'service-public.fr, taxe d\'habitation sur les résidences secondaires', 'DGFiP en gemeenten', 'jaarlijks',
@@ -167,7 +167,7 @@ G('p.xb.ehic.geldigheidsduur', 'Europese ziekteverzekeringskaart, geldigheidsduu
 G('p.xb.cak.rekenwijze_verdragsbijdrage', 'Rekenwijze van de CAK-verdragsbijdrage', 'Méthode de calcul de la cotisation conventionnelle', null, 'xb.cak', 'tekst', 'bepaalt_grondslag',
   'https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/',
   'Het CAK, berekening van de verdragsbijdrage', 'Het CAK', 'jaarlijks',
-  'De losse bestanddelen staan wel in het register, de volgorde waarin het CAK ze toepast niet. Dat hoort in laag 2 thuis, als rekenregel.'),
+  'De losse bestanddelen staan wel in het register, de volgorde waarin het CAK ze toepast niet. Die volgorde hoort bij de rekenregels thuis.'),
 
 // ------------------------------------------------------------------- verzekeringen
 G('p.fr.assur.habitation_verplicht', 'Verplichte opstal- en inboedelverzekering', 'Assurance habitation obligatoire', 'Art. 7 g loi 89-462', 'fr.assur', 'tekst', 'bepaalt_toepasselijkheid',
@@ -195,7 +195,7 @@ G('p.fr.mutuelle.premie_indicatie', 'Premie-indicatie complémentaire santé', '
 G('p.fr.notaris.tarief_hypotheekakte', 'Emolumenten en heffingen bij een hypotheekakte', 'Frais d\'acte de prêt et taxe de publicité foncière', null, 'fr.notaris', 'procent en EUR', 'verhoogt_last',
   'https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/achat-dun-bien-immobilier-quels-frais-de-notaire-devez-vous-payer',
   'tabel 5 Code de commerce en art. 844 CGI', 'Ministère de l\'économie', 'meerjaarlijks',
-  'Wie met een Franse hypotheek koopt, betaalt boven op de koopakte ook de kosten van de leningakte. Vastgoedtransactie rekent alleen de koopakte.'),
+  'Wie met een Franse hypotheek koopt, betaalt boven op de koopakte ook de kosten van de leningakte. Vastgoedtransacties in Frankrijk rekent alleen de koopakte.'),
 
 G('p.fr.diagnostics.verplichte_diagnoses_kosten', 'Kosten van het verplichte diagnosepakket', 'Coût du dossier de diagnostic technique', 'Art. L271-4 Code de la construction', 'fr.diagnostics', 'EUR', 'verhoogt_last',
   'https://www.service-public.fr/particuliers/vosdroits/F16096', 'service-public.fr, dossier de diagnostic technique', 'Ministère de la transition écologique', 'onregelmatig',
@@ -205,5 +205,5 @@ G('p.fr.diagnostics.verplichte_diagnoses_kosten', 'Kosten van het verplichte dia
 G('p.fr.dmto.abattement_bijzondere_departementen', 'Bijzondere DMTO-regelingen per departement', 'Régimes départementaux particuliers', 'Art. 1594 F ter, F sexies en F septies CGI', 'fr.dmto', 'EUR en procent', 'verlaagt_last',
   'https://www.impots.gouv.fr/sites/default/files/media/1_metier/3_partenaire/notaires/dmto/dmto_2026-06.pdf',
   'DGFiP, barème DMTO; art. 1594 F ter, F sexies en F septies CGI', 'DGFiP', 'jaarlijks',
-  'In de DGFiP-tabel staan bij Calvados een abattement van 46.000 euro en bij Savoie een verlaagd tarief van 4,00 procent. Uit de platte tekst is niet af te leiden op welke kolom die betrekking hebben. Vastgoedtransactie heeft ze daarom niet ingebouwd en meldt dat onder OPENSTAAND.'),
+  'In de DGFiP-tabel staan bij Calvados een abattement van 46.000 euro en bij Savoie een verlaagd tarief van 4,00 procent. Uit de platte tekst is niet af te leiden op welke kolom die betrekking hebben. Vastgoedtransacties in Frankrijk heeft ze daarom niet ingebouwd en meldt dat zelf als openstaand punt.'),
 ];

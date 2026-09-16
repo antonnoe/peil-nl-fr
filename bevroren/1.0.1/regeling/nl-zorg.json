@@ -1,0 +1,75 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "nl.zorg",
+  "naam": "Zorgverzekering, nominale premie en eigen risico",
+  "belastingtype": null,
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "polis"
+ },
+ "aantal": 3,
+ "parameters": [
+  {
+   "id": "p.nl.zorg.eigen_risico",
+   "naam_nl": "Verplicht eigen risico Zvw",
+   "naam_fr": "Franchise obligatoire de l'assurance maladie",
+   "land": "NL",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "nl.zorg",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.rijksoverheid.nl",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.zorg.eigen_risico.json"
+  },
+  {
+   "id": "p.nl.zorg.nominale_premie",
+   "naam_nl": "Nominale zorgpremie per volwassene per jaar",
+   "naam_fr": "Prime nominale d'assurance maladie par adulte et par an",
+   "land": "NL",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "nl.zorg",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "2.119 euro per jaar",
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.zorg.nominale_premie.json"
+  },
+  {
+   "id": "p.nl.zorg.nominale_premie_raming",
+   "naam_nl": "Nominale zorgpremie, raming ontwerpbegroting",
+   "naam_fr": "Prime nominale, estimation du projet de budget",
+   "land": "NL",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "nl.zorg",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "raming",
+   "waarde_weergave": "2.143 euro per jaar, raming",
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": null,
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.zorg.nominale_premie_raming.json"
+  }
+ ]
+}

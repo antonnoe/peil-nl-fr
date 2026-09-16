@@ -1,0 +1,37 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "nl.ovb",
+  "naam": "Wet op belastingen van rechtsverkeer, overdrachtsbelasting",
+  "belastingtype": "overdrachtsbelasting",
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "koopsom"
+ },
+ "aantal": 1,
+ "parameters": [
+  {
+   "id": "p.nl.ovb.tarieven",
+   "naam_nl": "Tarieven overdrachtsbelasting",
+   "naam_fr": "Taux des droits de mutation, Pays-Bas",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.ovb",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.belastingdienst.nl",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.ovb.tarieven.json"
+  }
+ ]
+}

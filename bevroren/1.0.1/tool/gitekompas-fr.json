@@ -1,0 +1,153 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "gitekompas-fr",
+ "cockpit_onderdeel": "IF, GiteKompas",
+ "aantal": 3,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.gite.degressieve_reeks",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.gite.degressieve_reeks",
+   "omschrijving": "1 tool rekent met een waarde voor Degressieve reeks per bezitsjaar in GiteKompas die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:1177-1179"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.gite.minimumheffing_niet_residenten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.gite.minimumheffing_niet_residenten",
+   "omschrijving": "1 tool rekent met een waarde voor Minimumheffing niet-residenten, bandbreedte die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:1226-1227"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.bic_verhuur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.bic_verhuur",
+   "omschrijving": "2 tools rekent met een waarde voor Micro-BIC verhuur: plafond en abattement per type die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:67-69"
+    },
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:864-867"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.gite.degressieve_reeks",
+   "naam_nl": "Degressieve reeks per bezitsjaar in GiteKompas",
+   "naam_fr": "Série dégressive par année de détention",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.gite",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "gitekompas-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.gite.degressieve_reeks.json",
+   "locaties": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:1177-1179",
+     "waarde_in_tool": "jaar 6: 75 procent; jaar 7: 50 procent; jaar 8: 25 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.gite.minimumheffing_niet_residenten",
+   "naam_nl": "Minimumheffing niet-residenten, bandbreedte",
+   "naam_fr": "Taux minimum d'imposition des non-résidents",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.gite",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "gitekompas-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.gite.minimumheffing_niet_residenten.json",
+   "locaties": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:1226-1227",
+     "waarde_in_tool": "20 tot 30 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.micro.bic_verhuur",
+   "naam_nl": "Micro-BIC verhuur: plafond en abattement per type",
+   "naam_fr": "Micro-BIC location: plafond et abattement par type",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.micro",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "gitekompas-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.micro.bic_verhuur.json",
+   "locaties": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:864-867",
+     "waarde_in_tool": "meublé non classé 30 procent bij 15000; meublé classé 50 procent bij 77700; chambre d'hôtes 50 procent bij 77700; verhuur eigen woning 30 procent bij 15000",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

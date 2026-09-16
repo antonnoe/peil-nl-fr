@@ -10,6 +10,7 @@ import { REGELINGEN } from '../tools/lib/regelingen.mjs';
 import { VERSIE, PEILDATUM, LICENTIE_DATA } from '../tools/lib/versie.mjs';
 import { ZONDER_ACCENT, zoekZonderAccent, tekstUitHtml, tekstUitMarkdown, weergaveTeksten } from '../tools/lib/accenten.mjs';
 import { meetHoogte, vindChromium } from '../tools/lib/hoogte.mjs';
+import { ALLE_TOOLS } from '../tools/lib/tools.mjs';
 
 const WORTEL = join(dirname(fileURLToPath(import.meta.url)), '..');
 const lees = (...p) => JSON.parse(readFileSync(join(WORTEL, ...p), 'utf8'));
@@ -375,6 +376,43 @@ if (existsSync(join(WORTEL, 'dist'))) {
     eisLeeg(fout, 'zichtbare tekst zonder accent');
     return distBestanden.filter((x) => x.endsWith('.html')).length + ' pagina\'s gecontroleerd';
   });
+  // De buitenkant van Peil is voor lezers, niet voor bouwers. Deze controle wijst
+  // de gebouwde pagina's af zodra er een interne aanduiding in de zichtbare tekst
+  // staat: de naam van een repository, een bestandspad met regelnummer, de naam van
+  // het instrument dat de signalen ophaalt, een taaknummer of een intern veldlabel.
+  // Alleen de zichtbare tekst telt: een href naar de broncode op GitHub is een
+  // attribuut en blijft dus toegestaan, net als de openbare adressen van de API.
+  toets('geen interne aanduiding in de zichtbare tekst van de site', () => {
+    const INTERN = [
+      ['de naam Anton', /\bAnton\b/i],
+      ['het woord Cockpit', /cockpit/i],
+      ['het signaalbestand', /peil\/state\.json/i],
+      ['de naam Claude buiten Café Claude', /\bClaude\b/],
+      ['het woord repo of repository', /\brepo(s|\u2019s|'s)?\b|repositor(y|ies)/i],
+      ['een verwijzing naar broncode', /\.(js|ts|mjs|tsx|py)\b|config\.json/i],
+      ['een laagnummer', /\blaag [123]\b/i],
+      ['het woord kandidaat', /kandidaat/i],
+      ['een intern veldlabel', /gebruikt_in|waarde_in_tool|cockpit_onderdeel/i],
+      ['het woord meetbron', /meetbron/i],
+      ['een taaknummer', /\btaak \d/i],
+      // De naam van een repository, hoofdlettergevoelig zodat de openbare naam
+      // van een tool die alleen in schrijfwijze afwijkt niet wordt geraakt.
+      ...ALLE_TOOLS.map((t) => [`de naam van een repository (${t.naam})`,
+        new RegExp('\\b' + t.repo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b')]),
+    ];
+    const fout = [];
+    for (const pad of distBestanden.filter((x) => x.endsWith('.html'))) {
+      const zichtbaar = tekstUitHtml(readFileSync(join(WORTEL, 'dist', pad), 'utf8'))
+        .split('Café Claude').join(' ');
+      for (const [wat, re] of INTERN) {
+        const raak = zichtbaar.match(re);
+        if (raak) fout.push(`${pad}: ${wat}, gevonden: ${raak[0]}`);
+      }
+    }
+    eisLeeg([...new Set(fout)], 'interne aanduidingen op de openbare site');
+    return INTERN.length + ' aanduidingen bewaakt op ' + distBestanden.filter((x) => x.endsWith('.html')).length + ' pagina\'s';
+  });
+
   toets('de CSV draagt een BOM en levert de accenten in UTF-8', () => {
     const ruw = readFileSync(join(WORTEL, 'dist', 'api', 'v1', 'register.csv'));
     eis(ruw[0] === 0xef && ruw[1] === 0xbb && ruw[2] === 0xbf, 'geen UTF-8-BOM, Excel leest de accenten dan verkeerd');

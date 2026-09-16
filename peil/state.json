@@ -1,7 +1,7 @@
 {
  "meta": {
   "bron": "Peil, openbaar parameterregister NL-FR",
-  "versie": "1.0.1",
+  "versie": "1.0.2",
   "versiedatum": "2026-09-16",
   "peildatum": "2026-09-16",
   "licentie": "CC BY 4.0",
@@ -1237,7 +1237,7 @@
    "soort": "verouderd",
    "niveau": "rood",
    "parameter": "p.fr.gite.degressieve_reeks",
-   "omschrijving": "1 tool rekent met een waarde voor Degressieve reeks per bezitsjaar in GiteKompas die geen bron met verificatiedatum heeft.",
+   "omschrijving": "1 tool rekent met een waarde voor Degressieve reeks per bezitsjaar in GîteKompas die geen bron met verificatiedatum heeft.",
    "geraakt": [
     {
      "repo": "gitekompas-fr",

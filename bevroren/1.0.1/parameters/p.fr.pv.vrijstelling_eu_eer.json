@@ -1,0 +1,66 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.pv.vrijstelling_eu_eer",
+  "naam_nl": "Vrijstelling meerwaarde voor onderdanen van de EU of EER",
+  "naam_fr": "Exonération pour les ressortissants UE ou EEE",
+  "naam_officieel": "Art. 150 U II 2 CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.pv",
+   "naam": "Plus-value immobilière des particuliers",
+   "belastingtype": "meerwaardeheffing",
+   "socialelastentype": null,
+   "vrijstellingstype": "vrijstelling",
+   "transactionele_basis": "meerwaarde"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": 150000,
+  "waarde_weergave": "150.000 euro netto belastbare meerwaarde",
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": null,
+  "bron_kenmerk": "art. 150 U II 2 CGI en art. 244 bis A CGI; BOFiP, BOI-RFPI-PVINR-10-20",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "bronnen.json:136",
+    "waarde_in_tool": "150000",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [
+   "De vrijstelling voor de voormalige hoofdwoning en deze vrijstelling sluiten elkaar uit. Welke van de twee gunstiger is, hangt af van het geval; leg dat voor aan de notaris of een belastingadviseur."
+  ],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

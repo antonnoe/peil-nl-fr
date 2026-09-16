@@ -10,7 +10,7 @@ Een grootheid kan lang bestaan en toch elk jaar veranderen, zoals het heffingsvr
 
 ## Wat uit het register zelf komt
 
-De cijfers hieronder zijn geteld over de 210 parameters in `data/register.json` op peildatum 16 september 2026. Zij zeggen iets over wat Peil weet, niet over de werkelijkheid: de aanpassingsfrequentie is per parameter ingevuld op grond van de regeling waaronder de grootheid valt, en die invulling is zelf nog niet tegen een primaire bron getoetst.
+De cijfers hieronder zijn geteld over de 210 parameters van het register op peildatum 16 september 2026. Zij zeggen iets over wat Peil weet, niet over de werkelijkheid: de aanpassingsfrequentie is per parameter ingevuld op grond van de regeling waaronder de grootheid valt, en die invulling is zelf nog niet tegen een primaire bron getoetst.
 
 | Categorie | Parameters | Jaarlijks of vaker aangepast | Invoeringsdatum bekend | Vervallen |
 |---|---|---|---|---|
@@ -22,19 +22,19 @@ De cijfers hieronder zijn geteld over de 210 parameters in `data/register.json` 
 | Vastgoedtransactiekosten | 40 | 9, 23 procent | 0 | 0 |
 | Overheidsgekaderde verzekeringen | 22 | 4, 18 procent | 0 | 0 |
 
-Van 24 parameters is een eerdere waarde vastgelegd, vrijwel allemaal uit de voorganger `financieel-kompas`. Van 36 parameters is een datum van laatste wijziging bekend die binnen de laatste vijf jaar valt. Van 8 parameters is een invoeringsdatum bekend. Van 1 parameter is vastgelegd dat zij is vervallen en door welke grootheid zij is opgevolgd: de oude forfaitaire CAK-benadering van 4.500 euro per jaar, opgevolgd door de opgebouwde berekening met woonlandfactor.
+Van 24 parameters is een eerdere waarde vastgelegd, vrijwel allemaal uit de voorganger van het Financieel Kompas. Van 36 parameters is een datum van laatste wijziging bekend die binnen de laatste vijf jaar valt. Van 8 parameters is een invoeringsdatum bekend. Van 1 parameter is vastgelegd dat zij is vervallen en door welke grootheid zij is opgevolgd: de oude forfaitaire CAK-benadering van 4.500 euro per jaar, opgevolgd door de opgebouwde berekening met woonlandfactor.
 
 ## Wat het register nog niet weet
 
 De gemiddelde en mediane bestaansduur per categorie kan Peil niet uit zijn eigen gegevens berekenen. Daarvoor is van te weinig grootheden een invoeringsdatum bekend: 8 van de 210, en die acht liggen allemaal in Frankrijk. Een gemiddelde over acht waarnemingen uit een enkel land zegt niets over de zeven categorieën. Peil publiceert dat getal daarom niet.
 
-Hetzelfde geldt voor het aandeel geboren en gestorven in de laatste vijf jaar. Uit de gegevens blijkt alleen dat er in die periode twee grootheden zijn bijgekomen, de terugname van afschrijvingen bij gemeubileerde verhuur per 15 februari 2025 en het prélèvement de solidarité in zijn huidige vorm per 2019, en dat er een is vervallen. Dat is geen steekproef maar een toevallige vangst van wat in de repo's stond.
+Hetzelfde geldt voor het aandeel geboren en gestorven in de laatste vijf jaar. Uit de gegevens blijkt alleen dat er in die periode twee grootheden zijn bijgekomen, de terugname van afschrijvingen bij gemeubileerde verhuur per 15 februari 2025 en het prélèvement de solidarité in zijn huidige vorm per 2019, en dat er een is vervallen. Dat is geen steekproef maar een toevallige vangst van wat de aangesloten tools toevallig hadden vastgelegd.
 
 ## Indicatief beeld, te verifiëren
 
 Wat volgt is een inschatting uit eigen kennis van het gebied. Het staat hier omdat de opdracht om een beeld per categorie vraagt, en het staat er nadrukkelijk als **indicatief, te verifiëren**. In het register zelf staan geen aannames: daar heeft iedere waarde een bron of geen waarde.
 
-- **NL fiscaal.** Indicatief, te verifiëren: vrijwel alles verandert jaarlijks per 1 januari, de bestaansduur van de grootheden zelf is lang, orde tien tot dertig jaar. Box 3 is de uitzondering: de forfaitaire rendementen zijn sinds 2023 meermalen van vorm veranderd en de hele grondslag staat op de nominatie om te worden vervangen. De voorganger `financieel-kompas` rekende nog met een enkel forfaitair rendement, de huidige versie met drie. Dat is binnen twee edities een structuurwijziging, geen tariefwijziging.
+- **NL fiscaal.** Indicatief, te verifiëren: vrijwel alles verandert jaarlijks per 1 januari, de bestaansduur van de grootheden zelf is lang, orde tien tot dertig jaar. Box 3 is de uitzondering: de forfaitaire rendementen zijn sinds 2023 meermalen van vorm veranderd en de hele grondslag staat op de nominatie om te worden vervangen. De voorganger van het Financieel Kompas rekende nog met een enkel forfaitair rendement, de huidige versie met drie. Dat is binnen twee edities een structuurwijziging, geen tariefwijziging.
 - **NL sociaal.** Indicatief, te verifiëren: percentages en maximumbijdrage-inkomens veranderen jaarlijks, de grootheden zelf bestaan sinds de invoering van de Zvw in 2006 en de Wlz in 2015. De AOW-bedragen veranderen twee keer per jaar, met het wettelijk minimumloon.
 - **FR fiscaal.** Indicatief, te verifiëren: het barema van de impôt sur le revenu wordt jaarlijks geïndexeerd, maar de tarieven zelf, 0, 11, 30, 41 en 45 procent, liggen al sinds 2015 vast. De abattements bewegen mee met de indexatie. De vastgoedgerelateerde heffingen bewegen nauwelijks: het tarief van 19 procent op de meerwaarde staat sinds 2011 en de degressieve aftrek sinds 2013. De IFI bestaat sinds 2018 en verving de ISF; dat is de duidelijkste sterfte en geboorte van het gebied.
 - **FR sociaal.** Indicatief, te verifiëren: de CSG-tarieven bewegen zelden, de RFR-grenzen die bepalen welk tarief geldt bewegen jaarlijks. De cotisations voor micro-entrepreneurs zijn het meest beweeglijk: het tarief voor prestations de services ging per 1 januari 2026 van 12,3 naar 21,2 procent, een verhoging van bijna driekwart in een keer.
@@ -46,4 +46,4 @@ Wat volgt is een inschatting uit eigen kennis van het gebied. Het staat hier omd
 
 Uit de tabel volgt de indeling van de ijkkalender. Het Nederlandse deel van het register verandert bijna volledig per 1 januari en is half december bekend: daar hoort een ijkmoment half december. Het Franse deel verandert voor een kwart jaarlijks, maar de fiches waarin die wijzigingen leesbaar worden verschijnen pas in het voorjaar: daar hoort een ijkmoment half april.
 
-De categorieën die daarbuiten vallen, vastgoedtransactiekosten en overheidsgekaderde verzekeringen, bewegen onregelmatig. Voor die twee is een ijkmoment weinig waard; daar werkt Peil met de aangekondigde wijziging en met de einddatum van de geldigheid. Beide velden staan in het schema en beide voeden de waarschuwing `gaat_veranderen` zodra de datum binnen negentig dagen ligt.
+De categorieën die daarbuiten vallen, vastgoedtransactiekosten en overheidsgekaderde verzekeringen, bewegen onregelmatig. Voor die twee is een ijkmoment weinig waard; daar werkt Peil met de aangekondigde wijziging en met de einddatum van de geldigheid. Beide staan bij de parameter vastgelegd en beide zetten de melding dat er een wijziging aankomt zodra de datum binnen negentig dagen ligt.

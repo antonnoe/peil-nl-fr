@@ -1,13 +1,13 @@
 {
  "meta": {
   "titel": "Peil, openbaar parameterregister NL-FR",
-  "versie": "1.0.1",
+  "versie": "1.0.2",
   "versiedatum": "2026-09-16",
   "peildatum": "2026-09-16",
   "licentie": "CC BY 4.0",
-  "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+  "bronregel": "Peil, parameterregister NL-FR, een uitgave van Communities Abroad, versie 1.0.2, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
   "laag": "documentenregister",
-  "stand": "leeg: in taak 1 is alleen het schema opgeleverd. De inventarisatie van de handboeken en PDF's van Café Claude valt buiten deze taak."
+  "stand": "leeg: de opzet ligt vast, het vullen van dit register is voorzien voor een volgende uitgave van Peil."
  },
  "documenten": []
 }

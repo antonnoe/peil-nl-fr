@@ -1,0 +1,68 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.ir.abattement_pensioen",
+  "naam_nl": "Abattement op pensioen: tarief, minimum en maximum",
+  "naam_fr": "Abattement de 10 pour cent sur les pensions",
+  "naam_officieel": "Abattement de 10 pour cent, art. 158-5 CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.ir",
+   "naam": "Impôt sur le revenu",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "abattement",
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": {
+   "tarief": 0.1,
+   "minimum_per_persoon": 454,
+   "maximum_per_huishouden": 4439
+  },
+  "waarde_weergave": "10 procent, minimaal 454 euro per persoon en maximaal 4.439 euro per huishouden",
+  "eenheid": "fractie en EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F415",
+  "bron_kenmerk": "service-public.fr, fiche F415, Impôt sur le revenu: déclarer les pensions de retraite",
+  "bronsoort": "secundair: samenvattende fiche van service-public.fr, art. 158-5 CGI niet zelf gelezen",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-04-15",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "service-public.fr werkt de fiche bij in april",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:190-192",
+    "waarde_in_tool": "0,1 / 454 / 4439",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Minimum geldt per pensioengerechtigde, maximum per fiscaal huishouden. Het plafond wordt toegepast op de som van de per persoon berekende aftrekken.",
+  "kandidaat": false
+ }
+}

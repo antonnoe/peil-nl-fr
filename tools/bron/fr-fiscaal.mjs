@@ -62,7 +62,7 @@ export const FR_FISCAAL = [
   reg: 'fr.ps', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   freq: 'zelden',
   in: [[ 'financieel-kompas-ai', 'config.json:81', '0,186', false ]],
-  opm: 'Het bestand zet het tarief op roerend inkomen op 0,186 tegenover 0,172 op onroerend inkomen. Voor dat onderscheid staat geen bron in de repo. Verificatie tegen art. L136-6 en L136-7 CSS is nodig voordat hier een registerwaarde komt.' },
+  opm: 'Het bestand zet het tarief op roerend inkomen op 0,186 tegenover 0,172 op onroerend inkomen. Voor dat onderscheid staat bij de tool geen bron. Verificatie tegen art. L136-6 en L136-7 CSS is nodig voordat hier een registerwaarde komt.' },
 
 { id: 'p.fr.ps.opbouw', nl: 'Opbouw van de prélèvements sociaux', fr: 'Composition des prélèvements sociaux', off: null,
   reg: 'fr.ps', klasse: 'overheid_vastgesteld', effect: 'informatief', eh: 'fractie', jaar: '2026',
@@ -88,7 +88,7 @@ export const FR_FISCAAL = [
   freq: 'onregelmatig', lw: '2026-01-01', hist: [{ waarde: '0,123', geldig_jaar: '2025', herkomst: 'cafeclaude, lib/domains/prompts/geld.ts:84-85', opmerking: 'verhoogd naar 21,2 procent per 1 januari 2026' }],
   in: [[ 'financieel-kompas-ai', 'config.json:78', '0,212', false ],
        [ 'cafeclaude', 'lib/domains/prompts/geld.ts:84-85', '21,2 procent per 1 januari 2026', false ]],
-  opm: 'Het handboek beschrijft de verhoging van 12,3 naar 21,2 procent per 1 januari 2026. Geen van beide repo\'s noemt een verificatiedatum bij de waarde.' },
+  opm: 'Het handboek beschrijft de verhoging van 12,3 naar 21,2 procent per 1 januari 2026. Geen van beide tools noemt een verificatiedatum bij de waarde.' },
 
 { id: 'p.fr.sociaal.lasten_winst_verhuur', nl: 'Sociale lasten op winst uit verhuur', fr: 'Charges sociales sur revenus locatifs meublés', off: null,
   reg: 'fr.sociaal', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
@@ -209,13 +209,13 @@ export const FR_FISCAAL = [
   freq: 'onregelmatig',
   in: [[ 'cafeclaude', 'lib/domains/prompts/geld.ts:67-69', 'meublé niet geclassificeerd 15000 bij 30 procent; geclassificeerd en chambres d\'hôtes 77700 bij 50 procent', false ],
        [ 'gitekompas-fr', 'index.html:864-867', 'meublé non classé 30 procent bij 15000; meublé classé 50 procent bij 77700; chambre d\'hôtes 50 procent bij 77700; verhuur eigen woning 30 procent bij 15000', false ]],
-  opm: 'Handboek en GiteKompas zijn onderling gelijk. GiteKompas noemt zijn eigen waarden V1 en indicatief.' },
+  opm: 'Handboek en GîteKompas zijn onderling gelijk. GîteKompas noemt zijn eigen waarden V1 en indicatief.' },
 
-{ id: 'p.fr.gite.degressieve_reeks', nl: 'Degressieve reeks per bezitsjaar in GiteKompas', fr: 'Série dégressive par année de détention', off: null,
+{ id: 'p.fr.gite.degressieve_reeks', nl: 'Degressieve reeks per bezitsjaar in GîteKompas', fr: 'Série dégressive par année de détention', off: null,
   reg: 'fr.gite', klasse: 'indicatief', effect: 'verlaagt_last', vt: 'degressieve_aftrek', eh: 'procent', jaar: '2026',
   freq: 'onbekend',
   in: [[ 'gitekompas-fr', 'index.html:1177-1179', 'jaar 6: 75 procent; jaar 7: 50 procent; jaar 8: 25 procent', false ]],
-  opm: 'De tool noemt deze reeks zelf indicatief. Welke wettelijke regeling erachter zit, is in de repo niet vastgelegd.' },
+  opm: 'De tool noemt deze reeks zelf indicatief. Welke wettelijke regeling erachter zit, is bij de tool niet vastgelegd.' },
 
 { id: 'p.fr.gite.minimumheffing_niet_residenten', nl: 'Minimumheffing niet-residenten, bandbreedte', fr: 'Taux minimum d\'imposition des non-résidents', off: 'Taux minimum, art. 197 A CGI',
   reg: 'fr.gite', klasse: 'indicatief', effect: 'verhoogt_last', eh: 'procent', jaar: '2026',
@@ -248,7 +248,7 @@ export const FR_FISCAAL = [
   in: [[ 'financieel-kompas-ai', 'config.json:246', '12000', true ],
        [ 'ouderenzorg-fr', 'if-dossier/dossier-skelet.md:127', '6000 tot 10000', true ]],
   uitz: ['Het plafond kent verhogingen per kind ten laste en bij handicap. Welke variant in een concreet geval geldt, hoort bij een belastingadviseur.'],
-  opm: 'De twee tools gebruiken verschillende plafonds voor dezelfde grootheid. Het percentage is wel gelijk. Welk plafond bedoeld is, basisplafond of een verhoogde variant, staat in geen van beide repo\'s.' },
+  opm: 'De twee tools gebruiken verschillende plafonds voor dezelfde grootheid. Het percentage is wel gelijk. Welk plafond bedoeld is, basisplafond of een verhoogde variant, staat bij geen van beide tools.' },
 
 { id: 'p.fr.ir.boete_niet_aangifte_buitenlandse_rekening', nl: 'Boete niet-aangifte buitenlandse rekening', fr: 'Amende pour compte étranger non déclaré', off: 'Amende, art. 1736 IV CGI, formulaire 3916',
   reg: 'fr.ir', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'EUR/jaar', jaar: '2026',
@@ -271,11 +271,11 @@ export const FR_FISCAAL = [
   reg: 'fr.lmp', klasse: 'overheid_vastgesteld', effect: 'bepaalt_toepasselijkheid', vt: 'drempel', eh: 'EUR', jaar: '2026',
   freq: 'zelden',
   in: [[ 'cafeclaude', 'lib/audit/prompts/ondernemen.ts:103', '23000 euro', false ]],
-  opm: 'De tweede voorwaarde, dat de huuropbrengst de overige beroepsinkomsten overtreft, staat niet als aparte grootheid in de repo.' },
+  opm: 'De tweede voorwaarde, dat de huuropbrengst de overige beroepsinkomsten overtreft, staat niet als aparte grootheid bij de tool.' },
 
 { id: 'p.fr.tva.tarief_algemeen', nl: 'Btw-tarief Frankrijk, algemeen', fr: 'Taux normal de TVA', off: 'Taux normal, art. 278 CGI',
   reg: 'fr.tva', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'procent', jaar: '2026',
   freq: 'zelden', ingev: '2014-01-01',
   in: [[ 'Vastgoedtransactie', 'calc.js:104', '20,0', false ]],
-  opm: 'Vastgoedtransactie noteert bij deze post uitdrukkelijk dat er geen eigen wetsartikel is: het algemene tarief geldt omdat de emolumenten een dienst zijn. De niet-aangesloten btw-tool ca-btw-oss-tool voert hetzelfde tarief met bron en datum; die repo is niet aangesloten, dus dat telt hier niet als verificatie.' },
+  opm: 'Vastgoedtransacties in Frankrijk noteert bij deze post uitdrukkelijk dat er geen eigen wetsartikel is: het algemene tarief geldt omdat de emolumenten een dienst zijn. Een niet-aangesloten btw-tool voert hetzelfde tarief met bron en datum; die tool is niet aangesloten, dus dat telt hier niet als verificatie.' },
 ];

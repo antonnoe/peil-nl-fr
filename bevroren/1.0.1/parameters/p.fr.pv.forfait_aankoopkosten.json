@@ -1,0 +1,73 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.pv.forfait_aankoopkosten",
+  "naam_nl": "Forfait aankoopkosten bij de meerwaarde",
+  "naam_fr": "Forfait des frais d'acquisition",
+  "naam_officieel": "Art. 150 VB II-3 CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.pv",
+   "naam": "Plus-value immobilière des particuliers",
+   "belastingtype": "meerwaardeheffing",
+   "socialelastentype": null,
+   "vrijstellingstype": "abattement",
+   "transactionele_basis": "meerwaarde"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": 7.5,
+  "waarde_weergave": "7,5 procent van de aankoopprijs",
+  "eenheid": "procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051202577",
+  "bron_kenmerk": "art. 150 VB II-3 CGI, versie in werking sinds 21 februari 2026",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": "2026-02-21",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:153",
+    "waarde_in_tool": "7,5",
+    "afwijkend": false
+   },
+   {
+    "repo": "Plus-Value-Calculator",
+    "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+    "locatie": "generate_pdf.py:113",
+    "waarde_in_tool": "0,075",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [
+   "Bij verkrijging om niet, door erfenis of schenking, bestaat het forfait niet: dan geldt de waarde die voor de schenk- of erfbelasting is aangehouden. Wie werkelijke kosten hoger inschat, kan die op bewijsstukken opvoeren; leg dat voor aan de notaris."
+  ],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

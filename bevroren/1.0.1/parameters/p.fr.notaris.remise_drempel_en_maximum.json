@@ -1,0 +1,67 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.notaris.remise_drempel_en_maximum",
+  "naam_nl": "Wettelijke korting op de emolumenten",
+  "naam_fr": "Remise sur les émoluments du notaire",
+  "naam_officieel": "Remise, art. A444-174 Code de commerce",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.notaris",
+   "naam": "Émoluments et débours du notaire",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": "drempel",
+   "transactionele_basis": "akte"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": {
+   "vanaf": 100000,
+   "maximum_procent": 20
+  },
+  "waarde_weergave": "maximaal 20 procent over het deel van de grondslag vanaf 100.000 euro",
+  "eenheid": "EUR en procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/achat-dun-bien-immobilier-quels-frais-de-notaire-devez-vous-payer",
+  "bron_kenmerk": "wettelijke korting op de emolumenten, maximaal 20 procent vanaf 100.000 euro",
+  "bronsoort": "secundair: voorlichtingspagina van economie.gouv.fr, het wetsartikel niet zelf gelezen",
+  "instantie": "Ministère de l'économie",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "meerjaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:139-140",
+    "waarde_in_tool": "vanaf 100000 euro, maximaal 20 procent",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De notaris is niet verplicht de korting te geven. Wie erop rekent, vraagt er vooraf naar.",
+  "kandidaat": false
+ }
+}

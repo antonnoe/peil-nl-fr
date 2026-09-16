@@ -1,0 +1,149 @@
+{
+ "meta": {
+  "titel": "Koppeling van interne repositorynaam naar openbare toolnaam en openbaar adres",
+  "toelichting": "Intern bestand. De openbare site toont uitsluitend het veld naam en, als het gevuld is, het veld url. De repositorynaam, de vindplaats en de motivering blijven binnen en worden nooit op een pagina gezet. Een url staat hier alleen als hij aantoonbaar in de betreffende repository is gevonden; de vindplaats staat erbij. Is er geen aantoonbaar adres, dan blijft url leeg en toont de site alleen de naam.",
+  "peildatum": "2026-09-16",
+  "vindplaatsen": "homepage-veld van de repository, README, of een vercel- of siteconfiguratie in de repository"
+ },
+ "tools": [
+  {
+   "repo": "financieel-kompas-ai",
+   "naam": "Financieel Kompas",
+   "url": "https://financieel-kompas-ai.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository"
+  },
+  {
+   "repo": "cafeclaude",
+   "naam": "Café Claude",
+   "url": "https://cafeclaude.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository; de README noemt daarnaast het domein cafeclaude.fr"
+  },
+  {
+   "repo": "Vastgoedtransactie",
+   "naam": "Vastgoedtransacties in Frankrijk",
+   "url": null,
+   "url_vindplaats": "geen: de README noemt geen openbaar adres en het homepage-veld is in deze sessie niet leesbaar"
+  },
+  {
+   "repo": "Plus-Value-Calculator",
+   "naam": "Franse Meerwaarde Calculator",
+   "url": "https://plus-value-calculator.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository"
+  },
+  {
+   "repo": "zorgkompas-frankrijk",
+   "naam": "ZorgKompas Frankrijk",
+   "url": null,
+   "url_vindplaats": "geen: de repository bevat geen README en geen siteconfiguratie met een adres; de naam komt uit de paginatitel van index.html"
+  },
+  {
+   "repo": "erf-en-schenkingsrecht-nl-fr",
+   "naam": "Erf- en schenkingsrecht NL/FR",
+   "url": null,
+   "url_vindplaats": "geen: de naam komt uit de paginatitel van index.html, een openbaar adres staat er niet bij"
+  },
+  {
+   "repo": "briefhulp-fr",
+   "naam": "Briefhulp FR",
+   "url": "https://briefhulp-fr.vercel.app",
+   "url_vindplaats": "README, regel Live, en het homepage-veld van de repository"
+  },
+  {
+   "repo": "gitekompas-fr",
+   "naam": "GîteKompas FR",
+   "url": null,
+   "url_vindplaats": "geen: de naam komt uit de paginatitel van index.html, een openbaar adres staat er niet bij"
+  },
+  {
+   "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+   "naam": "Subsidie-routeplanner energierenovatie",
+   "url": null,
+   "url_vindplaats": "geen: de README noemt geen openbaar adres"
+  },
+  {
+   "repo": "e-facturatie-frankrijk",
+   "naam": "E-facturatie Frankrijk",
+   "url": "https://e-facturatie-frankrijk.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository"
+  },
+  {
+   "repo": "woningzoeker-frankrijk",
+   "naam": "Woningzoeker Frankrijk",
+   "url": "https://woningzoeker-frankrijk.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository"
+  },
+  {
+   "repo": "dossier-elektriciteit-if",
+   "naam": "Dossier Elektriciteit",
+   "url": null,
+   "url_vindplaats": "geen: de README noemt een beoogd adres op Infofrankrijk.com maar meldt uitdrukkelijk dat er vanuit deze repository nog niet wordt gepubliceerd"
+  },
+  {
+   "repo": "energieportaal",
+   "naam": "EnergiePortaal",
+   "url": "https://energieportaal.vercel.app",
+   "url_vindplaats": "README, regel URL"
+  },
+  {
+   "repo": "if-mobiel",
+   "naam": "Infopoche",
+   "url": null,
+   "url_vindplaats": "geen: de README noemt infopoche.fr als vastgelegd domein, niet als adres waarop de app wordt uitgeleverd"
+  },
+  {
+   "repo": "warmteverlies-calculator",
+   "naam": "Warmteverlies-calculator",
+   "url": null,
+   "url_vindplaats": "geen: de repository is gearchiveerd en stuurt al haar verkeer door naar het EnergiePortaal"
+  },
+  {
+   "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "naam": "Energiecalculator Frankrijk",
+   "url": null,
+   "url_vindplaats": "geen: de README bevat alleen de titel"
+  },
+  {
+   "repo": "erfrecht-en-testament",
+   "naam": "Erfrechtgids Frankrijk",
+   "url": null,
+   "url_vindplaats": "geen: de naam komt uit de paginatitel van index.html, een openbaar adres staat er niet bij"
+  },
+  {
+   "repo": "ouderenzorg-fr",
+   "naam": "Ouderenzorg FR",
+   "url": null,
+   "url_vindplaats": "geen: de README noemt geen openbaar adres"
+  },
+  {
+   "repo": "nlfr-ai-agent",
+   "naam": "AI-assistent Nederlanders.fr",
+   "url": "https://nlfr-ai-agent.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository"
+  },
+  {
+   "repo": "if-tools-api",
+   "naam": "IF Tools API",
+   "url": "https://if-tools-api.vercel.app",
+   "url_vindplaats": "homepage-veld van de repository"
+  },
+  {
+   "repo": "bouwvergunningwijzer-frankrijk",
+   "naam": "Vergunningwijzer Frankrijk",
+   "url": null,
+   "url_vindplaats": "geen: het homepage-veld is leeg en de README noemt geen openbaar adres"
+  },
+  {
+   "repo": "klussen-in-frankrijk",
+   "naam": "Klussen in Frankrijk",
+   "url": null,
+   "url_vindplaats": "geen: deze bron levert alleen het feitenschema en geen parameters"
+  },
+  {
+   "repo": "financieel-kompas",
+   "naam": "Financieel Kompas",
+   "voorganger": true,
+   "url": null,
+   "url_vindplaats": "geen: dit is de voorganger van het Financieel Kompas en is niet aangesloten"
+  }
+ ]
+}

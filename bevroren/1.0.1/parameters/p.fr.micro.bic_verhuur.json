@@ -1,0 +1,71 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.micro.bic_verhuur",
+  "naam_nl": "Micro-BIC verhuur: plafond en abattement per type",
+  "naam_fr": "Micro-BIC location: plafond et abattement par type",
+  "naam_officieel": "Art. 50-0 CGI, meublés de tourisme et chambres d'hôtes",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.micro",
+   "naam": "Régime micro-entreprise",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "abattement",
+   "transactionele_basis": "omzet"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR en procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onregelmatig",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Café Claude",
+    "locatie": "lib/domains/prompts/geld.ts:67-69",
+    "waarde_in_tool": "meublé niet geclassificeerd 15000 bij 30 procent; geclassificeerd en chambres d'hôtes 77700 bij 50 procent",
+    "afwijkend": false
+   },
+   {
+    "repo": "gitekompas-fr",
+    "cockpit_onderdeel": "IF, GiteKompas",
+    "locatie": "index.html:864-867",
+    "waarde_in_tool": "meublé non classé 30 procent bij 15000; meublé classé 50 procent bij 77700; chambre d'hôtes 50 procent bij 77700; verhuur eigen woning 30 procent bij 15000",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Handboek en GiteKompas zijn onderling gelijk. GiteKompas noemt zijn eigen waarden V1 en indicatief.",
+  "kandidaat": false
+ }
+}

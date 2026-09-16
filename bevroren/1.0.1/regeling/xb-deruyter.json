@@ -1,0 +1,63 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "xb.deruyter",
+  "naam": "Arrest De Ruyter, vrijstelling CSG en CRDS",
+  "belastingtype": null,
+  "socialelastentype": "prelevement_social",
+  "vrijstellingstype": null,
+  "transactionele_basis": "meerwaarde"
+ },
+ "aantal": 2,
+ "parameters": [
+  {
+   "id": "p.xb.deruyter.csg_crds_geschrapt",
+   "naam_nl": "CSG en CRDS die bij De Ruyter vervallen",
+   "naam_fr": "CSG et CRDS écartées dans la situation De Ruyter",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.deruyter",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.deruyter.csg_crds_geschrapt.json"
+  },
+  {
+   "id": "p.xb.deruyter.prelevement_solidarite",
+   "naam_nl": "Prélèvement de solidarité bij De Ruyter",
+   "naam_fr": "Prélèvement de solidarité, situation De Ruyter",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.deruyter",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "7,5 procent",
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-08-12",
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "Vastgoedtransactie",
+    "cafeclaude",
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.deruyter.prelevement_solidarite.json"
+  }
+ ]
+}

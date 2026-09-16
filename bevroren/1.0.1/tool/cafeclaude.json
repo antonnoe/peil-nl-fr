@@ -1,0 +1,1906 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "cafeclaude",
+ "cockpit_onderdeel": "CC, Café Claude",
+ "aantal": 40,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.notaris.vuistregel_kosten_ancien",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.vuistregel_kosten_ancien",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Vuistregel notariskosten bestaande bouw: cafeclaude 7 tot 8 procent ancien, 2 tot 3 procent neuf; if-tools-api circa 7 tot 8 procent bij bestaande bouw; woningzoeker-frankrijk circa 8 procent, zonder onderscheid.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts:52"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.secu.brss_consult_medecin_traitant",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.brss_consult_medecin_traitant",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Base de remboursement consult huisarts: zorgkompas-frankrijk 30,00; cafeclaude 26,50 sinds november 2024.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:19-21"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:59"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.secu.forfait_journalier",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.forfait_journalier",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Forfait journalier hospitalier: zorgkompas-frankrijk 20,00 euro per dag, tarief 2024/2025; cafeclaude 23 euro ziekenhuis en 17 euro psychiatrie sinds 1 maart 2026.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:100 en 155"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:60"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.secu.franchise_medicale",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.franchise_medicale",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Franchise médicale per medicijn: cafeclaude 0,50 euro per medicijn; cafeclaude 1 euro per doosje, verdubbeld per 1 mei 2024.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:146-147"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.succ.abattement_niet_verwanten",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_niet_verwanten",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Vrijstelling en tarief niet-verwanten: cafeclaude 1594 euro vrijstelling, daarna 60 procent; erfrecht-en-testament partner zonder huwelijk of PACS: vrijstelling 1594 euro.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.acre.reductie_en_duur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.acre.reductie_en_duur",
+   "omschrijving": "1 tool rekent met een waarde voor ACRE: reductie en duur die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:98-100"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.assur.bonus_malus_auto",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.assur.bonus_malus_auto",
+   "omschrijving": "1 tool rekent met een waarde voor Bonus-malus autoverzekering die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:86"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.av.abattements",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.av.abattements",
+   "omschrijving": "1 tool rekent met een waarde voor Assurance vie, abattements die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/verzekeren.ts:62-65"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.cvae.drempel",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.cvae.drempel",
+   "omschrijving": "1 tool rekent met een waarde voor CVAE-drempel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:72"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.erf.reserve_hereditaire",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.erf.reserve_hereditaire",
+   "omschrijving": "1 tool rekent met een waarde voor Réserve héréditaire per aantal kinderen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:54"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ifi.drempel",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ifi.drempel",
+   "omschrijving": "2 tools rekent met een waarde voor IFI-drempel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:217"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:110"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+   "omschrijving": "1 tool rekent met een waarde voor Boete niet-aangifte buitenlandse rekening die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:10"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.decote",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.decote",
+   "omschrijving": "2 tools rekent met een waarde voor Décote: drempels, forfaits en percentage die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:206-210"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.pfu_tarief",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.pfu_tarief",
+   "omschrijving": "2 tools rekent met een waarde voor PFU, inkomstenbelastingdeel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:187"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:143"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.schijven",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.schijven",
+   "omschrijving": "2 tools rekent met een waarde voor Schijven en tarieven impôt sur le revenu die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:157-177"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.lmp.drempel",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.lmp.drempel",
+   "omschrijving": "1 tool rekent met een waarde voor LMP-drempel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:103"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.abattement_per_categorie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.abattement_per_categorie",
+   "omschrijving": "1 tool rekent met een waarde voor Abattement micro per categorie die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:85"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.bic_verhuur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.bic_verhuur",
+   "omschrijving": "2 tools rekent met een waarde voor Micro-BIC verhuur: plafond en abattement per type die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:67-69"
+    },
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:864-867"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.plafonds",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.plafonds",
+   "omschrijving": "1 tool rekent met een waarde voor Omzetplafonds micro-entreprise per categorie die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:89"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.notaris.vuistregel_kosten_ancien",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.vuistregel_kosten_ancien",
+   "omschrijving": "3 tools rekent met een waarde voor Vuistregel notariskosten bestaande bouw die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts:52"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ps.opbouw",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ps.opbouw",
+   "omschrijving": "1 tool rekent met een waarde voor Opbouw van de prélèvements sociaux die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.brss_consult_medecin_traitant",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.brss_consult_medecin_traitant",
+   "omschrijving": "2 tools rekent met een waarde voor Base de remboursement consult huisarts die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:19-21"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:59"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.forfait_journalier",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.forfait_journalier",
+   "omschrijving": "2 tools rekent met een waarde voor Forfait journalier hospitalier die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:100 en 155"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:60"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.franchise_medicale",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.franchise_medicale",
+   "omschrijving": "2 tools rekent met een waarde voor Franchise médicale per medicijn die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:146-147"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.franchise_transport",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.franchise_transport",
+   "omschrijving": "1 tool rekent met een waarde voor Franchise medisch transport die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:117"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.participation_forfaitaire",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.participation_forfaitaire",
+   "omschrijving": "2 tools rekent met een waarde voor Participation forfaitaire per consult die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:117"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_had_en_infirmiere",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.vergoeding_had_en_infirmiere",
+   "omschrijving": "1 tool rekent met een waarde voor Vergoeding thuisziekenhuis en verpleging aan huis die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:112-113"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_zonder_medecin_traitant",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.vergoeding_zonder_medecin_traitant",
+   "omschrijving": "2 tools rekent met een waarde voor Vergoeding buiten het parcours de soins die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarioEngine.js:96"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:88"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_winst_diensten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.sociaal.lasten_winst_diensten",
+   "omschrijving": "2 tools rekent met een waarde voor Sociale lasten op winst uit diensten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:78"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:84-85"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_broers_zussen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_broers_zussen",
+   "omschrijving": "1 tool rekent met een waarde voor Vrijstelling en tarief broers en zussen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_niet_verwanten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_niet_verwanten",
+   "omschrijving": "2 tools rekent met een waarde voor Vrijstelling en tarief niet-verwanten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.hernieuwingstermijn",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.hernieuwingstermijn",
+   "omschrijving": "1 tool rekent met een waarde voor Hernieuwingstermijn van de schenkingsvrijstelling die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:57"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.urssaf.drempel_chambres_hotes",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.urssaf.drempel_chambres_hotes",
+   "omschrijving": "1 tool rekent met een waarde voor Urssaf-drempel chambres d'hôtes die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:75-76"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.urssaf.drempel_meuble_tourisme",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.urssaf.drempel_meuble_tourisme",
+   "omschrijving": "1 tool rekent met een waarde voor Urssaf-drempel verhuur meublé de tourisme die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:75-76"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.zorg.beschermingsmaatregel_kosten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.zorg.beschermingsmaatregel_kosten",
+   "omschrijving": "1 tool rekent met een waarde voor Rechterlijke beschermingsmaatregel, doorlooptijd en kosten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:151"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.zorg.mandat_protection_future_kosten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.zorg.mandat_protection_future_kosten",
+   "omschrijving": "1 tool rekent met een waarde voor Mandat de protection future, kosten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.zorg.teleassistentie_maandprijs",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.zorg.teleassistentie_maandprijs",
+   "omschrijving": "1 tool rekent met een waarde voor Teleassistentie, maandprijs die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:115"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.leges.paspoort_verlengen_buitenland",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.leges.paspoort_verlengen_buitenland",
+   "omschrijving": "1 tool rekent met een waarde voor Nederlands paspoort verlengen in Frankrijk die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/bureaucratie.ts:44"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.xb.deruyter.csg_crds_geschrapt",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.xb.deruyter.csg_crds_geschrapt",
+   "omschrijving": "2 tools rekent met een waarde voor CSG en CRDS die bij De Ruyter vervallen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "ARGUMENTATIE.md:19"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.acre.reductie_en_duur",
+   "naam_nl": "ACRE: reductie en duur",
+   "naam_fr": "ACRE: taux et durée",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.acre",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent en maanden",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.acre.reductie_en_duur.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:98-100",
+     "waarde_in_tool": "50 procent gedurende 12 maanden",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.assur.bonus_malus_auto",
+   "naam_nl": "Bonus-malus autoverzekering",
+   "naam_fr": "Coefficient de réduction-majoration",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.assur",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "factor en procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.assur.bonus_malus_auto.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:86",
+     "waarde_in_tool": "start 1,00; min 5 procent per schadevrij jaar tot 0,50; plus 25 procent per ongeval tot 3,50",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.av.abattements",
+   "naam_nl": "Assurance vie, abattements",
+   "naam_fr": "Assurance vie, abattements",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.av",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.av.abattements.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/verzekeren.ts:62-65",
+     "waarde_in_tool": "152500 per begunstigde tot 70 jaar; 30500 globaal na 70 jaar; IR-abattement 4600 alleen of 9200 paar na 8 jaar",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.cvae.drempel",
+   "naam_nl": "CVAE-drempel",
+   "naam_fr": "Seuil de la CVAE",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.cvae",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.cvae.drempel.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:72",
+     "waarde_in_tool": "152500 euro omzet",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.erf.reserve_hereditaire",
+   "naam_nl": "Réserve héréditaire per aantal kinderen",
+   "naam_fr": "Réserve héréditaire selon le nombre d'enfants",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.erf",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.erf.reserve_hereditaire.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:54",
+     "waarde_in_tool": "1 kind 50 procent, 2 kinderen twee derde, 3 of meer kinderen drie kwart",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ifi.drempel",
+   "naam_nl": "IFI-drempel",
+   "naam_fr": "Seuil d'assujettissement à l'IFI",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.ifi",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ifi.drempel.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:110",
+     "waarde_in_tool": "1,3 miljoen euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+   "naam_nl": "Boete niet-aangifte buitenlandse rekening",
+   "naam_fr": "Amende pour compte étranger non déclaré",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.ir",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ir.boete_niet_aangifte_buitenlandse_rekening.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:10",
+     "waarde_in_tool": "1500 euro per jaar",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ir.decote",
+   "naam_nl": "Décote: drempels, forfaits en percentage",
+   "naam_fr": "Décote de l'impôt sur le revenu",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.ir",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ir.decote.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55",
+     "waarde_in_tool": "celibataire 1982 (897 min 45,25 procent), couple 3277 (1483 min 45,25 procent)",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ir.pfu_tarief",
+   "naam_nl": "PFU, inkomstenbelastingdeel",
+   "naam_fr": "Prélèvement forfaitaire unique, part impôt sur le revenu",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.ir",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ir.pfu_tarief.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:143",
+     "waarde_in_tool": "12,8 procent, totaal 30 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ir.schijven",
+   "naam_nl": "Schijven en tarieven impôt sur le revenu",
+   "naam_fr": "Barème de l'impôt sur le revenu",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.ir",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ir.schijven.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55",
+     "waarde_in_tool": "11600 / 29579 / 84577 / 181917",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.lmp.drempel",
+   "naam_nl": "LMP-drempel",
+   "naam_fr": "Seuil du statut de loueur en meublé professionnel",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.lmp",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.lmp.drempel.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:103",
+     "waarde_in_tool": "23000 euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.micro.abattement_per_categorie",
+   "naam_nl": "Abattement micro per categorie",
+   "naam_fr": "Abattement micro par catégorie",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.micro",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.micro.abattement_per_categorie.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:85",
+     "waarde_in_tool": "71 procent ventes, 50 procent prestations de services, 30 procent meublé non classé",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.micro.bic_verhuur",
+   "naam_nl": "Micro-BIC verhuur: plafond en abattement per type",
+   "naam_fr": "Micro-BIC location: plafond et abattement par type",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.micro",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "gitekompas-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.micro.bic_verhuur.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:67-69",
+     "waarde_in_tool": "meublé niet geclassificeerd 15000 bij 30 procent; geclassificeerd en chambres d'hôtes 77700 bij 50 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.micro.plafonds",
+   "naam_nl": "Omzetplafonds micro-entreprise per categorie",
+   "naam_fr": "Plafonds de chiffre d'affaires du régime micro",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.micro",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.micro.plafonds.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:89",
+     "waarde_in_tool": "ventes 188700, prestations de services BIC 77700, BNC 77700",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.notaris.vuistregel_kosten_ancien",
+   "naam_nl": "Vuistregel notariskosten bestaande bouw",
+   "naam_fr": "Règle empirique des frais de notaire, ancien",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.notaris",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "if-tools-api",
+    "woningzoeker-frankrijk"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.notaris.vuistregel_kosten_ancien.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46",
+     "waarde_in_tool": "7 tot 8 procent ancien, 2 tot 3 procent neuf",
+     "afwijkend": true
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ps.opbouw",
+   "naam_nl": "Opbouw van de prélèvements sociaux",
+   "naam_fr": "Composition des prélèvements sociaux",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.ps",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ps.opbouw.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108",
+     "waarde_in_tool": "CSG 9,2 plus CRDS 0,5 plus solidarité 7,5 is 17,2 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.ps.taux_global",
+   "naam_nl": "Prélèvements sociaux op vermogen, totaaltarief",
+   "naam_fr": "Prélèvements sociaux sur les revenus du patrimoine",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.ps",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "17,2 procent",
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-08-12",
+   "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "Vastgoedtransactie",
+    "Plus-Value-Calculator",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.ps.taux_global.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108",
+     "waarde_in_tool": "17,2",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.pv.tarief_ir",
+   "naam_nl": "Tarief inkomstenbelasting op de meerwaarde",
+   "naam_fr": "Taux d'impôt sur le revenu sur la plus-value",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.pv",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "19 procent",
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-08-12",
+   "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
+   "gebruikt_in": [
+    "Vastgoedtransactie",
+    "Plus-Value-Calculator",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.pv.tarief_ir.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:47",
+     "waarde_in_tool": "19 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.brss_consult_medecin_traitant",
+   "naam_nl": "Base de remboursement consult huisarts",
+   "naam_fr": "Base de remboursement, consultation du médecin traitant",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk",
+    "cafeclaude"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.secu.brss_consult_medecin_traitant.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:59",
+     "waarde_in_tool": "26,50 sinds november 2024",
+     "afwijkend": true
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.forfait_journalier",
+   "naam_nl": "Forfait journalier hospitalier",
+   "naam_fr": "Forfait journalier hospitalier",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR/dag",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk",
+    "cafeclaude"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.secu.forfait_journalier.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:60",
+     "waarde_in_tool": "23 euro ziekenhuis en 17 euro psychiatrie sinds 1 maart 2026",
+     "afwijkend": true
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.franchise_medicale",
+   "naam_nl": "Franchise médicale per medicijn",
+   "naam_fr": "Franchise médicale par boîte de médicaments",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "cafeclaude"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.secu.franchise_medicale.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68",
+     "waarde_in_tool": "0,50 euro per medicijn",
+     "afwijkend": true
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:146-147",
+     "waarde_in_tool": "1 euro per doosje, verdubbeld per 1 mei 2024",
+     "afwijkend": true
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.franchise_transport",
+   "naam_nl": "Franchise medisch transport",
+   "naam_fr": "Franchise sur le transport sanitaire",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.franchise_transport.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:117",
+     "waarde_in_tool": "4,00 euro per transport",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.participation_forfaitaire",
+   "naam_nl": "Participation forfaitaire per consult",
+   "naam_fr": "Participation forfaitaire",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.participation_forfaitaire.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:117",
+     "waarde_in_tool": "2,00 euro per artsbezoek",
+     "afwijkend": false
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68",
+     "waarde_in_tool": "2 euro per consult",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.vergoeding_had_en_infirmiere",
+   "naam_nl": "Vergoeding thuisziekenhuis en verpleging aan huis",
+   "naam_fr": "Taux de remboursement, HAD et infirmière libérale",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.vergoeding_had_en_infirmiere.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:112-113",
+     "waarde_in_tool": "HAD 80 procent of 100 procent bij ALD; infirmière 70 procent Secu plus 30 procent mutuelle",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.secu.vergoeding_zonder_medecin_traitant",
+   "naam_nl": "Vergoeding buiten het parcours de soins",
+   "naam_fr": "Taux de remboursement hors parcours de soins",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.vergoeding_zonder_medecin_traitant.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:88",
+     "waarde_in_tool": "30 procent in plaats van 70 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.sociaal.lasten_winst_diensten",
+   "naam_nl": "Sociale lasten op winst uit diensten",
+   "naam_fr": "Charges sociales sur prestations de services",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.sociaal",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.sociaal.lasten_winst_diensten.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:84-85",
+     "waarde_in_tool": "21,2 procent per 1 januari 2026",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.abattement_broers_zussen",
+   "naam_nl": "Vrijstelling en tarief broers en zussen",
+   "naam_fr": "Abattement et taux, frères et soeurs",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.abattement_broers_zussen.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56",
+     "waarde_in_tool": "15932 euro bij 35 tot 45 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.abattement_niet_verwanten",
+   "naam_nl": "Vrijstelling en tarief niet-verwanten",
+   "naam_fr": "Abattement et taux, non-parents",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.succ.abattement_niet_verwanten.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56",
+     "waarde_in_tool": "1594 euro vrijstelling, daarna 60 procent",
+     "afwijkend": true
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.abattement_per_kind",
+   "naam_nl": "Abattement per kind per ouder",
+   "naam_fr": "Abattement par enfant et par parent",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "100.000 euro per kind per ouder",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2025-12-18",
+   "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-beneficie-dun-abattement-sur-les-donations-et-successions",
+   "gebruikt_in": [
+    "erf-en-schenkingsrecht-nl-fr",
+    "cafeclaude",
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.abattement_per_kind.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56",
+     "waarde_in_tool": "100000 per ouder",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.hernieuwingstermijn",
+   "naam_nl": "Hernieuwingstermijn van de schenkingsvrijstelling",
+   "naam_fr": "Délai de rappel fiscal des donations",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "jaren",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.hernieuwingstermijn.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:57",
+     "waarde_in_tool": "15 jaar",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.urssaf.drempel_chambres_hotes",
+   "naam_nl": "Urssaf-drempel chambres d'hôtes",
+   "naam_fr": "Seuil Urssaf, chambres d'hôtes",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.urssaf",
+   "variabiliteitsklasse": "afgeleid",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2025",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.urssaf.drempel_chambres_hotes.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:75-76",
+     "waarde_in_tool": "6123 euro belastbaar",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.urssaf.drempel_meuble_tourisme",
+   "naam_nl": "Urssaf-drempel verhuur meublé de tourisme",
+   "naam_fr": "Seuil Urssaf, meublé de tourisme",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": "fr.urssaf",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.urssaf.drempel_meuble_tourisme.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:75-76",
+     "waarde_in_tool": "23000 euro bruto",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.zorg.beschermingsmaatregel_kosten",
+   "naam_nl": "Rechterlijke beschermingsmaatregel, doorlooptijd en kosten",
+   "naam_fr": "Mesure de protection judiciaire, délai et coût",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.zorg",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "maanden en EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.zorg.beschermingsmaatregel_kosten.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:151",
+     "waarde_in_tool": "3 tot 6 maanden, 200 tot 500 euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.zorg.mandat_protection_future_kosten",
+   "naam_nl": "Mandat de protection future, kosten",
+   "naam_fr": "Mandat de protection future, coût",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.zorg",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.zorg.mandat_protection_future_kosten.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:146",
+     "waarde_in_tool": "sous seing prive gratis tot 100 euro; notarie 300 tot 500 euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.zorg.teleassistentie_maandprijs",
+   "naam_nl": "Teleassistentie, maandprijs",
+   "naam_fr": "Téléassistance, prix mensuel",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.zorg",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR/maand",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.zorg.teleassistentie_maandprijs.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:115",
+     "waarde_in_tool": "20 tot 40 euro per maand",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.nl.leges.paspoort_verlengen_buitenland",
+   "naam_nl": "Nederlands paspoort verlengen in Frankrijk",
+   "naam_fr": "Renouvellement du passeport néerlandais en France",
+   "land": "NL",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "nl.leges",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2025",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.leges.paspoort_verlengen_buitenland.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/bureaucratie.ts:44",
+     "waarde_in_tool": "83,37",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.xb.cak.nominale_zvw_bijdrage_jaar",
+   "naam_nl": "Nominale Zvw-bijdrage verdragsgerechtigden per jaar",
+   "naam_fr": "Cotisation Zvw nominale annuelle, bénéficiaires conventionnés",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.cak",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "1.884 euro per jaar, 157,00 euro per maand",
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.cak.nominale_zvw_bijdrage_jaar.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:79",
+     "waarde_in_tool": "157,00 euro per maand",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.xb.cak.woonlandfactor_fr",
+   "naam_nl": "Woonlandfactor Frankrijk",
+   "naam_fr": "Coefficient pays de résidence, France",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.cak",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "0,8304",
+   "eenheid": "factor",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.cak.woonlandfactor_fr.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:79",
+     "waarde_in_tool": "0,8304",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.xb.deruyter.csg_crds_geschrapt",
+   "naam_nl": "CSG en CRDS die bij De Ruyter vervallen",
+   "naam_fr": "CSG et CRDS écartées dans la situation De Ruyter",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.deruyter",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.deruyter.csg_crds_geschrapt.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108",
+     "waarde_in_tool": "CSG 9,2 plus CRDS 0,5",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.xb.deruyter.prelevement_solidarite",
+   "naam_nl": "Prélèvement de solidarité bij De Ruyter",
+   "naam_fr": "Prélèvement de solidarité, situation De Ruyter",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.deruyter",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "7,5 procent",
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-08-12",
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "Vastgoedtransactie",
+    "cafeclaude",
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.deruyter.prelevement_solidarite.json",
+   "locaties": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:107-108",
+     "waarde_in_tool": "7,5",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

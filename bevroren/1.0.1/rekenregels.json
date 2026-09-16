@@ -1,0 +1,508 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "aantal": 8,
+ "rekenregels": [
+  {
+   "id": "r.fr.pv.belastbare_meerwaarde",
+   "naam_nl": "Belastbare meerwaarde bij verkoop van Frans onroerend goed",
+   "naam_fr": "Plus-value imposable sur la cession d'un bien immobilier",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": {
+    "code": "fr.pv",
+    "naam": "Plus-value immobilière des particuliers",
+    "belastingtype": "meerwaardeheffing",
+    "socialelastentype": null,
+    "vrijstellingstype": null,
+    "transactionele_basis": "meerwaarde"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "Verkoopprijs min verkoopkosten, min de aankoopprijs verhoogd met het forfait aankoopkosten en het forfait werkzaamheden, geeft de bruto meerwaarde. Daarop wordt per bezitsjaar de aftrek toegepast, voor de inkomstenbelasting en voor de prélèvements sociaux afzonderlijk, wat twee verschillende belastbare bedragen oplevert.",
+   "gebruikt_parameters": [
+    "p.fr.pv.forfait_aankoopkosten",
+    "p.fr.pv.forfait_werkzaamheden",
+    "p.fr.pv.abattement_ir_per_jaar",
+    "p.fr.pv.abattement_ps_per_jaar",
+    "p.fr.pv.terugname_afschrijvingen_vanaf"
+   ],
+   "gebruikt_rekenregels": [],
+   "volgorde": "eerste stap; de uitkomst is de grondslag voor r.fr.pv.heffing en r.fr.pv.surtaxe",
+   "bron_url": null,
+   "bron_kenmerk": "art. 150 V tot 150 VD CGI",
+   "bronsoort": "primair",
+   "instantie": "DGFiP",
+   "verificatiedatum": null,
+   "verificatie_door": null,
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js:230-280",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+     "locatie": "generate_pdf.py:40-130",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "aankoop 200.000 euro in 2010, verkoop 320.000 euro in 2026, geen werkelijke kosten opgevoerd",
+     "verwachte_uitkomst": "bruto meerwaarde 75.000 euro, daarna 16 volle bezitsjaren aftrek",
+     "toelichting": "200.000 plus 7,5 procent forfait aankoopkosten plus 15 procent forfait werkzaamheden geeft een aanschafwaarde van 245.000 euro."
+    }
+   ],
+   "uitzonderingen": [
+    "Bij verkrijging om niet bestaat het forfait aankoopkosten niet. Bij gemeubileerde verhuur worden afgetrokken afschrijvingen teruggenomen. Beide gevallen horen bij de notaris."
+   ],
+   "opmerkingen": "Kiem: de regel is beschreven en verwijst naar bestaande parameters, maar is niet uitvoerbaar vastgelegd. De formule zelf komt in taak 2.",
+   "kandidaat": false
+  },
+  {
+   "id": "r.fr.pv.heffing",
+   "naam_nl": "Heffing over de belastbare meerwaarde",
+   "naam_fr": "Imposition de la plus-value",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": {
+    "code": "fr.pv",
+    "naam": "Plus-value immobilière des particuliers",
+    "belastingtype": "meerwaardeheffing",
+    "socialelastentype": null,
+    "vrijstellingstype": null,
+    "transactionele_basis": "meerwaarde"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "Over de voor de inkomstenbelasting belastbare meerwaarde wordt het vaste tarief geheven. Over de voor de sociale lasten belastbare meerwaarde worden de prélèvements sociaux geheven, tenzij het arrest De Ruyter van toepassing is; dan blijft alleen het prélèvement de solidarité over.",
+   "gebruikt_parameters": [
+    "p.fr.pv.tarief_ir",
+    "p.fr.ps.taux_global",
+    "p.xb.deruyter.prelevement_solidarite"
+   ],
+   "gebruikt_rekenregels": [
+    "r.fr.pv.belastbare_meerwaarde"
+   ],
+   "volgorde": "na r.fr.pv.belastbare_meerwaarde",
+   "bron_url": null,
+   "bron_kenmerk": "art. 200 B CGI en art. L136-6 CSS",
+   "bronsoort": "primair",
+   "instantie": "DGFiP",
+   "verificatiedatum": null,
+   "verificatie_door": null,
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js:156-160",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+     "locatie": "generate_pdf.py:87-130",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "belastbare meerwaarde 100.000 euro, geen De Ruyter",
+     "verwachte_uitkomst": "19.000 euro inkomstenbelasting en 17.200 euro sociale lasten, samen 36.200 euro",
+     "toelichting": "Zonder surtaxe."
+    },
+    {
+     "invoer": "belastbare meerwaarde 100.000 euro, wel De Ruyter",
+     "verwachte_uitkomst": "19.000 euro inkomstenbelasting en 7.500 euro prélèvement de solidarité, samen 26.500 euro",
+     "toelichting": "Dit is de 26,5 procent die Café Claude noemt tegenover 36,2 procent."
+    }
+   ],
+   "uitzonderingen": [],
+   "opmerkingen": null,
+   "kandidaat": false
+  },
+  {
+   "id": "r.fr.pv.surtaxe",
+   "naam_nl": "Surtaxe op hoge meerwaarden",
+   "naam_fr": "Taxe sur les plus-values élevées",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": {
+    "code": "fr.pv",
+    "naam": "Plus-value immobilière des particuliers",
+    "belastingtype": "meerwaardeheffing",
+    "socialelastentype": null,
+    "vrijstellingstype": null,
+    "transactionele_basis": "meerwaarde"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "Boven een belastbare meerwaarde van 50.000 euro komt een extra heffing van 2 tot 6 procent, per verkoper, met een afvlakkingsformule rond elke tranchegrens.",
+   "gebruikt_parameters": [
+    "p.fr.pv.surtaxe_barema"
+   ],
+   "gebruikt_rekenregels": [
+    "r.fr.pv.belastbare_meerwaarde"
+   ],
+   "volgorde": "na r.fr.pv.belastbare_meerwaarde, naast r.fr.pv.heffing",
+   "bron_url": null,
+   "bron_kenmerk": "art. 1609 nonies G CGI",
+   "bronsoort": "primair",
+   "instantie": "DGFiP",
+   "verificatiedatum": null,
+   "verificatie_door": null,
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js:245-255",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+     "locatie": "generate_pdf.py:58-63",
+     "waarde_in_tool": null,
+     "afwijkend": true
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "belastbare meerwaarde 120.000 euro",
+     "verwachte_uitkomst": "heffing volgens de tranche 110.000 tot 160.000 met afvlakking",
+     "toelichting": "De twee tools geven hier verschillende uitkomsten: de Python-versie mist de afvlakkingsformule."
+    }
+   ],
+   "uitzonderingen": [
+    "Geldt niet bij bouwgrond en wordt per verkoper toegepast."
+   ],
+   "opmerkingen": null,
+   "kandidaat": false
+  },
+  {
+   "id": "r.fr.notaris.transactiekosten",
+   "naam_nl": "Totale transactiekosten bij aankoop van bestaande bouw",
+   "naam_fr": "Frais totaux d'acquisition dans l'ancien",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": {
+    "code": "fr.notaris",
+    "naam": "Émoluments et débours du notaire",
+    "belastingtype": null,
+    "socialelastentype": null,
+    "vrijstellingstype": null,
+    "transactionele_basis": "akte"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "De som van de emolumenten van de notaris met btw, de droits de mutation (departementaal deel plus frais d'assiette, plus taxe communale), de contribution de sécurité immobilière en de débours. Eventueel verminderd met de wettelijke korting op de emolumenten.",
+   "gebruikt_parameters": [
+    "p.fr.notaris.emolumenten_schaal",
+    "p.fr.notaris.remise_drempel_en_maximum",
+    "p.fr.notaris.debours_forfait",
+    "p.fr.dmto.departementaal_standaard",
+    "p.fr.dmto.departementaal_primo",
+    "p.fr.dmto.taxe_communale",
+    "p.fr.dmto.frais_assiette",
+    "p.fr.csi.tarief_en_minimum",
+    "p.fr.tva.tarief_algemeen"
+   ],
+   "gebruikt_rekenregels": [],
+   "volgorde": "zelfstandige regel; vervangt de vuistregel van 7 tot 8 procent",
+   "bron_url": null,
+   "bron_kenmerk": "art. A444-91 Code de commerce, art. 1584, 1594 D, 1647 en 879 CGI",
+   "bronsoort": "primair",
+   "instantie": "DGFiP en Conseil supérieur du notariat",
+   "verificatiedatum": "2026-08-12",
+   "verificatie_door": "Vastgoedtransactie, bronnen.json",
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js, kernberekening",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "bestaande woning, 250.000 euro, departement met 5,00 procent, geen primo-accédant",
+     "verwachte_uitkomst": "kosten koper van ongeveer 7,4 procent van de koopsom",
+     "toelichting": "De vuistregel van 7 tot 8 procent klopt hier ruwweg, maar niet in een departement met 4,50 procent en niet bij een primo-accédant."
+    }
+   ],
+   "uitzonderingen": [],
+   "opmerkingen": "Drie aangesloten tools gebruiken in plaats hiervan een vuistregel. Zie p.fr.notaris.vuistregel_kosten_ancien.",
+   "kandidaat": false
+  },
+  {
+   "id": "r.nl.zorgtoeslag.bedrag",
+   "naam_nl": "Hoogte van de zorgtoeslag",
+   "naam_fr": "Montant de l'allocation santé",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": {
+    "code": "nl.zorgtoeslag",
+    "naam": "Wet op de zorgtoeslag",
+    "belastingtype": null,
+    "socialelastentype": null,
+    "vrijstellingstype": null,
+    "transactionele_basis": "inkomen"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "De standaardpremie min de normpremie. De normpremie is het normpercentage maal het drempelinkomen, plus het afbouwpercentage maal het inkomen boven het drempelinkomen. De uitkomst kan niet negatief zijn. Ligt het box 3-vermogen op de peildatum boven de vermogensgrens, dan is de zorgtoeslag nul voor het hele jaar.",
+   "gebruikt_parameters": [
+    "p.nl.zorg.nominale_premie",
+    "p.nl.zorgtoeslag.drempelinkomen",
+    "p.nl.zorgtoeslag.normpercentage_zonder_partner",
+    "p.nl.zorgtoeslag.normpercentage_met_partner",
+    "p.nl.zorgtoeslag.afbouwpercentage",
+    "p.nl.zorgtoeslag.vermogensgrens_zonder_partner",
+    "p.nl.zorgtoeslag.vermogensgrens_met_partner"
+   ],
+   "gebruikt_rekenregels": [],
+   "volgorde": "na vaststelling van het toetsingsinkomen",
+   "bron_url": null,
+   "bron_kenmerk": "Wet op de zorgtoeslag en het Besluit percentages drempel- en toetsingsinkomen zorgtoeslag",
+   "bronsoort": "primair",
+   "instantie": "Belastingdienst Toeslagen",
+   "verificatiedatum": "2026-09-15",
+   "verificatie_door": "financieel-kompas-ai, config.json",
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:56-70 en de rekenkern",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "alleenstaande, toetsingsinkomen 25.000 euro, vermogen onder de grens",
+     "verwachte_uitkomst": "zorgtoeslag 2.119 min de normpremie over 25.000 euro",
+     "toelichting": "Het inkomen ligt onder het drempelinkomen, dus het afbouwdeel is nul."
+    }
+   ],
+   "uitzonderingen": [
+    "Het toetsingsinkomen is niet hetzelfde als het door een rekentool berekende bruto inkomen. Voor een exact bedrag geldt de beschikking van de Belastingdienst."
+   ],
+   "opmerkingen": null,
+   "kandidaat": false
+  },
+  {
+   "id": "r.xb.cak.verdragsbijdrage",
+   "naam_nl": "Verdragsbijdrage aan het CAK",
+   "naam_fr": "Cotisation conventionnelle au CAK",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": {
+    "code": "xb.cak",
+    "naam": "CAK, verdragsbijdrage en woonlandfactor",
+    "belastingtype": null,
+    "socialelastentype": "verdragsbijdrage",
+    "vrijstellingstype": null,
+    "transactionele_basis": "inkomen"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "De nominale Zvw-bijdrage plus de inkomensafhankelijke Zvw-bijdrage plus de Wlz-bijdrage, elk begrensd door het eigen maximumbijdrage-inkomen, en het geheel vermenigvuldigd met de woonlandfactor van het woonland.",
+   "gebruikt_parameters": [
+    "p.xb.cak.woonlandfactor_fr",
+    "p.xb.cak.nominale_zvw_bijdrage_jaar",
+    "p.nl.zvw.percentage_laag",
+    "p.nl.zvw.max_bijdrage_inkomen",
+    "p.nl.wlz.percentage",
+    "p.nl.wlz.max_bijdrage_inkomen",
+    "p.nl.wlz.max_bijdrage_inkomen_voor_1946"
+   ],
+   "gebruikt_rekenregels": [],
+   "volgorde": "in plaats van de Nederlandse premie en in plaats van de Franse CSG, voor wie een S1 heeft",
+   "bron_url": null,
+   "bron_kenmerk": "Zorgverzekeringswet, art. 69; Vo. (EG) 883/2004",
+   "bronsoort": "secundair: pagina van het CAK, de regeling niet zelf gelezen",
+   "instantie": "Het CAK",
+   "verificatiedatum": "2026-09-15",
+   "verificatie_door": "financieel-kompas-ai, config.json",
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:247-256 en de CAK-rekenkern",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "nominale bijdrage 157,00 euro per maand, woonlandfactor Frankrijk",
+     "verwachte_uitkomst": "130,37 euro per maand",
+     "toelichting": "Exact het maandbedrag dat het CAK voor Frankrijk publiceert."
+    }
+   ],
+   "uitzonderingen": [],
+   "opmerkingen": "De volgorde waarin het CAK de bestanddelen toepast staat in geen enkele repo vast. Zie p.xb.cak.rekenwijze_verdragsbijdrage in de gatenlijst.",
+   "kandidaat": false
+  },
+  {
+   "id": "r.fr.ir.belasting_na_decote",
+   "naam_nl": "Impôt sur le revenu na plafonnering en décote",
+   "naam_fr": "Impôt sur le revenu après plafonnement et décote",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": {
+    "code": "fr.ir",
+    "naam": "Impôt sur le revenu",
+    "belastingtype": "inkomstenbelasting",
+    "socialelastentype": null,
+    "vrijstellingstype": null,
+    "transactionele_basis": "inkomen"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "Het belastbaar inkomen wordt gedeeld door het aantal parts, door het barema gehaald en weer vermenigvuldigd met het aantal parts. Het voordeel van de extra halve parts wordt geplafonneerd. Daarna volgt de décote en pas daarna komen belastingkortingen en belastingkredieten.",
+   "gebruikt_parameters": [
+    "p.fr.ir.schijven",
+    "p.fr.ir.quotient_plafond_per_halve_part",
+    "p.fr.ir.decote",
+    "p.fr.ir.abattement_pensioen",
+    "p.fr.ir.abattement_loon",
+    "p.fr.ir.abattement_65plus"
+   ],
+   "gebruikt_rekenregels": [],
+   "volgorde": "na de abattements, voor de belastingkredieten",
+   "bron_url": null,
+   "bron_kenmerk": "art. 197 CGI",
+   "bronsoort": "secundair: de volgorde is uit de toelichting van de tool overgenomen, art. 197 CGI niet zelf gelezen",
+   "instantie": "DGFiP",
+   "verificatiedatum": null,
+   "verificatie_door": null,
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:155-212 en de FR-rekenkern",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Café Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "echtpaar, 2 parts, belastbaar inkomen 40.000 euro",
+     "verwachte_uitkomst": "belasting volgens het barema over 20.000 euro per part, maal 2, daarna de décote toetsen",
+     "toelichting": "De volgorde is bepalend: de décote pas na de plafonnering."
+    }
+   ],
+   "uitzonderingen": [
+    "Voor een niet-resident geldt bovendien het minimumtarief van art. 197 A CGI. Dat staat nog niet in het register."
+   ],
+   "opmerkingen": null,
+   "kandidaat": false
+  },
+  {
+   "id": "r.fr.csg.regime_bepalen",
+   "naam_nl": "Bepalen welk CSG-regime geldt",
+   "naam_fr": "Détermination du taux de CSG applicable",
+   "land": "FR",
+   "lastensoort": "sociaal",
+   "regeling": {
+    "code": "fr.csg",
+    "naam": "CSG, CRDS et CASA sur les pensions",
+    "belastingtype": null,
+    "socialelastentype": "csg_crds_casa",
+    "vrijstellingstype": null,
+    "transactionele_basis": "inkomen"
+   },
+   "status": "te_verifieren",
+   "omschrijving": "Het revenu fiscal de référence van twee jaar terug wordt vergeleken met de grenzen die horen bij het aantal parts. Boven drie parts komt er per halve part een opslag bij. De uitkomst wijst een van de vier regimes aan.",
+   "gebruikt_parameters": [
+    "p.fr.csg.tarief_per_regime",
+    "p.fr.csg.rfr_grenzen_per_part",
+    "p.fr.csg.opslag_per_halve_part"
+   ],
+   "gebruikt_rekenregels": [],
+   "volgorde": "voor de heffing van CSG, CRDS en CASA",
+   "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2971",
+   "bron_kenmerk": "service-public.fr, fiche F2971",
+   "bronsoort": "secundair: samenvattende fiche van service-public.fr",
+   "instantie": "Urssaf",
+   "verificatiedatum": "2026-06-01",
+   "verificatie_door": "financieel-kompas-ai, config.json",
+   "levensduur_b": {
+    "ingevoerd": null,
+    "vervallen": null,
+    "opgevolgd_door": null
+   },
+   "gebruikt_in": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:85-152",
+     "waarde_in_tool": null,
+     "afwijkend": false
+    }
+   ],
+   "testvoorbeelden": [
+    {
+     "invoer": "RFR 2024 van 18.000 euro, 1 part",
+     "verwachte_uitkomst": "taux médian, 7,4 procent",
+     "toelichting": "18.000 ligt tussen 17.057 en 26.472 euro."
+    }
+   ],
+   "uitzonderingen": [
+    "Overgang naar een hoger tarief geldt pas na twee opeenvolgende jaren overschrijding. Die regel is in geen enkele tool ingebouwd."
+   ],
+   "opmerkingen": null,
+   "kandidaat": false
+  }
+ ],
+ "stand": "kiem: de regels zijn beschreven en verwijzen naar bestaande parameters, met testvoorbeelden. Uitvoerbare formules komen in een volgende taak."
+}

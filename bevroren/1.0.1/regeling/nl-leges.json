@@ -1,0 +1,39 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "nl.leges",
+  "naam": "Consulaire leges",
+  "belastingtype": null,
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "verrichting"
+ },
+ "aantal": 1,
+ "parameters": [
+  {
+   "id": "p.nl.leges.paspoort_verlengen_buitenland",
+   "naam_nl": "Nederlands paspoort verlengen in Frankrijk",
+   "naam_fr": "Renouvellement du passeport néerlandais en France",
+   "land": "NL",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "nl.leges",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2025",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.leges.paspoort_verlengen_buitenland.json"
+  }
+ ]
+}

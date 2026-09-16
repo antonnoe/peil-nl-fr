@@ -1,0 +1,275 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "dossier-elektriciteit-if",
+ "cockpit_onderdeel": "IF, dossier Elektriciteit",
+ "aantal": 9,
+ "waarschuwingen": [],
+ "parameters": [
+  {
+   "id": "p.fr.diagnostics.geldigheid_diagnostic_electrique",
+   "naam_nl": "Geldigheid van het diagnostic électrique",
+   "naam_fr": "Durée de validité du diagnostic électrique",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.diagnostics",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "3 jaar bij verkoop, 6 jaar bij verhuur; verplicht bij een installatie ouder dan 15 jaar",
+   "eenheid": "jaren",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F18692",
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.diagnostics.geldigheid_diagnostic_electrique.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "verificatie/normverificatie.md:V9",
+     "waarde_in_tool": "3 jaar verkoop, 6 jaar verhuur, 15 jaar ouderdomsgrens",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.beheerbijdrage_weigeren_linky",
+   "naam_nl": "Beheerbijdrage bij weigeren van de Linky-meter",
+   "naam_fr": "Contribution de gestion en cas de refus du compteur Linky",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "6,48 euro exclusief btw per twee maanden, plus 4,14 euro exclusief btw bij meer dan een jaar geen meterstand",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.beheerbijdrage_weigeren_linky.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h1.md:125",
+     "waarde_in_tool": "6,48 EUR HT per twee maanden, plus 4,14 EUR HT",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.consuel_contre_visite",
+   "naam_nl": "Consuel contre-visite",
+   "naam_fr": "Consuel, contre-visite",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "232,13 euro",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.consuel_contre_visite.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h8.md:51 en 99",
+     "waarde_in_tool": "232,13",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.consuel_geel_elektronisch",
+   "naam_nl": "Consuel-tarief attestation geel, elektronisch",
+   "naam_fr": "Tarif Consuel, attestation jaune, voie électronique",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "144,67 euro",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.consuel_geel_elektronisch.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h8.md:12, 51 en 99",
+     "waarde_in_tool": "144,67",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.consuel_indexering",
+   "naam_nl": "Indexering van het Consuel-barema",
+   "naam_fr": "Indexation du barème Consuel",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "0,64 procent per 2 september 2025",
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.consuel_indexering.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h8.md:48 en 99",
+     "waarde_in_tool": "0,64 procent per 02-09-2025",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.consuel_overige_formulieren",
+   "naam_nl": "Consuel-tarieven overige formulieren",
+   "naam_fr": "Tarifs Consuel, autres attestations",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "geel op papier 146,15; groen 76,37; blauw 201,17; violet 230,32 euro",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.consuel_overige_formulieren.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h8.md:51",
+     "waarde_in_tool": "geel papier 146,15; groen 76,37; blauw 201,17; violet 230,32",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.tariefoptiewissel_zonder_linky",
+   "naam_nl": "Tariefoptiewissel zonder Linky",
+   "naam_fr": "Changement d'option tarifaire sans Linky",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "56,72 euro; met Linky gratis",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.tariefoptiewissel_zonder_linky.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h1.md:120",
+     "waarde_in_tool": "56,72",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.vermogenstrappen",
+   "naam_nl": "Vermogenstrappen en aansluitgrenzen",
+   "naam_fr": "Paliers de puissance et limites de raccordement",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "abonnement 3, 6, 9 of 12 kVA; monophase maximaal 12 kVA; triphase tot 36 kVA",
+   "eenheid": "kVA",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.vermogenstrappen.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h1.md:63 en 67",
+     "waarde_in_tool": "3-6-9-12 kVA; monophase max 12 kVA; triphase tot 36 kVA",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.elec.wijziging_puissance_souscrite",
+   "naam_nl": "Administratieve wijziging van de puissance souscrite",
+   "naam_fr": "Changement de puissance souscrite",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.elec",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "circa 4,28 euro inclusief btw",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-04",
+   "bron_url": null,
+   "gebruikt_in": [
+    "dossier-elektriciteit-if"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.elec.wijziging_puissance_souscrite.json",
+   "locaties": [
+    {
+     "repo": "dossier-elektriciteit-if",
+     "cockpit_onderdeel": "IF, dossier Elektriciteit",
+     "locatie": "hoofdstukken/h1.md:126",
+     "waarde_in_tool": "circa 4,28 EUR TTC",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

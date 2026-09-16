@@ -172,12 +172,12 @@ writeFileSync(join(WORTEL, 'data', 'rekenregels.json'), JSON.stringify({
 }, null, 1) + '\n');
 
 writeFileSync(join(WORTEL, 'data', 'duidingsregels.json'), JSON.stringify({
-  meta: meta('1, duidingsregels', { stand: 'leeg: in taak 1 is alleen het schema opgeleverd. De vulling wordt later geïndexeerd over de handboeken van Café Claude.' }),
+  meta: meta('1, duidingsregels', { stand: 'leeg: de opzet ligt vast, de vulling volgt in een latere uitgave en wordt geïndexeerd over de handboeken van Café Claude.' }),
   duidingsregels: [],
 }, null, 1) + '\n');
 
 writeFileSync(join(WORTEL, 'data', 'documenten.json'), JSON.stringify({
-  meta: meta('documentenregister', { stand: 'leeg: in taak 1 is alleen het schema opgeleverd. De inventarisatie van de handboeken en PDF\'s van Café Claude valt buiten deze taak.' }),
+  meta: meta('documentenregister', { stand: 'leeg: de opzet ligt vast, het vullen van dit register is voorzien voor een volgende uitgave van Peil.' }),
   documenten: [],
 }, null, 1) + '\n');
 

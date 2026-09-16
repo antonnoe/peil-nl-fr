@@ -4,13 +4,15 @@
 // afhankelijkheid van hoofdletters of accenten in de sleutel.
 
 import { slug, csvRegel, waardeTekst } from './hulp.mjs';
-import { VERSIE, PEILDATUM, LICENTIE_DATA, BRONREGEL, VOORBEHOUD, SITE_URL } from './versie.mjs';
+import { VERSIE, PEILDATUM, LICENTIE_DATA, BRONREGEL, VOORBEHOUD, SITE_URL, UITGEVER, UITGEVER_URL } from './versie.mjs';
 
 const omslag = (extra) => ({
   versie: VERSIE,
   versiedatum: PEILDATUM,
   peildatum: PEILDATUM,
   licentie: LICENTIE_DATA,
+  uitgever: UITGEVER,
+  uitgever_url: UITGEVER_URL,
   bronregel: BRONREGEL,
   voorbehoud: VOORBEHOUD,
   ...extra,
@@ -39,7 +41,7 @@ export function bouwApi({ register, rekenregels, duidingsregels, documenten, ijk
 
   zet('api/v1/index.json', omslag({
     titel: 'Peil, openbaar parameterregister NL-FR',
-    beheerder: 'Communities Abroad, Anton Noe',
+    beheerder: UITGEVER + ', Anton Noe',
     site: SITE_URL,
     lagen: {
       '3_parameters': ps.length,

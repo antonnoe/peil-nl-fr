@@ -1,0 +1,66 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.gite.degressieve_reeks",
+  "naam_nl": "Degressieve reeks per bezitsjaar in GiteKompas",
+  "naam_fr": "Série dégressive par année de détention",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.gite",
+   "naam": "Location meublée de tourisme",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "degressieve_aftrek",
+   "transactionele_basis": "omzet"
+  },
+  "variabiliteitsklasse": "indicatief",
+  "effect": "verlaagt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onbekend",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "gitekompas-fr",
+    "cockpit_onderdeel": "IF, GiteKompas",
+    "locatie": "index.html:1177-1179",
+    "waarde_in_tool": "jaar 6: 75 procent; jaar 7: 50 procent; jaar 8: 25 procent",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De tool noemt deze reeks zelf indicatief. Welke wettelijke regeling erachter zit, is in de repo niet vastgelegd.",
+  "kandidaat": false,
+  "verantwoordelijke": "Anton Noe, Communities Abroad",
+  "houdbaarheidsdatum": "2027-09-16"
+ }
+}

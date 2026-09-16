@@ -85,6 +85,14 @@ Elke waarschuwing noemt de geraakte repo's en locaties. Niveau rood zodra een to
 5. Uitzonderingen in tekst benoemen met verwijzing naar een professional, niet modelleren.
 6. Een secundaire bron wordt nooit stilzwijgend opgewaardeerd tot primair.
 
+## Buitenkant en binnenkant
+
+De openbare site noemt geen repositorynamen, geen bestandspaden, geen regelnummers en geen interne veldnamen. Een tool heet daar bij haar openbare naam, met een verwijzing naar haar openbare adres waar dat adres aantoonbaar in de betreffende repo staat. Die koppeling ligt vast in `data/tools.json` en wordt toegepast door `tools/lib/tools.mjs`.
+
+Binnen verandert er niets: dit bestand, `docs/`, `peil/state.json`, de volledige velden onder `/api/v1/` en `register.csv` blijven onverkort beschikbaar, inclusief `gebruikt_in` met repo, locatie en `waarde_in_tool`.
+
+De test `geen interne aanduiding in de zichtbare tekst van de site` bewaakt dat. Een nieuwe aangesloten repo hoort dus altijd ook in `data/tools.json`, anders valt de bouw om.
+
 ## Een parameter toevoegen of corrigeren
 
 Kort: open een issue met het sjabloon `correctie parameter`, of wijzig `data/register.json` en open een pull request. Zet de status pas op `vastgesteld` als bron en verificatiedatum er allebei staan. De volledige procedure staat in [`CONTRIBUTING.md`](CONTRIBUTING.md).
@@ -109,12 +117,13 @@ Geen afhankelijkheden, geen `npm install`. De validator en de build staan in `to
 | `data/documenten.json` | Documentenregister, leeg |
 | `data/ijkkalender.json` | Per maand de verwachte wijzigingen |
 | `data/inventarisatie.json` | De inventarisatie uit taak 0 |
+| `data/tools.json` | Intern. Per repo de openbare toolnaam en, als hij aantoonbaar in die repo staat, het openbare adres |
 | `peil/state.json` | Signalen voor de Cockpit |
 | `tools/` | Afleiding, build, validator |
 | `bevroren/` | De API van elke afgesloten versie, zoals die toen is uitgeleverd |
 | `docs/volledigheid.md` | Welke grootheden nodig zijn, en de gatenlijst |
 | `docs/levensduur.md` | Levensduur per categorie |
-| `docs/over-peil.md` | Doel, harde regels, licentie, correctieprocedure, API |
+| `docs/over-peil.md` | De openbare pagina Over Peil: wat Peil is, verificatie, statussen, versies, correcties, licentie, API |
 | `docs/rapport-taak-1.md` | Eindrapport van de bouw van dit register |
 | `docs/inventarisatie/` | De rapportage uit taak 0 |
 

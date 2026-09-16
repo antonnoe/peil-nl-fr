@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.th.taxe_habitation_residence_secondaire",
+  "naam_nl": "Taxe d'habitation op een tweede woning",
+  "naam_fr": "Taxe d'habitation sur les résidences secondaires",
+  "naam_officieel": "THRS",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.th",
+   "naam": "Taxe d'habitation sur les résidences secondaires",
+   "belastingtype": "lokale_belasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "vermogen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "procent",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F42",
+  "bron_kenmerk": "service-public.fr, taxe d'habitation sur les résidences secondaires",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "DGFiP en gemeenten",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Een jaarlijkse last die vrijwel elke Nederlander met een tweede woning in Frankrijk treft, met een gemeentelijk tarief en in gespannen gebieden een opslag. Staat in geen enkele tool.",
+  "kandidaat": true
+ }
+}

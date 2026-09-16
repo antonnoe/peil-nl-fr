@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.nl.wlz.percentage",
+  "naam_nl": "Wlz-premiepercentage",
+  "naam_fr": "Taux de cotisation Wlz",
+  "naam_officieel": "Premiepercentage Wet langdurige zorg",
+  "land": "NL",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "nl.wlz",
+   "naam": "Wet langdurige zorg",
+   "belastingtype": null,
+   "socialelastentype": "premie_volksverzekering",
+   "vrijstellingstype": null,
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": 0.0965,
+  "waarde_weergave": "9,65 procent",
+  "eenheid": "fractie",
+  "geldig_jaar": "2026",
+  "geldig_van": "2026-01-01",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+  "bron_kenmerk": "Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen",
+  "bronsoort": "secundair: pagina van het CAK, de onderliggende regeling niet zelf gelezen",
+  "instantie": "Het CAK",
+  "verificatiedatum": "2026-09-15",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "CAK, eind december",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:251",
+    "waarde_in_tool": "0,0965",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

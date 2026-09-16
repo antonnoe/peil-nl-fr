@@ -1,0 +1,68 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.csg.opslag_per_halve_part",
+  "naam_nl": "Opslag per halve part boven drie parts",
+  "naam_fr": "Majoration par demi-part au-delà de trois parts",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "fr.csg",
+   "naam": "CSG, CRDS et CASA sur les pensions",
+   "belastingtype": null,
+   "socialelastentype": "csg_crds_casa",
+   "vrijstellingstype": null,
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": [
+   3484,
+   4555,
+   7066
+  ],
+  "waarde_weergave": "3.484 / 4.555 / 7.066 euro per halve part",
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2971",
+  "bron_kenmerk": "service-public.fr, fiche F2971",
+  "bronsoort": "secundair: samenvattende fiche van service-public.fr, de wetsartikelen niet zelf gelezen",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-06-01",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "voorjaar",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:148-152",
+    "waarde_in_tool": "3484 / 4555 / 7066",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

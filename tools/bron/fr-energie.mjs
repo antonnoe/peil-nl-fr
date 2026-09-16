@@ -6,7 +6,7 @@ export const FR_ENERGIE = [
 // --------------------------------------------------------------- DPE
 { id: 'p.fr.dpe.primaire_energiefactor_elektriciteit', nl: 'Primaire-energiefactor elektriciteit', fr: 'Coefficient d\'énergie primaire, électricité', off: 'Coefficient de conversion en énergie primaire',
   reg: 'fr.dpe', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', eh: 'factor', jaar: '2026', van: '2026-01-01',
-  kn: 'arrêté du 13 août 2025, in werking per 1 januari 2026', bs: 'secundair: het arrêté is in de repo genoemd maar niet als vindplaats vastgelegd',
+  kn: 'arrêté du 13 août 2025, in werking per 1 januari 2026', bs: 'secundair: het arrêté wordt in de tool genoemd maar is niet als vindplaats vastgelegd',
   inst: 'Ministère de la transition écologique', freq: 'meerjaarlijks', lw: '2026-01-01',
   in: [[ 'energieportaal', 'engine/dpe.js:47', '1,9', false ],
        [ 'if-mobiel', 'engine/dpe.js:47 (byte-identieke kopie)', '1,9', false ]],
@@ -32,7 +32,7 @@ export const FR_ENERGIE = [
        [ 'if-mobiel', 'engine/dpe.js:28-33 (byte-identieke kopie)', 'identiek', false ],
        [ 'warmteverlies-calculator', 'engine/engine.js:6-11', 'identiek, met koeldagen en zwembadtemperatuur erbij', false ],
        [ 'Energiecalculator-Frankrijk-door-Nederlanders.fr', 'script.js:4', 'identiek', false ]],
-  opm: 'Vier aangesloten tools, identieke waarden. if-mobiel bevat een byte-identieke kopie van de hele engine van energieportaal; dat is een kopie, geen verwijzing, en dus een onderhoudsrisico.' },
+  opm: 'Vier aangesloten tools, identieke waarden. Infopoche bevat een letterlijke kopie van de hele rekenmotor van het EnergiePortaal; dat is een kopie, geen verwijzing, en dus een onderhoudsrisico.' },
 
 { id: 'p.fr.energie.koeldagen_en_zwembadtemperatuur', nl: 'Koeldagen en zwembadtemperatuur per klimaatzone', fr: 'Degrés-jours de refroidissement et température de piscine', off: null,
   reg: 'fr.energie', klasse: 'indicatief', effect: 'bepaalt_grondslag', eh: 'CDD en graden C', jaar: '2026',

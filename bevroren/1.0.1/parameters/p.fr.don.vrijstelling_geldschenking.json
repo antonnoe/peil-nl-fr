@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.1",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.don.vrijstelling_geldschenking",
+  "naam_nl": "Extra vrijstelling geldschenking",
+  "naam_fr": "Don familial de somme d'argent",
+  "naam_officieel": "Art. 790 G CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.don",
+   "naam": "Droits de donation",
+   "belastingtype": "erf_en_schenkbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "vrijstelling",
+   "transactionele_basis": "schenking"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "erf-en-schenkingsrecht-nl-fr",
+    "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
+    "locatie": "app.js:1222-1223",
+    "waarde_in_tool": "31865",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De code merkt deze waarde zelf aan als indicatief. Er gelden leeftijdsvoorwaarden voor schenker en begiftigde die niet zijn vastgelegd.",
+  "kandidaat": false
+ }
+}
