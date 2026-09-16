@@ -122,19 +122,30 @@ De score kijkt naar bereik en tegenspraak, niet naar geldbedrag. Drie parameters
 
 De site en de API zijn gebouwd en getest. `npm test` geeft 40 geslaagde controles en 0 mislukte, waaronder schemavalidatie van alle gegevensbestanden, unieke id's, de verwijzingen tussen de drie lagen, de vier assen en beide levensduren per parameter, de regel dat er geen vastgestelde waarde zonder bron en datum bestaat, 218 pagina's op werkende interne links, 308 JSON-bestanden onder `/api/v1/` op geldigheid en op de aanwezigheid van versie, versiedatum, licentie en bronregel, de afwezigheid van externe scripts, stylesheets en fonts, en de taalregels.
 
-**Wat nog aan moet.** GitHub Pages staat nog niet aan. De publicatieworkflow staat klaar in `.github/workflows/pages.yml` en publiceert vanuit Actions, niet vanuit een branch. Daarvoor is een instelling nodig die alleen de eigenaar van de repo kan zetten:
+**Wat nog aan moet.** GitHub Pages staat nog niet aan en ik kan het niet zelf aanzetten. Twee routes geprobeerd, beide geblokkeerd:
+
+- Rechtstreeks via de Pages-API vanuit deze sessie: geweigerd, ik heb geen toegang tot het token daarvoor.
+- Vanuit de workflow met `actions/configure-pages` en `enablement: true`: `Create Pages site failed. Error: Resource not accessible by integration`. Het GITHUB_TOKEN van Actions mag wel naar Pages publiceren, maar geen Pages-site aanmaken. Die stap is daarom weer uit de workflow gehaald.
+
+Het is een handeling van enkele seconden en alleen de eigenaar van de repo kan hem doen:
 
 > GitHub, repository `antonnoe/peil-nl-fr`, **Settings**, **Pages**, onder **Build and deployment** bij **Source** kiezen voor **GitHub Actions**.
 
-Meer is er niet nodig; de workflow doet de rest bij de eerstvolgende push naar `main` of via **Actions**, **Peil bouwen en publiceren**, **Run workflow**.
+Meer is er niet nodig. Daarna publiceert de workflow bij de eerstvolgende push naar `main`, of direct via **Actions**, **Peil bouwen en publiceren**, **Run workflow**.
 
-Zodra dat is gezet:
+De workflow is intussen in twee jobs gesplitst. `bouwen` doet de afleiding, de controle dat de afleiding niets verandert, de build en de tests; die job staat groen. `publiceren` doet de Pages-publicatie en blijft rood tot de instelling erop staat. Zo is aan de kleur te zien wat er aan de hand is.
+
+Bewijs uit de laatste run op `main`, run 3, job `bouwen`, alle stappen geslaagd: afleiding stabiel, build geslaagd, `npm test` 40 geslaagd en 0 mislukt, waaronder 231 bestanden op de taalregels, 308 JSON-bestanden onder `/api/v1/` en 218 pagina's op werkende interne links.
+
+Zodra Pages aanstaat:
 
 - Site: https://antonnoe.github.io/peil-nl-fr/
 - API: https://antonnoe.github.io/peil-nl-fr/api/v1/index.json
 - CSV: https://antonnoe.github.io/peil-nl-fr/api/v1/register.csv
 - Signalen: https://antonnoe.github.io/peil-nl-fr/api/v1/state.json
 - Bevroren versie 1.0.0: https://antonnoe.github.io/peil-nl-fr/api/versies/1.0.0/index.json
+
+**De oude branch is niet verwijderd.** `git push origin --delete claude/peaceful-ptolemy-5yvvq0` is in deze sessie geweigerd door de beveiliging op destructieve git-opdrachten, en de GitHub-tools die ik hier heb kennen geen opdracht om een branch te verwijderen. De branch wijst naar dezelfde commit als de taak 0-commit die al in `main` zit, dus er gaat niets verloren als hij weg gaat. Te verwijderen via GitHub, **Branches**, prullenbak bij `claude/peaceful-ptolemy-5yvvq0`, of lokaal met dezelfde opdracht.
 
 ## 5. Wat bewust niet is gedaan, en de keuzes bij twijfel
 
