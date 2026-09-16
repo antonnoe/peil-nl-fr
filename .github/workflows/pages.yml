@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Afleiden uit de bronbestanden
         run: npm run afleiden
       - name: Controleren dat de afleiding niets wijzigt
@@ -35,7 +35,13 @@ jobs:
         run: npm run bouw
       - name: Testen
         run: npm test
-      - uses: actions/configure-pages@v5
+      - name: Pages inschakelen en instellen op GitHub Actions
+        uses: actions/configure-pages@v5
+        with:
+          # Zet de bron van Pages zo nodig zelf op GitHub Actions. Lukt dat niet,
+          # dan moet de eigenaar het eenmalig zetten onder Settings, Pages,
+          # Build and deployment, Source: GitHub Actions.
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
