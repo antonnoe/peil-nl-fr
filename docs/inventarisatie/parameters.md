@@ -6,10 +6,10 @@ Waarden zijn letterlijk overgenomen. Er is niets gecorrigeerd en niets tegen een
 
 Variabiliteitsklassen: `overheid_vastgesteld`, `marktindex`, `contractueel`, `indicatief`, `afgeleid`, `gebruikersinvoer`.
 
-## `financieel-kompas-ai` — ja (59 parameters)
+## `financieel-kompas-ai`, ja (59 parameters)
 
 Volledig parameterbestand config.json met NL- en FR-belasting-, zorg- en CAK-waarden, inclusief bron en verificatiedatum per grootheid.  
-Vermoedelijk Cockpit-onderdeel: CC / IF — Financieel Kompas (AI-versie)
+Vermoedelijk Cockpit-onderdeel: CC / IF, Financieel Kompas (AI-versie)
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -73,10 +73,10 @@ Vermoedelijk Cockpit-onderdeel: CC / IF — Financieel Kompas (AI-versie)
 | P058 | `config.json` | 253 | Maximumbijdrage-inkomen Wlz | 38883 | EUR/jaar | NL | ja | geraadpleegd 15 september 2026 | `overheid_vastgesteld` |  |
 | P059 | `config.json` | 254 | Maximumbijdrage-inkomen Wlz geboortejaar t/m 1945 | 41123 | EUR/jaar | NL | ja | geraadpleegd 15 september 2026 | `overheid_vastgesteld` |  |
 
-## `cafeclaude` — ja (34 parameters)
+## `cafeclaude`, ja (34 parameters)
 
 Domein- en auditprompts bevatten harde 2026-bedragen en tarieven die de AI als handboek gebruikt (IR-schijven, décote, micro-BIC, BRSS, successierechten).  
-Vermoedelijk Cockpit-onderdeel: CC — Cafe Claude
+Vermoedelijk Cockpit-onderdeel: CC, Cafe Claude
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -115,10 +115,10 @@ Vermoedelijk Cockpit-onderdeel: CC — Cafe Claude
 | P139 | `lib/audit/prompts/zorg.ts` | 67-68 | Franchise medicale en participation forfaitaire | 0,50 euro per medicijn, 2 euro per consult | EUR | FR | nee | verdubbeling per 1 mei 2024 genoemd | `overheid_vastgesteld` | regel 146-147 meldt de oude waarden 1 euro en 0,50 euro |
 | P140 | `lib/audit/prompts/ondernemen.ts` | 72 | CVAE-drempel | 152500 euro omzet | EUR | FR | nee | afschaffing uitgesteld naar 2030 | `overheid_vastgesteld` |  |
 
-## `financieel-kompas` — ja (20 parameters)
+## `financieel-kompas`, ja (20 parameters)
 
 Oudere config.json met dezelfde structuur maar afwijkende waarden (editie 2025) plus een Belgisch blok.  
-Vermoedelijk Cockpit-onderdeel: IF — Financieel Kompas (voorganger)
+Vermoedelijk Cockpit-onderdeel: IF, Financieel Kompas (voorganger)
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -143,10 +143,10 @@ Vermoedelijk Cockpit-onderdeel: IF — Financieel Kompas (voorganger)
 | P078 | `config.json` | 35 | Belgische zelfstandigenbijdrage, schijven | 73447,52 bij 20,5 procent; 108238,40 bij 14,16 procent | EUR en fractie | BE | nee | nee | `overheid_vastgesteld` | Belgisch blok, buiten NL-FR-scope |
 | P079 | `config.json` | 45 | Belgische inkomstenbelastingschijven 2025 | 16320 / 28800 / 49840 bij 25 tot 50 procent | EUR en fractie | BE | nee | 2025 in sleutelnaam | `overheid_vastgesteld` |  |
 
-## `Vastgoedtransactie` — ja (20 parameters)
+## `Vastgoedtransactie`, ja (20 parameters)
 
 Rekenkern calc.js met emolumenten, TPF, plus-value-abattements en surtaxe, plus dmto.json met 101 departementale tarieven en bronnen.json.  
-Vermoedelijk Cockpit-onderdeel: Vastgoedtransacties — transactiekostentool
+Vermoedelijk Cockpit-onderdeel: Vastgoedtransacties, transactiekostentool
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -171,10 +171,10 @@ Vermoedelijk Cockpit-onderdeel: Vastgoedtransacties — transactiekostentool
 | P098 | `dmto.json` | departementen | Departementaal DMTO-tarief primo-accedant, 101 departementen | 4,50 procent (99 dep.), 3,80 procent (2 dep.) | procent | FR | ja | DGFiP, tarieven per 1 juni 2026 | `overheid_vastgesteld` |  |
 | P099 | `bronnen.json` | 136 | Vrijstelling plus-value EU/EER-onderdanen | 150000 | EUR | FR | ja | nee | `overheid_vastgesteld` | art. 150 U II 2 CGI |
 
-## `energieportaal` — ja (10 parameters)
+## `energieportaal`, ja (10 parameters)
 
 Rekenengine met klimaatzones, DPE-coefficienten, U-waarden en een prijsmodule met actuele Franse energieprijzen.  
-Vermoedelijk Cockpit-onderdeel: IF — EnergiePortaal
+Vermoedelijk Cockpit-onderdeel: IF, EnergiePortaal
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -189,10 +189,10 @@ Vermoedelijk Cockpit-onderdeel: IF — EnergiePortaal
 | P149 | `api/prices.js` | 15-22 | Referentie-energieprijzen met peildatum | elec 0,194 EUR/kWh (CRE, feb 2026); gas 0,1051 EUR/kWh PCI (CRE, apr 2026); fioul 1,19 EUR/L (mrt 2026); pellet 0,60 EUR/kg (Q1 2026); hout 85 EUR/stere (2025); propaan 1,90 EUR/L; petroleum 2,00 EUR/L | EUR per eenheid | FR | ja | refDate per waarde | `marktindex` | elektriciteit en gas worden live opgehaald bij CRE, de rest is vast |
 | P150 | `api/prices.js` | 7 | Verouderingsdrempel prijzen | 120 | dagen | FR | nee | nee | `afgeleid` |  |
 
-## `dossier-elektriciteit-if` — ja (9 parameters)
+## `dossier-elektriciteit-if`, ja (9 parameters)
 
 Hoofdstukken bevatten geverifieerde Consuel- en Enedis-tarieven met bron en verificatiedatum.  
-Vermoedelijk Cockpit-onderdeel: IF — dossier Elektriciteit
+Vermoedelijk Cockpit-onderdeel: IF, dossier Elektriciteit
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -206,10 +206,10 @@ Vermoedelijk Cockpit-onderdeel: IF — dossier Elektriciteit
 | P194 | `hoofdstukken/h1.md` | 63 en 67 | Vermogenstrappen en aansluitgrenzen | abonnement 3-6-9-12 kVA; monophase maximaal 12 kVA; triphase tot 36 kVA | kVA | FR | ja | geverifieerd 04-07-2026 | `overheid_vastgesteld` |  |
 | P195 | `verificatie/normverificatie.md` | V9 | Geldigheid diagnostic electrique | 3 jaar bij verkoop, 6 jaar bij verhuur; verplicht bij installatie ouder dan 15 jaar | jaren | FR | ja | service-public.gouv.fr F18692, geverifieerd 04-07-2026 | `overheid_vastgesteld` |  |
 
-## `briefhulp-fr` — ja (8 parameters)
+## `briefhulp-fr`, ja (8 parameters)
 
 Brieftemplates rekenen met wettelijke termijnen en boetepercentages (borg, telecom, belastingbezwaar).  
-Vermoedelijk Cockpit-onderdeel: IF — Briefhulp
+Vermoedelijk Cockpit-onderdeel: IF, Briefhulp
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -222,10 +222,10 @@ Vermoedelijk Cockpit-onderdeel: IF — Briefhulp
 | P185 | `KLIKSTROMEN.md` | 233 | Boete per maand vertraging | 10 procent | procent | FR | nee | nee | `overheid_vastgesteld` |  |
 | P186 | `ARGUMENTATIE.md` | 19 | CSG en CRDS geschrapt voor EU-verzekerden | CSG 9,2 procent en CRDS 0,5 procent | procent | FR | ja | LFSS 2019 | `overheid_vastgesteld` |  |
 
-## `Plus-Value-Calculator` — ja (7 parameters)
+## `Plus-Value-Calculator`, ja (7 parameters)
 
 Python-rekenkern met abattementsreeksen, surtaxe-barema, forfaits en tarieven voor de Franse meerwaardeheffing.  
-Vermoedelijk Cockpit-onderdeel: Vastgoedtransacties — plus-value
+Vermoedelijk Cockpit-onderdeel: Vastgoedtransacties, plus-value
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -237,10 +237,10 @@ Vermoedelijk Cockpit-onderdeel: Vastgoedtransacties — plus-value
 | P105 | `generate_pdf.py` | 119 | Forfait verbouwing, vanaf 5 jaar bezit | 0,15 | fractie | FR | nee | nee | `overheid_vastgesteld` |  |
 | P106 | `generate_pdf.py` | 127 | Tarief inkomstenbelasting plus-value | 0,19 | fractie | FR | nee | nee | `overheid_vastgesteld` |  |
 
-## `zorgkompas-frankrijk` — ja (7 parameters)
+## `zorgkompas-frankrijk`, ja (7 parameters)
 
 Scenariodatabase met BRSS-tarieven en vergoedingspercentages van de Securite sociale.  
-Vermoedelijk Cockpit-onderdeel: IF — ZorgKompas
+Vermoedelijk Cockpit-onderdeel: IF, ZorgKompas
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -252,10 +252,10 @@ Vermoedelijk Cockpit-onderdeel: IF — ZorgKompas
 | P174 | `scenarioEngine.js` | 89-90 | Vergoeding kine en medicatie | 0,60 respectievelijk 0,65 | fractie | FR | nee | nee | `overheid_vastgesteld` |  |
 | P175 | `scenarioEngine.js` | 96 | Vergoeding zonder parcours de soins | 0,30 | fractie | FR | nee | nee | `overheid_vastgesteld` |  |
 
-## `Energiecalculator-Frankrijk-door-Nederlanders.fr` — ja (5 parameters)
+## `Energiecalculator-Frankrijk-door-Nederlanders.fr`, ja (5 parameters)
 
 Vroege versie van de energie-engine met dezelfde HDD- en PV-waarden maar deels afwijkende U-presets.  
-Vermoedelijk Cockpit-onderdeel: NLFR — energiecalculator (oud)
+Vermoedelijk Cockpit-onderdeel: NLFR, energiecalculator (oud)
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -265,10 +265,10 @@ Vermoedelijk Cockpit-onderdeel: NLFR — energiecalculator (oud)
 | P160 | `script.js` | 8 en 10 | Standaardprijzen en omrekenfactoren | identiek aan energieportaal | EUR en kWh | FR | nee | nee | `gebruikersinvoer` |  |
 | P161 | `script.js` | 15 | U-waarden per isolatieniveau | muur 2,0 tot 0,25; dak 3,0 tot 0,1; vloer 1,2 tot 0,18; raam 5,8 tot 0,8 | W/m2K | FR | nee | nee | `indicatief` | dak, vloer en raam wijken af van de latere versies |
 
-## `warmteverlies-calculator` — ja (5 parameters)
+## `warmteverlies-calculator`, ja (5 parameters)
 
 Oudere variant van dezelfde energie-engine met dezelfde klimaat-, prijs- en U-waardeconstanten.  
-Vermoedelijk Cockpit-onderdeel: IF — warmteverlies
+Vermoedelijk Cockpit-onderdeel: IF, warmteverlies
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -278,10 +278,10 @@ Vermoedelijk Cockpit-onderdeel: IF — warmteverlies
 | P155 | `engine/engine.js` | 26 en 28 | Standaardprijzen en omrekenfactoren | identiek aan energieportaal | EUR en kWh | FR | nee | nee | `gebruikersinvoer` |  |
 | P156 | `engine/engine.js` | 63-66 | U-waarden per isolatieniveau | identiek aan energieportaal | W/m2K | FR | nee | nee | `indicatief` |  |
 
-## `erf-en-schenkingsrecht-nl-fr` — ja (4 parameters)
+## `erf-en-schenkingsrecht-nl-fr`, ja (4 parameters)
 
 Franse successie- en schenkingsbaremes met tarieven en abattements in app.js, met bronregister en verificatiedata.  
-Vermoedelijk Cockpit-onderdeel: IF — erf- en schenkingsrecht
+Vermoedelijk Cockpit-onderdeel: IF, erf- en schenkingsrecht
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -290,10 +290,10 @@ Vermoedelijk Cockpit-onderdeel: IF — erf- en schenkingsrecht
 | P164 | `app.js` | 1203 en 1219 | Abattement per kind per ouder | 100000 | EUR | FR | ja | impots.gouv.fr, 18 december 2025 | `overheid_vastgesteld` | hernieuwbaar per 15 jaar |
 | P165 | `app.js` | 1222-1223 | Extra vrijstelling geldschenking | 31865 | EUR | FR | nee | nee | `overheid_vastgesteld` | in de code aangeduid als indicatief |
 
-## `ca-btw-oss-tool` — ja (3 parameters)
+## `ca-btw-oss-tool`, ja (3 parameters)
 
 Regelset met btw-tarieven NL en FR en een rekenmodule voor aangifterubrieken en OSS.  
-Vermoedelijk Cockpit-onderdeel: CA intern — btw/OSS
+Vermoedelijk Cockpit-onderdeel: CA intern, btw/OSS
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -301,10 +301,10 @@ Vermoedelijk Cockpit-onderdeel: CA intern — btw/OSS
 | P177 | `lib/regels.ts` | 62 en 180 | Btw-tarief FR-particulieren via OSS | 20 | procent | FR | ja | regelset vastgesteld 2026-07-07 | `overheid_vastgesteld` |  |
 | P178 | `lib/bereken.ts` | 126 | Voorbelastingtarief inkoop NL | 0,21 | fractie | NL | ja | 2026-07-07 | `overheid_vastgesteld` |  |
 
-## `e-facturatie-frankrijk` — ja (3 parameters)
+## `e-facturatie-frankrijk`, ja (3 parameters)
 
 Feitenobjecten met wettelijke invoeringsdata en ondernemingsgroottegrenzen, elk met bron en controledatum.  
-Vermoedelijk Cockpit-onderdeel: IF / CA — e-facturatie
+Vermoedelijk Cockpit-onderdeel: IF / CA, e-facturatie
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -312,10 +312,10 @@ Vermoedelijk Cockpit-onderdeel: IF / CA — e-facturatie
 | P197 | `data/rules.ts` | 54-56 | Invoeringsdatum uitgifteplicht PME en TPE | 1 september 2027 | datum | FR | ja | gecontroleerd 8 juli 2026 | `overheid_vastgesteld` |  |
 | P198 | `data/rules.ts` | 103 | Grens TPE | minder dan 10 medewerkers en maximaal 2 miljoen euro omzet of balanstotaal | EUR en aantal | FR | ja | gecontroleerd 8 juli 2026 | `overheid_vastgesteld` | bron: INSEE categorieen |
 
-## `energiebesparing-subsidie-en-fiscale-regelingen` — ja (3 parameters)
+## `energiebesparing-subsidie-en-fiscale-regelingen`, ja (3 parameters)
 
 Beslislogica met btw-tarieven voor renovatie en voorwaardendrempels voor Eco-PTZ.  
-Vermoedelijk Cockpit-onderdeel: IF — subsidiewijzer
+Vermoedelijk Cockpit-onderdeel: IF, subsidiewijzer
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -323,10 +323,10 @@ Vermoedelijk Cockpit-onderdeel: IF — subsidiewijzer
 | P200 | `script.js` | 193 | Ouderdomsgrens woning voor verlaagd tarief en Eco-PTZ | 2 jaar | jaren | FR | nee | nee | `overheid_vastgesteld` |  |
 | P201 | `index.html` | 35 | MaPrimeRenov-bedrag in de tekst | 24500 | EUR | FR | nee | 2026 in de pagina | `overheid_vastgesteld` | als plafondbedrag in de pagina genoemd |
 
-## `gitekompas-fr` — ja (3 parameters)
+## `gitekompas-fr`, ja (3 parameters)
 
 Micro-BIC-parameters (abattement en omzetplafond per activiteitstype), degressieve reeks en niet-residentbandbreedte.  
-Vermoedelijk Cockpit-onderdeel: IF — GiteKompas
+Vermoedelijk Cockpit-onderdeel: IF, GiteKompas
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -334,28 +334,28 @@ Vermoedelijk Cockpit-onderdeel: IF — GiteKompas
 | P167 | `index.html` | 1177-1179 | Degressieve reeks per bezitsjaar | jaar 6: 75 procent; jaar 7: 50 procent; jaar 8: 25 procent | procent | FR | nee | nee | `indicatief` |  |
 | P168 | `index.html` | 1226-1227 | Minimumheffing niet-residenten, bandbreedte | 20 tot 30 procent | procent | FR | nee | nee | `indicatief` | in de tool als bandbreedte getoond |
 
-## `if-mobiel` — ja (1 parameters)
+## `if-mobiel`, ja (1 parameters)
 
 Bevat een byte-identieke kopie van de engine van energieportaal (engine.js, dpe.js, archetypes.js).  
-Vermoedelijk Cockpit-onderdeel: IF — mobiele schil
+Vermoedelijk Cockpit-onderdeel: IF, mobiele schil
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P151 | `engine/dpe.js en engine/engine.js` | alle | Identieke kopie van de energie-engine van energieportaal | zie energieportaal | divers | FR | nee | nee | `afgeleid` | byte-identiek aan energieportaal op 16 september 2026 |
 
-## `woningzoeker-frankrijk` — ja (1 parameters)
+## `woningzoeker-frankrijk`, ja (1 parameters)
 
 Budgetstap rekent notariskosten als vast percentage over de aankoopprijs.  
-Vermoedelijk Cockpit-onderdeel: IF — Woningzoeker
+Vermoedelijk Cockpit-onderdeel: IF, Woningzoeker
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P202 | `components/steps/StepBudget.tsx` | 52, 129 en 146 | Notariskosten als percentage van de aankoopprijs | circa 8 procent | procent | FR | nee | nee | `indicatief` |  |
 
-## `nlfr-ai-agent` — mogelijk (5 parameters)
+## `nlfr-ai-agent`, mogelijk (5 parameters)
 
 Kennisbestand voor de AI-adviseur bevat richtprijzen, subsidiebedragen en energiekentallen zonder bronregel per waarde.  
-Vermoedelijk Cockpit-onderdeel: NLFR — AI-agent
+Vermoedelijk Cockpit-onderdeel: NLFR, AI-agent
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -365,7 +365,7 @@ Vermoedelijk Cockpit-onderdeel: NLFR — AI-agent
 | P207 | `knowledge/experts/energieportaal-ai-adviseur.md` | 272-279 | Richtprijzen renovatiemaatregelen | dakisolatie 25-50 EUR/m2; ITI 50-90 EUR/m2; ITE 100-200 EUR/m2; vloerisolatie 30-60 EUR/m2; raam HR++ 400-800 per stuk; warmtepomp lucht-water 8000-15000; geothermisch 15000-25000; PV 3 kWp 5000-8000 | EUR | FR | nee | nee | `indicatief` |  |
 | P208 | `knowledge/experts/energieportaal-ai-adviseur.md` | 286 | Besparing per graad lagere binnentemperatuur | circa 7 procent | procent | FR | nee | nee | `indicatief` |  |
 
-## `dossierfrankrijk` — mogelijk (4 parameters)
+## `dossierfrankrijk`, mogelijk (4 parameters)
 
 Beslisboom noemt kostenindicaties en een rekenvoorbeeld; alleen code en configuratie beoordeeld, geen gebruikersdata.  
 Vermoedelijk Cockpit-onderdeel: DossierFrankrijk
@@ -377,10 +377,10 @@ Vermoedelijk Cockpit-onderdeel: DossierFrankrijk
 | P217 | `lib/embedTree.ts` | 330 | Repatriering naar Nederland | 3000 tot 8000 euro | EUR | grensoverschrijdend | nee | nee | `indicatief` |  |
 | P218 | `lib/embedTree.ts` | 396 | Rekenvoorbeeld ouderenzorg | inkomen 1800, kosten 1624 per maand, restant circa 325 euro | EUR/maand | FR | nee | nee | `afgeleid` | expliciet indicatief genoemd |
 
-## `ouderenzorg-fr` — mogelijk (4 parameters)
+## `ouderenzorg-fr`, mogelijk (4 parameters)
 
 Dossierskelet met een tabel van Franse zorgtoeslagen en plafonds, aangeduid als indicatief.  
-Vermoedelijk Cockpit-onderdeel: IF — Ouderenzorg
+Vermoedelijk Cockpit-onderdeel: IF, Ouderenzorg
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -389,10 +389,10 @@ Vermoedelijk Cockpit-onderdeel: IF — Ouderenzorg
 | P211 | `if-dossier/dossier-skelet.md` | 127 | Credit d'impot hulp aan huis en plafond | 50 procent, maximaal 6000 tot 10000 euro per jaar | procent en EUR | FR | nee | indicatief 2026 | `overheid_vastgesteld` |  |
 | P212 | `if-dossier/dossier-skelet.md` | 128 | MaPrimeAdapt maximum | tot 70 procent van de kosten | procent | FR | nee | indicatief 2026 | `overheid_vastgesteld` |  |
 
-## `erfrecht-en-testament` — mogelijk (3 parameters)
+## `erfrecht-en-testament`, mogelijk (3 parameters)
 
 Artikel met harde successietarieven en vrijstellingen, zonder rekenfunctie.  
-Vermoedelijk Cockpit-onderdeel: IF — erfrecht (artikel)
+Vermoedelijk Cockpit-onderdeel: IF, erfrecht (artikel)
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -400,37 +400,37 @@ Vermoedelijk Cockpit-onderdeel: IF — erfrecht (artikel)
 | P224 | `index.html` | 351 | Vrijstelling stiefkinderen | verhoogd van 1594 naar 15932 euro | EUR | FR | nee | nee | `overheid_vastgesteld` | geldt bij overlijden, niet bij schenking |
 | P225 | `index.html` | 369 | Barema en abattement bij adoption simple | 5 tot 45 procent, abattement 100000 euro | procent en EUR | FR | nee | nee | `overheid_vastgesteld` |  |
 
-## `bouwvergunningwijzer-frankrijk` — mogelijk (2 parameters)
+## `bouwvergunningwijzer-frankrijk`, mogelijk (2 parameters)
 
 Regelmatrix met oppervlaktedrempels voor DP en PC; nog niet gekoppeld aan Legifrance-artikelen.  
-Vermoedelijk Cockpit-onderdeel: IF — Bouwvergunningwijzer
+Vermoedelijk Cockpit-onderdeel: IF, Bouwvergunningwijzer
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P219 | `docs/rule-matrix-v0.1.md` | 22-24 | Oppervlaktedrempels vrijstaand bijgebouw | tot 5 m2 geen formaliteit; 5 tot 20 m2 declaration prealable; boven 20 m2 permis de construire | m2 | FR | nee | nee | `overheid_vastgesteld` | document meldt dat koppeling aan Legifrance-artikelen nog moet gebeuren |
 | P220 | `docs/rule-matrix-v0.1.md` | 27-29 | Oppervlaktedrempels uitbreiding | buiten zone U tot 20 m2 DP; in zone U tot 40 m2 DP; boven 20 tot 40 m2 architectenplicht toetsen | m2 | FR | nee | nee | `overheid_vastgesteld` |  |
 
-## `infofrankrijk-routecontrole` — mogelijk (2 parameters)
+## `infofrankrijk-routecontrole`, mogelijk (2 parameters)
 
 Reiskostenraming met brandstofverbruik, literprijs en huurbandbreedtes als vaste aannames.  
-Vermoedelijk Cockpit-onderdeel: IF — Routecontrole
+Vermoedelijk Cockpit-onderdeel: IF, Routecontrole
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P221 | `components/vervoershub.tsx` | 178 | Aannames reiskostenraming | 7 liter per 100 km en 1,80 euro per liter | L/100km en EUR/L | FR | nee | nee | `marktindex` |  |
 | P222 | `components/passport-wizard.tsx` | 340 | Huurbandbreedte 9-persoonsbus | 100 tot 190 euro per dag en 0,25 tot 0,40 euro per extra kilometer | EUR | FR | nee | nee | `marktindex` |  |
 
-## `taalhulp-fr` — mogelijk (2 parameters)
+## `taalhulp-fr`, mogelijk (2 parameters)
 
 Begrippenlijst bevat losse tarieven als toelichting bij een term, niet als rekenparameter.  
-Vermoedelijk Cockpit-onderdeel: IF — Taalhulp
+Vermoedelijk Cockpit-onderdeel: IF, Taalhulp
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P213 | `begrippen.js` | 692 | PFU als vlaktaks | 30 procent | procent | FR | nee | nee | `overheid_vastgesteld` | toelichting bij een begrip, geen rekenparameter |
 | P214 | `begrippen.js` | 693 | Prelevements sociaux over beleggingsinkomsten | 17,2 procent | procent | FR | nee | nee | `overheid_vastgesteld` |  |
 
-## `verenigings-dashboard` — mogelijk (2 parameters)
+## `verenigings-dashboard`, mogelijk (2 parameters)
 
 Rekent kosten met API-tarieven per miljoen tokens, met bron en raadpleegdatum; buiten het fiscale en sociale domein.  
 Vermoedelijk Cockpit-onderdeel: Verenigings-dashboard
@@ -440,73 +440,73 @@ Vermoedelijk Cockpit-onderdeel: Verenigings-dashboard
 | P226 | `lib/tarieven.ts` | 22-27 | API-tarief claude-sonnet-5 | 2,00 USD invoer en 10,00 USD uitvoer per miljoen tokens | USD per 1M tokens | grensoverschrijdend | ja | geraadpleegd 2026-09-11 | `contractueel` | buiten het fiscale en sociale domein |
 | P227 | `lib/tarieven.ts` | 35-39 | Wisselkoers USD naar EUR | null, bron niet bereikbaar | koers | grensoverschrijdend | ja | nee | `marktindex` | bewust leeg gelaten in plaats van geschat |
 
-## `Aankoop-kompas-voor-franse-huizen-in-frankrijk` — mogelijk (1 parameters)
+## `Aankoop-kompas-voor-franse-huizen-in-frankrijk`, mogelijk (1 parameters)
 
 Rekent technische waarde en adviesbod uit gebruikersinvoer; geen vaste fiscale parameters.  
-Vermoedelijk Cockpit-onderdeel: IF — Aankoopkompas
+Vermoedelijk Cockpit-onderdeel: IF, Aankoopkompas
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P233 | `src/App.jsx` | 367 en 489 | Marktprijs per m2 en technische waarde | gebruikersinvoer | EUR/m2 | FR | nee | nee | `gebruikersinvoer` |  |
 
-## `bouwgrond-frankrijk-check` — mogelijk (1 parameters)
+## `bouwgrond-frankrijk-check`, mogelijk (1 parameters)
 
 Analyse op basis van externe API's met een vaste zoekradius; geen fiscale parameters.  
-Vermoedelijk Cockpit-onderdeel: IF — bouwgrondcheck
+Vermoedelijk Cockpit-onderdeel: IF, bouwgrondcheck
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P234 | `api/analyze.js` | 93-110 | Zoekradius risicoanalyse | 1000 | meter | FR | ja | georisques.gouv.fr | `afgeleid` |  |
 
-## `gasdossier-stillewille` — mogelijk (1 parameters)
+## `gasdossier-stillewille`, mogelijk (1 parameters)
 
 Historisch dossier met bedragen en percentages uit een concreet gasgeschil; geen herbruikbare parameters.  
-Vermoedelijk Cockpit-onderdeel: overig — gasdossier
+Vermoedelijk Cockpit-onderdeel: overig, gasdossier
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P229 | `gas-historie.html` | 106-117 | Historische gasprijzen en verbruikscijfers uit een individueel dossier | 0,10 en 0,43 EUR per eenheid; 20,4 en 15 procent | EUR en procent | FR | nee | nee | `indicatief` | dossiergegevens, niet herbruikbaar als parameter |
 
-## `if-tools-api` — mogelijk (1 parameters)
+## `if-tools-api`, mogelijk (1 parameters)
 
 AI-prompt geeft een vast percentage voor frais de notaire mee aan de woninganalyse.  
-Vermoedelijk Cockpit-onderdeel: IF — tools-API
+Vermoedelijk Cockpit-onderdeel: IF, tools-API
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P203 | `src/app/api/woning-analyse/route.ts` | 52 | Frais de notaire in de AI-prompt | circa 7 tot 8 procent bij bestaande bouw | procent | FR | nee | nee | `indicatief` |  |
 
-## `klussen-in-frankrijk` — mogelijk (1 parameters)
+## `klussen-in-frankrijk`, mogelijk (1 parameters)
 
 Bevat een feitenlaag-schema dat expliciet voor bedragen en tarieven is ontworpen (met bron, bronsoort, geverifieerd, geldigVanaf), maar het enige feitenbestand is nog leeg; wel losse bedragen in de brontekst.  
-Vermoedelijk Cockpit-onderdeel: KIF — hoofdrepo
+Vermoedelijk Cockpit-onderdeel: KIF, hoofdrepo
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P228 | `source/facts/schema.json en source/facts/README.md` | geheel | Schema voor een feitenlaag met bedragen en tarieven | velden: id, onderwerp, feit, categorie, bron, bronurl, bronsoort, geverifieerd, geldigVanaf, nlfr | schema | grensoverschrijdend | ja | ja | `afgeleid` | energie.json is leeg; het schema is het meest bruikbare bestaande ontwerp voor Peil |
 
-## `klussen-in-frankrijk-christian-von-klosterlein` — mogelijk (1 parameters)
+## `klussen-in-frankrijk-christian-von-klosterlein`, mogelijk (1 parameters)
 
 Artikeldata met technische percentages en maten; geen fiscale of sociale parameters aangetroffen.  
-Vermoedelijk Cockpit-onderdeel: KIF — artikelen
+Vermoedelijk Cockpit-onderdeel: KIF, artikelen
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P230 | `app/artikelen/water-riool-batch-data.json` | 33-42 | Technische percentages water en riool | 20 tot 95 procent | procent | FR | nee | nee | `indicatief` | technisch, buiten het fiscale en sociale domein |
 
-## `vastgoed-analyse` — mogelijk (1 parameters)
+## `vastgoed-analyse`, mogelijk (1 parameters)
 
 Rekent met marktprijzen per m2 uit DVF; geen eigen vastgelegde parameters.  
-Vermoedelijk Cockpit-onderdeel: IF — vastgoedanalyse
+Vermoedelijk Cockpit-onderdeel: IF, vastgoedanalyse
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|
 | P231 | `api/dvf.js en api/dpe.js` | geheel | Marktprijzen per m2 uit DVF en DPE-gegevens | opgehaald bij .gouv-API's | EUR/m2 | FR | ja | per transactie | `marktindex` | geen eigen vastgelegde waarden |
 
-## `vastgoed-in-frankrijk` — mogelijk (1 parameters)
+## `vastgoed-in-frankrijk`, mogelijk (1 parameters)
 
 Analysetool op .gouv-API's; rekenwerk zit in de AI-prompt, geen vastgelegde parameters.  
-Vermoedelijk Cockpit-onderdeel: IF — vastgoed in Frankrijk
+Vermoedelijk Cockpit-onderdeel: IF, vastgoed in Frankrijk
 
 | # | Bestand | Regel | Naam | Waarde | Eenheid | Land | Bron | Datum | Klasse | Opmerking |
 |---|---|---|---|---|---|---|---|---|---|---|

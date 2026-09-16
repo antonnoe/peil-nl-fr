@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/document.schema.json",
+  "title": "Peil, documentenregister",
+  "description": "Officiele documenten waarop handboeken en tools steunen: brochures, arretes, circulaires, fiches. In taak 1 alleen het schema, met een leeg data/documenten.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "uitgever", "titel", "kenmerk", "publicatiedatum", "bron_url", "gebruikt_in", "verwacht_vervangingsmoment", "vervangen_door", "status"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^doc\\.[a-z0-9_.-]+$" },
+    "uitgever": { "type": "string", "minLength": 1 },
+    "titel": { "type": "string", "minLength": 1 },
+    "kenmerk": { "type": ["string", "null"] },
+    "publicatiedatum": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "bron_url": { "type": ["string", "null"] },
+    "gebruikt_in": {
+      "type": "array",
+      "description": "Handboeken en hoofdstukken die op dit document steunen.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["handboek", "locatie"],
+        "properties": {
+          "handboek": { "type": "string", "minLength": 1 },
+          "locatie": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "verwacht_vervangingsmoment": { "type": ["string", "null"] },
+    "vervangen_door": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["vigerend", "vervangen", "ingetrokken", "te_verifieren"] }
+  }
+}

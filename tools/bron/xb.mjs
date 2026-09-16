@@ -1,0 +1,55 @@
+// Grensoverschrijdend: CAK, arrest De Ruyter, verdrag NL-FR 1973, verordening 883/2004, S1.
+import { VD_FKAI, DOOR_FKAI, VD_VT, DOOR_VT, CAK_URL, oud } from './constanten.mjs';
+
+export const XB = [
+
+{ id: 'p.xb.cak.woonlandfactor_fr', nl: 'Woonlandfactor Frankrijk', fr: 'Coefficient pays de residence, France', off: 'Woonlandfactor Frankrijk, Zvw- en Wlz-bijdrage verdragsgerechtigden',
+  reg: 'xb.cak', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', eh: 'factor', jaar: '2026',
+  st: 'vastgesteld', w: 0.8304, wv: '0,8304', van: '2026-01-01',
+  url: CAK_URL, kn: 'Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen, bron bijgewerkt 29 december 2025',
+  bs: 'secundair: publicatiepagina van het CAK, de onderliggende ministeriele regeling niet zelf gelezen',
+  inst: 'Het CAK', vd: VD_FKAI, vdoor: DOOR_FKAI,
+  freq: 'jaarlijks', lw: '2026-01-01', pub: 'Het CAK, eind december voor het komende jaar',
+  hist: [{ waarde: '0,8251', geldig_jaar: '2025', herkomst: 'Het CAK, woonlandfactor 2025', opmerking: 'genoemd in financieel-kompas-ai als vorige waarde' }],
+  in: [[ 'financieel-kompas-ai', 'config.json:248', '0,8304', false ], [ 'cafeclaude', 'lib/domains/prompts/verzekeren.ts:79', '0,8304', false ]],
+  test: { invoer: 'nominale Zvw-bijdrage 157,00 euro per maand', verwachte_uitkomst: '130,37 euro per maand', toelichting: '157,00 maal 0,8304 is precies het maandbedrag dat het CAK voor Frankrijk publiceert.' },
+  opm: 'De woonlandfactor vermenigvuldigt zowel het nominale deel als het inkomensafhankelijke deel van de verdragsbijdrage.' },
+
+{ id: 'p.xb.cak.nominale_zvw_bijdrage_jaar', nl: 'Nominale Zvw-bijdrage verdragsgerechtigden per jaar', fr: 'Cotisation Zvw nominale annuelle, beneficiaires conventionnes', off: 'Nominale Zvw-bijdrage, voor toepassing van de woonlandfactor',
+  reg: 'xb.cak', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'EUR/jaar', jaar: '2026',
+  st: 'vastgesteld', w: 1884, wv: '1.884 euro per jaar, 157,00 euro per maand', van: '2026-01-01',
+  url: CAK_URL, kn: 'Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen',
+  bs: 'secundair: publicatiepagina van het CAK, de onderliggende ministeriele regeling niet zelf gelezen',
+  inst: 'Het CAK', vd: VD_FKAI, vdoor: DOOR_FKAI,
+  freq: 'jaarlijks', lw: '2026-01-01', pub: 'Het CAK, eind december',
+  in: [[ 'financieel-kompas-ai', 'config.json:249', '1884', false ], [ 'cafeclaude', 'lib/domains/prompts/verzekeren.ts:79', '157,00 euro per maand', false ]],
+  opm: 'De twee tools noteren hetzelfde bedrag anders, per jaar en per maand. Dat is geen afwijking: 157,00 maal 12 is 1.884.' },
+
+{ id: 'p.xb.cak.bijdrage_gemiddeld_oud', nl: 'CAK-bijdrage, oude forfaitaire benadering', fr: 'Cotisation CAK, ancienne approche forfaitaire', off: null,
+  reg: 'xb.cak', klasse: 'indicatief', effect: 'verhoogt_last', eh: 'EUR/jaar', jaar: '2025',
+  st: 'vervallen', w: null, wv: null, tot: '2025-12-31',
+  freq: 'onregelmatig', opgv: 'p.xb.cak.nominale_zvw_bijdrage_jaar',
+  hist: oud(4500, 'een enkel gemiddeld bedrag, zonder opbouw'),
+  kand: true,
+  opm: 'De voorganger financieel-kompas rekende met een vast gemiddeld bedrag van 4.500 euro per jaar. Die benadering is vervangen door een opgebouwde berekening met woonlandfactor, nominaal deel en inkomensafhankelijk deel. Hier vastgelegd zodat zichtbaar blijft dat de grootheid is opgevolgd, niet verdwenen.' },
+
+{ id: 'p.xb.deruyter.prelevement_solidarite', nl: 'Prelevement de solidarite bij De Ruyter', fr: 'Prelevement de solidarite, situation De Ruyter', off: 'Prelevement de solidarite',
+  reg: 'xb.deruyter', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
+  st: 'vastgesteld', w: 0.075, wv: '7,5 procent',
+  kn: 'BOFiP, BOI-RFPI-PVINR-20-20; art. 235 ter CGI; art. 26 LFSS 2019; HvJ-EU C-623/13 (De Ruyter) en C-372/18 (Dreyer)',
+  bs: 'primair', inst: 'DGFiP', vd: VD_VT, vdoor: DOOR_VT,
+  freq: 'zelden', ingev: '2019-01-01', pub: 'wijziging alleen bij een loi de financement de la securite sociale',
+  in: [[ 'financieel-kompas-ai', 'config.json:82', '0,075', false ],
+       [ 'Vastgoedtransactie', 'calc.js:158', '7,5', false ],
+       [ 'cafeclaude', 'lib/domains/prompts/geld.ts:107-108', '7,5', false ],
+       [ 'briefhulp-fr', 'cache/belasting/bezwaar/niveau-1.json:58', '7,5', false ]],
+  uitz: ['Wie voor ziektekosten onder een Frans verplicht stelsel valt, komt hier niet voor in aanmerking en betaalt de volle 17,2 procent. Of iemand onder de uitzondering valt, is een vraag voor een belastingadviseur of de eigen ziektekostenverzekeraar.'],
+  opm: 'Wie voor ziektekosten onder de wetgeving van een ander land van de EER of Zwitserland valt en niet ten laste komt van een Frans verplicht stelsel, is geen CSG en CRDS verschuldigd. Alleen het prelevement de solidarite blijft over.' },
+
+{ id: 'p.xb.deruyter.csg_crds_geschrapt', nl: 'CSG en CRDS die bij De Ruyter vervallen', fr: 'CSG et CRDS ecartees dans la situation De Ruyter', off: 'CSG 9,2 procent en CRDS 0,5 procent',
+  reg: 'xb.deruyter', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', eh: 'fractie', jaar: '2026',
+  freq: 'zelden',
+  in: [[ 'briefhulp-fr', 'ARGUMENTATIE.md:19', 'CSG 9,2 procent en CRDS 0,5 procent', false ],
+       [ 'cafeclaude', 'lib/domains/prompts/geld.ts:108', 'CSG 9,2 plus CRDS 0,5', false ]],
+  opm: 'Bron aanwezig (LFSS 2019, art. 26) maar geen verificatiedatum bij de waarde in de repo. Daarom geen registerwaarde.' },
+];

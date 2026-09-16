@@ -1,4 +1,4 @@
-# Eindrapport taak 0 — inventarisatie van rekeninstrumenten en hun parameters
+# Eindrapport taak 0, inventarisatie van rekeninstrumenten en hun parameters
 
 Peildatum 16 september 2026. Alle 120 repositories onder het GitHub-account `antonnoe` zijn lezend beoordeeld. Er is buiten `peil-nl-fr` niets gewijzigd.
 
@@ -12,7 +12,7 @@ Peildatum 16 september 2026. Alle 120 repositories onder het GitHub-account `ant
 | Geen rekenfunctie (nee) | 86 |
 | Parameters genoteerd | 234 |
 | Dubbele grootheden | 33 |
-| — waarvan afwijkend | 18 |
+| waarvan afwijkend | 18 |
 | Parameters zonder bronverwijzing | 167 van 234 |
 | Parameters zonder datum of jaar | 156 van 234 |
 | Parameters zonder bron én zonder datum | 141 van 234 |

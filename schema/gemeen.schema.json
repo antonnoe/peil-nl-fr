@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/gemeen.schema.json",
+  "title": "Peil, gedeelde definities",
+  "description": "Gedeelde bouwstenen voor de drie lagen van Peil. De bronvelden volgen het feitenschema van Klussen in Frankrijk (KIF): bron, bronurl, bronsoort, geverifieerd, geldigVanaf. Peil hernoemt die velden naar bron_kenmerk, bron_url, bronsoort, verificatiedatum en geldig_van, en voegt instantie, verificatie_door en publicatiemoment toe.",
+  "$defs": {
+    "datum": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "format": "date"
+    },
+    "datum_of_null": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "land": {
+      "type": "string",
+      "enum": ["NL", "FR", "XB"],
+      "description": "As 1. NL, FR of XB voor grensoverschrijdend."
+    },
+    "lastensoort": {
+      "type": "string",
+      "enum": ["fiscaal", "sociaal", "verzekering_overheidsgekaderd", "overig_transactiekosten"],
+      "description": "As 2."
+    },
+    "regeling": {
+      "type": "object",
+      "description": "As 3. De regeling waar de grootheid onder valt, met de typering die bij die regeling hoort. Velden die niet van toepassing zijn staan op null; ze worden niet weggelaten, zodat zichtbaar blijft dat de keuze is gemaakt.",
+      "additionalProperties": false,
+      "required": ["code", "naam", "belastingtype", "socialelastentype", "vrijstellingstype", "transactionele_basis"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^(nl|fr|xb)\\.[a-z0-9_]+$",
+          "description": "Stabiele sleutel van de regeling, gelijk aan het tweede en derde deel van de parameter-id."
+        },
+        "naam": { "type": "string", "minLength": 1 },
+        "belastingtype": {
+          "type": ["string", "null"],
+          "enum": ["inkomstenbelasting", "vermogensbelasting", "meerwaardeheffing", "overdrachtsbelasting", "erf_en_schenkbelasting", "omzetbelasting", "lokale_belasting", "heffing_bijzonder", null]
+        },
+        "socialelastentype": {
+          "type": ["string", "null"],
+          "enum": ["premie_volksverzekering", "premie_werknemersverzekering", "zorgbijdrage", "csg_crds_casa", "prelevement_social", "zelfstandigenbijdrage", "verdragsbijdrage", null]
+        },
+        "vrijstellingstype": {
+          "type": ["string", "null"],
+          "enum": ["abattement", "heffingskorting", "belastingkrediet", "vrijstelling", "drempel", "plafond", "degressieve_aftrek", null]
+        },
+        "transactionele_basis": {
+          "type": ["string", "null"],
+          "enum": ["inkomen", "vermogen", "koopsom", "verkoopprijs", "meerwaarde", "nalatenschap", "schenking", "omzet", "verbruik", "oppervlakte", "akte", "verrichting", "polis", null]
+        }
+      }
+    },
+    "variabiliteitsklasse": {
+      "type": "string",
+      "enum": ["overheid_vastgesteld", "marktindex", "contractueel", "indicatief", "afgeleid", "gebruikersinvoer"],
+      "description": "As 4."
+    },
+    "effect": {
+      "type": "string",
+      "enum": ["verhoogt_last", "verlaagt_last", "bepaalt_grondslag", "bepaalt_toepasselijkheid", "informatief"],
+      "description": "Wat de grootheid met de uitkomst doet."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["vastgesteld", "raming", "te_verifieren", "vervallen"]
+    },
+    "bronsoort": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "description": "Precies 'primair' wanneer de waarde rechtstreeks aan de wettekst of officiele publicatie is getoetst. In elk ander geval een omschrijving van de secundaire route. Een secundaire route wordt nooit stilzwijgend tot primair opgewaardeerd."
+    },
+    "gebruikt_in_regel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repo", "cockpit_onderdeel", "locatie", "waarde_in_tool", "afwijkend"],
+      "properties": {
+        "repo": { "type": "string", "minLength": 1 },
+        "cockpit_onderdeel": { "type": "string", "minLength": 1 },
+        "locatie": { "type": "string", "minLength": 1 },
+        "waarde_in_tool": { "type": ["string", "null"] },
+        "afwijkend": { "type": "boolean" }
+      }
+    },
+    "wijziging": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["waarde", "geldig_jaar", "herkomst"],
+      "properties": {
+        "waarde": { "type": ["string", "number", "null"] },
+        "geldig_jaar": { "type": ["string", "null"] },
+        "herkomst": { "type": "string", "minLength": 1 },
+        "opmerking": { "type": "string" }
+      }
+    },
+    "levensduur_a": {
+      "type": "object",
+      "description": "Levensduur A: hoe vaak de waarde verandert.",
+      "additionalProperties": false,
+      "required": ["aanpassingsfrequentie", "laatste_wijziging", "wijzigingshistorie"],
+      "properties": {
+        "aanpassingsfrequentie": {
+          "type": "string",
+          "enum": ["jaarlijks", "halfjaarlijks", "meerjaarlijks", "onregelmatig", "zelden", "doorlopend", "onbekend"]
+        },
+        "laatste_wijziging": { "$ref": "#/$defs/datum_of_null" },
+        "wijzigingshistorie": { "type": "array", "items": { "$ref": "#/$defs/wijziging" } }
+      }
+    },
+    "levensduur_b": {
+      "type": "object",
+      "description": "Levensduur B: hoe lang de grootheid als zodanig bestaat.",
+      "additionalProperties": false,
+      "required": ["ingevoerd", "vervallen", "opgevolgd_door"],
+      "properties": {
+        "ingevoerd": { "$ref": "#/$defs/datum_of_null" },
+        "vervallen": { "$ref": "#/$defs/datum_of_null" },
+        "opgevolgd_door": { "type": ["string", "null"] }
+      }
+    },
+    "aangekondigde_wijziging": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["datum", "omschrijving", "bron"],
+      "properties": {
+        "datum": { "$ref": "#/$defs/datum_of_null" },
+        "omschrijving": { "type": "string", "minLength": 1 },
+        "bron": { "type": ["string", "null"] }
+      }
+    },
+    "testvoorbeeld": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["invoer", "verwachte_uitkomst", "toelichting"],
+      "properties": {
+        "invoer": { "type": "string", "minLength": 1 },
+        "verwachte_uitkomst": { "type": "string", "minLength": 1 },
+        "toelichting": { "type": "string" }
+      }
+    }
+  }
+}

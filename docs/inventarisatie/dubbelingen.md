@@ -6,7 +6,7 @@ Peildatum 16 september 2026. Dezelfde grootheid in meer dan een repo. **Afwijken
 
 ## Afwijkend
 
-### D01 — Zvw inkomensafhankelijke bijdrage, laag percentage (NL)
+### D01, Zvw inkomensafhankelijke bijdrage, laag percentage (NL)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -16,7 +16,7 @@ Peildatum 16 september 2026. Dezelfde grootheid in meer dan een repo. **Afwijken
 
 Twee edities naast elkaar. De AI-versie noemt bron en verificatiedatum en meldt expliciet dat 0,0526 de waarde van 2025 was; de oude repo doet dat niet. Dezelfde grootheid staat in de AI-versie twee keer, in het NL-blok en in het CAK-blok.
 
-### D02 — AOW bruto per jaar, alleenstaand en partner (NL)
+### D02, AOW bruto per jaar, alleenstaand en partner (NL)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -25,7 +25,7 @@ Twee edities naast elkaar. De AI-versie noemt bron en verificatiedatum en meldt 
 
 Verschil van circa 2,3 procent. Geen van beide repo's noemt een bron of peildatum bij dit bedrag.
 
-### D03 — Schijven impot sur le revenu (FR)
+### D03, Schijven impot sur le revenu (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -35,7 +35,7 @@ Verschil van circa 2,3 procent. Geen van beide repo's noemt een bron of peildatu
 
 De AI-versie en Cafe Claude zijn onderling gelijk; de oude repo loopt een editie achter. De tarieven (0, 11, 30, 41 en 45 procent) zijn in alle drie gelijk.
 
-### D04 — Structuur box 1 en box 3 (NL)
+### D04, Structuur box 1 en box 3 (NL)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -44,7 +44,7 @@ De AI-versie en Cafe Claude zijn onderling gelijk; de oude repo loopt een editie
 
 Niet alleen de waarden maar ook de structuur verschilt. Een register moet hier kiezen welke vorm leidend is, anders is de grootheid niet vergelijkbaar.
 
-### D05 — Heffingskortingen en afbouw (NL)
+### D05, Heffingskortingen en afbouw (NL)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -53,7 +53,7 @@ Niet alleen de waarden maar ook de structuur verschilt. Een register moet hier k
 
 De AI-versie kent bovendien een afzonderlijke afbouw van de arbeidskorting (45592 en 0,0651) die in de oude repo ontbreekt.
 
-### D06 — Heffingsvrij vermogen box 3 (NL)
+### D06, Heffingsvrij vermogen box 3 (NL)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -62,7 +62,7 @@ De AI-versie kent bovendien een afzonderlijke afbouw van de arbeidskorting (4559
 
 Verschil van circa 2,9 procent, opnieuw een editieverschil.
 
-### D07 — Abattement 65-plus en plafond gezinsquotient (FR)
+### D07, Abattement 65-plus en plafond gezinsquotient (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -71,7 +71,7 @@ Verschil van circa 2,9 procent, opnieuw een editieverschil.
 
 Editieverschil. Geen van beide noemt hier een bron.
 
-### D08 — Forfait journalier hospitalier (FR)
+### D08, Forfait journalier hospitalier (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -80,7 +80,7 @@ Editieverschil. Geen van beide noemt hier een bron.
 
 ZorgKompas gebruikt een tarief 2024/2025 en kent geen onderscheid tussen ziekenhuis en psychiatrie. Cafe Claude noemt 1 maart 2026 als ingangsdatum. De rekentool loopt dus achter op het handboek.
 
-### D09 — Base de remboursement consult huisarts (FR)
+### D09, Base de remboursement consult huisarts (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -89,7 +89,7 @@ ZorgKompas gebruikt een tarief 2024/2025 en kent geen onderscheid tussen ziekenh
 
 Twee verschillende bedragen voor dezelfde grootheid, allebei zonder primaire bronverwijzing. Dit is de meest directe tegenspraak tussen een rekentool en een handboek.
 
-### D10 — Franchise medicale en participation forfaitaire (FR)
+### D10, Franchise medicale en participation forfaitaire (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -99,7 +99,7 @@ Twee verschillende bedragen voor dezelfde grootheid, allebei zonder primaire bro
 
 Binnen een repo staan de franchise per doosje op 0,50 en op 1 euro. Regel 146-147 beschrijft de verdubbeling van 0,50 naar 1 euro, regel 67-68 hanteert nog 0,50. Een van beide is verouderd.
 
-### D11 — Surtaxe hoge meerwaarden, rekenwijze (FR)
+### D11, Surtaxe hoge meerwaarden, rekenwijze (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -108,7 +108,7 @@ Binnen een repo staan de franchise per doosje op 0,50 en op 1 euro. Regel 146-14
 
 Zelfde heffing, twee verschillende implementaties. De afvlakkingsformule uit art. 1609 nonies G CGI ontbreekt in de Python-versie, waardoor de uitkomsten rond de tranchegrenzen uiteenlopen.
 
-### D12 — Notariskosten bij aankoop bestaande bouw (FR)
+### D12, Notariskosten bij aankoop bestaande bouw (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -119,7 +119,7 @@ Zelfde heffing, twee verschillende implementaties. De afvlakkingsformule uit art
 
 Vier verschillende aanpakken voor dezelfde vraag. Vastgoedtransactie rekent de kosten daadwerkelijk op; de andere drie gebruiken een vuistregel. De vuistregel van 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste.
 
-### D13 — Standaard energieprijs elektriciteit (FR)
+### D13, Standaard energieprijs elektriciteit (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -128,7 +128,7 @@ Vier verschillende aanpakken voor dezelfde vraag. Vastgoedtransactie rekent de k
 
 Binnen dezelfde repo staan een invulwaarde en een referentiewaarde met bron naast elkaar. Dat is verdedigbaar zolang duidelijk is welke waar geldt, maar een register moet ze uit elkaar houden.
 
-### D14 — Standaard propaanprijs (FR)
+### D14, Standaard propaanprijs (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -139,7 +139,7 @@ Binnen dezelfde repo staan een invulwaarde en een referentiewaarde met bron naas
 
 De referentiewaarde is bijgewerkt, de invulwaarden in drie repo's niet.
 
-### D15 — U-waarden per isolatieniveau (FR)
+### D15, U-waarden per isolatieniveau (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -149,7 +149,7 @@ De referentiewaarde is bijgewerkt, de invulwaarden in drie repo's niet.
 
 De oudste versie hanteert andere U-waarden voor dak, vloer en raam. Alleen de muurwaarden zijn in alle drie gelijk. Als de oude calculator nog ergens is ingebed, geeft hij andere uitkomsten.
 
-### D16 — Apparaatverbruik per jaar (FR)
+### D16, Apparaatverbruik per jaar (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -158,7 +158,7 @@ De oudste versie hanteert andere U-waarden voor dak, vloer en raam. Alleen de mu
 
 Vier van de zeven posten wijken af en de indeling verschilt. Koelkast (250) en wassen (220) zijn gelijk.
 
-### D17 — Plafond credit d'impot hulp aan huis (FR)
+### D17, Plafond credit d'impot hulp aan huis (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -167,7 +167,7 @@ Vier van de zeven posten wijken af en de indeling verschilt. Koelkast (250) en w
 
 Het percentage (50) is gelijk, het plafond niet. Het wettelijke plafond kent verhogingen per kind of bij handicap; welke variant hier bedoeld is, staat er niet bij.
 
-### D18 — Vrijstelling erfbelasting niet-verwanten en stiefkinderen (FR)
+### D18, Vrijstelling erfbelasting niet-verwanten en stiefkinderen (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -179,7 +179,7 @@ Twee bedragen voor wat op het eerste gezicht dezelfde categorie is. Het ondersch
 
 ## Gelijk
 
-### D19 — Prelevements sociaux op vermogen (FR)
+### D19, Prelevements sociaux op vermogen (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -192,7 +192,7 @@ Twee bedragen voor wat op het eerste gezicht dezelfde categorie is. Het ondersch
 
 Zes repo's, dezelfde waarde. De meest verspreide parameter van het hele netwerk en daarmee de eerste kandidaat voor het register.
 
-### D20 — Prelevement de solidarite (De Ruyter) (grensoverschrijdend)
+### D20, Prelevement de solidarite (De Ruyter) (grensoverschrijdend)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -203,7 +203,7 @@ Zes repo's, dezelfde waarde. De meest verspreide parameter van het hele netwerk 
 
 Vier repo's, dezelfde waarde. Alleen briefhulp-fr en cafeclaude noemen de juridische grondslag erbij.
 
-### D21 — Tarief inkomstenbelasting plus-value en forfaits (FR)
+### D21, Tarief inkomstenbelasting plus-value en forfaits (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -213,7 +213,7 @@ Vier repo's, dezelfde waarde. Alleen briefhulp-fr en cafeclaude noemen de juridi
 
 Gelijk. Alleen Vastgoedtransactie noemt de CGI-artikelen.
 
-### D22 — Abattement plus-value per bezitsjaar (FR)
+### D22, Abattement plus-value per bezitsjaar (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -222,7 +222,7 @@ Gelijk. Alleen Vastgoedtransactie noemt de CGI-artikelen.
 
 Gelijk. De Python-versie rekent de inkomstenbelastingkant met een andere hulpfunctie maar komt op dezelfde volledige vrijstelling na 22 jaar uit.
 
-### D23 — Micro-BIC abattements en plafonds verhuur (FR)
+### D23, Micro-BIC abattements en plafonds verhuur (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -232,7 +232,7 @@ Gelijk. De Python-versie rekent de inkomstenbelastingkant met een andere hulpfun
 
 De eerste twee zijn gelijk. Financieel Kompas kent wel de abattements maar niet de omzetplafonds, waardoor het de grens niet bewaakt.
 
-### D24 — Woonlandfactor Frankrijk en nominale Zvw-bijdrage (grensoverschrijdend)
+### D24, Woonlandfactor Frankrijk en nominale Zvw-bijdrage (grensoverschrijdend)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -241,7 +241,7 @@ De eerste twee zijn gelijk. Financieel Kompas kent wel de abattements maar niet 
 
 Gelijk; 157,00 maal 12 is 1884. Alleen de AI-versie noemt de CAK-pagina en de raadpleegdatum.
 
-### D25 — Klimaatzones, graaddagen en PV-opbrengst (FR)
+### D25, Klimaatzones, graaddagen en PV-opbrengst (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -252,7 +252,7 @@ Gelijk; 157,00 maal 12 is 1884. Alleen de AI-versie noemt de CAK-pagina en de ra
 
 Vier repo's, identieke waarden. if-mobiel bevat een byte-identieke kopie van de hele engine van energieportaal; dat is een kopie, geen verwijzing.
 
-### D26 — Omrekenfactoren naar kWh (FR)
+### D26, Omrekenfactoren naar kWh (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -263,7 +263,7 @@ Vier repo's, identieke waarden. if-mobiel bevat een byte-identieke kopie van de 
 
 Gelijk. Het kennisbestand van de AI-adviseur herhaalt de waarde uit de engine en noemt die expliciet als de waarde die de tool gebruikt.
 
-### D27 — Btw-tarief Frankrijk, algemeen (FR)
+### D27, Btw-tarief Frankrijk, algemeen (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -272,7 +272,7 @@ Gelijk. Het kennisbestand van de AI-adviseur herhaalt de waarde uit de engine en
 
 Gelijk. Alleen de btw-tool noemt de bron en de datum waarop de regelset is vastgesteld.
 
-### D28 — PFU, tarief inkomstenbelastingdeel (FR)
+### D28, PFU, tarief inkomstenbelastingdeel (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -283,7 +283,7 @@ Gelijk. Alleen de btw-tool noemt de bron en de datum waarop de regelset is vastg
 
 Gelijk.
 
-### D29 — IFI-drempel en schijven (FR)
+### D29, IFI-drempel en schijven (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -293,7 +293,7 @@ Gelijk.
 
 Gelijk; het enige blok in Financieel Kompas dat tussen de twee edities niet is gewijzigd.
 
-### D30 — Sociale lasten Frankrijk per inkomenssoort (FR)
+### D30, Sociale lasten Frankrijk per inkomenssoort (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -302,7 +302,7 @@ Gelijk; het enige blok in Financieel Kompas dat tussen de twee edities niet is g
 
 Gelijk. De AI-versie splitst de 0,091 voor pensioen bovendien uit naar vier CSG-regimes; de oude versie kent alleen het normale tarief.
 
-### D31 — Btw-tarief energetische renovatie (FR)
+### D31, Btw-tarief energetische renovatie (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -311,7 +311,7 @@ Gelijk. De AI-versie splitst de 0,091 voor pensioen bovendien uit naar vier CSG-
 
 Gelijk.
 
-### D32 — Successievrijstelling per kind per ouder (FR)
+### D32, Successievrijstelling per kind per ouder (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -321,7 +321,7 @@ Gelijk.
 
 Gelijk. Alleen erf-en-schenkingsrecht noemt de bron en de verificatiedatum.
 
-### D33 — Boete te late teruggave huurborg (FR)
+### D33, Boete te late teruggave huurborg (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|

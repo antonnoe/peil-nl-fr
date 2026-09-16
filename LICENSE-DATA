@@ -1,0 +1,32 @@
+# Licentie van de gegevens
+
+De gegevens in dit register, alles onder `data/`, `peil/` en alles wat de build
+onder `/api/` publiceert, staan onder de licentie
+**Creative Commons Naamsvermelding 4.0 Internationaal (CC BY 4.0)**.
+
+De volledige licentietekst: https://creativecommons.org/licenses/by/4.0/legalcode.nl
+Samenvatting: https://creativecommons.org/licenses/by/4.0/deed.nl
+
+## Wat mag
+
+Delen en bewerken, ook commercieel, mits met bronvermelding.
+
+## Bronvermelding
+
+Gebruik de bronregel die bij elk antwoord van de API zit en op elke detailpagina
+van de site staat:
+
+> Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0,
+> peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0
+
+Vervang versie en peildatum door die van de versie die u werkelijk hebt gebruikt.
+Eerdere versies blijven opvraagbaar onder `/api/versies/<versie>/`.
+
+## Geen garantie en geen advies
+
+Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron
+of raadpleeg een professional. De gegevens worden geleverd zonder enige garantie.
+
+## Code
+
+De code in dit register staat onder de MIT-licentie. Zie `LICENSE`.

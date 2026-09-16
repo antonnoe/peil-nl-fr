@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/rekenregel.schema.json",
+  "title": "Peil, laag 2: rekenregel",
+  "description": "Een rekenregel beschrijft hoe parameters tot een uitkomst leiden. In taak 1 is alleen het schema gevuld, met een kiem van rekenregels die uitsluitend uit testvoorbeelden bestaan. De formule is beschrijvend, niet uitvoerbaar.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "naam_nl", "naam_fr", "land", "lastensoort", "regeling", "status",
+    "omschrijving", "gebruikt_parameters", "gebruikt_rekenregels", "volgorde",
+    "bron_url", "bron_kenmerk", "bronsoort", "instantie", "verificatiedatum", "verificatie_door",
+    "levensduur_b", "gebruikt_in", "testvoorbeelden", "uitzonderingen", "opmerkingen", "kandidaat"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^r\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" },
+    "naam_nl": { "type": "string", "minLength": 1 },
+    "naam_fr": { "type": ["string", "null"] },
+    "land": { "$ref": "gemeen.schema.json#/$defs/land" },
+    "lastensoort": { "$ref": "gemeen.schema.json#/$defs/lastensoort" },
+    "regeling": { "$ref": "gemeen.schema.json#/$defs/regeling" },
+    "status": { "$ref": "gemeen.schema.json#/$defs/status" },
+    "omschrijving": { "type": "string", "minLength": 1 },
+    "gebruikt_parameters": {
+      "type": "array",
+      "description": "Parameter-id's uit laag 3. Elk id moet in data/register.json bestaan.",
+      "items": { "type": "string", "pattern": "^p\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" }
+    },
+    "gebruikt_rekenregels": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^r\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" }
+    },
+    "volgorde": { "type": ["string", "null"], "description": "Waar de regel in de keten staat, in woorden." },
+    "bron_url": { "type": ["string", "null"] },
+    "bron_kenmerk": { "type": ["string", "null"] },
+    "bronsoort": { "$ref": "gemeen.schema.json#/$defs/bronsoort" },
+    "instantie": { "type": ["string", "null"] },
+    "verificatiedatum": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "verificatie_door": { "type": ["string", "null"] },
+    "levensduur_b": { "$ref": "gemeen.schema.json#/$defs/levensduur_b" },
+    "gebruikt_in": { "type": "array", "items": { "$ref": "gemeen.schema.json#/$defs/gebruikt_in_regel" } },
+    "testvoorbeelden": { "type": "array", "items": { "$ref": "gemeen.schema.json#/$defs/testvoorbeeld" } },
+    "uitzonderingen": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "opmerkingen": { "type": ["string", "null"] },
+    "kandidaat": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "description": "Geen dode regels.",
+      "anyOf": [
+        { "properties": { "kandidaat": { "const": true } }, "required": ["kandidaat"] },
+        { "properties": { "gebruikt_in": { "type": "array", "minItems": 1 } }, "required": ["gebruikt_in"] }
+      ]
+    }
+  ]
+}

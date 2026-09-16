@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/register.schema.json",
+  "title": "Peil, register",
+  "description": "Omslag om de drie lagen. data/register.json bevat laag 3. data/rekenregels.json en data/duidingsregels.json gebruiken dezelfde omslag met een andere sleutel.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "parameters"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["titel", "versie", "versiedatum", "peildatum", "licentie", "bronregel", "aangesloten_repos"],
+      "properties": {
+        "titel": { "type": "string", "minLength": 1 },
+        "versie": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "versiedatum": { "$ref": "gemeen.schema.json#/$defs/datum" },
+        "peildatum": { "$ref": "gemeen.schema.json#/$defs/datum" },
+        "licentie": { "type": "string", "minLength": 1 },
+        "bronregel": { "type": "string", "minLength": 1 },
+        "aangesloten_repos": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "parameters": { "type": "array", "minItems": 1, "items": { "$ref": "parameter.schema.json" } }
+  }
+}

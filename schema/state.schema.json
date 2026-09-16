@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/state.schema.json",
+  "title": "Peil, signaalbestand voor de Cockpit",
+  "description": "Peil is een meetbron. Het stuurt geen mails, opent geen issues en slaat geen alarm. Alles wat de Cockpit moet weten staat hier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "totalen", "per_cockpit_onderdeel", "waarschuwingen"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["bron", "versie", "versiedatum", "peildatum", "licentie"],
+      "properties": {
+        "bron": { "type": "string" },
+        "versie": { "type": "string" },
+        "versiedatum": { "$ref": "gemeen.schema.json#/$defs/datum" },
+        "peildatum": { "$ref": "gemeen.schema.json#/$defs/datum" },
+        "licentie": { "type": "string" }
+      }
+    },
+    "totalen": { "$ref": "#/$defs/tellers" },
+    "per_cockpit_onderdeel": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["cockpit_onderdeel", "repos", "tellers", "waarschuwingen"],
+        "properties": {
+          "cockpit_onderdeel": { "type": "string", "minLength": 1 },
+          "repos": { "type": "array", "items": { "type": "string" } },
+          "tellers": { "$ref": "#/$defs/tellers" },
+          "waarschuwingen": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "waarschuwingen": { "type": "array", "items": { "$ref": "#/$defs/waarschuwing" } }
+  },
+  "$defs": {
+    "tellers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["vastgesteld", "raming", "te_verifieren", "vervallen", "afwijkend_tussen_tools"],
+      "properties": {
+        "vastgesteld": { "type": "integer", "minimum": 0 },
+        "raming": { "type": "integer", "minimum": 0 },
+        "te_verifieren": { "type": "integer", "minimum": 0 },
+        "vervallen": { "type": "integer", "minimum": 0 },
+        "afwijkend_tussen_tools": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "waarschuwing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sleutel", "soort", "niveau", "parameter", "omschrijving", "geraakt", "veranderd"],
+      "properties": {
+        "sleutel": { "type": "string", "minLength": 1 },
+        "soort": { "type": "string", "enum": ["gaat_veranderen", "verouderd", "afwijkend", "veranderd"] },
+        "niveau": { "type": "string", "enum": ["rood", "oranje", "grijs"] },
+        "parameter": { "type": "string", "pattern": "^p\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" },
+        "omschrijving": { "type": "string", "minLength": 1 },
+        "geraakt": {
+          "type": "array",
+          "description": "Elke waarschuwing noemt de geraakte repo's en locaties.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["repo", "cockpit_onderdeel", "locatie"],
+            "properties": {
+              "repo": { "type": "string", "minLength": 1 },
+              "cockpit_onderdeel": { "type": "string", "minLength": 1 },
+              "locatie": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "veranderd": {
+          "type": ["object", "null"],
+          "description": "Veld aanwezig maar leeg. De Peil-run vult dit in taak 2 met wat er sinds de vorige run feitelijk is veranderd.",
+          "additionalProperties": true
+        }
+      }
+    }
+  }
+}

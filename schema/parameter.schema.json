@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/parameter.schema.json",
+  "title": "Peil, laag 3: parameter",
+  "description": "Een parameter is een enkele grootheid met een waarde, een bron en een levensduur. Laag 3 is de onderste laag: rekenregels (laag 2) verwijzen naar parameters, duidingsregels (laag 1) verwijzen naar rekenregels en parameters.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "naam_nl", "naam_fr", "naam_officieel",
+    "land", "lastensoort", "regeling", "variabiliteitsklasse", "effect",
+    "waarde", "waarde_weergave", "eenheid", "geldig_jaar", "geldig_van", "geldig_tot",
+    "status", "bron_url", "bron_kenmerk", "bronsoort", "instantie", "verificatiedatum", "verificatie_door",
+    "publicatiemoment", "aangekondigde_wijziging", "levensduur_a", "levensduur_b",
+    "gebruikt_in", "testvoorbeeld", "uitzonderingen", "opmerkingen", "kandidaat"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^p\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$",
+      "description": "Laagprefix p, dan land, regeling en grootheid. Voorbeeld: p.fr.ps.taux_global."
+    },
+    "naam_nl": { "type": "string", "minLength": 1 },
+    "naam_fr": { "type": ["string", "null"] },
+    "naam_officieel": { "type": ["string", "null"], "description": "De naam zoals de wet of de instantie die voert." },
+    "land": { "$ref": "gemeen.schema.json#/$defs/land" },
+    "lastensoort": { "$ref": "gemeen.schema.json#/$defs/lastensoort" },
+    "regeling": { "$ref": "gemeen.schema.json#/$defs/regeling" },
+    "variabiliteitsklasse": { "$ref": "gemeen.schema.json#/$defs/variabiliteitsklasse" },
+    "effect": { "$ref": "gemeen.schema.json#/$defs/effect" },
+    "waarde": {
+      "type": ["number", "string", "array", "object", "null"],
+      "description": "De registerwaarde. null zolang de status te_verifieren is; de waarde die een tool nu gebruikt staat dan in gebruikt_in[].waarde_in_tool."
+    },
+    "waarde_weergave": { "type": ["string", "null"], "description": "Leesbare weergave van de waarde. null wanneer er geen registerwaarde is." },
+    "eenheid": { "type": ["string", "null"] },
+    "geldig_jaar": { "type": ["string", "null"] },
+    "geldig_van": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "geldig_tot": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "status": { "$ref": "gemeen.schema.json#/$defs/status" },
+    "bron_url": { "type": ["string", "null"] },
+    "bron_kenmerk": { "type": ["string", "null"], "description": "Wetsartikel, fichenummer, publicatiekenmerk." },
+    "bronsoort": { "$ref": "gemeen.schema.json#/$defs/bronsoort" },
+    "instantie": { "type": ["string", "null"] },
+    "verificatiedatum": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "verificatie_door": { "type": ["string", "null"] },
+    "publicatiemoment": { "type": ["string", "null"], "description": "Wanneer de instantie de waarde normaal publiceert." },
+    "aangekondigde_wijziging": { "$ref": "gemeen.schema.json#/$defs/aangekondigde_wijziging" },
+    "levensduur_a": { "$ref": "gemeen.schema.json#/$defs/levensduur_a" },
+    "levensduur_b": { "$ref": "gemeen.schema.json#/$defs/levensduur_b" },
+    "verantwoordelijke": { "type": ["string", "null"], "description": "Verplicht voor elke klasse buiten overheid_vastgesteld." },
+    "houdbaarheidsdatum": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "gebruikt_in": { "type": "array", "items": { "$ref": "gemeen.schema.json#/$defs/gebruikt_in_regel" } },
+    "testvoorbeeld": { "$ref": "gemeen.schema.json#/$defs/testvoorbeeld" },
+    "uitzonderingen": {
+      "type": "array",
+      "description": "Uitzonderingen worden in tekst benoemd met verwijzing naar een professional, niet gemodelleerd.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "opmerkingen": { "type": ["string", "null"] },
+    "kandidaat": { "type": "boolean", "description": "true wanneer de grootheid nog door geen enkele aangesloten tool wordt gebruikt." }
+  },
+  "allOf": [
+    {
+      "description": "Geen vastgestelde waarde zonder bron en verificatiedatum.",
+      "if": { "properties": { "status": { "const": "vastgesteld" } }, "required": ["status"] },
+      "then": {
+        "required": ["verificatiedatum"],
+        "properties": {
+          "verificatiedatum": { "type": "string" },
+          "waarde": { "not": { "type": "null" } }
+        },
+        "anyOf": [
+          { "properties": { "bron_url": { "type": "string", "minLength": 1 } }, "required": ["bron_url"] },
+          { "properties": { "bron_kenmerk": { "type": "string", "minLength": 1 } }, "required": ["bron_kenmerk"] }
+        ]
+      }
+    },
+    {
+      "description": "Te verifieren betekent: geen registerwaarde.",
+      "if": { "properties": { "status": { "const": "te_verifieren" } }, "required": ["status"] },
+      "then": { "properties": { "waarde": { "type": "null" }, "waarde_weergave": { "type": "null" } } }
+    },
+    {
+      "description": "Klassen buiten overheid_vastgesteld krijgen een verantwoordelijke en een houdbaarheidsdatum.",
+      "if": {
+        "properties": { "variabiliteitsklasse": { "enum": ["marktindex", "contractueel", "indicatief", "afgeleid", "gebruikersinvoer"] } },
+        "required": ["variabiliteitsklasse"]
+      },
+      "then": {
+        "required": ["verantwoordelijke", "houdbaarheidsdatum"],
+        "properties": {
+          "verantwoordelijke": { "type": "string", "minLength": 1 },
+          "houdbaarheidsdatum": { "type": "string" }
+        }
+      }
+    },
+    {
+      "description": "Geen dode regels: een parameter wordt gebruikt of is kandidaat.",
+      "anyOf": [
+        { "properties": { "kandidaat": { "const": true } }, "required": ["kandidaat"] },
+        { "properties": { "gebruikt_in": { "type": "array", "minItems": 1 } }, "required": ["gebruikt_in"] }
+      ]
+    }
+  ]
+}

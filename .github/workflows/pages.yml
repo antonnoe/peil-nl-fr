@@ -1,0 +1,50 @@
+name: Peil bouwen en publiceren
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bouwen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Afleiden uit de bronbestanden
+        run: npm run afleiden
+      - name: Controleren dat de afleiding niets wijzigt
+        run: |
+          if [ -n "$(git status --porcelain data peil)" ]; then
+            echo "De afgeleide bestanden lopen uit de pas met tools/bron/."
+            git --no-pager diff --stat data peil
+            exit 1
+          fi
+      - name: Bouwen
+        run: npm run bouw
+      - name: Testen
+        run: npm test
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  publiceren:
+    needs: bouwen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicatie.outputs.page_url }}
+    steps:
+      - id: publicatie
+        uses: actions/deploy-pages@v4

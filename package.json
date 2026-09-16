@@ -1,0 +1,15 @@
+{
+  "name": "peil-nl-fr",
+  "version": "1.0.0",
+  "description": "Openbaar parameterregister NL-FR van Communities Abroad",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "afleiden": "node tools/afleiden-register.mjs && node tools/afleiden-lagen.mjs && node tools/afleiden-ijkkalender.mjs && node tools/afleiden-state.mjs",
+    "bouw": "node tools/bouw.mjs",
+    "test": "node test/test.mjs",
+    "rapport": "node tools/rapport.mjs"
+  }
+}

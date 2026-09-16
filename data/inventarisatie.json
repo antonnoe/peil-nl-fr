@@ -32,7 +32,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Volledig parameterbestand config.json met NL- en FR-belasting-, zorg- en CAK-waarden, inclusief bron en verificatiedatum per grootheid.",
-   "cockpit_onderdeel": "CC / IF — Financieel Kompas (AI-versie)",
+   "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
    "aantal_parameters": 59
   },
   {
@@ -40,7 +40,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Domein- en auditprompts bevatten harde 2026-bedragen en tarieven die de AI als handboek gebruikt (IR-schijven, décote, micro-BIC, BRSS, successierechten).",
-   "cockpit_onderdeel": "CC — Cafe Claude",
+   "cockpit_onderdeel": "CC, Cafe Claude",
    "aantal_parameters": 34
   },
   {
@@ -48,7 +48,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Oudere config.json met dezelfde structuur maar afwijkende waarden (editie 2025) plus een Belgisch blok.",
-   "cockpit_onderdeel": "IF — Financieel Kompas (voorganger)",
+   "cockpit_onderdeel": "IF, Financieel Kompas (voorganger)",
    "aantal_parameters": 20
   },
   {
@@ -56,7 +56,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Rekenkern calc.js met emolumenten, TPF, plus-value-abattements en surtaxe, plus dmto.json met 101 departementale tarieven en bronnen.json.",
-   "cockpit_onderdeel": "Vastgoedtransacties — transactiekostentool",
+   "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
    "aantal_parameters": 20
   },
   {
@@ -64,7 +64,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Rekenengine met klimaatzones, DPE-coefficienten, U-waarden en een prijsmodule met actuele Franse energieprijzen.",
-   "cockpit_onderdeel": "IF — EnergiePortaal",
+   "cockpit_onderdeel": "IF, EnergiePortaal",
    "aantal_parameters": 10
   },
   {
@@ -72,7 +72,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Hoofdstukken bevatten geverifieerde Consuel- en Enedis-tarieven met bron en verificatiedatum.",
-   "cockpit_onderdeel": "IF — dossier Elektriciteit",
+   "cockpit_onderdeel": "IF, dossier Elektriciteit",
    "aantal_parameters": 9
   },
   {
@@ -80,7 +80,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Brieftemplates rekenen met wettelijke termijnen en boetepercentages (borg, telecom, belastingbezwaar).",
-   "cockpit_onderdeel": "IF — Briefhulp",
+   "cockpit_onderdeel": "IF, Briefhulp",
    "aantal_parameters": 8
   },
   {
@@ -88,7 +88,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Python-rekenkern met abattementsreeksen, surtaxe-barema, forfaits en tarieven voor de Franse meerwaardeheffing.",
-   "cockpit_onderdeel": "Vastgoedtransacties — plus-value",
+   "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
    "aantal_parameters": 7
   },
   {
@@ -96,7 +96,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Scenariodatabase met BRSS-tarieven en vergoedingspercentages van de Securite sociale.",
-   "cockpit_onderdeel": "IF — ZorgKompas",
+   "cockpit_onderdeel": "IF, ZorgKompas",
    "aantal_parameters": 7
   },
   {
@@ -104,7 +104,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Vroege versie van de energie-engine met dezelfde HDD- en PV-waarden maar deels afwijkende U-presets.",
-   "cockpit_onderdeel": "NLFR — energiecalculator (oud)",
+   "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
    "aantal_parameters": 5
   },
   {
@@ -112,7 +112,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Oudere variant van dezelfde energie-engine met dezelfde klimaat-, prijs- en U-waardeconstanten.",
-   "cockpit_onderdeel": "IF — warmteverlies",
+   "cockpit_onderdeel": "IF, warmteverlies",
    "aantal_parameters": 5
   },
   {
@@ -120,7 +120,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Franse successie- en schenkingsbaremes met tarieven en abattements in app.js, met bronregister en verificatiedata.",
-   "cockpit_onderdeel": "IF — erf- en schenkingsrecht",
+   "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
    "aantal_parameters": 4
   },
   {
@@ -128,7 +128,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Regelset met btw-tarieven NL en FR en een rekenmodule voor aangifterubrieken en OSS.",
-   "cockpit_onderdeel": "CA intern — btw/OSS",
+   "cockpit_onderdeel": "CA intern, btw/OSS",
    "aantal_parameters": 3
   },
   {
@@ -136,7 +136,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Feitenobjecten met wettelijke invoeringsdata en ondernemingsgroottegrenzen, elk met bron en controledatum.",
-   "cockpit_onderdeel": "IF / CA — e-facturatie",
+   "cockpit_onderdeel": "IF / CA, e-facturatie",
    "aantal_parameters": 3
   },
   {
@@ -144,7 +144,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Beslislogica met btw-tarieven voor renovatie en voorwaardendrempels voor Eco-PTZ.",
-   "cockpit_onderdeel": "IF — subsidiewijzer",
+   "cockpit_onderdeel": "IF, subsidiewijzer",
    "aantal_parameters": 3
   },
   {
@@ -152,7 +152,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Micro-BIC-parameters (abattement en omzetplafond per activiteitstype), degressieve reeks en niet-residentbandbreedte.",
-   "cockpit_onderdeel": "IF — GiteKompas",
+   "cockpit_onderdeel": "IF, GiteKompas",
    "aantal_parameters": 3
   },
   {
@@ -160,7 +160,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "ja",
    "motivering": "Bevat een byte-identieke kopie van de engine van energieportaal (engine.js, dpe.js, archetypes.js).",
-   "cockpit_onderdeel": "IF — mobiele schil",
+   "cockpit_onderdeel": "IF, mobiele schil",
    "aantal_parameters": 1
   },
   {
@@ -168,7 +168,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "ja",
    "motivering": "Budgetstap rekent notariskosten als vast percentage over de aankoopprijs.",
-   "cockpit_onderdeel": "IF — Woningzoeker",
+   "cockpit_onderdeel": "IF, Woningzoeker",
    "aantal_parameters": 1
   },
   {
@@ -176,7 +176,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "mogelijk",
    "motivering": "Kennisbestand voor de AI-adviseur bevat richtprijzen, subsidiebedragen en energiekentallen zonder bronregel per waarde.",
-   "cockpit_onderdeel": "NLFR — AI-agent",
+   "cockpit_onderdeel": "NLFR, AI-agent",
    "aantal_parameters": 5
   },
   {
@@ -192,7 +192,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Dossierskelet met een tabel van Franse zorgtoeslagen en plafonds, aangeduid als indicatief.",
-   "cockpit_onderdeel": "IF — Ouderenzorg",
+   "cockpit_onderdeel": "IF, Ouderenzorg",
    "aantal_parameters": 4
   },
   {
@@ -200,7 +200,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Artikel met harde successietarieven en vrijstellingen, zonder rekenfunctie.",
-   "cockpit_onderdeel": "IF — erfrecht (artikel)",
+   "cockpit_onderdeel": "IF, erfrecht (artikel)",
    "aantal_parameters": 3
   },
   {
@@ -208,7 +208,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "mogelijk",
    "motivering": "Regelmatrix met oppervlaktedrempels voor DP en PC; nog niet gekoppeld aan Legifrance-artikelen.",
-   "cockpit_onderdeel": "IF — Bouwvergunningwijzer",
+   "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
    "aantal_parameters": 2
   },
   {
@@ -216,7 +216,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "mogelijk",
    "motivering": "Reiskostenraming met brandstofverbruik, literprijs en huurbandbreedtes als vaste aannames.",
-   "cockpit_onderdeel": "IF — Routecontrole",
+   "cockpit_onderdeel": "IF, Routecontrole",
    "aantal_parameters": 2
   },
   {
@@ -224,7 +224,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "mogelijk",
    "motivering": "Begrippenlijst bevat losse tarieven als toelichting bij een term, niet als rekenparameter.",
-   "cockpit_onderdeel": "IF — Taalhulp",
+   "cockpit_onderdeel": "IF, Taalhulp",
    "aantal_parameters": 2
   },
   {
@@ -240,7 +240,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Rekent technische waarde en adviesbod uit gebruikersinvoer; geen vaste fiscale parameters.",
-   "cockpit_onderdeel": "IF — Aankoopkompas",
+   "cockpit_onderdeel": "IF, Aankoopkompas",
    "aantal_parameters": 1
   },
   {
@@ -248,7 +248,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Analyse op basis van externe API's met een vaste zoekradius; geen fiscale parameters.",
-   "cockpit_onderdeel": "IF — bouwgrondcheck",
+   "cockpit_onderdeel": "IF, bouwgrondcheck",
    "aantal_parameters": 1
   },
   {
@@ -256,7 +256,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Historisch dossier met bedragen en percentages uit een concreet gasgeschil; geen herbruikbare parameters.",
-   "cockpit_onderdeel": "overig — gasdossier",
+   "cockpit_onderdeel": "overig, gasdossier",
    "aantal_parameters": 1
   },
   {
@@ -264,7 +264,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "mogelijk",
    "motivering": "AI-prompt geeft een vast percentage voor frais de notaire mee aan de woninganalyse.",
-   "cockpit_onderdeel": "IF — tools-API",
+   "cockpit_onderdeel": "IF, tools-API",
    "aantal_parameters": 1
   },
   {
@@ -272,7 +272,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "mogelijk",
    "motivering": "Bevat een feitenlaag-schema dat expliciet voor bedragen en tarieven is ontworpen (met bron, bronsoort, geverifieerd, geldigVanaf), maar het enige feitenbestand is nog leeg; wel losse bedragen in de brontekst.",
-   "cockpit_onderdeel": "KIF — hoofdrepo",
+   "cockpit_onderdeel": "KIF, hoofdrepo",
    "aantal_parameters": 1
   },
   {
@@ -280,7 +280,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Artikeldata met technische percentages en maten; geen fiscale of sociale parameters aangetroffen.",
-   "cockpit_onderdeel": "KIF — artikelen",
+   "cockpit_onderdeel": "KIF, artikelen",
    "aantal_parameters": 1
   },
   {
@@ -288,7 +288,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Rekent met marktprijzen per m2 uit DVF; geen eigen vastgelegde parameters.",
-   "cockpit_onderdeel": "IF — vastgoedanalyse",
+   "cockpit_onderdeel": "IF, vastgoedanalyse",
    "aantal_parameters": 1
   },
   {
@@ -296,7 +296,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "mogelijk",
    "motivering": "Analysetool op .gouv-API's; rekenwerk zit in de AI-prompt, geen vastgelegde parameters.",
-   "cockpit_onderdeel": "IF — vastgoed in Frankrijk",
+   "cockpit_onderdeel": "IF, vastgoed in Frankrijk",
    "aantal_parameters": 1
   },
   {
@@ -304,7 +304,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Knoppenblok.",
-   "cockpit_onderdeel": "overig — knoppen",
+   "cockpit_onderdeel": "overig, knoppen",
    "aantal_parameters": 0
   },
   {
@@ -312,7 +312,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Knoppenblok.",
-   "cockpit_onderdeel": "overig — knoppen",
+   "cockpit_onderdeel": "overig, knoppen",
    "aantal_parameters": 0
   },
   {
@@ -320,7 +320,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Knoppenblok.",
-   "cockpit_onderdeel": "overig — knoppen",
+   "cockpit_onderdeel": "overig, knoppen",
    "aantal_parameters": 0
   },
   {
@@ -328,7 +328,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Adressenlijst.",
-   "cockpit_onderdeel": "IF — adressen",
+   "cockpit_onderdeel": "IF, adressen",
    "aantal_parameters": 0
   },
   {
@@ -336,7 +336,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Beeldbank.",
-   "cockpit_onderdeel": "overig — beeld",
+   "cockpit_onderdeel": "overig, beeld",
    "aantal_parameters": 0
   },
   {
@@ -344,7 +344,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Werkwijze-, rollen- en inventarisatiedocumenten; bevat een eerdere repo-inventarisatie maar geen rekenparameters.",
-   "cockpit_onderdeel": "overig — werkwijze",
+   "cockpit_onderdeel": "overig, werkwijze",
    "aantal_parameters": 0
   },
   {
@@ -352,7 +352,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "UI-blokken.",
-   "cockpit_onderdeel": "overig — UI",
+   "cockpit_onderdeel": "overig, UI",
    "aantal_parameters": 0
   },
   {
@@ -368,7 +368,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Huisstijl- en componentenbibliotheek.",
-   "cockpit_onderdeel": "CA — Style Studio",
+   "cockpit_onderdeel": "CA, Style Studio",
    "aantal_parameters": 0
   },
   {
@@ -376,7 +376,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Redactiehulp, markdown naar HTML.",
-   "cockpit_onderdeel": "CA — redactietool",
+   "cockpit_onderdeel": "CA, redactietool",
    "aantal_parameters": 0
   },
   {
@@ -384,7 +384,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Catalogus van Franse open API's.",
-   "cockpit_onderdeel": "overig — API-catalogus",
+   "cockpit_onderdeel": "overig, API-catalogus",
    "aantal_parameters": 0
   },
   {
@@ -392,7 +392,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Privéproject.",
-   "cockpit_onderdeel": "overig — privé",
+   "cockpit_onderdeel": "overig, privé",
    "aantal_parameters": 0
   },
   {
@@ -400,7 +400,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Vertaalmodule met begrippen, geen bedragen.",
-   "cockpit_onderdeel": "overig — begrippen",
+   "cockpit_onderdeel": "overig, begrippen",
    "aantal_parameters": 0
   },
   {
@@ -408,7 +408,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Kaart- en informatietoepassing over bosbranden.",
-   "cockpit_onderdeel": "IF — bosbranden",
+   "cockpit_onderdeel": "IF, bosbranden",
    "aantal_parameters": 0
   },
   {
@@ -416,7 +416,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Dossierbegeleiding zonder rekenfunctie.",
-   "cockpit_onderdeel": "CA — dossierguide",
+   "cockpit_onderdeel": "CA, dossierguide",
    "aantal_parameters": 0
   },
   {
@@ -424,7 +424,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Leeg, geen default branch.",
-   "cockpit_onderdeel": "CC — lexicon",
+   "cockpit_onderdeel": "CC, lexicon",
    "aantal_parameters": 0
   },
   {
@@ -432,7 +432,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Banner.",
-   "cockpit_onderdeel": "NLFR — banner",
+   "cockpit_onderdeel": "NLFR, banner",
    "aantal_parameters": 0
   },
   {
@@ -440,7 +440,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "SEO-agent op Search Console-data.",
-   "cockpit_onderdeel": "CA — SEO-agent",
+   "cockpit_onderdeel": "CA, SEO-agent",
    "aantal_parameters": 0
   },
   {
@@ -448,7 +448,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Bedrijfssite.",
-   "cockpit_onderdeel": "CA — corporate",
+   "cockpit_onderdeel": "CA, corporate",
    "aantal_parameters": 0
   },
   {
@@ -456,7 +456,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Zoeker met prijsfilters; de bedragen zijn filterwaarden, geen parameters.",
-   "cockpit_onderdeel": "IF — controle technique",
+   "cockpit_onderdeel": "IF, controle technique",
    "aantal_parameters": 0
   },
   {
@@ -464,7 +464,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Statische beheerpagina.",
-   "cockpit_onderdeel": "overig — dashboard",
+   "cockpit_onderdeel": "overig, dashboard",
    "aantal_parameters": 0
   },
   {
@@ -472,7 +472,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "WordPress-export van forumdraden; uitsluitend gebruikersinhoud, geen code of configuratie. Inhoud niet beoordeeld.",
-   "cockpit_onderdeel": "NLFR / IF — forumdata",
+   "cockpit_onderdeel": "NLFR / IF, forumdata",
    "aantal_parameters": 0
   },
   {
@@ -480,7 +480,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Checker rechtsvormen.",
-   "cockpit_onderdeel": "IF — rechtspersoon",
+   "cockpit_onderdeel": "IF, rechtspersoon",
    "aantal_parameters": 0
   },
   {
@@ -496,7 +496,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Eén pagina over offertes; de getallen zijn opmaakcodes.",
-   "cockpit_onderdeel": "IF — devisdossier",
+   "cockpit_onderdeel": "IF, devisdossier",
    "aantal_parameters": 0
   },
   {
@@ -504,7 +504,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Dossierschil zonder bedragen in code.",
-   "cockpit_onderdeel": "IF — Ouderenzorg (schil)",
+   "cockpit_onderdeel": "IF, Ouderenzorg (schil)",
    "aantal_parameters": 0
   },
   {
@@ -512,7 +512,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Beslisboom zonder bedragen.",
-   "cockpit_onderdeel": "IF — beslisboom",
+   "cockpit_onderdeel": "IF, beslisboom",
    "aantal_parameters": 0
   },
   {
@@ -520,7 +520,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Alleen een permanente redirect naar energieportaal.",
-   "cockpit_onderdeel": "IF — redirect",
+   "cockpit_onderdeel": "IF, redirect",
    "aantal_parameters": 0
   },
   {
@@ -528,7 +528,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Evenementenkaart.",
-   "cockpit_onderdeel": "NLFR — evenementen",
+   "cockpit_onderdeel": "NLFR, evenementen",
    "aantal_parameters": 0
   },
   {
@@ -536,7 +536,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Importtool voor artikelen.",
-   "cockpit_onderdeel": "IF — import",
+   "cockpit_onderdeel": "IF, import",
    "aantal_parameters": 0
   },
   {
@@ -544,7 +544,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Eén pagina.",
-   "cockpit_onderdeel": "IF — M2",
+   "cockpit_onderdeel": "IF, M2",
    "aantal_parameters": 0
   },
   {
@@ -552,7 +552,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Nieuwsverwerking en RSS-uitvoer.",
-   "cockpit_onderdeel": "NLFR / IF — newsdesk",
+   "cockpit_onderdeel": "NLFR / IF, newsdesk",
    "aantal_parameters": 0
   },
   {
@@ -560,7 +560,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Juridische pagina's zonder bedragen.",
-   "cockpit_onderdeel": "IF — legal",
+   "cockpit_onderdeel": "IF, legal",
    "aantal_parameters": 0
   },
   {
@@ -568,7 +568,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Nieuwsfeed.",
-   "cockpit_onderdeel": "IF — nieuws",
+   "cockpit_onderdeel": "IF, nieuws",
    "aantal_parameters": 0
   },
   {
@@ -576,7 +576,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Checker zonder rekenparameters.",
-   "cockpit_onderdeel": "IF — huizenchecker",
+   "cockpit_onderdeel": "IF, huizenchecker",
    "aantal_parameters": 0
   },
   {
@@ -584,7 +584,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Taalmodule; percentages zijn opmaak of voorbeelden.",
-   "cockpit_onderdeel": "IF — taalmodule",
+   "cockpit_onderdeel": "IF, taalmodule",
    "aantal_parameters": 0
   },
   {
@@ -592,7 +592,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Gearchiveerd, alleen een licentiebestand.",
-   "cockpit_onderdeel": "overig — gearchiveerd",
+   "cockpit_onderdeel": "overig, gearchiveerd",
    "aantal_parameters": 0
   },
   {
@@ -600,7 +600,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Alleen een licentiebestand.",
-   "cockpit_onderdeel": "IF — gite",
+   "cockpit_onderdeel": "IF, gite",
    "aantal_parameters": 0
   },
   {
@@ -608,7 +608,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Woordenlijst ICT.",
-   "cockpit_onderdeel": "overig — vocabulaire",
+   "cockpit_onderdeel": "overig, vocabulaire",
    "aantal_parameters": 0
   },
   {
@@ -616,7 +616,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "AI-blokken voor artikelen.",
-   "cockpit_onderdeel": "IF — AI-blokken",
+   "cockpit_onderdeel": "IF, AI-blokken",
    "aantal_parameters": 0
   },
   {
@@ -624,7 +624,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Bronnen en artikel over autoverzekering; polisvoorwaarden als PDF, geen vastgelegde parameters in code of configuratie.",
-   "cockpit_onderdeel": "IF — autoverzekering",
+   "cockpit_onderdeel": "IF, autoverzekering",
    "aantal_parameters": 0
   },
   {
@@ -632,7 +632,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Oudere generator.",
-   "cockpit_onderdeel": "IF — generator (oud)",
+   "cockpit_onderdeel": "IF, generator (oud)",
    "aantal_parameters": 0
   },
   {
@@ -640,7 +640,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Generator voor funnels en tabellen.",
-   "cockpit_onderdeel": "IF — generator",
+   "cockpit_onderdeel": "IF, generator",
    "aantal_parameters": 0
   },
   {
@@ -648,7 +648,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Banner.",
-   "cockpit_onderdeel": "IF — banner",
+   "cockpit_onderdeel": "IF, banner",
    "aantal_parameters": 0
   },
   {
@@ -656,7 +656,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Toelichtingspagina over beide platforms.",
-   "cockpit_onderdeel": "overig — uitleg",
+   "cockpit_onderdeel": "overig, uitleg",
    "aantal_parameters": 0
   },
   {
@@ -664,7 +664,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Archiefpagina.",
-   "cockpit_onderdeel": "IF — klussenarchief",
+   "cockpit_onderdeel": "IF, klussenarchief",
    "aantal_parameters": 0
   },
   {
@@ -672,7 +672,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Artikelpagina.",
-   "cockpit_onderdeel": "IF — klussen",
+   "cockpit_onderdeel": "IF, klussen",
    "aantal_parameters": 0
   },
   {
@@ -680,7 +680,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Regioportretten in markdown.",
-   "cockpit_onderdeel": "IF — regioportretten",
+   "cockpit_onderdeel": "IF, regioportretten",
    "aantal_parameters": 0
   },
   {
@@ -688,7 +688,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Infographic met audio.",
-   "cockpit_onderdeel": "IF — infographic",
+   "cockpit_onderdeel": "IF, infographic",
    "aantal_parameters": 0
   },
   {
@@ -696,7 +696,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Informatiepagina.",
-   "cockpit_onderdeel": "IF — internet",
+   "cockpit_onderdeel": "IF, internet",
    "aantal_parameters": 0
   },
   {
@@ -704,7 +704,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Informatiepagina over internetopties.",
-   "cockpit_onderdeel": "IF — internet",
+   "cockpit_onderdeel": "IF, internet",
    "aantal_parameters": 0
   },
   {
@@ -712,7 +712,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Banner.",
-   "cockpit_onderdeel": "overig — banner",
+   "cockpit_onderdeel": "overig, banner",
    "aantal_parameters": 0
   },
   {
@@ -720,7 +720,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Eén pagina, geen rekenwerk.",
-   "cockpit_onderdeel": "overig — kluis",
+   "cockpit_onderdeel": "overig, kluis",
    "aantal_parameters": 0
   },
   {
@@ -728,7 +728,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Beroepenzoeker.",
-   "cockpit_onderdeel": "IF — beroepen",
+   "cockpit_onderdeel": "IF, beroepen",
    "aantal_parameters": 0
   },
   {
@@ -736,7 +736,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Informatiemodule.",
-   "cockpit_onderdeel": "IF — school",
+   "cockpit_onderdeel": "IF, school",
    "aantal_parameters": 0
   },
   {
@@ -744,7 +744,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Moestuinsite; het enige bedrag is een abonnementsprijs.",
-   "cockpit_onderdeel": "IF — moestuin",
+   "cockpit_onderdeel": "IF, moestuin",
    "aantal_parameters": 0
   },
   {
@@ -752,7 +752,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Navigatiecomponenten.",
-   "cockpit_onderdeel": "overig — navigatie",
+   "cockpit_onderdeel": "overig, navigatie",
    "aantal_parameters": 0
   },
   {
@@ -768,7 +768,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Familiekroniek.",
-   "cockpit_onderdeel": "overig — privé",
+   "cockpit_onderdeel": "overig, privé",
    "aantal_parameters": 0
   },
   {
@@ -776,7 +776,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Overzichtspagina verenigingen.",
-   "cockpit_onderdeel": "NLFR — verenigingen",
+   "cockpit_onderdeel": "NLFR, verenigingen",
    "aantal_parameters": 0
   },
   {
@@ -784,7 +784,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Redactionele site zonder berekening.",
-   "cockpit_onderdeel": "NLFR — special",
+   "cockpit_onderdeel": "NLFR, special",
    "aantal_parameters": 0
   },
   {
@@ -792,7 +792,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Banners.",
-   "cockpit_onderdeel": "NLFR — banners",
+   "cockpit_onderdeel": "NLFR, banners",
    "aantal_parameters": 0
   },
   {
@@ -800,7 +800,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Serverless doorgifte van berichten.",
-   "cockpit_onderdeel": "NLFR — berichten",
+   "cockpit_onderdeel": "NLFR, berichten",
    "aantal_parameters": 0
   },
   {
@@ -808,7 +808,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Distributie van artikelen tussen platforms.",
-   "cockpit_onderdeel": "NLFR / IF — distributie",
+   "cockpit_onderdeel": "NLFR / IF, distributie",
    "aantal_parameters": 0
   },
   {
@@ -816,7 +816,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Zoekfunctie; getallen komen uit voorbeeldpagina's.",
-   "cockpit_onderdeel": "NLFR / IF — zoek",
+   "cockpit_onderdeel": "NLFR / IF, zoek",
    "aantal_parameters": 0
   },
   {
@@ -824,7 +824,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Eén statische pagina.",
-   "cockpit_onderdeel": "NLFR — mobiel",
+   "cockpit_onderdeel": "NLFR, mobiel",
    "aantal_parameters": 0
   },
   {
@@ -832,7 +832,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Menu- en persmeetlogica met operationele drempels, geen fiscale of sociale grootheden.",
-   "cockpit_onderdeel": "NLFR — menu",
+   "cockpit_onderdeel": "NLFR, menu",
    "aantal_parameters": 0
   },
   {
@@ -840,7 +840,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Nieuwsbriefgeneratie.",
-   "cockpit_onderdeel": "NLFR — nieuwsbrief",
+   "cockpit_onderdeel": "NLFR, nieuwsbrief",
    "aantal_parameters": 0
   },
   {
@@ -848,7 +848,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Platformvernieuwing, Supabase en SQL; geen rekenfunctie.",
-   "cockpit_onderdeel": "NLFR — v2",
+   "cockpit_onderdeel": "NLFR, v2",
    "aantal_parameters": 0
   },
   {
@@ -856,7 +856,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Verblijfsaanbod van leden.",
-   "cockpit_onderdeel": "NLFR — verblijven",
+   "cockpit_onderdeel": "NLFR, verblijven",
    "aantal_parameters": 0
   },
   {
@@ -864,7 +864,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Enqueteverslag.",
-   "cockpit_onderdeel": "NLFR — enquete",
+   "cockpit_onderdeel": "NLFR, enquete",
    "aantal_parameters": 0
   },
   {
@@ -872,7 +872,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Componentschil zonder bedragen.",
-   "cockpit_onderdeel": "IF — ouderenzorg",
+   "cockpit_onderdeel": "IF, ouderenzorg",
    "aantal_parameters": 0
   },
   {
@@ -888,7 +888,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Monitoringpagina met repo-overzicht en statuscontroles.",
-   "cockpit_onderdeel": "overig — monitoring",
+   "cockpit_onderdeel": "overig, monitoring",
    "aantal_parameters": 0
   },
   {
@@ -896,7 +896,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Pollmodule.",
-   "cockpit_onderdeel": "NLFR — polls",
+   "cockpit_onderdeel": "NLFR, polls",
    "aantal_parameters": 0
   },
   {
@@ -912,7 +912,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Overzichtspagina.",
-   "cockpit_onderdeel": "IF — palliatieve zorg",
+   "cockpit_onderdeel": "IF, palliatieve zorg",
    "aantal_parameters": 0
   },
   {
@@ -920,7 +920,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Taalarchief.",
-   "cockpit_onderdeel": "overig — archief",
+   "cockpit_onderdeel": "overig, archief",
    "aantal_parameters": 0
   },
   {
@@ -928,7 +928,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Sjablonen.",
-   "cockpit_onderdeel": "overig — templates",
+   "cockpit_onderdeel": "overig, templates",
    "aantal_parameters": 0
   },
   {
@@ -936,7 +936,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Agendadata van verenigingen.",
-   "cockpit_onderdeel": "NLFR — kalender",
+   "cockpit_onderdeel": "NLFR, kalender",
    "aantal_parameters": 0
   },
   {
@@ -944,7 +944,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Alleen een licentiebestand.",
-   "cockpit_onderdeel": "overig — archief",
+   "cockpit_onderdeel": "overig, archief",
    "aantal_parameters": 0
   },
   {
@@ -952,7 +952,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Vervoersgroep met Apps Script, geen bedragen aangetroffen.",
-   "cockpit_onderdeel": "NLFR — vervoersgroep",
+   "cockpit_onderdeel": "NLFR, vervoersgroep",
    "aantal_parameters": 0
   },
   {
@@ -960,7 +960,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Beroepenplatform; de aangetroffen getallen zijn opmaakwaarden.",
-   "cockpit_onderdeel": "IF — werk",
+   "cockpit_onderdeel": "IF, werk",
    "aantal_parameters": 0
   },
   {
@@ -968,7 +968,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Wensenlijst-applicatie.",
-   "cockpit_onderdeel": "overig — wishlist",
+   "cockpit_onderdeel": "overig, wishlist",
    "aantal_parameters": 0
   },
   {
@@ -976,7 +976,7 @@
    "zichtbaarheid": "prive",
    "rekenfunctie": "nee",
    "motivering": "Leeskopie van WordPress-snippets en redirects.",
-   "cockpit_onderdeel": "overig — WordPress",
+   "cockpit_onderdeel": "overig, WordPress",
    "aantal_parameters": 0
   },
   {
@@ -984,7 +984,7 @@
    "zichtbaarheid": "publiek",
    "rekenfunctie": "nee",
    "motivering": "Begrippenlijst zorg.",
-   "cockpit_onderdeel": "IF — zorglexicon",
+   "cockpit_onderdeel": "IF, zorglexicon",
    "aantal_parameters": 0
   }
  ],

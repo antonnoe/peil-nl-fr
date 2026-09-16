@@ -1,0 +1,78 @@
+name: Correctie parameter
+description: Meld een fout, een ontbrekende bron of een verouderde waarde in het register.
+title: "Correctie <parameter-id>"
+labels: ["correctie"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Peil neemt alleen correcties over die een primaire bron noemen, met een vindplaats en een datum.
+        Een melding zonder bron wordt niet verwerkt.
+  - type: input
+    id: parameter
+    attributes:
+      label: Parameter-id
+      description: Het id zoals het op de detailpagina staat, bijvoorbeeld p.fr.ps.taux_global.
+      placeholder: p.fr.ps.taux_global
+    validations:
+      required: true
+  - type: dropdown
+    id: soort
+    attributes:
+      label: Wat is er mis
+      options:
+        - De waarde klopt niet
+        - De waarde is verouderd
+        - De bron ontbreekt of klopt niet
+        - De status klopt niet
+        - Een tool gebruikt een andere waarde dan hier staat
+        - De grootheid ontbreekt in het register
+        - Anders
+    validations:
+      required: true
+  - type: textarea
+    id: nu
+    attributes:
+      label: Wat staat er nu
+      description: Neem over wat er op de detailpagina staat.
+    validations:
+      required: true
+  - type: textarea
+    id: moet
+    attributes:
+      label: Wat moet er staan
+      description: De waarde, de eenheid en de periode waarvoor die geldt.
+    validations:
+      required: true
+  - type: input
+    id: bron
+    attributes:
+      label: Primaire bron
+      description: De volledige URL, of het wetsartikel met het publicatiekenmerk.
+      placeholder: https://www.legifrance.gouv.fr/... of art. 197 CGI
+    validations:
+      required: true
+  - type: dropdown
+    id: bronsoort
+    attributes:
+      label: Bronsoort
+      description: Primair betekent dat u de wettekst of de officiele publicatie zelf hebt gelezen.
+      options:
+        - primair, ik heb de wettekst of de officiele publicatie zelf gelezen
+        - secundair, ik heb een samenvatting of een voorlichtingspagina gelezen
+    validations:
+      required: true
+  - type: input
+    id: datum
+    attributes:
+      label: Datum waarop u de bron hebt geraadpleegd
+      placeholder: 2026-09-16
+    validations:
+      required: true
+  - type: textarea
+    id: toelichting
+    attributes:
+      label: Toelichting
+      description: Optioneel. Uitzonderingen, overgangsrecht of iets anders dat van belang is.
+    validations:
+      required: false

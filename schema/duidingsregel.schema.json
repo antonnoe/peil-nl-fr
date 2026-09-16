@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://antonnoe.github.io/peil-nl-fr/schema/duidingsregel.schema.json",
+  "title": "Peil, laag 1: duidingsregel",
+  "description": "Een duidingsregel bepaalt welke situatie van toepassing is, voordat er gerekend wordt: verdragstoewijzing, verzekeringsplicht, ingezetenschap, kwalificatie van een inkomensbestanddeel. Laag 1 is in taak 1 alleen als schema opgeleverd; de vulling komt later uit de handboeken van Cafe Claude en wordt daar geindexeerd.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "naam_nl", "naam_fr", "land", "lastensoort", "regeling", "status",
+    "vraag", "uitkomsten", "gebruikt_rekenregels", "gebruikt_parameters",
+    "bron_url", "bron_kenmerk", "bronsoort", "instantie", "verificatiedatum", "verificatie_door",
+    "levensduur_b", "gebruikt_in", "uitzonderingen", "opmerkingen", "kandidaat"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^d\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" },
+    "naam_nl": { "type": "string", "minLength": 1 },
+    "naam_fr": { "type": ["string", "null"] },
+    "land": { "$ref": "gemeen.schema.json#/$defs/land" },
+    "lastensoort": { "$ref": "gemeen.schema.json#/$defs/lastensoort" },
+    "regeling": { "$ref": "gemeen.schema.json#/$defs/regeling" },
+    "status": { "$ref": "gemeen.schema.json#/$defs/status" },
+    "vraag": { "type": "string", "minLength": 1, "description": "De vraag die de regel beantwoordt." },
+    "uitkomsten": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["uitkomst", "gevolg"],
+        "properties": {
+          "uitkomst": { "type": "string", "minLength": 1 },
+          "gevolg": { "type": "string", "minLength": 1 },
+          "leidt_naar": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "gebruikt_rekenregels": { "type": "array", "items": { "type": "string", "pattern": "^r\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" } },
+    "gebruikt_parameters": { "type": "array", "items": { "type": "string", "pattern": "^p\\.(nl|fr|xb)\\.[a-z0-9_]+\\.[a-z0-9_]+$" } },
+    "bron_url": { "type": ["string", "null"] },
+    "bron_kenmerk": { "type": ["string", "null"] },
+    "bronsoort": { "$ref": "gemeen.schema.json#/$defs/bronsoort" },
+    "instantie": { "type": ["string", "null"] },
+    "verificatiedatum": { "$ref": "gemeen.schema.json#/$defs/datum_of_null" },
+    "verificatie_door": { "type": ["string", "null"] },
+    "levensduur_b": { "$ref": "gemeen.schema.json#/$defs/levensduur_b" },
+    "gebruikt_in": { "type": "array", "items": { "$ref": "gemeen.schema.json#/$defs/gebruikt_in_regel" } },
+    "uitzonderingen": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "opmerkingen": { "type": ["string", "null"] },
+    "kandidaat": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "anyOf": [
+        { "properties": { "kandidaat": { "const": true } }, "required": ["kandidaat"] },
+        { "properties": { "gebruikt_in": { "type": "array", "minItems": 1 } }, "required": ["gebruikt_in"] }
+      ]
+    }
+  ]
+}
