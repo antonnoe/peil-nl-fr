@@ -15,6 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Bouwen en testen. Dit is de eigenlijke controle en hoort altijd groen te staan.
   bouwen:
     runs-on: ubuntu-latest
     steps:
@@ -35,16 +36,20 @@ jobs:
         run: npm run bouw
       - name: Testen
         run: npm test
-      - name: Pages inschakelen en instellen op GitHub Actions
-        uses: actions/configure-pages@v5
+      - name: Bouwresultaat bewaren
+        uses: actions/upload-artifact@v4
         with:
-          # Zet de bron van Pages zo nodig zelf op GitHub Actions. Lukt dat niet,
-          # dan moet de eigenaar het eenmalig zetten onder Settings, Pages,
-          # Build and deployment, Source: GitHub Actions.
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
+          name: peil-dist
           path: dist
+          retention-days: 7
+
+  # Publiceren naar GitHub Pages.
+  #
+  # Dit lukt pas nadat Pages voor de repo aanstaat. De eigenaar zet dat eenmalig:
+  # Settings, Pages, Build and deployment, Source: GitHub Actions.
+  # De workflow kan het niet zelf: het GITHUB_TOKEN van Actions mag geen Pages-site
+  # aanmaken, en actions/configure-pages met enablement: true geeft dan
+  # "Resource not accessible by integration".
   publiceren:
     needs: bouwen
     runs-on: ubuntu-latest
@@ -52,5 +57,15 @@ jobs:
       name: github-pages
       url: ${{ steps.publicatie.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Bouwen
+        run: npm run bouw
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
       - id: publicatie
         uses: actions/deploy-pages@v4
