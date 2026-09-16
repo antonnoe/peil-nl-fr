@@ -1,0 +1,5114 @@
+{
+ "meta": {
+  "titel": "Peil, taak 0: inventarisatie van rekeninstrumenten en hun parameters",
+  "peildatum": "2026-09-16",
+  "scope": "alle repositories onder het GitHub-account antonnoe, uitsluitend lezend benaderd",
+  "methode": "alle repo's lokaal gecloned (shallow), doorzocht op fiscale, sociale, verzekerings- en vastgoedtermen met bedragen, percentages, drempels en termijnen; kandidaten daarna per bestand gelezen",
+  "waarschuwing": "waarden zijn overgenomen zoals zij in de repo staan; er is niets gecorrigeerd, aangevuld of tegen een primaire bron getoetst",
+  "variabiliteitsklassen": [
+   "overheid_vastgesteld",
+   "marktindex",
+   "contractueel",
+   "indicatief",
+   "afgeleid",
+   "gebruikersinvoer"
+  ],
+  "aantallen": {
+   "repos_totaal": 120,
+   "rekenfunctie_ja": 18,
+   "rekenfunctie_mogelijk": 16,
+   "rekenfunctie_nee": 86,
+   "parameters_gevonden": 234,
+   "dubbelingen": 33,
+   "dubbelingen_afwijkend": 18,
+   "parameters_zonder_bron": 167,
+   "parameters_zonder_datum": 156,
+   "parameters_zonder_bron_en_datum": 141
+  }
+ },
+ "repos": [
+  {
+   "naam": "financieel-kompas-ai",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Volledig parameterbestand config.json met NL- en FR-belasting-, zorg- en CAK-waarden, inclusief bron en verificatiedatum per grootheid.",
+   "cockpit_onderdeel": "CC / IF — Financieel Kompas (AI-versie)",
+   "aantal_parameters": 59
+  },
+  {
+   "naam": "cafeclaude",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Domein- en auditprompts bevatten harde 2026-bedragen en tarieven die de AI als handboek gebruikt (IR-schijven, décote, micro-BIC, BRSS, successierechten).",
+   "cockpit_onderdeel": "CC — Cafe Claude",
+   "aantal_parameters": 34
+  },
+  {
+   "naam": "financieel-kompas",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Oudere config.json met dezelfde structuur maar afwijkende waarden (editie 2025) plus een Belgisch blok.",
+   "cockpit_onderdeel": "IF — Financieel Kompas (voorganger)",
+   "aantal_parameters": 20
+  },
+  {
+   "naam": "Vastgoedtransactie",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Rekenkern calc.js met emolumenten, TPF, plus-value-abattements en surtaxe, plus dmto.json met 101 departementale tarieven en bronnen.json.",
+   "cockpit_onderdeel": "Vastgoedtransacties — transactiekostentool",
+   "aantal_parameters": 20
+  },
+  {
+   "naam": "energieportaal",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Rekenengine met klimaatzones, DPE-coefficienten, U-waarden en een prijsmodule met actuele Franse energieprijzen.",
+   "cockpit_onderdeel": "IF — EnergiePortaal",
+   "aantal_parameters": 10
+  },
+  {
+   "naam": "dossier-elektriciteit-if",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Hoofdstukken bevatten geverifieerde Consuel- en Enedis-tarieven met bron en verificatiedatum.",
+   "cockpit_onderdeel": "IF — dossier Elektriciteit",
+   "aantal_parameters": 9
+  },
+  {
+   "naam": "briefhulp-fr",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Brieftemplates rekenen met wettelijke termijnen en boetepercentages (borg, telecom, belastingbezwaar).",
+   "cockpit_onderdeel": "IF — Briefhulp",
+   "aantal_parameters": 8
+  },
+  {
+   "naam": "Plus-Value-Calculator",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Python-rekenkern met abattementsreeksen, surtaxe-barema, forfaits en tarieven voor de Franse meerwaardeheffing.",
+   "cockpit_onderdeel": "Vastgoedtransacties — plus-value",
+   "aantal_parameters": 7
+  },
+  {
+   "naam": "zorgkompas-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Scenariodatabase met BRSS-tarieven en vergoedingspercentages van de Securite sociale.",
+   "cockpit_onderdeel": "IF — ZorgKompas",
+   "aantal_parameters": 7
+  },
+  {
+   "naam": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Vroege versie van de energie-engine met dezelfde HDD- en PV-waarden maar deels afwijkende U-presets.",
+   "cockpit_onderdeel": "NLFR — energiecalculator (oud)",
+   "aantal_parameters": 5
+  },
+  {
+   "naam": "warmteverlies-calculator",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Oudere variant van dezelfde energie-engine met dezelfde klimaat-, prijs- en U-waardeconstanten.",
+   "cockpit_onderdeel": "IF — warmteverlies",
+   "aantal_parameters": 5
+  },
+  {
+   "naam": "erf-en-schenkingsrecht-nl-fr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Franse successie- en schenkingsbaremes met tarieven en abattements in app.js, met bronregister en verificatiedata.",
+   "cockpit_onderdeel": "IF — erf- en schenkingsrecht",
+   "aantal_parameters": 4
+  },
+  {
+   "naam": "ca-btw-oss-tool",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Regelset met btw-tarieven NL en FR en een rekenmodule voor aangifterubrieken en OSS.",
+   "cockpit_onderdeel": "CA intern — btw/OSS",
+   "aantal_parameters": 3
+  },
+  {
+   "naam": "e-facturatie-frankrijk",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Feitenobjecten met wettelijke invoeringsdata en ondernemingsgroottegrenzen, elk met bron en controledatum.",
+   "cockpit_onderdeel": "IF / CA — e-facturatie",
+   "aantal_parameters": 3
+  },
+  {
+   "naam": "energiebesparing-subsidie-en-fiscale-regelingen",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Beslislogica met btw-tarieven voor renovatie en voorwaardendrempels voor Eco-PTZ.",
+   "cockpit_onderdeel": "IF — subsidiewijzer",
+   "aantal_parameters": 3
+  },
+  {
+   "naam": "gitekompas-fr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Micro-BIC-parameters (abattement en omzetplafond per activiteitstype), degressieve reeks en niet-residentbandbreedte.",
+   "cockpit_onderdeel": "IF — GiteKompas",
+   "aantal_parameters": 3
+  },
+  {
+   "naam": "if-mobiel",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "ja",
+   "motivering": "Bevat een byte-identieke kopie van de engine van energieportaal (engine.js, dpe.js, archetypes.js).",
+   "cockpit_onderdeel": "IF — mobiele schil",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "woningzoeker-frankrijk",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "ja",
+   "motivering": "Budgetstap rekent notariskosten als vast percentage over de aankoopprijs.",
+   "cockpit_onderdeel": "IF — Woningzoeker",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "nlfr-ai-agent",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Kennisbestand voor de AI-adviseur bevat richtprijzen, subsidiebedragen en energiekentallen zonder bronregel per waarde.",
+   "cockpit_onderdeel": "NLFR — AI-agent",
+   "aantal_parameters": 5
+  },
+  {
+   "naam": "dossierfrankrijk",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Beslisboom noemt kostenindicaties en een rekenvoorbeeld; alleen code en configuratie beoordeeld, geen gebruikersdata.",
+   "cockpit_onderdeel": "DossierFrankrijk",
+   "aantal_parameters": 4
+  },
+  {
+   "naam": "ouderenzorg-fr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Dossierskelet met een tabel van Franse zorgtoeslagen en plafonds, aangeduid als indicatief.",
+   "cockpit_onderdeel": "IF — Ouderenzorg",
+   "aantal_parameters": 4
+  },
+  {
+   "naam": "erfrecht-en-testament",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Artikel met harde successietarieven en vrijstellingen, zonder rekenfunctie.",
+   "cockpit_onderdeel": "IF — erfrecht (artikel)",
+   "aantal_parameters": 3
+  },
+  {
+   "naam": "bouwvergunningwijzer-frankrijk",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Regelmatrix met oppervlaktedrempels voor DP en PC; nog niet gekoppeld aan Legifrance-artikelen.",
+   "cockpit_onderdeel": "IF — Bouwvergunningwijzer",
+   "aantal_parameters": 2
+  },
+  {
+   "naam": "infofrankrijk-routecontrole",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Reiskostenraming met brandstofverbruik, literprijs en huurbandbreedtes als vaste aannames.",
+   "cockpit_onderdeel": "IF — Routecontrole",
+   "aantal_parameters": 2
+  },
+  {
+   "naam": "taalhulp-fr",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Begrippenlijst bevat losse tarieven als toelichting bij een term, niet als rekenparameter.",
+   "cockpit_onderdeel": "IF — Taalhulp",
+   "aantal_parameters": 2
+  },
+  {
+   "naam": "verenigings-dashboard",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Rekent kosten met API-tarieven per miljoen tokens, met bron en raadpleegdatum; buiten het fiscale en sociale domein.",
+   "cockpit_onderdeel": "Verenigings-dashboard",
+   "aantal_parameters": 2
+  },
+  {
+   "naam": "Aankoop-kompas-voor-franse-huizen-in-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Rekent technische waarde en adviesbod uit gebruikersinvoer; geen vaste fiscale parameters.",
+   "cockpit_onderdeel": "IF — Aankoopkompas",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "bouwgrond-frankrijk-check",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Analyse op basis van externe API's met een vaste zoekradius; geen fiscale parameters.",
+   "cockpit_onderdeel": "IF — bouwgrondcheck",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "gasdossier-stillewille",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Historisch dossier met bedragen en percentages uit een concreet gasgeschil; geen herbruikbare parameters.",
+   "cockpit_onderdeel": "overig — gasdossier",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "if-tools-api",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "AI-prompt geeft een vast percentage voor frais de notaire mee aan de woninganalyse.",
+   "cockpit_onderdeel": "IF — tools-API",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "klussen-in-frankrijk",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Bevat een feitenlaag-schema dat expliciet voor bedragen en tarieven is ontworpen (met bron, bronsoort, geverifieerd, geldigVanaf), maar het enige feitenbestand is nog leeg; wel losse bedragen in de brontekst.",
+   "cockpit_onderdeel": "KIF — hoofdrepo",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "klussen-in-frankrijk-christian-von-klosterlein",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Artikeldata met technische percentages en maten; geen fiscale of sociale parameters aangetroffen.",
+   "cockpit_onderdeel": "KIF — artikelen",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "vastgoed-analyse",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Rekent met marktprijzen per m2 uit DVF; geen eigen vastgelegde parameters.",
+   "cockpit_onderdeel": "IF — vastgoedanalyse",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "vastgoed-in-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "mogelijk",
+   "motivering": "Analysetool op .gouv-API's; rekenwerk zit in de AI-prompt, geen vastgelegde parameters.",
+   "cockpit_onderdeel": "IF — vastgoed in Frankrijk",
+   "aantal_parameters": 1
+  },
+  {
+   "naam": "2knoppen_onder_menu",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Knoppenblok.",
+   "cockpit_onderdeel": "overig — knoppen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "3knoppen",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Knoppenblok.",
+   "cockpit_onderdeel": "overig — knoppen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "4-knoppen-v2",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Knoppenblok.",
+   "cockpit_onderdeel": "overig — knoppen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "adressen-van-.gouv-tot-nl-verenigingen",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Adressenlijst.",
+   "cockpit_onderdeel": "IF — adressen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "afbeeldingen",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Beeldbank.",
+   "cockpit_onderdeel": "overig — beeld",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "anton-ai-werkwijze",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Werkwijze-, rollen- en inventarisatiedocumenten; bevat een eerdere repo-inventarisatie maar geen rekenparameters.",
+   "cockpit_onderdeel": "overig — werkwijze",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "anton-ui-blocks",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "UI-blokken.",
+   "cockpit_onderdeel": "overig — UI",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "antonnoe-antons-cockpit---private",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Beheertool met operationele drempels (betaalmuur, alarmen), geen domeinparameters.",
+   "cockpit_onderdeel": "Anton's Cockpit",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "antonnoe-communities-abroad-style-studio",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Huisstijl- en componentenbibliotheek.",
+   "cockpit_onderdeel": "CA — Style Studio",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "antonnoe-redactie-tool",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Redactiehulp, markdown naar HTML.",
+   "cockpit_onderdeel": "CA — redactietool",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "api-catalog-france",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Catalogus van Franse open API's.",
+   "cockpit_onderdeel": "overig — API-catalogus",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "baolse-bierdrinkers",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Privéproject.",
+   "cockpit_onderdeel": "overig — privé",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Begrippen-NL-FR-vertaalmodule",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Vertaalmodule met begrippen, geen bedragen.",
+   "cockpit_onderdeel": "overig — begrippen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "bosbranden",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Kaart- en informatietoepassing over bosbranden.",
+   "cockpit_onderdeel": "IF — bosbranden",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "ca-dossierguide",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Dossierbegeleiding zonder rekenfunctie.",
+   "cockpit_onderdeel": "CA — dossierguide",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "cafe-claude-lexicon",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Leeg, geen default branch.",
+   "cockpit_onderdeel": "CC — lexicon",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Cafe-Jeudi-Banner",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Banner.",
+   "cockpit_onderdeel": "NLFR — banner",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "communities-abroad-seo-agent",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "SEO-agent op Search Console-data.",
+   "cockpit_onderdeel": "CA — SEO-agent",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "communitiesabroad",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Bedrijfssite.",
+   "cockpit_onderdeel": "CA — corporate",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "controle-technique-zoeker",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Zoeker met prijsfilters; de bedragen zijn filterwaarden, geen parameters.",
+   "cockpit_onderdeel": "IF — controle technique",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "dashboard-admin",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Statische beheerpagina.",
+   "cockpit_onderdeel": "overig — dashboard",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "data",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "WordPress-export van forumdraden; uitsluitend gebruikersinhoud, geen code of configuratie. Inhoud niet beoordeeld.",
+   "cockpit_onderdeel": "NLFR / IF — forumdata",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "De-rechtspersoon-checker",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Checker rechtsvormen.",
+   "cockpit_onderdeel": "IF — rechtspersoon",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "desert",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Losse pagina's.",
+   "cockpit_onderdeel": "overig",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "devisdossier-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Eén pagina over offertes; de getallen zijn opmaakcodes.",
+   "cockpit_onderdeel": "IF — devisdossier",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "dossier-ouderenzorg",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Dossierschil zonder bedragen in code.",
+   "cockpit_onderdeel": "IF — Ouderenzorg (schil)",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "emigreren-naar-frankrijk-beslisboom",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Beslisboom zonder bedragen.",
+   "cockpit_onderdeel": "IF — beslisboom",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "energiekompas-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Alleen een permanente redirect naar energieportaal.",
+   "cockpit_onderdeel": "IF — redirect",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "evenementenkaart",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Evenementenkaart.",
+   "cockpit_onderdeel": "NLFR — evenementen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "fr-auto-import-tool",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Importtool voor artikelen.",
+   "cockpit_onderdeel": "IF — import",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "france-M2",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Eén pagina.",
+   "cockpit_onderdeel": "IF — M2",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "france-newsdesk",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Nieuwsverwerking en RSS-uitvoer.",
+   "cockpit_onderdeel": "NLFR / IF — newsdesk",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Frankrijk-legal",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Juridische pagina's zonder bedragen.",
+   "cockpit_onderdeel": "IF — legal",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "frankrijknieuws",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Nieuwsfeed.",
+   "cockpit_onderdeel": "IF — nieuws",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "franse-huizen-checker",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Checker zonder rekenparameters.",
+   "cockpit_onderdeel": "IF — huizenchecker",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Franse-taal-in-contextuele-module",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Taalmodule; percentages zijn opmaak of voorbeelden.",
+   "cockpit_onderdeel": "IF — taalmodule",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "GEODIRECTORY",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Gearchiveerd, alleen een licentiebestand.",
+   "cockpit_onderdeel": "overig — gearchiveerd",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Gite-admin",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Alleen een licentiebestand.",
+   "cockpit_onderdeel": "IF — gite",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "ict-vocabulaire",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Woordenlijst ICT.",
+   "cockpit_onderdeel": "overig — vocabulaire",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "if-ai-blocks",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "AI-blokken voor artikelen.",
+   "cockpit_onderdeel": "IF — AI-blokken",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "if-autoverzekering",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Bronnen en artikel over autoverzekering; polisvoorwaarden als PDF, geen vastgelegde parameters in code of configuratie.",
+   "cockpit_onderdeel": "IF — autoverzekering",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "IF-Funnel-en-Tabel-Generator",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Oudere generator.",
+   "cockpit_onderdeel": "IF — generator (oud)",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "if-funnel-en-tabel-generator-v2",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Generator voor funnels en tabellen.",
+   "cockpit_onderdeel": "IF — generator",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "ifr-banner",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Banner.",
+   "cockpit_onderdeel": "IF — banner",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "infofrankrijk-en-nederlandersfr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Toelichtingspagina over beide platforms.",
+   "cockpit_onderdeel": "overig — uitleg",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "infofrankrijk-klussen-archief",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Archiefpagina.",
+   "cockpit_onderdeel": "IF — klussenarchief",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Infofrankrijk-klussen-en-verbouwen",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Artikelpagina.",
+   "cockpit_onderdeel": "IF — klussen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "infofrankrijk-regioportretten",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Regioportretten in markdown.",
+   "cockpit_onderdeel": "IF — regioportretten",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "infographic-ouderenzorg",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Infographic met audio.",
+   "cockpit_onderdeel": "IF — infographic",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "internet-opties",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Informatiepagina.",
+   "cockpit_onderdeel": "IF — internet",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "internetverbinding",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Informatiepagina over internetopties.",
+   "cockpit_onderdeel": "IF — internet",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "kerstbanner2025",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Banner.",
+   "cockpit_onderdeel": "overig — banner",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "kluis",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Eén pagina, geen rekenwerk.",
+   "cockpit_onderdeel": "overig — kluis",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "KvK-beroep-zoeker",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Beroepenzoeker.",
+   "cockpit_onderdeel": "IF — beroepen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Module-naar-school-in-Frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Informatiemodule.",
+   "cockpit_onderdeel": "IF — school",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "moestuin-fr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Moestuinsite; het enige bedrag is een abonnementsprijs.",
+   "cockpit_onderdeel": "IF — moestuin",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "navigation",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Navigatiecomponenten.",
+   "cockpit_onderdeel": "overig — navigatie",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Nedergids-v2",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Gids met aanbiedingen; bedragen zijn aanbodgegevens, geen parameters.",
+   "cockpit_onderdeel": "Nedergids",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nienhuys-deli-familiekroniek",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Familiekroniek.",
+   "cockpit_onderdeel": "overig — privé",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nl-verenigingen-in-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Overzichtspagina verenigingen.",
+   "cockpit_onderdeel": "NLFR — verenigingen",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlers-in-de-lavendelvelden",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Redactionele site zonder berekening.",
+   "cockpit_onderdeel": "NLFR — special",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-banners",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Banners.",
+   "cockpit_onderdeel": "NLFR — banners",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-berichten",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Serverless doorgifte van berichten.",
+   "cockpit_onderdeel": "NLFR — berichten",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-if-distributie",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Distributie van artikelen tussen platforms.",
+   "cockpit_onderdeel": "NLFR / IF — distributie",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-if-zoek",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Zoekfunctie; getallen komen uit voorbeeldpagina's.",
+   "cockpit_onderdeel": "NLFR / IF — zoek",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-m",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Eén statische pagina.",
+   "cockpit_onderdeel": "NLFR — mobiel",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-menu",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Menu- en persmeetlogica met operationele drempels, geen fiscale of sociale grootheden.",
+   "cockpit_onderdeel": "NLFR — menu",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-nieuwsbrief",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Nieuwsbriefgeneratie.",
+   "cockpit_onderdeel": "NLFR — nieuwsbrief",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-v2",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Platformvernieuwing, Supabase en SQL; geen rekenfunctie.",
+   "cockpit_onderdeel": "NLFR — v2",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "nlfr-verblijven-bij-leden",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Verblijfsaanbod van leden.",
+   "cockpit_onderdeel": "NLFR — verblijven",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "NLverenigingen-enquete-2021",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Enqueteverslag.",
+   "cockpit_onderdeel": "NLFR — enquete",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Ouderenzorg",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Componentschil zonder bedragen.",
+   "cockpit_onderdeel": "IF — ouderenzorg",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "peil-nl-fr",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Deze repo; nog leeg op het register na.",
+   "cockpit_onderdeel": "Peil",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "platform-monitor",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Monitoringpagina met repo-overzicht en statuscontroles.",
+   "cockpit_onderdeel": "overig — monitoring",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "poll-engine",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Pollmodule.",
+   "cockpit_onderdeel": "NLFR — polls",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "savoirfrance",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Redactionele site, hardgecodeerde JSX zonder rekenwerk.",
+   "cockpit_onderdeel": "savoirfrance",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Soins-Palliatifs-USP-beschikbaar",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Overzichtspagina.",
+   "cockpit_onderdeel": "IF — palliatieve zorg",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "tom-polak-taalarchief",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Taalarchief.",
+   "cockpit_onderdeel": "overig — archief",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "tool-templates",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Sjablonen.",
+   "cockpit_onderdeel": "overig — templates",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "verenigingen-kalender",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Agendadata van verenigingen.",
+   "cockpit_onderdeel": "NLFR — kalender",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Verhalenbundel-Hans-vd-Bij",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Alleen een licentiebestand.",
+   "cockpit_onderdeel": "overig — archief",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "vervoersgroep",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Vervoersgroep met Apps Script, geen bedragen aangetroffen.",
+   "cockpit_onderdeel": "NLFR — vervoersgroep",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "Werk-in-Frankrijk-platform",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Beroepenplatform; de aangetroffen getallen zijn opmaakwaarden.",
+   "cockpit_onderdeel": "IF — werk",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "wishlist",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Wensenlijst-applicatie.",
+   "cockpit_onderdeel": "overig — wishlist",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "wp-snippets",
+   "zichtbaarheid": "prive",
+   "rekenfunctie": "nee",
+   "motivering": "Leeskopie van WordPress-snippets en redirects.",
+   "cockpit_onderdeel": "overig — WordPress",
+   "aantal_parameters": 0
+  },
+  {
+   "naam": "zorglexicon-frankrijk",
+   "zichtbaarheid": "publiek",
+   "rekenfunctie": "nee",
+   "motivering": "Begrippenlijst zorg.",
+   "cockpit_onderdeel": "IF — zorglexicon",
+   "aantal_parameters": 0
+  }
+ ],
+ "parameters": [
+  {
+   "id": "P001",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "7",
+   "naam": "AOW bruto alleenstaand per jaar",
+   "waarde": "19956",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "editie 2026 in bestand",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P002",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "8",
+   "naam": "AOW bruto per partner per jaar",
+   "waarde": "13296",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "editie 2026 in bestand",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P003",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "9",
+   "naam": "Frans gemiddeld salaris voor pensioenberekening",
+   "waarde": "40000",
+   "eenheid": "EUR/jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P004",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "10",
+   "naam": "Vereiste pensioenjaren Frankrijk",
+   "waarde": "43",
+   "eenheid": "jaren",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P005",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "11",
+   "naam": "Pensioenopbouwpercentage Frankrijk",
+   "waarde": "0,5",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P006",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "14",
+   "naam": "Zvw inkomensafhankelijke bijdrage, laag percentage",
+   "waarde": "0,0485",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: Regeling 3 november 2025, Stcrt 2025, 38055"
+  },
+  {
+   "id": "P007",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "15",
+   "naam": "Maximumbijdrage-inkomen Zvw",
+   "waarde": "79409",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P008",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "21-25",
+   "naam": "Tarieven box 1 onder AOW-leeftijd",
+   "waarde": "0,3575 / 0,3756 / 0,495",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P009",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "26-30",
+   "naam": "Tarieven box 1 boven AOW-leeftijd",
+   "waarde": "0,1785 / 0,3756 / 0,495",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P010",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "35",
+   "naam": "Grens eerste schijf box 1",
+   "waarde": "38883",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P011",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "36",
+   "naam": "Grens tweede schijf box 1",
+   "waarde": "78426",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P012",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "37",
+   "naam": "Algemene heffingskorting maximum",
+   "waarde": "3115",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P013",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "38",
+   "naam": "Arbeidskorting maximum",
+   "waarde": "5685",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P014",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "39",
+   "naam": "MKB-winstvrijstelling",
+   "waarde": "0,127",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P015",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "40",
+   "naam": "Startpunt afbouw heffingskorting",
+   "waarde": "29736",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P016",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "41",
+   "naam": "Afbouwfactor heffingskorting",
+   "waarde": "0,06398",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P017",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "42",
+   "naam": "Startpunt afbouw arbeidskorting",
+   "waarde": "45592",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P018",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "43",
+   "naam": "Afbouwfactor arbeidskorting",
+   "waarde": "0,0651",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P019",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "46",
+   "naam": "Heffingsvrij vermogen box 3, alleenstaand",
+   "waarde": "59357",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P020",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "47",
+   "naam": "Heffingsvrij vermogen box 3, partners",
+   "waarde": "118714",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P021",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "48",
+   "naam": "Tarief box 3",
+   "waarde": "0,36",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P022",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "49",
+   "naam": "Forfaitair rendement spaargeld",
+   "waarde": "0,0128",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P023",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "50",
+   "naam": "Forfaitair rendement beleggingen",
+   "waarde": "0,06",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P024",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "51",
+   "naam": "Forfaitair rendement schulden",
+   "waarde": "0,027",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P025",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "54",
+   "naam": "Nominale zorgpremie per volwassene per jaar",
+   "waarde": "2119",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bestand meldt expliciet dat 2143 een raming is en niet het vastgestelde bedrag"
+  },
+  {
+   "id": "P026",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "61",
+   "naam": "Drempelinkomen zorgtoeslag",
+   "waarde": "29736",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P027",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "62",
+   "naam": "Normpercentage zorgtoeslag zonder partner",
+   "waarde": "0,01912",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P028",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "63",
+   "naam": "Normpercentage zorgtoeslag met partner",
+   "waarde": "0,04289",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P029",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "64",
+   "naam": "Afbouwpercentage zorgtoeslag",
+   "waarde": "0,1373",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P030",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "65",
+   "naam": "Vermogensgrens zorgtoeslag zonder partner",
+   "waarde": "146011",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P031",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "66",
+   "naam": "Vermogensgrens zorgtoeslag met partner",
+   "waarde": "184633",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P032",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "76",
+   "naam": "Sociale lasten Frans pensioen, totaal",
+   "waarde": "0,091",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P033",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "77",
+   "naam": "Sociale lasten salaris Frankrijk",
+   "waarde": "0,22",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P034",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "78",
+   "naam": "Sociale lasten winst uit diensten",
+   "waarde": "0,212",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P035",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "79",
+   "naam": "Sociale lasten winst uit verhuur",
+   "waarde": "0,212",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P036",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "80",
+   "naam": "Prelevements sociaux onroerend",
+   "waarde": "0,172",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P037",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "81",
+   "naam": "Prelevements sociaux roerend",
+   "waarde": "0,186",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P038",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "82",
+   "naam": "Prelevement de solidarite",
+   "waarde": "0,075",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P039",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "87-116",
+   "naam": "CSG-CRDS-CASA per regime pensioen",
+   "waarde": "0 / 0,043 / 0,074 / 0,091",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 01 juni 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: service-public.fr fiche F2971"
+  },
+  {
+   "id": "P040",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "119-147",
+   "naam": "RFR-grenzen per part voor CSG-regime",
+   "waarde": "13048 / 17057 / 26472 (1 part) tot 26984 / 35277 / 54736 (3 parts)",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 01 juni 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P041",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "148-152",
+   "naam": "Opslag per halve part boven 3",
+   "waarde": "3484 / 4555 / 7066",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 01 juni 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P042",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "157-177",
+   "naam": "Schijven impot sur le revenu",
+   "waarde": "11600 / 29579 / 84577 / 181917 bij 0 / 11 / 30 / 41 / 45 procent",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P043",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "180-183",
+   "naam": "Abattement 65-plus, drempels en aftrek",
+   "waarde": "17510 / 2796 / 28170 / 1398",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P044",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "185",
+   "naam": "Abattement micro winst uit diensten",
+   "waarde": "0,5",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P045",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "186",
+   "naam": "Abattement micro winst uit verhuur",
+   "waarde": "0,3",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P046",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "187",
+   "naam": "PFU-tarief inkomstenbelastingdeel",
+   "waarde": "0,128",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P047",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "188",
+   "naam": "Plafond gezinsquotient per halve part",
+   "waarde": "1807",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P048",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "190-192",
+   "naam": "Abattement pensioen: tarief, minimum, maximum",
+   "waarde": "0,1 / 454 / 4439",
+   "eenheid": "fractie en EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 15 april 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: service-public.fr fiche F415"
+  },
+  {
+   "id": "P049",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "198-200",
+   "naam": "Abattement loon: tarief, minimum, maximum",
+   "waarde": "0,1 / 509 / 14555",
+   "eenheid": "fractie en EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 15 april 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: service-public.fr fiche F1989"
+  },
+  {
+   "id": "P050",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "206-210",
+   "naam": "Decote: drempels, forfaits, percentage",
+   "waarde": "1982 / 3277 / 897 / 1483 / 0,4525",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geen verifie-le-datum op de bron, gegevens aangeleverd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 197 CGI"
+  },
+  {
+   "id": "P051",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "217",
+   "naam": "IFI-drempel",
+   "waarde": "1300000",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P052",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "218-242",
+   "naam": "IFI-schijven",
+   "waarde": "800000 / 1300000 / 2570000 / 5000000 / 10000000 bij 0 tot 1,5 procent",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P053",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "245",
+   "naam": "Credit d'impot hulp aan huis",
+   "waarde": "0,5",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P054",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "246",
+   "naam": "Plafond hulp aan huis",
+   "waarde": "12000",
+   "eenheid": "EUR/jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P055",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "248",
+   "naam": "Woonlandfactor Frankrijk",
+   "waarde": "0,8304",
+   "eenheid": "factor",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "bron bijgewerkt 29 december 2025, geraadpleegd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "CAK; 2025 was 0,8251"
+  },
+  {
+   "id": "P056",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "249",
+   "naam": "Nominale Zvw-bijdrage per jaar (CAK)",
+   "waarde": "1884",
+   "eenheid": "EUR/jaar",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geraadpleegd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "157,00 per maand"
+  },
+  {
+   "id": "P057",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "251",
+   "naam": "Wlz-percentage",
+   "waarde": "0,0965",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geraadpleegd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P058",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "253",
+   "naam": "Maximumbijdrage-inkomen Wlz",
+   "waarde": "38883",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geraadpleegd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P059",
+   "repo": "financieel-kompas-ai",
+   "bestand": "config.json",
+   "regel": "254",
+   "naam": "Maximumbijdrage-inkomen Wlz geboortejaar t/m 1945",
+   "waarde": "41123",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geraadpleegd 15 september 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P060",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "2",
+   "naam": "AOW bruto alleenstaand per jaar",
+   "waarde": "19500",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "oudere editie"
+  },
+  {
+   "id": "P061",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "3",
+   "naam": "AOW bruto per partner per jaar",
+   "waarde": "13000",
+   "eenheid": "EUR/jaar",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P062",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "8",
+   "naam": "Zvw-percentage",
+   "waarde": "0,0526",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "2025-waarde"
+  },
+  {
+   "id": "P063",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "10",
+   "naam": "Tarieven box 1 onder AOW",
+   "waarde": "0,3697 / 0,495",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "tweeschijvenstelsel"
+  },
+  {
+   "id": "P064",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "10",
+   "naam": "Tarieven box 1 boven AOW",
+   "waarde": "0,1907 / 0,495",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P065",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "11",
+   "naam": "Grens eerste schijf box 1",
+   "waarde": "75518",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P066",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "11",
+   "naam": "Algemene heffingskorting maximum",
+   "waarde": "3362",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P067",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "11",
+   "naam": "Arbeidskorting maximum",
+   "waarde": "5532",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P068",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "12",
+   "naam": "Startpunt afbouw heffingskorting",
+   "waarde": "24813",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P069",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "12",
+   "naam": "Afbouwfactor heffingskorting",
+   "waarde": "0,0663",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P070",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "15",
+   "naam": "Heffingsvrij vermogen box 3, alleenstaand",
+   "waarde": "57684",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P071",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "15",
+   "naam": "Heffingsvrij vermogen box 3, partners",
+   "waarde": "115368",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P072",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "15",
+   "naam": "Forfaitair rendement box 3, enkelvoudig",
+   "waarde": "0,0617",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "een enkel rendement in plaats van drie"
+  },
+  {
+   "id": "P073",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "19",
+   "naam": "Prelevements sociaux (PFU)",
+   "waarde": "0,172",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P074",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "21",
+   "naam": "Schijven impot sur le revenu",
+   "waarde": "11497 / 29315 / 83823 / 180294",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "oudere editie"
+  },
+  {
+   "id": "P075",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "22",
+   "naam": "Abattement 65-plus",
+   "waarde": "17200 / 2746 / 27670 / 1373",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P076",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "24",
+   "naam": "Plafond gezinsquotient per halve part",
+   "waarde": "1759",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P077",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "30",
+   "naam": "CAK-bijdrage gemiddeld",
+   "waarde": "4500",
+   "eenheid": "EUR/jaar",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": "vervangen door een opgebouwde CAK-berekening in de AI-versie"
+  },
+  {
+   "id": "P078",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "35",
+   "naam": "Belgische zelfstandigenbijdrage, schijven",
+   "waarde": "73447,52 bij 20,5 procent; 108238,40 bij 14,16 procent",
+   "eenheid": "EUR en fractie",
+   "land": "BE",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "Belgisch blok, buiten NL-FR-scope"
+  },
+  {
+   "id": "P079",
+   "repo": "financieel-kompas",
+   "bestand": "config.json",
+   "regel": "45",
+   "naam": "Belgische inkomstenbelastingschijven 2025",
+   "waarde": "16320 / 28800 / 49840 bij 25 tot 50 procent",
+   "eenheid": "EUR en fractie",
+   "land": "BE",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025 in sleutelnaam",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P080",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "96-100",
+   "naam": "Emolumenten notaris, trancheschaal",
+   "waarde": "6500 bij 3,870 procent; 17000 bij 1,596 procent; 60000 bij 1,064 procent; daarboven 0,799 procent",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "arrete 25 februari 2026, geldig tot 29 februari 2028",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. A444-91 Code de commerce, tabel 5 nr. 17"
+  },
+  {
+   "id": "P081",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "104",
+   "naam": "TVA-tarief",
+   "waarde": "20,0",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P082",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "110-111",
+   "naam": "Contribution de securite immobiliere en minimum",
+   "waarde": "0,10 procent, minimaal 15,00 euro",
+   "eenheid": "procent en EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P083",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "127-129",
+   "naam": "Taxe de publicite fonciere VEFA",
+   "waarde": "0,715 procent (0,70 basis maal 2,14 procent frais d'assiette)",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "Legifrance, vigerend sinds 1 juli 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 1594 F quinquies en 1647 V-b CGI"
+  },
+  {
+   "id": "P084",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "134",
+   "naam": "Debours, forfaitair",
+   "waarde": "1200,0",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P085",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "139-140",
+   "naam": "Remise notaris: drempel en maximum",
+   "waarde": "vanaf 100000 euro, maximaal 20 procent",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "wettelijke korting, notaris niet verplicht"
+  },
+  {
+   "id": "P086",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "153",
+   "naam": "Forfait aankoopkosten plus-value",
+   "waarde": "7,5",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 150 VB II 3 CGI"
+  },
+  {
+   "id": "P087",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "154",
+   "naam": "Forfait verbouwing plus-value",
+   "waarde": "15,0",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 150 VB II 4 CGI, vanaf 5 jaar bezit"
+  },
+  {
+   "id": "P088",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "156",
+   "naam": "Tarief inkomstenbelasting plus-value",
+   "waarde": "19,0",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 200 B CGI"
+  },
+  {
+   "id": "P089",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "157",
+   "naam": "Tarief prelevements sociaux",
+   "waarde": "17,2",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P090",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "158",
+   "naam": "Tarief prelevements sociaux bij De Ruyter",
+   "waarde": "7,5",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P091",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "235-239",
+   "naam": "Abattement plus-value per bezitsjaar",
+   "waarde": "IB 6,0 per jaar en 4,0 in jaar 22; PS 1,65 per jaar, 1,60 in jaar 22 en 9,0 in jaar 23 t/m 30",
+   "eenheid": "procent per jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P092",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "245-255",
+   "naam": "Surtaxe hoge meerwaarden: drempel en barema",
+   "waarde": "drempel 50000 euro; 2 tot 6 procent met afvlakking per tranche",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "Legifrance, in werking sinds 1 januari 2024",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 1609 nonies G CGI"
+  },
+  {
+   "id": "P093",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "275",
+   "naam": "Terugname afschrijvingen vanaf",
+   "waarde": "2025-02-15",
+   "eenheid": "datum",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 84 wet 2025-127"
+  },
+  {
+   "id": "P094",
+   "repo": "Vastgoedtransactie",
+   "bestand": "calc.js",
+   "regel": "61-62",
+   "naam": "Houdbaarheidstermijn tarieven, actueel en controleren",
+   "waarde": "2 en 6",
+   "eenheid": "maanden",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": "eigen bewaking van de tool"
+  },
+  {
+   "id": "P095",
+   "repo": "Vastgoedtransactie",
+   "bestand": "dmto.json",
+   "regel": "_meta",
+   "naam": "Taxe communale",
+   "waarde": "1,20",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "peildatum 2026-06-01",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 1584 CGI"
+  },
+  {
+   "id": "P096",
+   "repo": "Vastgoedtransactie",
+   "bestand": "dmto.json",
+   "regel": "_meta",
+   "naam": "Frais d'assiette over departementaal deel",
+   "waarde": "2,37",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "peildatum 2026-06-01",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 1647 V-a CGI"
+  },
+  {
+   "id": "P097",
+   "repo": "Vastgoedtransactie",
+   "bestand": "dmto.json",
+   "regel": "departementen",
+   "naam": "Departementaal DMTO-tarief standaard, 101 departementen",
+   "waarde": "5,00 procent (89 dep.), 4,50 procent (11 dep.), 3,80 procent (1 dep.)",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "DGFiP, tarieven per 1 juni 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 1594 D CGI en art. 116 II wet 2025-127"
+  },
+  {
+   "id": "P098",
+   "repo": "Vastgoedtransactie",
+   "bestand": "dmto.json",
+   "regel": "departementen",
+   "naam": "Departementaal DMTO-tarief primo-accedant, 101 departementen",
+   "waarde": "4,50 procent (99 dep.), 3,80 procent (2 dep.)",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "DGFiP, tarieven per 1 juni 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P099",
+   "repo": "Vastgoedtransactie",
+   "bestand": "bronnen.json",
+   "regel": "136",
+   "naam": "Vrijstelling plus-value EU/EER-onderdanen",
+   "waarde": "150000",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 150 U II 2 CGI"
+  },
+  {
+   "id": "P100",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "51-53",
+   "naam": "Abattement prelevements sociaux per jaar",
+   "waarde": "1,65 (jaar 6-21), 1,6 (jaar 22), 9,0 (jaar 23-30)",
+   "eenheid": "procent per jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P101",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "43-45",
+   "naam": "Abattement inkomstenbelasting, volledige vrijstelling",
+   "waarde": "100,0 na 22 jaar",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P102",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "58-63",
+   "naam": "Surtaxe-barema hoge meerwaarden",
+   "waarde": "0 tot 50000: 0 procent; daarna 2, 3, 4, 5 en 6 procent per tranche van 50000",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "rechte tranches, zonder afvlakkingsformule"
+  },
+  {
+   "id": "P103",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "87",
+   "naam": "Standaardtarief prelevements sociaux",
+   "waarde": "0,172",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P104",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "113",
+   "naam": "Forfait aankoopkosten",
+   "waarde": "0,075",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P105",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "119",
+   "naam": "Forfait verbouwing, vanaf 5 jaar bezit",
+   "waarde": "0,15",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P106",
+   "repo": "Plus-Value-Calculator",
+   "bestand": "generate_pdf.py",
+   "regel": "127",
+   "naam": "Tarief inkomstenbelasting plus-value",
+   "waarde": "0,19",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P107",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "55",
+   "naam": "Schijven impot sur le revenu 2026 (inkomsten 2025)",
+   "waarde": "0 tot 11600; 11 procent tot 29579; 30 procent tot 84577; 41 procent tot 181917; 45 procent daarboven",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "editie 2026 in de tekst",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P108",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "55",
+   "naam": "Decote drempels en formule",
+   "waarde": "celibataire 1982 (897 min 45,25 procent), couple 3277 (1483 min 45,25 procent)",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P109",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "67-69",
+   "naam": "Micro-BIC plafonds en abattements",
+   "waarde": "meuble de tourisme niet geclassificeerd 15000 bij 30 procent; geclassificeerd en chambres d'hotes 77700 bij 50 procent; autres locations meublees 77700 bij 50 procent",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P110",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "75-76",
+   "naam": "Urssaf-drempels verhuur",
+   "waarde": "23000 euro bruto (meuble de tourisme) en 6123 euro belastbaar (chambres d'hotes, 13 procent PASS 2025)",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "PASS-jaar 2025 genoemd",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P111",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "84-85",
+   "naam": "Urssaf-tariefwijziging prestations de services",
+   "waarde": "van 12,3 naar 21,2 procent per 1 januari 2026",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "1-1-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P112",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "85",
+   "naam": "Abattement micro per categorie",
+   "waarde": "71 procent ventes/logement, 50 procent prestations de services, 30 procent meuble non classe",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P113",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "107",
+   "naam": "De Ruyter: totaaltarief verkoop Frans huis door NL-ingezetene",
+   "waarde": "26,5 procent (19 procent IR plus 7,5 procent solidarite) in plaats van 36,2 procent",
+   "eenheid": "procent",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "HvJ-EU C-623/13"
+  },
+  {
+   "id": "P114",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "108",
+   "naam": "Prelevements sociaux, opbouw",
+   "waarde": "CSG 9,2 plus CRDS 0,5 plus solidarite 7,5 is 17,2 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025 in de tekst",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P115",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "110",
+   "naam": "IFI-drempel",
+   "waarde": "1,3 miljoen euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P116",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "143",
+   "naam": "PFU totaal",
+   "waarde": "30 procent (12,8 IR plus 17,2 sociaal)",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P117",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/geld.ts",
+   "regel": "10",
+   "naam": "Boete niet-aangifte buitenlandse rekening (formulier 3916)",
+   "waarde": "1500 euro per jaar",
+   "eenheid": "EUR/jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P118",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/verzekeren.ts",
+   "regel": "59",
+   "naam": "Base de remboursement consult medecin traitant secteur 1",
+   "waarde": "26,50 euro, vergoeding 70 procent is 18,55, ticket moderateur 7,95",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "sinds november 2024",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P119",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/verzekeren.ts",
+   "regel": "60",
+   "naam": "Forfait journalier hospitalier",
+   "waarde": "23 euro per dag ziekenhuis, 17 euro per dag psychiatrie",
+   "eenheid": "EUR/dag",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "sinds 1 maart 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P120",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/verzekeren.ts",
+   "regel": "79",
+   "naam": "Woonlandfactor Frankrijk en nominale Zvw-bijdrage",
+   "waarde": "0,8304 en 157,00 euro per maand",
+   "eenheid": "factor en EUR",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P121",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/verzekeren.ts",
+   "regel": "86",
+   "naam": "Bonus-malus auto (CRM)",
+   "waarde": "start 1,00; min 5 procent per schadevrij jaar tot 0,50; plus 25 procent per ongeval tot 3,50",
+   "eenheid": "factor en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P122",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/verzekeren.ts",
+   "regel": "117",
+   "naam": "Participation forfaitaire en franchise medisch transport",
+   "waarde": "2,00 euro per artsbezoek, 4,00 euro transport",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P123",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/wonen.ts",
+   "regel": "46",
+   "naam": "Frais de notaire",
+   "waarde": "7 tot 8 procent bestaande bouw, 2 tot 3 procent nieuwbouw",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P124",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/wonen.ts",
+   "regel": "47",
+   "naam": "Plus-value tweede woning",
+   "waarde": "19 procent IR plus 17,2 procent sociaal, degressieve aftrek na 6 jaar, vrij na 22 respectievelijk 30 jaar",
+   "eenheid": "procent en jaren",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P125",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/wonen.ts",
+   "regel": "54",
+   "naam": "Reserve hereditaire",
+   "waarde": "1 kind 50 procent, 2 kinderen twee derde, 3 of meer kinderen drie kwart",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P126",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/wonen.ts",
+   "regel": "56",
+   "naam": "Droits de succession, vrijstellingen en tarieven",
+   "waarde": "kinderen 100000 per ouder, tarief 5 tot 45 procent; broers en zussen 15932 bij 35 tot 45 procent; niet-verwanten 1594 bij 60 procent",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P127",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/wonen.ts",
+   "regel": "57",
+   "naam": "Hernieuwingstermijn schenkingsvrijstelling",
+   "waarde": "15 jaar",
+   "eenheid": "jaren",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P128",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/zorg.ts",
+   "regel": "88",
+   "naam": "Vergoeding zonder medecin traitant",
+   "waarde": "30 procent in plaats van 70 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P129",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/zorg.ts",
+   "regel": "112-113",
+   "naam": "Vergoeding HAD en infirmiere liberale",
+   "waarde": "HAD 80 procent of 100 procent bij ALD; infirmiere 70 procent Secu plus 30 procent mutuelle",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P130",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/zorg.ts",
+   "regel": "115",
+   "naam": "Teleassistentie, maandprijs",
+   "waarde": "20 tot 40 euro per maand",
+   "eenheid": "EUR/maand",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P131",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/zorg.ts",
+   "regel": "146",
+   "naam": "Mandat de protection future, kosten",
+   "waarde": "sous seing prive gratis tot 100 euro; notarie 300 tot 500 euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P132",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/zorg.ts",
+   "regel": "151",
+   "naam": "Rechterlijke beschermingsmaatregel: doorlooptijd en kosten",
+   "waarde": "3 tot 6 maanden, 200 tot 500 euro",
+   "eenheid": "maanden en EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P133",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/bureaucratie.ts",
+   "regel": "43",
+   "naam": "Frans rijbewijs halen, gemiddelde kosten",
+   "waarde": "1500 tot 2000 euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P134",
+   "repo": "cafeclaude",
+   "bestand": "lib/domains/prompts/bureaucratie.ts",
+   "regel": "44",
+   "naam": "NL paspoort verlengen in Frankrijk",
+   "waarde": "83,37 euro",
+   "eenheid": "EUR",
+   "land": "NL",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P135",
+   "repo": "cafeclaude",
+   "bestand": "lib/audit/prompts/ondernemen.ts",
+   "regel": "89",
+   "naam": "Micro-plafonds per categorie",
+   "waarde": "ventes 188700, prestations de services BIC 77700, BNC 77700",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P136",
+   "repo": "cafeclaude",
+   "bestand": "lib/audit/prompts/ondernemen.ts",
+   "regel": "98-100",
+   "naam": "ACRE: reductie en duur",
+   "waarde": "50 procent gedurende 12 maanden; wijziging per 1 juli 2026 mogelijk naar 25 procent",
+   "eenheid": "procent en maanden",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "1 juli 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P137",
+   "repo": "cafeclaude",
+   "bestand": "lib/audit/prompts/ondernemen.ts",
+   "regel": "103",
+   "naam": "LMP-drempel",
+   "waarde": "23000 euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P138",
+   "repo": "cafeclaude",
+   "bestand": "lib/audit/prompts/verzekeren.ts",
+   "regel": "62-65",
+   "naam": "Assurance vie: abattements",
+   "waarde": "152500 per begunstigde tot 70 jaar (art. 990 I); 30500 globaal na 70 jaar (art. 757 B); IR-abattement 4600 alleen of 9200 paar na 8 jaar (art. 125-0 A)",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P139",
+   "repo": "cafeclaude",
+   "bestand": "lib/audit/prompts/zorg.ts",
+   "regel": "67-68",
+   "naam": "Franchise medicale en participation forfaitaire",
+   "waarde": "0,50 euro per medicijn, 2 euro per consult",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "verdubbeling per 1 mei 2024 genoemd",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "regel 146-147 meldt de oude waarden 1 euro en 0,50 euro"
+  },
+  {
+   "id": "P140",
+   "repo": "cafeclaude",
+   "bestand": "lib/audit/prompts/ondernemen.ts",
+   "regel": "72",
+   "naam": "CVAE-drempel",
+   "waarde": "152500 euro omzet",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "afschaffing uitgesteld naar 2030",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P141",
+   "repo": "energieportaal",
+   "bestand": "engine/dpe.js",
+   "regel": "28-33",
+   "naam": "Graaddagen en referentietemperatuur per klimaatzone",
+   "waarde": "med 1400/12, ouest 1900/10, paris 2200/7, centre 2500/6, est 2800/5, mont 3400/2",
+   "eenheid": "HDD en graden C",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P142",
+   "repo": "energieportaal",
+   "bestand": "engine/dpe.js",
+   "regel": "47",
+   "naam": "Primaire-energiefactor elektriciteit",
+   "waarde": "1,9",
+   "eenheid": "factor",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "per 1 januari 2026, arrete du 13 aout 2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P143",
+   "repo": "energieportaal",
+   "bestand": "engine/dpe.js",
+   "regel": "63-64",
+   "naam": "CO2-emissiefactoren per energiedrager",
+   "waarde": "elec 0,079; gas 0,227; fioul 0,324; propaan 0,272; pellet en hout 0,030; petroleum 0,324",
+   "eenheid": "kg CO2 per kWh",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P144",
+   "repo": "energieportaal",
+   "bestand": "engine/dpe.js",
+   "regel": "73-88",
+   "naam": "DPE-klassegrenzen energie en CO2",
+   "waarde": "energie A 70 t/m F 420 kWh per m2; CO2 A 6 t/m F 100 kg per m2",
+   "eenheid": "kWh/m2 en kg CO2/m2",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P145",
+   "repo": "energieportaal",
+   "bestand": "engine/engine.js",
+   "regel": "14",
+   "naam": "PV-opbrengst per klimaatzone",
+   "waarde": "med 1450, ouest 1250, paris 1150, centre 1200, est 1150, mont 1100",
+   "eenheid": "kWh per kWp per jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P146",
+   "repo": "energieportaal",
+   "bestand": "engine/engine.js",
+   "regel": "26",
+   "naam": "Standaard energieprijzen gebruikersinvoer",
+   "waarde": "elec 0,25 EUR/kWh; gas 1,20 EUR/m3; fioul 1,15 EUR/L; pellet 0,60 EUR/kg; hout 85 EUR/stere; propaan 1,80 EUR/L; petroleum 2,00 EUR/L",
+   "eenheid": "EUR per eenheid",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "gebruikersinvoer",
+   "opmerking": "defaults, overschrijfbaar"
+  },
+  {
+   "id": "P147",
+   "repo": "energieportaal",
+   "bestand": "engine/engine.js",
+   "regel": "28",
+   "naam": "Omrekening naar kWh per eenheid",
+   "waarde": "gas 10, fioul 10, pellet 5, hout 1800, propaan 7,1, petroleum 10",
+   "eenheid": "kWh per eenheid",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": ""
+  },
+  {
+   "id": "P148",
+   "repo": "energieportaal",
+   "bestand": "engine/engine.js",
+   "regel": "62-66",
+   "naam": "U-waarden per isolatieniveau",
+   "waarde": "muur 2,0 tot 0,25; dak 3,0 tot 0,15; vloer 2,2 tot 0,3; raam 5,5 tot 1,0",
+   "eenheid": "W/m2K",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P149",
+   "repo": "energieportaal",
+   "bestand": "api/prices.js",
+   "regel": "15-22",
+   "naam": "Referentie-energieprijzen met peildatum",
+   "waarde": "elec 0,194 EUR/kWh (CRE, feb 2026); gas 0,1051 EUR/kWh PCI (CRE, apr 2026); fioul 1,19 EUR/L (mrt 2026); pellet 0,60 EUR/kg (Q1 2026); hout 85 EUR/stere (2025); propaan 1,90 EUR/L; petroleum 2,00 EUR/L",
+   "eenheid": "EUR per eenheid",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "refDate per waarde",
+   "variabiliteitsklasse": "marktindex",
+   "opmerking": "elektriciteit en gas worden live opgehaald bij CRE, de rest is vast"
+  },
+  {
+   "id": "P150",
+   "repo": "energieportaal",
+   "bestand": "api/prices.js",
+   "regel": "7",
+   "naam": "Verouderingsdrempel prijzen",
+   "waarde": "120",
+   "eenheid": "dagen",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": ""
+  },
+  {
+   "id": "P151",
+   "repo": "if-mobiel",
+   "bestand": "engine/dpe.js en engine/engine.js",
+   "regel": "alle",
+   "naam": "Identieke kopie van de energie-engine van energieportaal",
+   "waarde": "zie energieportaal",
+   "eenheid": "divers",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": "byte-identiek aan energieportaal op 16 september 2026"
+  },
+  {
+   "id": "P152",
+   "repo": "warmteverlies-calculator",
+   "bestand": "engine/engine.js",
+   "regel": "6-11",
+   "naam": "Graaddagen, koeldagen, zwembadtemperatuur per zone",
+   "waarde": "med 1400/700/22, ouest 1900/350/20, paris 2200/250/19, centre 2500/200/19, est 2800/150/18, mont 3400/50/17",
+   "eenheid": "HDD, CDD en graden C",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P153",
+   "repo": "warmteverlies-calculator",
+   "bestand": "engine/engine.js",
+   "regel": "14",
+   "naam": "PV-opbrengst per zone",
+   "waarde": "identiek aan energieportaal",
+   "eenheid": "kWh per kWp per jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P154",
+   "repo": "warmteverlies-calculator",
+   "bestand": "engine/engine.js",
+   "regel": "17-23",
+   "naam": "Apparaatverbruik per jaar",
+   "waarde": "koelkast 250, wassen 220, vaatwasser 160, IT 150, tv 120, klein 150, verlichting 180",
+   "eenheid": "kWh/jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P155",
+   "repo": "warmteverlies-calculator",
+   "bestand": "engine/engine.js",
+   "regel": "26 en 28",
+   "naam": "Standaardprijzen en omrekenfactoren",
+   "waarde": "identiek aan energieportaal",
+   "eenheid": "EUR en kWh",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "gebruikersinvoer",
+   "opmerking": ""
+  },
+  {
+   "id": "P156",
+   "repo": "warmteverlies-calculator",
+   "bestand": "engine/engine.js",
+   "regel": "63-66",
+   "naam": "U-waarden per isolatieniveau",
+   "waarde": "identiek aan energieportaal",
+   "eenheid": "W/m2K",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P157",
+   "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "bestand": "script.js",
+   "regel": "4",
+   "naam": "Graaddagen en zwembadtemperatuur per zone",
+   "waarde": "identiek aan warmteverlies-calculator",
+   "eenheid": "HDD en graden C",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P158",
+   "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "bestand": "script.js",
+   "regel": "5",
+   "naam": "PV-opbrengst per zone",
+   "waarde": "identiek aan energieportaal",
+   "eenheid": "kWh per kWp per jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P159",
+   "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "bestand": "script.js",
+   "regel": "6",
+   "naam": "Apparaatverbruik per jaar",
+   "waarde": "koelkast 250, wassen 220, vaatwasser 180, oven 120, tv 100, IT 100, verlichting 200",
+   "eenheid": "kWh/jaar",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": "wijkt af van de latere versies"
+  },
+  {
+   "id": "P160",
+   "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "bestand": "script.js",
+   "regel": "8 en 10",
+   "naam": "Standaardprijzen en omrekenfactoren",
+   "waarde": "identiek aan energieportaal",
+   "eenheid": "EUR en kWh",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "gebruikersinvoer",
+   "opmerking": ""
+  },
+  {
+   "id": "P161",
+   "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+   "bestand": "script.js",
+   "regel": "15",
+   "naam": "U-waarden per isolatieniveau",
+   "waarde": "muur 2,0 tot 0,25; dak 3,0 tot 0,1; vloer 1,2 tot 0,18; raam 5,8 tot 0,8",
+   "eenheid": "W/m2K",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": "dak, vloer en raam wijken af van de latere versies"
+  },
+  {
+   "id": "P162",
+   "repo": "erf-en-schenkingsrecht-nl-fr",
+   "bestand": "app.js",
+   "regel": "62-68",
+   "naam": "Barema successie in lijn directe",
+   "waarde": "8072 bij 5 procent; 12109 bij 10; 15932 bij 15; 552324 bij 20; 902838 bij 30; 1805677 bij 40; daarboven 45 procent",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 31 juli 2025 (F35794)",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P163",
+   "repo": "erf-en-schenkingsrecht-nl-fr",
+   "bestand": "app.js",
+   "regel": "72-78",
+   "naam": "Barema schenking in lijn directe",
+   "waarde": "8072 bij 5 procent; 15932 bij 10; 31865 bij 15; 552324 bij 20; 902838 bij 30; 1805677 bij 40; daarboven 45 procent",
+   "eenheid": "EUR en fractie",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "verifie le 07 november 2024 (F14203)",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P164",
+   "repo": "erf-en-schenkingsrecht-nl-fr",
+   "bestand": "app.js",
+   "regel": "1203 en 1219",
+   "naam": "Abattement per kind per ouder",
+   "waarde": "100000",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "impots.gouv.fr, 18 december 2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "hernieuwbaar per 15 jaar"
+  },
+  {
+   "id": "P165",
+   "repo": "erf-en-schenkingsrecht-nl-fr",
+   "bestand": "app.js",
+   "regel": "1222-1223",
+   "naam": "Extra vrijstelling geldschenking",
+   "waarde": "31865",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "in de code aangeduid als indicatief"
+  },
+  {
+   "id": "P166",
+   "repo": "gitekompas-fr",
+   "bestand": "index.html",
+   "regel": "864-867",
+   "naam": "Micro-BIC per activiteitstype",
+   "waarde": "meuble non classe 30 procent bij 15000; meuble classe 50 procent bij 77700; chambre d'hotes 50 procent bij 77700; verhuur eigen woning 30 procent bij 15000",
+   "eenheid": "procent en EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "in de tekst aangeduid als V1 en indicatief"
+  },
+  {
+   "id": "P167",
+   "repo": "gitekompas-fr",
+   "bestand": "index.html",
+   "regel": "1177-1179",
+   "naam": "Degressieve reeks per bezitsjaar",
+   "waarde": "jaar 6: 75 procent; jaar 7: 50 procent; jaar 8: 25 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P168",
+   "repo": "gitekompas-fr",
+   "bestand": "index.html",
+   "regel": "1226-1227",
+   "naam": "Minimumheffing niet-residenten, bandbreedte",
+   "waarde": "20 tot 30 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": "in de tool als bandbreedte getoond"
+  },
+  {
+   "id": "P169",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarios.js",
+   "regel": "19-21",
+   "naam": "Base de remboursement consult huisarts",
+   "waarde": "30,00",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025 in de kop van het bestand",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "het bestand meldt zelf tarieven 2024/2025"
+  },
+  {
+   "id": "P170",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarios.js",
+   "regel": "62 en 106",
+   "naam": "Base de remboursement kinesitherapie per sessie",
+   "waarde": "16,13",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P171",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarios.js",
+   "regel": "81",
+   "naam": "Base de remboursement specialist (APC)",
+   "waarde": "55,00",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P172",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarios.js",
+   "regel": "100 en 155",
+   "naam": "Forfait journalier ziekenhuis",
+   "waarde": "20,00",
+   "eenheid": "EUR/dag",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "cafeclaude noemt 23 euro sinds 1 maart 2026"
+  },
+  {
+   "id": "P173",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarioEngine.js",
+   "regel": "80",
+   "naam": "Standaard vergoedingspercentage Secu",
+   "waarde": "0,70",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P174",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarioEngine.js",
+   "regel": "89-90",
+   "naam": "Vergoeding kine en medicatie",
+   "waarde": "0,60 respectievelijk 0,65",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P175",
+   "repo": "zorgkompas-frankrijk",
+   "bestand": "scenarioEngine.js",
+   "regel": "96",
+   "naam": "Vergoeding zonder parcours de soins",
+   "waarde": "0,30",
+   "eenheid": "fractie",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P176",
+   "repo": "ca-btw-oss-tool",
+   "bestand": "lib/regels.ts",
+   "regel": "56 en 179",
+   "naam": "Btw-tarief NL-klanten",
+   "waarde": "21",
+   "eenheid": "procent",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "regelset vastgesteld 2026-07-07",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: Belastingdienst"
+  },
+  {
+   "id": "P177",
+   "repo": "ca-btw-oss-tool",
+   "bestand": "lib/regels.ts",
+   "regel": "62 en 180",
+   "naam": "Btw-tarief FR-particulieren via OSS",
+   "waarde": "20",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "regelset vastgesteld 2026-07-07",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P178",
+   "repo": "ca-btw-oss-tool",
+   "bestand": "lib/bereken.ts",
+   "regel": "126",
+   "naam": "Voorbelastingtarief inkoop NL",
+   "waarde": "0,21",
+   "eenheid": "fractie",
+   "land": "NL",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "2026-07-07",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P179",
+   "repo": "briefhulp-fr",
+   "bestand": "cache/verhuurder/borg/niveau-2.json",
+   "regel": "29",
+   "naam": "Boete te late teruggave huurborg",
+   "waarde": "10 procent van de kale maandhuur per begonnen maand",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 22 al. 5 loi 89-462"
+  },
+  {
+   "id": "P180",
+   "repo": "briefhulp-fr",
+   "bestand": "cache/telecom/opzeg/niveau-1.json",
+   "regel": "25",
+   "naam": "Maximale verbrekingsvergoeding telecom",
+   "waarde": "25 procent van het restant",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. L224-39 Code de la consommation"
+  },
+  {
+   "id": "P181",
+   "repo": "briefhulp-fr",
+   "bestand": "cache/telecom/opzeg/niveau-1.json",
+   "regel": "25",
+   "naam": "Minimale looptijd voor opzegging met binding",
+   "waarde": "12 maanden",
+   "eenheid": "maanden",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P182",
+   "repo": "briefhulp-fr",
+   "bestand": "cache/werkgever/factuur/niveau-3.json",
+   "regel": "32",
+   "naam": "Forfaitaire incassokosten",
+   "waarde": "40",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P183",
+   "repo": "briefhulp-fr",
+   "bestand": "cache/belasting/bezwaar/niveau-1.json",
+   "regel": "58",
+   "naam": "Prelevement de solidarite bij De Ruyter",
+   "waarde": "7,5 procent",
+   "eenheid": "procent",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "art. 26 LFSS 2019, HvJ-EU C-623/13 en C-372/18"
+  },
+  {
+   "id": "P184",
+   "repo": "briefhulp-fr",
+   "bestand": "cache/buur/erfgrens/niveau-1.json",
+   "regel": "39",
+   "naam": "Kosten bornage amiable",
+   "waarde": "500 tot 1500 euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P185",
+   "repo": "briefhulp-fr",
+   "bestand": "KLIKSTROMEN.md",
+   "regel": "233",
+   "naam": "Boete per maand vertraging",
+   "waarde": "10 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P186",
+   "repo": "briefhulp-fr",
+   "bestand": "ARGUMENTATIE.md",
+   "regel": "19",
+   "naam": "CSG en CRDS geschrapt voor EU-verzekerden",
+   "waarde": "CSG 9,2 procent en CRDS 0,5 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "LFSS 2019",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P187",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h8.md",
+   "regel": "12, 51 en 99",
+   "naam": "Consuel-tarief attestation geel, elektronisch",
+   "waarde": "144,67",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "barema bij arrete 04-08-2015, plus 0,64 procent per 02-09-2025; geverifieerd 04-07-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P188",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h8.md",
+   "regel": "51",
+   "naam": "Consuel-tarieven overige formulieren",
+   "waarde": "geel papier 146,15; groen 76,37; blauw 201,17; violet 230,32",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 04-07-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P189",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h8.md",
+   "regel": "51 en 99",
+   "naam": "Consuel contre-visite",
+   "waarde": "232,13",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 04-07-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P190",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h8.md",
+   "regel": "48 en 99",
+   "naam": "Indexering Consuel-barema",
+   "waarde": "0,64 procent per 02-09-2025",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "02-09-2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P191",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h1.md",
+   "regel": "120",
+   "naam": "Tariefoptiewissel zonder Linky",
+   "waarde": "56,72",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 04-07-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "met Linky gratis"
+  },
+  {
+   "id": "P192",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h1.md",
+   "regel": "125",
+   "naam": "Beheerbijdrage bij weigeren Linky",
+   "waarde": "6,48 EUR HT per twee maanden, plus 4,14 EUR HT bij meer dan een jaar geen meterstand",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "sinds 01-08-2025, TURPE 7",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "CRE-deliberatie 2025-78"
+  },
+  {
+   "id": "P193",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h1.md",
+   "regel": "126",
+   "naam": "Administratieve wijziging puissance souscrite",
+   "waarde": "circa 4,28 EUR TTC",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P194",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "hoofdstukken/h1.md",
+   "regel": "63 en 67",
+   "naam": "Vermogenstrappen en aansluitgrenzen",
+   "waarde": "abonnement 3-6-9-12 kVA; monophase maximaal 12 kVA; triphase tot 36 kVA",
+   "eenheid": "kVA",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geverifieerd 04-07-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P195",
+   "repo": "dossier-elektriciteit-if",
+   "bestand": "verificatie/normverificatie.md",
+   "regel": "V9",
+   "naam": "Geldigheid diagnostic electrique",
+   "waarde": "3 jaar bij verkoop, 6 jaar bij verhuur; verplicht bij installatie ouder dan 15 jaar",
+   "eenheid": "jaren",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "service-public.gouv.fr F18692, geverifieerd 04-07-2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P196",
+   "repo": "e-facturatie-frankrijk",
+   "bestand": "data/rules.ts",
+   "regel": "44-49",
+   "naam": "Invoeringsdatum ontvangstplicht en uitgifteplicht grote ondernemingen",
+   "waarde": "1 september 2026",
+   "eenheid": "datum",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "gecontroleerd 8 juli 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: impots.gouv.fr"
+  },
+  {
+   "id": "P197",
+   "repo": "e-facturatie-frankrijk",
+   "bestand": "data/rules.ts",
+   "regel": "54-56",
+   "naam": "Invoeringsdatum uitgifteplicht PME en TPE",
+   "waarde": "1 september 2027",
+   "eenheid": "datum",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "gecontroleerd 8 juli 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P198",
+   "repo": "e-facturatie-frankrijk",
+   "bestand": "data/rules.ts",
+   "regel": "103",
+   "naam": "Grens TPE",
+   "waarde": "minder dan 10 medewerkers en maximaal 2 miljoen euro omzet of balanstotaal",
+   "eenheid": "EUR en aantal",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "gecontroleerd 8 juli 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "bron: INSEE categorieen"
+  },
+  {
+   "id": "P199",
+   "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+   "bestand": "script.js",
+   "regel": "193-206",
+   "naam": "Btw-tarief energetische renovatiewerken",
+   "waarde": "5,5 procent, naast 10 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "simple mention sinds 1 maart 2025",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P200",
+   "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+   "bestand": "script.js",
+   "regel": "193",
+   "naam": "Ouderdomsgrens woning voor verlaagd tarief en Eco-PTZ",
+   "waarde": "2 jaar",
+   "eenheid": "jaren",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P201",
+   "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+   "bestand": "index.html",
+   "regel": "35",
+   "naam": "MaPrimeRenov-bedrag in de tekst",
+   "waarde": "24500",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2026 in de pagina",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "als plafondbedrag in de pagina genoemd"
+  },
+  {
+   "id": "P202",
+   "repo": "woningzoeker-frankrijk",
+   "bestand": "components/steps/StepBudget.tsx",
+   "regel": "52, 129 en 146",
+   "naam": "Notariskosten als percentage van de aankoopprijs",
+   "waarde": "circa 8 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P203",
+   "repo": "if-tools-api",
+   "bestand": "src/app/api/woning-analyse/route.ts",
+   "regel": "52",
+   "naam": "Frais de notaire in de AI-prompt",
+   "waarde": "circa 7 tot 8 procent bij bestaande bouw",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P204",
+   "repo": "nlfr-ai-agent",
+   "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+   "regel": "156",
+   "naam": "Energie-inhoud hout per stere",
+   "waarde": "1800 kWh droog hardhout, 1400 kWh zachthout",
+   "eenheid": "kWh/stere",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P205",
+   "repo": "nlfr-ai-agent",
+   "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+   "regel": "233-234",
+   "naam": "Eco-PTZ maximum en btw-tarief renovatie",
+   "waarde": "tot 50000 euro renteloos; TVA 5,5 procent bij RGE-installateur",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P206",
+   "repo": "nlfr-ai-agent",
+   "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+   "regel": "237",
+   "naam": "MaPrimeRenov budget en achterstand",
+   "waarde": "3,6 miljard euro budget 2026, 83000 onbehandelde dossiers uit 2025",
+   "eenheid": "EUR en aantal",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P207",
+   "repo": "nlfr-ai-agent",
+   "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+   "regel": "272-279",
+   "naam": "Richtprijzen renovatiemaatregelen",
+   "waarde": "dakisolatie 25-50 EUR/m2; ITI 50-90 EUR/m2; ITE 100-200 EUR/m2; vloerisolatie 30-60 EUR/m2; raam HR++ 400-800 per stuk; warmtepomp lucht-water 8000-15000; geothermisch 15000-25000; PV 3 kWp 5000-8000",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P208",
+   "repo": "nlfr-ai-agent",
+   "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+   "regel": "286",
+   "naam": "Besparing per graad lagere binnentemperatuur",
+   "waarde": "circa 7 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P209",
+   "repo": "ouderenzorg-fr",
+   "bestand": "if-dossier/dossier-skelet.md",
+   "regel": "124",
+   "naam": "APA-bedrag per maand",
+   "waarde": "811 tot 2080 euro",
+   "eenheid": "EUR/maand",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "indicatief 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P210",
+   "repo": "ouderenzorg-fr",
+   "bestand": "if-dossier/dossier-skelet.md",
+   "regel": "126",
+   "naam": "ASPA maximum alleenstaand",
+   "waarde": "tot 1012 euro per maand",
+   "eenheid": "EUR/maand",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "indicatief 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P211",
+   "repo": "ouderenzorg-fr",
+   "bestand": "if-dossier/dossier-skelet.md",
+   "regel": "127",
+   "naam": "Credit d'impot hulp aan huis en plafond",
+   "waarde": "50 procent, maximaal 6000 tot 10000 euro per jaar",
+   "eenheid": "procent en EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "indicatief 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P212",
+   "repo": "ouderenzorg-fr",
+   "bestand": "if-dossier/dossier-skelet.md",
+   "regel": "128",
+   "naam": "MaPrimeAdapt maximum",
+   "waarde": "tot 70 procent van de kosten",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": "indicatief 2026",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P213",
+   "repo": "taalhulp-fr",
+   "bestand": "begrippen.js",
+   "regel": "692",
+   "naam": "PFU als vlaktaks",
+   "waarde": "30 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "toelichting bij een begrip, geen rekenparameter"
+  },
+  {
+   "id": "P214",
+   "repo": "taalhulp-fr",
+   "bestand": "begrippen.js",
+   "regel": "693",
+   "naam": "Prelevements sociaux over beleggingsinkomsten",
+   "waarde": "17,2 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P215",
+   "repo": "dossierfrankrijk",
+   "bestand": "lib/embedTree.ts",
+   "regel": "284",
+   "naam": "Mandat de protection future, kosten",
+   "waarde": "sous seing prive gratis tot 100 euro; notarie 300 tot 500 euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P216",
+   "repo": "dossierfrankrijk",
+   "bestand": "lib/embedTree.ts",
+   "regel": "294",
+   "naam": "Rechterlijke beschermingsmaatregel, kosten",
+   "waarde": "200 tot 500 euro, doorlooptijd 3 tot 6 maanden",
+   "eenheid": "EUR en maanden",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P217",
+   "repo": "dossierfrankrijk",
+   "bestand": "lib/embedTree.ts",
+   "regel": "330",
+   "naam": "Repatriering naar Nederland",
+   "waarde": "3000 tot 8000 euro",
+   "eenheid": "EUR",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": ""
+  },
+  {
+   "id": "P218",
+   "repo": "dossierfrankrijk",
+   "bestand": "lib/embedTree.ts",
+   "regel": "396",
+   "naam": "Rekenvoorbeeld ouderenzorg",
+   "waarde": "inkomen 1800, kosten 1624 per maand, restant circa 325 euro",
+   "eenheid": "EUR/maand",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": "expliciet indicatief genoemd"
+  },
+  {
+   "id": "P219",
+   "repo": "bouwvergunningwijzer-frankrijk",
+   "bestand": "docs/rule-matrix-v0.1.md",
+   "regel": "22-24",
+   "naam": "Oppervlaktedrempels vrijstaand bijgebouw",
+   "waarde": "tot 5 m2 geen formaliteit; 5 tot 20 m2 declaration prealable; boven 20 m2 permis de construire",
+   "eenheid": "m2",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "document meldt dat koppeling aan Legifrance-artikelen nog moet gebeuren"
+  },
+  {
+   "id": "P220",
+   "repo": "bouwvergunningwijzer-frankrijk",
+   "bestand": "docs/rule-matrix-v0.1.md",
+   "regel": "27-29",
+   "naam": "Oppervlaktedrempels uitbreiding",
+   "waarde": "buiten zone U tot 20 m2 DP; in zone U tot 40 m2 DP; boven 20 tot 40 m2 architectenplicht toetsen",
+   "eenheid": "m2",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P221",
+   "repo": "infofrankrijk-routecontrole",
+   "bestand": "components/vervoershub.tsx",
+   "regel": "178",
+   "naam": "Aannames reiskostenraming",
+   "waarde": "7 liter per 100 km en 1,80 euro per liter",
+   "eenheid": "L/100km en EUR/L",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "marktindex",
+   "opmerking": ""
+  },
+  {
+   "id": "P222",
+   "repo": "infofrankrijk-routecontrole",
+   "bestand": "components/passport-wizard.tsx",
+   "regel": "340",
+   "naam": "Huurbandbreedte 9-persoonsbus",
+   "waarde": "100 tot 190 euro per dag en 0,25 tot 0,40 euro per extra kilometer",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "marktindex",
+   "opmerking": ""
+  },
+  {
+   "id": "P223",
+   "repo": "erfrecht-en-testament",
+   "bestand": "index.html",
+   "regel": "346 en 360",
+   "naam": "Tarief erfbelasting stiefkind",
+   "waarde": "60 procent boven de vrijstelling",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P224",
+   "repo": "erfrecht-en-testament",
+   "bestand": "index.html",
+   "regel": "351",
+   "naam": "Vrijstelling stiefkinderen",
+   "waarde": "verhoogd van 1594 naar 15932 euro",
+   "eenheid": "EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": "geldt bij overlijden, niet bij schenking"
+  },
+  {
+   "id": "P225",
+   "repo": "erfrecht-en-testament",
+   "bestand": "index.html",
+   "regel": "369",
+   "naam": "Barema en abattement bij adoption simple",
+   "waarde": "5 tot 45 procent, abattement 100000 euro",
+   "eenheid": "procent en EUR",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "opmerking": ""
+  },
+  {
+   "id": "P226",
+   "repo": "verenigings-dashboard",
+   "bestand": "lib/tarieven.ts",
+   "regel": "22-27",
+   "naam": "API-tarief claude-sonnet-5",
+   "waarde": "2,00 USD invoer en 10,00 USD uitvoer per miljoen tokens",
+   "eenheid": "USD per 1M tokens",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "geraadpleegd 2026-09-11",
+   "variabiliteitsklasse": "contractueel",
+   "opmerking": "buiten het fiscale en sociale domein"
+  },
+  {
+   "id": "P227",
+   "repo": "verenigings-dashboard",
+   "bestand": "lib/tarieven.ts",
+   "regel": "35-39",
+   "naam": "Wisselkoers USD naar EUR",
+   "waarde": "null, bron niet bereikbaar",
+   "eenheid": "koers",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "marktindex",
+   "opmerking": "bewust leeg gelaten in plaats van geschat"
+  },
+  {
+   "id": "P228",
+   "repo": "klussen-in-frankrijk",
+   "bestand": "source/facts/schema.json en source/facts/README.md",
+   "regel": "geheel",
+   "naam": "Schema voor een feitenlaag met bedragen en tarieven",
+   "waarde": "velden: id, onderwerp, feit, categorie, bron, bronurl, bronsoort, geverifieerd, geldigVanaf, nlfr",
+   "eenheid": "schema",
+   "land": "grensoverschrijdend",
+   "bron_aanwezig": true,
+   "datum_aanwezig": true,
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": "energie.json is leeg; het schema is het meest bruikbare bestaande ontwerp voor Peil"
+  },
+  {
+   "id": "P229",
+   "repo": "gasdossier-stillewille",
+   "bestand": "gas-historie.html",
+   "regel": "106-117",
+   "naam": "Historische gasprijzen en verbruikscijfers uit een individueel dossier",
+   "waarde": "0,10 en 0,43 EUR per eenheid; 20,4 en 15 procent",
+   "eenheid": "EUR en procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": "dossiergegevens, niet herbruikbaar als parameter"
+  },
+  {
+   "id": "P230",
+   "repo": "klussen-in-frankrijk-christian-von-klosterlein",
+   "bestand": "app/artikelen/water-riool-batch-data.json",
+   "regel": "33-42",
+   "naam": "Technische percentages water en riool",
+   "waarde": "20 tot 95 procent",
+   "eenheid": "procent",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "indicatief",
+   "opmerking": "technisch, buiten het fiscale en sociale domein"
+  },
+  {
+   "id": "P231",
+   "repo": "vastgoed-analyse",
+   "bestand": "api/dvf.js en api/dpe.js",
+   "regel": "geheel",
+   "naam": "Marktprijzen per m2 uit DVF en DPE-gegevens",
+   "waarde": "opgehaald bij .gouv-API's",
+   "eenheid": "EUR/m2",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "per transactie",
+   "variabiliteitsklasse": "marktindex",
+   "opmerking": "geen eigen vastgelegde waarden"
+  },
+  {
+   "id": "P232",
+   "repo": "vastgoed-in-frankrijk",
+   "bestand": "api/dvf.js en api/analyse.js",
+   "regel": "geheel",
+   "naam": "Marktprijzen per m2 uit DVF",
+   "waarde": "opgehaald bij .gouv-API's",
+   "eenheid": "EUR/m2",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "per transactie",
+   "variabiliteitsklasse": "marktindex",
+   "opmerking": "geen eigen vastgelegde waarden"
+  },
+  {
+   "id": "P233",
+   "repo": "Aankoop-kompas-voor-franse-huizen-in-frankrijk",
+   "bestand": "src/App.jsx",
+   "regel": "367 en 489",
+   "naam": "Marktprijs per m2 en technische waarde",
+   "waarde": "gebruikersinvoer",
+   "eenheid": "EUR/m2",
+   "land": "FR",
+   "bron_aanwezig": false,
+   "datum_aanwezig": false,
+   "variabiliteitsklasse": "gebruikersinvoer",
+   "opmerking": ""
+  },
+  {
+   "id": "P234",
+   "repo": "bouwgrond-frankrijk-check",
+   "bestand": "api/analyze.js",
+   "regel": "93-110",
+   "naam": "Zoekradius risicoanalyse",
+   "waarde": "1000",
+   "eenheid": "meter",
+   "land": "FR",
+   "bron_aanwezig": true,
+   "datum_aanwezig": "georisques.gouv.fr",
+   "variabiliteitsklasse": "afgeleid",
+   "opmerking": ""
+  }
+ ],
+ "dubbelingen": [
+  {
+   "id": "D01",
+   "grootheid": "Zvw inkomensafhankelijke bijdrage, laag percentage",
+   "land": "NL",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "8",
+     "waarde": "0,0526"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "14",
+     "waarde": "0,0485"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "250",
+     "waarde": "0,0485"
+    }
+   ],
+   "toelichting": "Twee edities naast elkaar. De AI-versie noemt bron en verificatiedatum en meldt expliciet dat 0,0526 de waarde van 2025 was; de oude repo doet dat niet. Dezelfde grootheid staat in de AI-versie twee keer, in het NL-blok en in het CAK-blok."
+  },
+  {
+   "id": "D02",
+   "grootheid": "AOW bruto per jaar, alleenstaand en partner",
+   "land": "NL",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "2-3",
+     "waarde": "19500 en 13000"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "7-8",
+     "waarde": "19956 en 13296"
+    }
+   ],
+   "toelichting": "Verschil van circa 2,3 procent. Geen van beide repo's noemt een bron of peildatum bij dit bedrag."
+  },
+  {
+   "id": "D03",
+   "grootheid": "Schijven impot sur le revenu",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "21",
+     "waarde": "11497 / 29315 / 83823 / 180294"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "157-177",
+     "waarde": "11600 / 29579 / 84577 / 181917"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/geld.ts",
+     "regel": "55",
+     "waarde": "11600 / 29579 / 84577 / 181917"
+    }
+   ],
+   "toelichting": "De AI-versie en Cafe Claude zijn onderling gelijk; de oude repo loopt een editie achter. De tarieven (0, 11, 30, 41 en 45 procent) zijn in alle drie gelijk."
+  },
+  {
+   "id": "D04",
+   "grootheid": "Structuur box 1 en box 3",
+   "land": "NL",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "10-15",
+     "waarde": "twee schijven (grens 75518), een forfaitair rendement 0,0617"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "21-51",
+     "waarde": "drie schijven (38883 en 78426), drie rendementen (0,0128 / 0,06 / 0,027)"
+    }
+   ],
+   "toelichting": "Niet alleen de waarden maar ook de structuur verschilt. Een register moet hier kiezen welke vorm leidend is, anders is de grootheid niet vergelijkbaar."
+  },
+  {
+   "id": "D05",
+   "grootheid": "Heffingskortingen en afbouw",
+   "land": "NL",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "11-12",
+     "waarde": "AHK 3362, arbeidskorting 5532, afbouw vanaf 24813 met factor 0,0663"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "37-43",
+     "waarde": "AHK 3115, arbeidskorting 5685, afbouw vanaf 29736 met factor 0,06398"
+    }
+   ],
+   "toelichting": "De AI-versie kent bovendien een afzonderlijke afbouw van de arbeidskorting (45592 en 0,0651) die in de oude repo ontbreekt."
+  },
+  {
+   "id": "D06",
+   "grootheid": "Heffingsvrij vermogen box 3",
+   "land": "NL",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "15",
+     "waarde": "57684 en 115368"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "46-47",
+     "waarde": "59357 en 118714"
+    }
+   ],
+   "toelichting": "Verschil van circa 2,9 procent, opnieuw een editieverschil."
+  },
+  {
+   "id": "D07",
+   "grootheid": "Abattement 65-plus en plafond gezinsquotient",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "22-24",
+     "waarde": "17200 / 2746 / 27670 / 1373 en plafond 1759"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "180-188",
+     "waarde": "17510 / 2796 / 28170 / 1398 en plafond 1807"
+    }
+   ],
+   "toelichting": "Editieverschil. Geen van beide noemt hier een bron."
+  },
+  {
+   "id": "D08",
+   "grootheid": "Forfait journalier hospitalier",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "bestand": "scenarios.js",
+     "regel": "100 en 155",
+     "waarde": "20,00 euro per dag"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/verzekeren.ts",
+     "regel": "60",
+     "waarde": "23 euro per dag ziekenhuis, 17 euro psychiatrie"
+    }
+   ],
+   "toelichting": "ZorgKompas gebruikt een tarief 2024/2025 en kent geen onderscheid tussen ziekenhuis en psychiatrie. Cafe Claude noemt 1 maart 2026 als ingangsdatum. De rekentool loopt dus achter op het handboek."
+  },
+  {
+   "id": "D09",
+   "grootheid": "Base de remboursement consult huisarts",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "bestand": "scenarios.js",
+     "regel": "19-21",
+     "waarde": "30,00 euro"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/verzekeren.ts",
+     "regel": "59",
+     "waarde": "26,50 euro, sinds november 2024"
+    }
+   ],
+   "toelichting": "Twee verschillende bedragen voor dezelfde grootheid, allebei zonder primaire bronverwijzing. Dit is de meest directe tegenspraak tussen een rekentool en een handboek."
+  },
+  {
+   "id": "D10",
+   "grootheid": "Franchise medicale en participation forfaitaire",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/audit/prompts/zorg.ts",
+     "regel": "67-68",
+     "waarde": "0,50 euro per medicijn, 2 euro per consult"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/audit/prompts/zorg.ts",
+     "regel": "146-147",
+     "waarde": "oude waarden 1 euro consult en 0,50 euro per doosje, verdubbeld per 1 mei 2024"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/verzekeren.ts",
+     "regel": "117",
+     "waarde": "2,00 euro per artsbezoek"
+    }
+   ],
+   "toelichting": "Binnen een repo staan de franchise per doosje op 0,50 en op 1 euro. Regel 146-147 beschrijft de verdubbeling van 0,50 naar 1 euro, regel 67-68 hanteert nog 0,50. Een van beide is verouderd."
+  },
+  {
+   "id": "D11",
+   "grootheid": "Surtaxe hoge meerwaarden, rekenwijze",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js",
+     "regel": "245-255",
+     "waarde": "tranches met afvlakkingsformule: 60000, 110000, 160000, 210000, 260000"
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "bestand": "generate_pdf.py",
+     "regel": "58-63",
+     "waarde": "rechte tranches zonder afvlakking: 50000, 100000, 150000, 200000, 250000"
+    }
+   ],
+   "toelichting": "Zelfde heffing, twee verschillende implementaties. De afvlakkingsformule uit art. 1609 nonies G CGI ontbreekt in de Python-versie, waardoor de uitkomsten rond de tranchegrenzen uiteenlopen."
+  },
+  {
+   "id": "D12",
+   "grootheid": "Notariskosten bij aankoop bestaande bouw",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/wonen.ts",
+     "regel": "46",
+     "waarde": "7 tot 8 procent ancien, 2 tot 3 procent neuf"
+    },
+    {
+     "repo": "if-tools-api",
+     "bestand": "src/app/api/woning-analyse/route.ts",
+     "regel": "52",
+     "waarde": "circa 7 tot 8 procent bij bestaande bouw"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "bestand": "components/steps/StepBudget.tsx",
+     "regel": "52",
+     "waarde": "circa 8 procent, zonder onderscheid"
+    },
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js en dmto.json",
+     "regel": "geheel",
+     "waarde": "opgebouwd uit emolumenten, DMTO per departement, taxe communale en frais d'assiette"
+    }
+   ],
+   "toelichting": "Vier verschillende aanpakken voor dezelfde vraag. Vastgoedtransactie rekent de kosten daadwerkelijk op; de andere drie gebruiken een vuistregel. De vuistregel van 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste."
+  },
+  {
+   "id": "D13",
+   "grootheid": "Standaard energieprijs elektriciteit",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "energieportaal",
+     "bestand": "engine/engine.js",
+     "regel": "26",
+     "waarde": "0,25 EUR per kWh als invulwaarde"
+    },
+    {
+     "repo": "energieportaal",
+     "bestand": "api/prices.js",
+     "regel": "15",
+     "waarde": "0,194 EUR per kWh, CRE TRV Base 6 kVA TTC, februari 2026"
+    }
+   ],
+   "toelichting": "Binnen dezelfde repo staan een invulwaarde en een referentiewaarde met bron naast elkaar. Dat is verdedigbaar zolang duidelijk is welke waar geldt, maar een register moet ze uit elkaar houden."
+  },
+  {
+   "id": "D14",
+   "grootheid": "Standaard propaanprijs",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "energieportaal",
+     "bestand": "engine/engine.js",
+     "regel": "26",
+     "waarde": "1,80 EUR per liter"
+    },
+    {
+     "repo": "energieportaal",
+     "bestand": "api/prices.js",
+     "regel": "20",
+     "waarde": "1,90 EUR per liter, DGEC Pegase GPL, Q1 2026"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "bestand": "engine/engine.js",
+     "regel": "26",
+     "waarde": "1,80 EUR per liter"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "bestand": "script.js",
+     "regel": "8",
+     "waarde": "1,80 EUR per liter"
+    }
+   ],
+   "toelichting": "De referentiewaarde is bijgewerkt, de invulwaarden in drie repo's niet."
+  },
+  {
+   "id": "D15",
+   "grootheid": "U-waarden per isolatieniveau",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "energieportaal",
+     "bestand": "engine/engine.js",
+     "regel": "62-66",
+     "waarde": "dak 3,0 / 0,5 / 0,25 / 0,15; vloer 2,2 / 1,2 / 0,8 / 0,3; raam 5,5 / 2,8 / 1,6 / 1,0"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "bestand": "engine/engine.js",
+     "regel": "63-66",
+     "waarde": "identiek aan energieportaal"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "bestand": "script.js",
+     "regel": "15",
+     "waarde": "dak 3,0 / 0,5 / 0,2 / 0,1; vloer 1,2 / 0,5 / 0,3 / 0,18; raam 5,8 / 2,9 / 1,7 / 0,8"
+    }
+   ],
+   "toelichting": "De oudste versie hanteert andere U-waarden voor dak, vloer en raam. Alleen de muurwaarden zijn in alle drie gelijk. Als de oude calculator nog ergens is ingebed, geeft hij andere uitkomsten."
+  },
+  {
+   "id": "D16",
+   "grootheid": "Apparaatverbruik per jaar",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "warmteverlies-calculator",
+     "bestand": "engine/engine.js",
+     "regel": "17-23",
+     "waarde": "vaatwasser 160, tv 120, IT 150, verlichting 180"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "bestand": "script.js",
+     "regel": "6",
+     "waarde": "vaatwasser 180, tv 100, IT 100, verlichting 200, plus een aparte oven 120"
+    }
+   ],
+   "toelichting": "Vier van de zeven posten wijken af en de indeling verschilt. Koelkast (250) en wassen (220) zijn gelijk."
+  },
+  {
+   "id": "D17",
+   "grootheid": "Plafond credit d'impot hulp aan huis",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "246",
+     "waarde": "12000 euro per jaar"
+    },
+    {
+     "repo": "ouderenzorg-fr",
+     "bestand": "if-dossier/dossier-skelet.md",
+     "regel": "127",
+     "waarde": "6000 tot 10000 euro per jaar"
+    }
+   ],
+   "toelichting": "Het percentage (50) is gelijk, het plafond niet. Het wettelijke plafond kent verhogingen per kind of bij handicap; welke variant hier bedoeld is, staat er niet bij."
+  },
+  {
+   "id": "D18",
+   "grootheid": "Vrijstelling erfbelasting niet-verwanten en stiefkinderen",
+   "land": "FR",
+   "afwijkend": true,
+   "voorkomens": [
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/wonen.ts",
+     "regel": "56",
+     "waarde": "niet-verwanten 60 procent na 1594 euro vrijstelling"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "bestand": "index.html",
+     "regel": "351",
+     "waarde": "stiefkinderen verhoogd van 1594 naar 15932 euro"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "bestand": "index.html",
+     "regel": "554",
+     "waarde": "partner zonder huwelijk of PACS: vrijstelling 1594 euro"
+    }
+   ],
+   "toelichting": "Twee bedragen voor wat op het eerste gezicht dezelfde categorie is. Het onderscheid tussen stiefkind en niet-verwante derde is bepalend en wordt niet overal gemaakt."
+  },
+  {
+   "id": "D19",
+   "grootheid": "Prelevements sociaux op vermogen",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "19",
+     "waarde": "0,172"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "80",
+     "waarde": "0,172"
+    },
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js",
+     "regel": "157",
+     "waarde": "17,2"
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "bestand": "generate_pdf.py",
+     "regel": "87",
+     "waarde": "0,172"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/geld.ts",
+     "regel": "108",
+     "waarde": "17,2"
+    },
+    {
+     "repo": "taalhulp-fr",
+     "bestand": "begrippen.js",
+     "regel": "693",
+     "waarde": "17,2"
+    }
+   ],
+   "toelichting": "Zes repo's, dezelfde waarde. De meest verspreide parameter van het hele netwerk en daarmee de eerste kandidaat voor het register."
+  },
+  {
+   "id": "D20",
+   "grootheid": "Prelevement de solidarite (De Ruyter)",
+   "land": "grensoverschrijdend",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "82",
+     "waarde": "0,075"
+    },
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js",
+     "regel": "158",
+     "waarde": "7,5"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/geld.ts",
+     "regel": "107-108",
+     "waarde": "7,5"
+    },
+    {
+     "repo": "briefhulp-fr",
+     "bestand": "cache/belasting/bezwaar/niveau-1.json",
+     "regel": "58",
+     "waarde": "7,5"
+    }
+   ],
+   "toelichting": "Vier repo's, dezelfde waarde. Alleen briefhulp-fr en cafeclaude noemen de juridische grondslag erbij."
+  },
+  {
+   "id": "D21",
+   "grootheid": "Tarief inkomstenbelasting plus-value en forfaits",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js",
+     "regel": "153-156",
+     "waarde": "19,0 procent; forfait aankoop 7,5; forfait verbouwing 15,0"
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "bestand": "generate_pdf.py",
+     "regel": "113-127",
+     "waarde": "0,19; 0,075; 0,15"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/wonen.ts",
+     "regel": "47",
+     "waarde": "19 procent"
+    }
+   ],
+   "toelichting": "Gelijk. Alleen Vastgoedtransactie noemt de CGI-artikelen."
+  },
+  {
+   "id": "D22",
+   "grootheid": "Abattement plus-value per bezitsjaar",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js",
+     "regel": "235-239",
+     "waarde": "IB 6,0 en 4,0 in jaar 22; PS 1,65 / 1,60 / 9,0"
+    },
+    {
+     "repo": "Plus-Value-Calculator",
+     "bestand": "generate_pdf.py",
+     "regel": "51-53",
+     "waarde": "PS 1,65 / 1,6 / 9,0"
+    }
+   ],
+   "toelichting": "Gelijk. De Python-versie rekent de inkomstenbelastingkant met een andere hulpfunctie maar komt op dezelfde volledige vrijstelling na 22 jaar uit."
+  },
+  {
+   "id": "D23",
+   "grootheid": "Micro-BIC abattements en plafonds verhuur",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/geld.ts",
+     "regel": "67-69",
+     "waarde": "15000 bij 30 procent; 77700 bij 50 procent"
+    },
+    {
+     "repo": "gitekompas-fr",
+     "bestand": "index.html",
+     "regel": "864-867",
+     "waarde": "15000 bij 30 procent; 77700 bij 50 procent"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "185-186",
+     "waarde": "abattement 0,5 diensten en 0,3 verhuur, zonder plafond"
+    }
+   ],
+   "toelichting": "De eerste twee zijn gelijk. Financieel Kompas kent wel de abattements maar niet de omzetplafonds, waardoor het de grens niet bewaakt."
+  },
+  {
+   "id": "D24",
+   "grootheid": "Woonlandfactor Frankrijk en nominale Zvw-bijdrage",
+   "land": "grensoverschrijdend",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "248-249",
+     "waarde": "0,8304 en 1884 euro per jaar"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/verzekeren.ts",
+     "regel": "79",
+     "waarde": "0,8304 en 157,00 euro per maand"
+    }
+   ],
+   "toelichting": "Gelijk; 157,00 maal 12 is 1884. Alleen de AI-versie noemt de CAK-pagina en de raadpleegdatum."
+  },
+  {
+   "id": "D25",
+   "grootheid": "Klimaatzones, graaddagen en PV-opbrengst",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "energieportaal",
+     "bestand": "engine/dpe.js en engine/engine.js",
+     "regel": "28-33 en 14",
+     "waarde": "HDD 1400 / 1900 / 2200 / 2500 / 2800 / 3400; PV 1450 / 1250 / 1150 / 1200 / 1150 / 1100"
+    },
+    {
+     "repo": "if-mobiel",
+     "bestand": "engine/dpe.js en engine/engine.js",
+     "regel": "idem",
+     "waarde": "byte-identiek"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "bestand": "engine/engine.js",
+     "regel": "6-14",
+     "waarde": "identiek"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "bestand": "script.js",
+     "regel": "4-5",
+     "waarde": "identiek"
+    }
+   ],
+   "toelichting": "Vier repo's, identieke waarden. if-mobiel bevat een byte-identieke kopie van de hele engine van energieportaal; dat is een kopie, geen verwijzing."
+  },
+  {
+   "id": "D26",
+   "grootheid": "Omrekenfactoren naar kWh",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "energieportaal",
+     "bestand": "engine/engine.js",
+     "regel": "28",
+     "waarde": "gas 10, fioul 10, pellet 5, hout 1800, propaan 7,1, petroleum 10"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "bestand": "engine/engine.js",
+     "regel": "28",
+     "waarde": "identiek"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "bestand": "script.js",
+     "regel": "10",
+     "waarde": "identiek"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+     "regel": "156",
+     "waarde": "hout 1800 kWh per stere"
+    }
+   ],
+   "toelichting": "Gelijk. Het kennisbestand van de AI-adviseur herhaalt de waarde uit de engine en noemt die expliciet als de waarde die de tool gebruikt."
+  },
+  {
+   "id": "D27",
+   "grootheid": "Btw-tarief Frankrijk, algemeen",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "Vastgoedtransactie",
+     "bestand": "calc.js",
+     "regel": "104",
+     "waarde": "20,0"
+    },
+    {
+     "repo": "ca-btw-oss-tool",
+     "bestand": "lib/regels.ts",
+     "regel": "62 en 180",
+     "waarde": "20"
+    }
+   ],
+   "toelichting": "Gelijk. Alleen de btw-tool noemt de bron en de datum waarop de regelset is vastgesteld."
+  },
+  {
+   "id": "D28",
+   "grootheid": "PFU, tarief inkomstenbelastingdeel",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "23",
+     "waarde": "0,128"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "187",
+     "waarde": "0,128"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/geld.ts",
+     "regel": "143",
+     "waarde": "12,8 procent, totaal 30 procent"
+    },
+    {
+     "repo": "taalhulp-fr",
+     "bestand": "begrippen.js",
+     "regel": "692",
+     "waarde": "30 procent"
+    }
+   ],
+   "toelichting": "Gelijk."
+  },
+  {
+   "id": "D29",
+   "grootheid": "IFI-drempel en schijven",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "28",
+     "waarde": "drempel 1300000; schijven 800000 tot 10000000"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "217-242",
+     "waarde": "identiek"
+    },
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/geld.ts",
+     "regel": "110",
+     "waarde": "drempel 1,3 miljoen"
+    }
+   ],
+   "toelichting": "Gelijk; het enige blok in Financieel Kompas dat tussen de twee edities niet is gewijzigd."
+  },
+  {
+   "id": "D30",
+   "grootheid": "Sociale lasten Frankrijk per inkomenssoort",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "financieel-kompas",
+     "bestand": "config.json",
+     "regel": "19",
+     "waarde": "pensioen 0,091; salaris 0,22; winst 0,212"
+    },
+    {
+     "repo": "financieel-kompas-ai",
+     "bestand": "config.json",
+     "regel": "76-79",
+     "waarde": "identiek"
+    }
+   ],
+   "toelichting": "Gelijk. De AI-versie splitst de 0,091 voor pensioen bovendien uit naar vier CSG-regimes; de oude versie kent alleen het normale tarief."
+  },
+  {
+   "id": "D31",
+   "grootheid": "Btw-tarief energetische renovatie",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "bestand": "script.js",
+     "regel": "193-206",
+     "waarde": "5,5 procent, naast 10 procent"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "bestand": "knowledge/experts/energieportaal-ai-adviseur.md",
+     "regel": "234",
+     "waarde": "5,5 procent bij RGE-installateur"
+    }
+   ],
+   "toelichting": "Gelijk."
+  },
+  {
+   "id": "D32",
+   "grootheid": "Successievrijstelling per kind per ouder",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "cafeclaude",
+     "bestand": "lib/domains/prompts/wonen.ts",
+     "regel": "56",
+     "waarde": "100000 euro"
+    },
+    {
+     "repo": "erf-en-schenkingsrecht-nl-fr",
+     "bestand": "app.js",
+     "regel": "1203 en 1219",
+     "waarde": "100000 euro"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "bestand": "index.html",
+     "regel": "369",
+     "waarde": "100000 euro"
+    }
+   ],
+   "toelichting": "Gelijk. Alleen erf-en-schenkingsrecht noemt de bron en de verificatiedatum."
+  },
+  {
+   "id": "D33",
+   "grootheid": "Boete te late teruggave huurborg",
+   "land": "FR",
+   "afwijkend": false,
+   "voorkomens": [
+    {
+     "repo": "briefhulp-fr",
+     "bestand": "cache/verhuurder/borg/niveau-2.json",
+     "regel": "29",
+     "waarde": "10 procent van de kale maandhuur per begonnen maand"
+    },
+    {
+     "repo": "briefhulp-fr",
+     "bestand": "cache/verhuurder/borg/niveau-3.json",
+     "regel": "33 en 83",
+     "waarde": "identiek"
+    }
+   ],
+   "toelichting": "Gelijk binnen dezelfde repo, met in beide gevallen art. 22 al. 5 loi 89-462 erbij."
+  }
+ ]
+}
