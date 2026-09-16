@@ -1,0 +1,66 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.vastgoed.houdbaarheidstermijn_tarieven",
+  "naam_nl": "Eigen houdbaarheidstermijn van de tarieven in de tool",
+  "naam_fr": "Duree de validite interne des taux",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.vastgoed",
+   "naam": "Bewaking van vastgoedtarieven",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "akte"
+  },
+  "variabiliteitsklasse": "afgeleid",
+  "effect": "informatief",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "maanden",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onbekend",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:61-62",
+    "waarde_in_tool": "actueel tot 2 maanden, controleren vanaf 6 maanden",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Dit is geen overheidsgrootheid maar de eigen bewaking van Vastgoedtransactie. Peil legt hem vast omdat hij bepaalt wanneer de tool zelf een waarschuwing toont.",
+  "kandidaat": false,
+  "verantwoordelijke": "Anton Noe, Communities Abroad",
+  "houdbaarheidsdatum": "2027-09-16"
+ }
+}

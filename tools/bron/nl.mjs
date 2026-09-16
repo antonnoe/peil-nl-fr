@@ -20,78 +20,78 @@ export const NL = [
   opm: 'Geen bron en geen verificatiedatum in het bestand.' },
 
 // ------------------------------------------------------------- NL, box 1
-{ id: 'p.nl.ib.tarieven_onder_aow', nl: 'Tarieven box 1 onder de AOW-leeftijd', fr: 'Taux box 1 avant l age AOW', off: 'Gecombineerd tarief inkomstenbelasting en premie volksverzekeringen',
+{ id: 'p.nl.ib.tarieven_onder_aow', nl: 'Tarieven box 1 onder de AOW-leeftijd', fr: 'Taux box 1 avant l\'âge AOW', off: 'Gecombineerd tarief inkomstenbelasting en premie volksverzekeringen',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december bij het Belastingplan',
   hist: oud('0,3697 / 0,495', 'tweeschijvenstelsel in de voorganger'),
   in: [[ 'financieel-kompas-ai', 'config.json:21-25', '0,3575 / 0,3756 / 0,495', false ]] },
 
-{ id: 'p.nl.ib.tarieven_boven_aow', nl: 'Tarieven box 1 boven de AOW-leeftijd', fr: 'Taux box 1 apres l age AOW', off: 'Gecombineerd tarief zonder AOW-premie',
+{ id: 'p.nl.ib.tarieven_boven_aow', nl: 'Tarieven box 1 boven de AOW-leeftijd', fr: 'Taux box 1 après l\'âge AOW', off: 'Gecombineerd tarief zonder AOW-premie',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud('0,1907 / 0,495'),
   in: [[ 'financieel-kompas-ai', 'config.json:26-30', '0,1785 / 0,3756 / 0,495', false ]] },
 
-{ id: 'p.nl.ib.grens_schijf_1', nl: 'Grens eerste schijf box 1', fr: 'Limite de la premiere tranche box 1', off: 'Einde eerste schijf box 1',
+{ id: 'p.nl.ib.grens_schijf_1', nl: 'Grens eerste schijf box 1', fr: 'Limite de la première tranche box 1', off: 'Einde eerste schijf box 1',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', vt: 'drempel', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud(75518, 'de voorganger kende twee schijven, met een andere grens'),
   in: [[ 'financieel-kompas-ai', 'config.json:35', '38883', false ]] },
 
-{ id: 'p.nl.ib.grens_schijf_2', nl: 'Grens tweede schijf box 1', fr: 'Limite de la deuxieme tranche box 1', off: 'Einde tweede schijf box 1',
+{ id: 'p.nl.ib.grens_schijf_2', nl: 'Grens tweede schijf box 1', fr: 'Limite de la deuxième tranche box 1', off: 'Einde tweede schijf box 1',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', vt: 'drempel', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   in: [[ 'financieel-kompas-ai', 'config.json:36', '78426', false ]] },
 
-{ id: 'p.nl.ib.algemene_heffingskorting_max', nl: 'Algemene heffingskorting, maximum', fr: 'Credit d impot general, maximum', off: 'Algemene heffingskorting',
+{ id: 'p.nl.ib.algemene_heffingskorting_max', nl: 'Algemene heffingskorting, maximum', fr: 'Crédit d\'impôt général, maximum', off: 'Algemene heffingskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'heffingskorting', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud(3362),
   in: [[ 'financieel-kompas-ai', 'config.json:37', '3115', false ]] },
 
-{ id: 'p.nl.ib.arbeidskorting_max', nl: 'Arbeidskorting, maximum', fr: 'Credit d impot sur le travail, maximum', off: 'Arbeidskorting',
+{ id: 'p.nl.ib.arbeidskorting_max', nl: 'Arbeidskorting, maximum', fr: 'Crédit d\'impôt sur le travail, maximum', off: 'Arbeidskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'heffingskorting', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud(5532),
   in: [[ 'financieel-kompas-ai', 'config.json:38', '5685', false ]] },
 
-{ id: 'p.nl.ib.mkb_winstvrijstelling', nl: 'MKB-winstvrijstelling', fr: 'Exoneration des benefices PME', off: 'MKB-winstvrijstelling',
+{ id: 'p.nl.ib.mkb_winstvrijstelling', nl: 'MKB-winstvrijstelling', fr: 'Exonération des bénéfices PME', off: 'MKB-winstvrijstelling',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'vrijstelling', eh: 'fractie', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   in: [[ 'financieel-kompas-ai', 'config.json:39', '0,127', false ]] },
 
-{ id: 'p.nl.ib.hk_afbouw_start', nl: 'Startpunt afbouw algemene heffingskorting', fr: 'Debut de la degressivite du credit d impot general', off: 'Afbouwgrens algemene heffingskorting',
+{ id: 'p.nl.ib.hk_afbouw_start', nl: 'Startpunt afbouw algemene heffingskorting', fr: 'Début de la dégressivité du crédit d\'impôt général', off: 'Afbouwgrens algemene heffingskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', vt: 'drempel', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud(24813),
   in: [[ 'financieel-kompas-ai', 'config.json:40', '29736', false ]],
   opm: 'Gelijk aan het drempelinkomen van de zorgtoeslag, maar het is een eigen grootheid met een eigen grondslag.' },
 
-{ id: 'p.nl.ib.hk_afbouw_factor', nl: 'Afbouwfactor algemene heffingskorting', fr: 'Taux de degressivite du credit d impot general', off: 'Afbouwpercentage algemene heffingskorting',
+{ id: 'p.nl.ib.hk_afbouw_factor', nl: 'Afbouwfactor algemene heffingskorting', fr: 'Taux de dégressivité du crédit d\'impôt général', off: 'Afbouwpercentage algemene heffingskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud('0,0663'),
   in: [[ 'financieel-kompas-ai', 'config.json:41', '0,06398', false ]] },
 
-{ id: 'p.nl.ib.ak_afbouw_start', nl: 'Startpunt afbouw arbeidskorting', fr: 'Debut de la degressivite du credit d impot sur le travail', off: 'Afbouwgrens arbeidskorting',
+{ id: 'p.nl.ib.ak_afbouw_start', nl: 'Startpunt afbouw arbeidskorting', fr: 'Début de la dégressivité du crédit d\'impôt sur le travail', off: 'Afbouwgrens arbeidskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', vt: 'drempel', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   in: [[ 'financieel-kompas-ai', 'config.json:42', '45592', false ]],
   opm: 'Ontbreekt in de voorganger financieel-kompas; die kent geen afzonderlijke afbouw van de arbeidskorting.' },
 
-{ id: 'p.nl.ib.ak_afbouw_factor', nl: 'Afbouwfactor arbeidskorting', fr: 'Taux de degressivite du credit d impot sur le travail', off: 'Afbouwpercentage arbeidskorting',
+{ id: 'p.nl.ib.ak_afbouw_factor', nl: 'Afbouwfactor arbeidskorting', fr: 'Taux de dégressivité du crédit d\'impôt sur le travail', off: 'Afbouwpercentage arbeidskorting',
   reg: 'nl.ib', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   in: [[ 'financieel-kompas-ai', 'config.json:43', '0,0651', false ]] },
 
 // ------------------------------------------------------------- NL, box 3
-{ id: 'p.nl.box3.heffingsvrij_alleenstaand', nl: 'Heffingsvrij vermogen box 3, alleenstaand', fr: 'Patrimoine exonere box 3, personne seule', off: 'Heffingsvrij vermogen',
+{ id: 'p.nl.box3.heffingsvrij_alleenstaand', nl: 'Heffingsvrij vermogen box 3, alleenstaand', fr: 'Patrimoine exonéré box 3, personne seule', off: 'Heffingsvrij vermogen',
   reg: 'nl.box3', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'vrijstelling', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud(57684),
   in: [[ 'financieel-kompas-ai', 'config.json:46', '59357', false ]] },
 
-{ id: 'p.nl.box3.heffingsvrij_partners', nl: 'Heffingsvrij vermogen box 3, partners', fr: 'Patrimoine exonere box 3, couple', off: 'Heffingsvrij vermogen fiscale partners',
+{ id: 'p.nl.box3.heffingsvrij_partners', nl: 'Heffingsvrij vermogen box 3, partners', fr: 'Patrimoine exonéré box 3, couple', off: 'Heffingsvrij vermogen fiscale partners',
   reg: 'nl.box3', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'vrijstelling', eh: 'EUR', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   hist: oud(115368),
@@ -102,7 +102,7 @@ export const NL = [
   freq: 'jaarlijks', pub: 'Belastingdienst, half december',
   in: [[ 'financieel-kompas-ai', 'config.json:48', '0,36', false ]] },
 
-{ id: 'p.nl.box3.rendement_spaargeld', nl: 'Forfaitair rendement spaargeld', fr: 'Rendement forfaitaire sur l epargne', off: 'Forfaitair rendementspercentage banktegoeden',
+{ id: 'p.nl.box3.rendement_spaargeld', nl: 'Forfaitair rendement spaargeld', fr: 'Rendement forfaitaire sur l\'épargne', off: 'Forfaitair rendementspercentage banktegoeden',
   reg: 'nl.box3', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', eh: 'fractie', jaar: '2026',
   freq: 'jaarlijks', pub: 'Belastingdienst, definitief begin van het volgende jaar',
   hist: oud('0,0617', 'de voorganger kende een enkel forfaitair rendement in plaats van drie'),
@@ -119,7 +119,7 @@ export const NL = [
   in: [[ 'financieel-kompas-ai', 'config.json:51', '0,027', false ]] },
 
 // ------------------------------------------------------------ NL, Zvw en Wlz
-{ id: 'p.nl.zvw.percentage_laag', nl: 'Zvw inkomensafhankelijke bijdrage, lage percentage', fr: 'Cotisation Zvw dependante du revenu, taux reduit', off: 'Lage percentage inkomensafhankelijke bijdrage Zvw',
+{ id: 'p.nl.zvw.percentage_laag', nl: 'Zvw inkomensafhankelijke bijdrage, lage percentage', fr: 'Cotisation Zvw dépendante du revenu, taux réduit', off: 'Lage percentage inkomensafhankelijke bijdrage Zvw',
   reg: 'nl.zvw', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   st: 'vastgesteld', w: 0.0485, wv: '4,85 procent', van: '2026-01-01',
   kn: 'Regeling van 3 november 2025, kenmerk 4240020-1089850-Z, Ministerie van VWS, Staatscourant 2025, 38055',
@@ -130,7 +130,7 @@ export const NL = [
   uitz: ['Loon valt niet onder het lage percentage: daarover draagt de werkgever de werkgeversheffing af. Welk percentage in een concreet geval geldt, is een vraag voor een belastingadviseur.'],
   test: { invoer: 'pensioeninkomen 30.000 euro', verwachte_uitkomst: '1.455 euro Zvw-bijdrage', toelichting: '30.000 maal 0,0485, onder het maximumbijdrage-inkomen.' } },
 
-{ id: 'p.nl.zvw.max_bijdrage_inkomen', nl: 'Maximumbijdrage-inkomen Zvw', fr: 'Revenu maximal soumis a la cotisation Zvw', off: 'Maximum bijdrage-inkomen Zvw',
+{ id: 'p.nl.zvw.max_bijdrage_inkomen', nl: 'Maximumbijdrage-inkomen Zvw', fr: 'Revenu maximal soumis à la cotisation Zvw', off: 'Maximum bijdrage-inkomen Zvw',
   reg: 'nl.zvw', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'plafond', eh: 'EUR/jaar', jaar: '2026',
   st: 'vastgesteld', w: 79409, wv: '79.409 euro per jaar', van: '2026-01-01',
   kn: 'Regeling van 3 november 2025, kenmerk 4240020-1089850-Z, Ministerie van VWS, Staatscourant 2025, 38055',
@@ -147,7 +147,7 @@ export const NL = [
   freq: 'jaarlijks', lw: '2026-01-01', pub: 'CAK, eind december',
   in: [[ 'financieel-kompas-ai', 'config.json:251', '0,0965', false ]] },
 
-{ id: 'p.nl.wlz.max_bijdrage_inkomen', nl: 'Maximumbijdrage-inkomen Wlz', fr: 'Revenu maximal soumis a la cotisation Wlz', off: 'Maximum bijdrage-inkomen Wlz',
+{ id: 'p.nl.wlz.max_bijdrage_inkomen', nl: 'Maximumbijdrage-inkomen Wlz', fr: 'Revenu maximal soumis à la cotisation Wlz', off: 'Maximum bijdrage-inkomen Wlz',
   reg: 'nl.wlz', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'plafond', eh: 'EUR/jaar', jaar: '2026',
   st: 'vastgesteld', w: 38883, wv: '38.883 euro per jaar', van: '2026-01-01',
   url: CAK_URL, kn: 'Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen', bs: 'secundair: pagina van het CAK, de onderliggende regeling niet zelf gelezen',
@@ -156,7 +156,7 @@ export const NL = [
   in: [[ 'financieel-kompas-ai', 'config.json:253', '38883', false ]],
   opm: 'Zvw en Wlz kennen verschillende maximumbijdrage-inkomens. Dit bedrag is toevallig gelijk aan de grens van de eerste schijf box 1, maar het is een eigen grootheid.' },
 
-{ id: 'p.nl.wlz.max_bijdrage_inkomen_voor_1946', nl: 'Maximumbijdrage-inkomen Wlz, geboortejaar 1945 of eerder', fr: 'Revenu maximal Wlz, nes en 1945 ou avant', off: 'Maximum bijdrage-inkomen Wlz voor geboortejaren tot en met 1945',
+{ id: 'p.nl.wlz.max_bijdrage_inkomen_voor_1946', nl: 'Maximumbijdrage-inkomen Wlz, geboortejaar 1945 of eerder', fr: 'Revenu maximal Wlz, nés en 1945 ou avant', off: 'Maximum bijdrage-inkomen Wlz voor geboortejaren tot en met 1945',
   reg: 'nl.wlz', klasse: 'overheid_vastgesteld', effect: 'verlaagt_last', vt: 'plafond', eh: 'EUR/jaar', jaar: '2026',
   st: 'vastgesteld', w: 41123, wv: '41.123 euro per jaar', van: '2026-01-01',
   url: CAK_URL, kn: 'Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen', bs: 'secundair: pagina van het CAK, de onderliggende regeling niet zelf gelezen',
@@ -165,7 +165,7 @@ export const NL = [
   in: [[ 'financieel-kompas-ai', 'config.json:254', '41123', false ]] },
 
 // -------------------------------------------------------- NL, zorgpremie en zorgtoeslag
-{ id: 'p.nl.zorg.nominale_premie', nl: 'Nominale zorgpremie per volwassene per jaar', fr: 'Prime nominale d assurance maladie par adulte et par an', off: 'Standaardpremie Wet op de zorgtoeslag',
+{ id: 'p.nl.zorg.nominale_premie', nl: 'Nominale zorgpremie per volwassene per jaar', fr: 'Prime nominale d\'assurance maladie par adulte et par an', off: 'Standaardpremie Wet op de zorgtoeslag',
   reg: 'nl.zorg', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'EUR/jaar', jaar: '2026',
   st: 'vastgesteld', w: 2119, wv: '2.119 euro per jaar', van: '2026-01-01',
   kn: 'Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, Ministerie van VWS, in werking per 1 januari 2026',
@@ -184,7 +184,7 @@ export const NL = [
   kand: true,
   opm: 'Staat hier uitsluitend om raming en vaststelling uit elkaar te houden. Rekentools horen met de vastgestelde waarde te rekenen, niet met deze raming.' },
 
-{ id: 'p.nl.zorgtoeslag.drempelinkomen', nl: 'Drempelinkomen zorgtoeslag', fr: 'Revenu de seuil pour l allocation sante', off: 'Drempelinkomen zorgtoeslag',
+{ id: 'p.nl.zorgtoeslag.drempelinkomen', nl: 'Drempelinkomen zorgtoeslag', fr: 'Revenu de seuil pour l\'allocation santé', off: 'Drempelinkomen zorgtoeslag',
   reg: 'nl.zorgtoeslag', klasse: 'overheid_vastgesteld', effect: 'bepaalt_grondslag', vt: 'drempel', eh: 'EUR/jaar', jaar: '2026',
   st: 'vastgesteld', w: 29736, wv: '29.736 euro per jaar', van: '2026-01-01',
   kn: 'Besluit percentages drempel- en toetsingsinkomen zorgtoeslag, geldend per 1 januari 2026', bs: 'primair',
@@ -206,7 +206,7 @@ export const NL = [
   inst: 'Ministerie van VWS', vd: VD_FKAI, vdoor: DOOR_FKAI, freq: 'jaarlijks', lw: '2026-01-01', pub: 'half december',
   in: [[ 'financieel-kompas-ai', 'config.json:63', '0,04289', false ]] },
 
-{ id: 'p.nl.zorgtoeslag.afbouwpercentage', nl: 'Afbouwpercentage zorgtoeslag', fr: 'Taux de degressivite de l allocation sante', off: 'Afbouwpercentage boven het drempelinkomen',
+{ id: 'p.nl.zorgtoeslag.afbouwpercentage', nl: 'Afbouwpercentage zorgtoeslag', fr: 'Taux de dégressivité de l\'allocation santé', off: 'Afbouwpercentage boven het drempelinkomen',
   reg: 'nl.zorgtoeslag', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'fractie', jaar: '2026',
   st: 'vastgesteld', w: 0.1373, wv: '13,73 procent', van: '2026-01-01',
   kn: 'Besluit percentages drempel- en toetsingsinkomen zorgtoeslag, geldend per 1 januari 2026', bs: 'primair',
@@ -228,7 +228,7 @@ export const NL = [
   inst: 'Belastingdienst Toeslagen', vd: VD_FKAI, vdoor: DOOR_FKAI, freq: 'jaarlijks', lw: '2026-01-01', pub: 'half december',
   in: [[ 'financieel-kompas-ai', 'config.json:66', '184633', false ]] },
 
-{ id: 'p.nl.leges.paspoort_verlengen_buitenland', nl: 'Nederlands paspoort verlengen in Frankrijk', fr: 'Renouvellement du passeport neerlandais en France', off: 'Consulaire leges paspoort',
+{ id: 'p.nl.leges.paspoort_verlengen_buitenland', nl: 'Nederlands paspoort verlengen in Frankrijk', fr: 'Renouvellement du passeport néerlandais en France', off: 'Consulaire leges paspoort',
   reg: 'nl.leges', klasse: 'overheid_vastgesteld', effect: 'verhoogt_last', eh: 'EUR', jaar: '2025',
   freq: 'jaarlijks', pub: 'Ministerie van Buitenlandse Zaken, begin januari',
   in: [[ 'cafeclaude', 'lib/domains/prompts/bureaucratie.ts:44', '83,37', false ]],

@@ -1,0 +1,94 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.pv.surtaxe_barema",
+  "naam_nl": "Surtaxe op hoge meerwaarden",
+  "naam_fr": "Taxe sur les plus-values immobilieres elevees",
+  "naam_officieel": "Art. 1609 nonies G CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.pv",
+   "naam": "Plus-value immobiliere des particuliers",
+   "belastingtype": "meerwaardeheffing",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "meerwaarde"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": {
+   "drempel": 50000,
+   "tarieven_procent": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "afvlakking": true,
+   "tranchegrenzen": [
+    60000,
+    110000,
+    160000,
+    210000,
+    260000
+   ]
+  },
+  "waarde_weergave": "vanaf 50.000 euro belastbare meerwaarde, 2 tot 6 procent met afvlakking per tranche",
+  "eenheid": "EUR en procent",
+  "geldig_jaar": "2026",
+  "geldig_van": "2024-01-01",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048806252",
+  "bron_kenmerk": "art. 1609 nonies G CGI, versie in werking sinds 1 januari 2024",
+  "bronsoort": "primair",
+  "instantie": "DGFiP",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": "2013-01-01",
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:245-255",
+    "waarde_in_tool": "tranches met afvlakkingsformule: 60000, 110000, 160000, 210000, 260000",
+    "afwijkend": false
+   },
+   {
+    "repo": "Plus-Value-Calculator",
+    "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+    "locatie": "generate_pdf.py:58-63",
+    "waarde_in_tool": "rechte tranches zonder afvlakking: 50000, 100000, 150000, 200000, 250000",
+    "afwijkend": true
+   }
+  ],
+  "testvoorbeeld": {
+   "invoer": "belastbare meerwaarde 120.000 euro",
+   "verwachte_uitkomst": "surtaxe volgens de tranche 110.000 tot 160.000 met afvlakkingsformule",
+   "toelichting": "De afvlakking maakt het verschil rond de tranchegrenzen; een rechte tranchetabel geeft daar een andere uitkomst."
+  },
+  "uitzonderingen": [
+   "De heffing geldt per verkoper en niet bij bouwgrond."
+  ],
+  "opmerkingen": "Twee aangesloten tools rekenen deze heffing verschillend. De Python-versie mist de afvlakkingsformule uit art. 1609 nonies G CGI, waardoor de uitkomsten rond de tranchegrenzen uiteenlopen.",
+  "kandidaat": false
+ }
+}

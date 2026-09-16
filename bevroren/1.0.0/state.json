@@ -1,0 +1,2648 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "totalen": {
+  "vastgesteld": 52,
+  "raming": 1,
+  "te_verifieren": 156,
+  "vervallen": 1,
+  "afwijkend_tussen_tools": 10
+ },
+ "per_cockpit_onderdeel": [
+  {
+   "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+   "repos": [
+    "financieel-kompas-ai"
+   ],
+   "tellers": {
+    "vastgesteld": 21,
+    "raming": 0,
+    "te_verifieren": 38,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.ir.credit_hulp_aan_huis_plafond",
+    "gaat_veranderen:raming:p.nl.zorg.nominale_premie",
+    "verouderd:niet_vastgesteld:p.fr.ifi.drempel",
+    "verouderd:niet_vastgesteld:p.fr.ifi.schijven",
+    "verouderd:niet_vastgesteld:p.fr.ir.abattement_65plus",
+    "verouderd:niet_vastgesteld:p.fr.ir.abattement_micro_diensten",
+    "verouderd:niet_vastgesteld:p.fr.ir.abattement_micro_verhuur",
+    "verouderd:niet_vastgesteld:p.fr.ir.credit_hulp_aan_huis_percentage",
+    "verouderd:niet_vastgesteld:p.fr.ir.credit_hulp_aan_huis_plafond",
+    "verouderd:niet_vastgesteld:p.fr.ir.decote",
+    "verouderd:niet_vastgesteld:p.fr.ir.pfu_tarief",
+    "verouderd:niet_vastgesteld:p.fr.ir.quotient_plafond_per_halve_part",
+    "verouderd:niet_vastgesteld:p.fr.ir.schijven",
+    "verouderd:niet_vastgesteld:p.fr.ps.taux_roerend",
+    "verouderd:niet_vastgesteld:p.fr.retraite.gemiddeld_salaris_referentie",
+    "verouderd:niet_vastgesteld:p.fr.retraite.jaren_vereist",
+    "verouderd:niet_vastgesteld:p.fr.retraite.opbouwpercentage",
+    "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_pensioen",
+    "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_salaris",
+    "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_winst_diensten",
+    "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_winst_verhuur",
+    "verouderd:niet_vastgesteld:p.nl.aow.bruto_alleenstaand",
+    "verouderd:niet_vastgesteld:p.nl.aow.bruto_partner",
+    "verouderd:niet_vastgesteld:p.nl.box3.heffingsvrij_alleenstaand",
+    "verouderd:niet_vastgesteld:p.nl.box3.heffingsvrij_partners",
+    "verouderd:niet_vastgesteld:p.nl.box3.rendement_beleggingen",
+    "verouderd:niet_vastgesteld:p.nl.box3.rendement_schulden",
+    "verouderd:niet_vastgesteld:p.nl.box3.rendement_spaargeld",
+    "verouderd:niet_vastgesteld:p.nl.box3.tarief",
+    "verouderd:niet_vastgesteld:p.nl.ib.ak_afbouw_factor",
+    "verouderd:niet_vastgesteld:p.nl.ib.ak_afbouw_start",
+    "verouderd:niet_vastgesteld:p.nl.ib.algemene_heffingskorting_max",
+    "verouderd:niet_vastgesteld:p.nl.ib.arbeidskorting_max",
+    "verouderd:niet_vastgesteld:p.nl.ib.grens_schijf_1",
+    "verouderd:niet_vastgesteld:p.nl.ib.grens_schijf_2",
+    "verouderd:niet_vastgesteld:p.nl.ib.hk_afbouw_factor",
+    "verouderd:niet_vastgesteld:p.nl.ib.hk_afbouw_start",
+    "verouderd:niet_vastgesteld:p.nl.ib.mkb_winstvrijstelling",
+    "verouderd:niet_vastgesteld:p.nl.ib.tarieven_boven_aow",
+    "verouderd:niet_vastgesteld:p.nl.ib.tarieven_onder_aow"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "CC, Cafe Claude",
+   "repos": [
+    "cafeclaude"
+   ],
+   "tellers": {
+    "vastgesteld": 6,
+    "raming": 0,
+    "te_verifieren": 34,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 5
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.notaris.vuistregel_kosten_ancien",
+    "afwijkend:p.fr.secu.brss_consult_medecin_traitant",
+    "afwijkend:p.fr.secu.forfait_journalier",
+    "afwijkend:p.fr.secu.franchise_medicale",
+    "afwijkend:p.fr.succ.abattement_niet_verwanten",
+    "verouderd:niet_vastgesteld:p.fr.acre.reductie_en_duur",
+    "verouderd:niet_vastgesteld:p.fr.assur.bonus_malus_auto",
+    "verouderd:niet_vastgesteld:p.fr.av.abattements",
+    "verouderd:niet_vastgesteld:p.fr.cvae.drempel",
+    "verouderd:niet_vastgesteld:p.fr.erf.reserve_hereditaire",
+    "verouderd:niet_vastgesteld:p.fr.ifi.drempel",
+    "verouderd:niet_vastgesteld:p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+    "verouderd:niet_vastgesteld:p.fr.ir.decote",
+    "verouderd:niet_vastgesteld:p.fr.ir.pfu_tarief",
+    "verouderd:niet_vastgesteld:p.fr.ir.schijven",
+    "verouderd:niet_vastgesteld:p.fr.lmp.drempel",
+    "verouderd:niet_vastgesteld:p.fr.micro.abattement_per_categorie",
+    "verouderd:niet_vastgesteld:p.fr.micro.bic_verhuur",
+    "verouderd:niet_vastgesteld:p.fr.micro.plafonds",
+    "verouderd:niet_vastgesteld:p.fr.notaris.vuistregel_kosten_ancien",
+    "verouderd:niet_vastgesteld:p.fr.ps.opbouw",
+    "verouderd:niet_vastgesteld:p.fr.secu.brss_consult_medecin_traitant",
+    "verouderd:niet_vastgesteld:p.fr.secu.forfait_journalier",
+    "verouderd:niet_vastgesteld:p.fr.secu.franchise_medicale",
+    "verouderd:niet_vastgesteld:p.fr.secu.franchise_transport",
+    "verouderd:niet_vastgesteld:p.fr.secu.participation_forfaitaire",
+    "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_had_en_infirmiere",
+    "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_zonder_medecin_traitant",
+    "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_winst_diensten",
+    "verouderd:niet_vastgesteld:p.fr.succ.abattement_broers_zussen",
+    "verouderd:niet_vastgesteld:p.fr.succ.abattement_niet_verwanten",
+    "verouderd:niet_vastgesteld:p.fr.succ.hernieuwingstermijn",
+    "verouderd:niet_vastgesteld:p.fr.urssaf.drempel_chambres_hotes",
+    "verouderd:niet_vastgesteld:p.fr.urssaf.drempel_meuble_tourisme",
+    "verouderd:niet_vastgesteld:p.fr.zorg.beschermingsmaatregel_kosten",
+    "verouderd:niet_vastgesteld:p.fr.zorg.mandat_protection_future_kosten",
+    "verouderd:niet_vastgesteld:p.fr.zorg.teleassistentie_maandprijs",
+    "verouderd:niet_vastgesteld:p.nl.leges.paspoort_verlengen_buitenland",
+    "verouderd:niet_vastgesteld:p.xb.deruyter.csg_crds_geschrapt"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF / CA, e-facturatie",
+   "repos": [
+    "e-facturatie-frankrijk"
+   ],
+   "tellers": {
+    "vastgesteld": 3,
+    "raming": 0,
+    "te_verifieren": 0,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": []
+  },
+  {
+   "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+   "repos": [
+    "bouwvergunningwijzer-frankrijk"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 2,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": [
+    "verouderd:niet_vastgesteld:p.fr.bouw.drempels_bijgebouw",
+    "verouderd:niet_vastgesteld:p.fr.bouw.drempels_uitbreiding"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, Briefhulp",
+   "repos": [
+    "briefhulp-fr"
+   ],
+   "tellers": {
+    "vastgesteld": 1,
+    "raming": 0,
+    "te_verifieren": 5,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": [
+    "verouderd:niet_vastgesteld:p.fr.handel.forfaitaire_incassokosten",
+    "verouderd:niet_vastgesteld:p.fr.huur.boete_late_teruggave_borg",
+    "verouderd:niet_vastgesteld:p.fr.telecom.max_verbrekingsvergoeding",
+    "verouderd:niet_vastgesteld:p.fr.telecom.minimale_looptijd_binding",
+    "verouderd:niet_vastgesteld:p.xb.deruyter.csg_crds_geschrapt"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, dossier Elektriciteit",
+   "repos": [
+    "dossier-elektriciteit-if"
+   ],
+   "tellers": {
+    "vastgesteld": 9,
+    "raming": 0,
+    "te_verifieren": 0,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": []
+  },
+  {
+   "cockpit_onderdeel": "IF, EnergiePortaal",
+   "repos": [
+    "energieportaal"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 10,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 2
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.energie.standaardprijzen_invoer",
+    "afwijkend:p.fr.energie.u_waarden_isolatieniveau",
+    "verouderd:niet_vastgesteld:p.fr.dpe.co2_emissiefactoren",
+    "verouderd:niet_vastgesteld:p.fr.dpe.klassegrenzen",
+    "verouderd:niet_vastgesteld:p.fr.dpe.primaire_energiefactor_elektriciteit",
+    "verouderd:niet_vastgesteld:p.fr.energie.graaddagen_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+    "verouderd:niet_vastgesteld:p.fr.energie.pv_opbrengst_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.referentieprijzen",
+    "verouderd:niet_vastgesteld:p.fr.energie.standaardprijzen_invoer",
+    "verouderd:niet_vastgesteld:p.fr.energie.u_waarden_isolatieniveau",
+    "verouderd:niet_vastgesteld:p.fr.energie.verouderingsdrempel_prijzen"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
+   "repos": [
+    "erf-en-schenkingsrecht-nl-fr"
+   ],
+   "tellers": {
+    "vastgesteld": 3,
+    "raming": 0,
+    "te_verifieren": 1,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": [
+    "verouderd:houdbaarheid:p.fr.don.barema_lijn_directe",
+    "verouderd:houdbaarheid:p.fr.succ.barema_lijn_directe",
+    "verouderd:niet_vastgesteld:p.fr.don.vrijstelling_geldschenking"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, erfrecht (artikel)",
+   "repos": [
+    "erfrecht-en-testament"
+   ],
+   "tellers": {
+    "vastgesteld": 1,
+    "raming": 0,
+    "te_verifieren": 4,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.succ.abattement_niet_verwanten",
+    "verouderd:niet_vastgesteld:p.fr.succ.abattement_niet_verwanten",
+    "verouderd:niet_vastgesteld:p.fr.succ.abattement_stiefkind",
+    "verouderd:niet_vastgesteld:p.fr.succ.adoption_simple",
+    "verouderd:niet_vastgesteld:p.fr.succ.tarief_stiefkind"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, GiteKompas",
+   "repos": [
+    "gitekompas-fr"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 3,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": [
+    "verouderd:niet_vastgesteld:p.fr.gite.degressieve_reeks",
+    "verouderd:niet_vastgesteld:p.fr.gite.minimumheffing_niet_residenten",
+    "verouderd:niet_vastgesteld:p.fr.micro.bic_verhuur"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, mobiele schil",
+   "repos": [
+    "if-mobiel"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 8,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 2
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.energie.standaardprijzen_invoer",
+    "afwijkend:p.fr.energie.u_waarden_isolatieniveau",
+    "verouderd:niet_vastgesteld:p.fr.dpe.co2_emissiefactoren",
+    "verouderd:niet_vastgesteld:p.fr.dpe.klassegrenzen",
+    "verouderd:niet_vastgesteld:p.fr.dpe.primaire_energiefactor_elektriciteit",
+    "verouderd:niet_vastgesteld:p.fr.energie.graaddagen_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+    "verouderd:niet_vastgesteld:p.fr.energie.pv_opbrengst_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.standaardprijzen_invoer",
+    "verouderd:niet_vastgesteld:p.fr.energie.u_waarden_isolatieniveau"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, Ouderenzorg",
+   "repos": [
+    "ouderenzorg-fr"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 5,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.ir.credit_hulp_aan_huis_plafond",
+    "verouderd:niet_vastgesteld:p.fr.apa.bedrag_per_maand",
+    "verouderd:niet_vastgesteld:p.fr.aspa.maximum_alleenstaand",
+    "verouderd:niet_vastgesteld:p.fr.ir.credit_hulp_aan_huis_percentage",
+    "verouderd:niet_vastgesteld:p.fr.ir.credit_hulp_aan_huis_plafond",
+    "verouderd:niet_vastgesteld:p.fr.renov.maprimeadapt_maximum"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, subsidiewijzer",
+   "repos": [
+    "energiebesparing-subsidie-en-fiscale-regelingen"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 3,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": [
+    "verouderd:niet_vastgesteld:p.fr.renov.maprimerenov_plafond",
+    "verouderd:niet_vastgesteld:p.fr.renov.ouderdomsgrens_woning",
+    "verouderd:niet_vastgesteld:p.fr.tva.tarief_renovatie"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, tools-API",
+   "repos": [
+    "if-tools-api"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 2,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.notaris.vuistregel_kosten_ancien",
+    "verouderd:niet_vastgesteld:p.fr.markt.dvf_transactieprijzen",
+    "verouderd:niet_vastgesteld:p.fr.notaris.vuistregel_kosten_ancien"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, warmteverlies",
+   "repos": [
+    "warmteverlies-calculator"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 7,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 3
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.energie.apparaatverbruik_per_jaar",
+    "afwijkend:p.fr.energie.standaardprijzen_invoer",
+    "afwijkend:p.fr.energie.u_waarden_isolatieniveau",
+    "verouderd:niet_vastgesteld:p.fr.energie.apparaatverbruik_per_jaar",
+    "verouderd:niet_vastgesteld:p.fr.energie.graaddagen_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.koeldagen_en_zwembadtemperatuur",
+    "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+    "verouderd:niet_vastgesteld:p.fr.energie.pv_opbrengst_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.standaardprijzen_invoer",
+    "verouderd:niet_vastgesteld:p.fr.energie.u_waarden_isolatieniveau"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, Woningzoeker",
+   "repos": [
+    "woningzoeker-frankrijk"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 2,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.notaris.vuistregel_kosten_ancien",
+    "verouderd:niet_vastgesteld:p.fr.markt.dvf_transactieprijzen",
+    "verouderd:niet_vastgesteld:p.fr.notaris.vuistregel_kosten_ancien"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "IF, ZorgKompas",
+   "repos": [
+    "zorgkompas-frankrijk"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 7,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 2
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.secu.brss_consult_medecin_traitant",
+    "afwijkend:p.fr.secu.forfait_journalier",
+    "verouderd:niet_vastgesteld:p.fr.secu.brss_consult_medecin_traitant",
+    "verouderd:niet_vastgesteld:p.fr.secu.brss_kine_per_sessie",
+    "verouderd:niet_vastgesteld:p.fr.secu.brss_specialist_apc",
+    "verouderd:niet_vastgesteld:p.fr.secu.forfait_journalier",
+    "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_kine_en_medicatie",
+    "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_zonder_medecin_traitant",
+    "verouderd:niet_vastgesteld:p.fr.secu.vergoedingspercentage_standaard"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "NLFR, AI-agent",
+   "repos": [
+    "nlfr-ai-agent"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 7,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 0
+   },
+   "waarschuwingen": [
+    "verouderd:niet_vastgesteld:p.fr.energie.houtenergie_per_stere",
+    "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+    "verouderd:niet_vastgesteld:p.fr.renov.besparing_per_graad",
+    "verouderd:niet_vastgesteld:p.fr.renov.ecoptz_maximum",
+    "verouderd:niet_vastgesteld:p.fr.renov.maprimerenov_budget",
+    "verouderd:niet_vastgesteld:p.fr.renov.richtprijzen_maatregelen",
+    "verouderd:niet_vastgesteld:p.fr.tva.tarief_renovatie"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+   "repos": [
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "tellers": {
+    "vastgesteld": 0,
+    "raming": 0,
+    "te_verifieren": 7,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 3
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.energie.apparaatverbruik_per_jaar",
+    "afwijkend:p.fr.energie.standaardprijzen_invoer",
+    "afwijkend:p.fr.energie.u_waarden_isolatieniveau",
+    "verouderd:niet_vastgesteld:p.fr.energie.apparaatverbruik_per_jaar",
+    "verouderd:niet_vastgesteld:p.fr.energie.graaddagen_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.koeldagen_en_zwembadtemperatuur",
+    "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+    "verouderd:niet_vastgesteld:p.fr.energie.pv_opbrengst_per_klimaatzone",
+    "verouderd:niet_vastgesteld:p.fr.energie.standaardprijzen_invoer",
+    "verouderd:niet_vastgesteld:p.fr.energie.u_waarden_isolatieniveau"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+   "repos": [
+    "Plus-Value-Calculator"
+   ],
+   "tellers": {
+    "vastgesteld": 7,
+    "raming": 0,
+    "te_verifieren": 0,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "afwijkend:p.fr.pv.surtaxe_barema"
+   ]
+  },
+  {
+   "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+   "repos": [
+    "Vastgoedtransactie"
+   ],
+   "tellers": {
+    "vastgesteld": 18,
+    "raming": 0,
+    "te_verifieren": 4,
+    "vervallen": 0,
+    "afwijkend_tussen_tools": 1
+   },
+   "waarschuwingen": [
+    "verouderd:niet_vastgesteld:p.fr.markt.dvf_transactieprijzen",
+    "verouderd:niet_vastgesteld:p.fr.notaris.debours_forfait",
+    "verouderd:niet_vastgesteld:p.fr.tva.tarief_algemeen",
+    "verouderd:niet_vastgesteld:p.fr.vastgoed.houdbaarheidstermijn_tarieven"
+   ]
+  }
+ ],
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.energie.apparaatverbruik_per_jaar",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.apparaatverbruik_per_jaar",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Apparaatverbruik per jaar: warmteverlies-calculator koelkast 250, wassen 220, vaatwasser 160, IT 150, tv 120, klein 150, verlichting 180; Energiecalculator-Frankrijk-door-Nederlanders.fr koelkast 250, wassen 220, vaatwasser 180, oven 120, tv 100, IT 100, verlichting 200.",
+   "geraakt": [
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:17-23"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:6"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.energie.standaardprijzen_invoer",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.standaardprijzen_invoer",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Standaard energieprijzen als invulwaarde: energieportaal elec 0,25 EUR/kWh; gas 1,20 EUR/m3; fioul 1,15 EUR/L; pellet 0,60 EUR/kg; hout 85 EUR/stere; propaan 1,80 EUR/L; petroleum 2,00 EUR/L; if-mobiel identiek; warmteverlies-calculator identiek; Energiecalculator-Frankrijk-door-Nederlanders.fr identiek.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:26"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:26 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:26"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:8"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.energie.u_waarden_isolatieniveau",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.u_waarden_isolatieniveau",
+   "omschrijving": "Tools gebruiken verschillende waarden voor U-waarden per isolatieniveau: energieportaal dak 3,0 / 0,5 / 0,25 / 0,15; vloer 2,2 / 1,2 / 0,8 / 0,3; raam 5,5 / 2,8 / 1,6 / 1,0; if-mobiel identiek aan energieportaal; warmteverlies-calculator identiek aan energieportaal; Energiecalculator-Frankrijk-door-Nederlanders.fr dak 3,0 / 0,5 / 0,2 / 0,1; vloer 1,2 / 0,5 / 0,3 / 0,18; raam 5,8 / 2,9 / 1,7 / 0,8.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:62-66"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:62-66 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:63-66"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:15"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.ir.credit_hulp_aan_huis_plafond",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.credit_hulp_aan_huis_plafond",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Credit d impot hulp aan huis, plafond: financieel-kompas-ai 12000; ouderenzorg-fr 6000 tot 10000.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:246"
+    },
+    {
+     "repo": "ouderenzorg-fr",
+     "cockpit_onderdeel": "IF, Ouderenzorg",
+     "locatie": "if-dossier/dossier-skelet.md:127"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.notaris.vuistregel_kosten_ancien",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.vuistregel_kosten_ancien",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Vuistregel notariskosten bestaande bouw: cafeclaude 7 tot 8 procent ancien, 2 tot 3 procent neuf; if-tools-api circa 7 tot 8 procent bij bestaande bouw; woningzoeker-frankrijk circa 8 procent, zonder onderscheid.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts:52"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.pv.surtaxe_barema",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.pv.surtaxe_barema",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Surtaxe op hoge meerwaarden: Plus-Value-Calculator rechte tranches zonder afvlakking: 50000, 100000, 150000, 200000, 250000.",
+   "geraakt": [
+    {
+     "repo": "Plus-Value-Calculator",
+     "cockpit_onderdeel": "Vastgoedtransacties, plus-value",
+     "locatie": "generate_pdf.py:58-63"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.secu.brss_consult_medecin_traitant",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.brss_consult_medecin_traitant",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Base de remboursement consult huisarts: zorgkompas-frankrijk 30,00; cafeclaude 26,50 sinds november 2024.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:19-21"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:59"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.secu.forfait_journalier",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.forfait_journalier",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Forfait journalier hospitalier: zorgkompas-frankrijk 20,00 euro per dag, tarief 2024/2025; cafeclaude 23 euro ziekenhuis en 17 euro psychiatrie sinds 1 maart 2026.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:100 en 155"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:60"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.secu.franchise_medicale",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.franchise_medicale",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Franchise medicale per medicijn: cafeclaude 0,50 euro per medicijn; cafeclaude 1 euro per doosje, verdubbeld per 1 mei 2024.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:146-147"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.succ.abattement_niet_verwanten",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_niet_verwanten",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Vrijstelling en tarief niet-verwanten: cafeclaude 1594 euro vrijstelling, daarna 60 procent; erfrecht-en-testament partner zonder huwelijk of PACS: vrijstelling 1594 euro.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "gaat_veranderen:raming:p.nl.zorg.nominale_premie",
+   "soort": "gaat_veranderen",
+   "niveau": "oranje",
+   "parameter": "p.nl.zorg.nominale_premie",
+   "omschrijving": "Naast de vastgestelde waarde staat een raming klaar: 2.143 euro per jaar, raming. Zolang de raming niet is vastgesteld, blijft de vastgestelde waarde leidend.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:54"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:houdbaarheid:p.fr.don.barema_lijn_directe",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.don.barema_lijn_directe",
+   "omschrijving": "De verificatie van 2024-11-07 is ouder dan de houdbaarheid die hoort bij de aanpassingsfrequentie zelden; Peil houdt daarbij een bovengrens van een jaar aan.",
+   "geraakt": [
+    {
+     "repo": "erf-en-schenkingsrecht-nl-fr",
+     "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
+     "locatie": "app.js:72-78"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:houdbaarheid:p.fr.succ.barema_lijn_directe",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.barema_lijn_directe",
+   "omschrijving": "De verificatie van 2025-07-31 is ouder dan de houdbaarheid die hoort bij de aanpassingsfrequentie zelden; Peil houdt daarbij een bovengrens van een jaar aan.",
+   "geraakt": [
+    {
+     "repo": "erf-en-schenkingsrecht-nl-fr",
+     "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
+     "locatie": "app.js:62-68"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.acre.reductie_en_duur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.acre.reductie_en_duur",
+   "omschrijving": "1 tool rekent met een waarde voor ACRE: reductie en duur die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:98-100"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.apa.bedrag_per_maand",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.apa.bedrag_per_maand",
+   "omschrijving": "1 tool rekent met een waarde voor APA-bedrag per maand die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "ouderenzorg-fr",
+     "cockpit_onderdeel": "IF, Ouderenzorg",
+     "locatie": "if-dossier/dossier-skelet.md:124"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.aspa.maximum_alleenstaand",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.aspa.maximum_alleenstaand",
+   "omschrijving": "1 tool rekent met een waarde voor ASPA maximum voor een alleenstaande die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "ouderenzorg-fr",
+     "cockpit_onderdeel": "IF, Ouderenzorg",
+     "locatie": "if-dossier/dossier-skelet.md:126"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.assur.bonus_malus_auto",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.assur.bonus_malus_auto",
+   "omschrijving": "1 tool rekent met een waarde voor Bonus-malus autoverzekering die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:86"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.av.abattements",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.av.abattements",
+   "omschrijving": "1 tool rekent met een waarde voor Assurance vie, abattements die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/verzekeren.ts:62-65"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.bouw.drempels_bijgebouw",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.bouw.drempels_bijgebouw",
+   "omschrijving": "1 tool rekent met een waarde voor Oppervlaktedrempels voor een vrijstaand bijgebouw die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "bouwvergunningwijzer-frankrijk",
+     "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+     "locatie": "docs/rule-matrix-v0.1.md:22-24"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.bouw.drempels_uitbreiding",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.bouw.drempels_uitbreiding",
+   "omschrijving": "1 tool rekent met een waarde voor Oppervlaktedrempels voor een uitbreiding die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "bouwvergunningwijzer-frankrijk",
+     "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+     "locatie": "docs/rule-matrix-v0.1.md:27-29"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.cvae.drempel",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.cvae.drempel",
+   "omschrijving": "1 tool rekent met een waarde voor CVAE-drempel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:72"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.don.vrijstelling_geldschenking",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.don.vrijstelling_geldschenking",
+   "omschrijving": "1 tool rekent met een waarde voor Extra vrijstelling geldschenking die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erf-en-schenkingsrecht-nl-fr",
+     "cockpit_onderdeel": "IF, erf- en schenkingsrecht",
+     "locatie": "app.js:1222-1223"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.dpe.co2_emissiefactoren",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.dpe.co2_emissiefactoren",
+   "omschrijving": "2 tools rekent met een waarde voor CO2-emissiefactoren per energiedrager die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/dpe.js:63-64"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/dpe.js:63-64 (byte-identieke kopie)"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.dpe.klassegrenzen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.dpe.klassegrenzen",
+   "omschrijving": "2 tools rekent met een waarde voor DPE-klassegrenzen voor energie en CO2 die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/dpe.js:73-88"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/dpe.js:73-88 (byte-identieke kopie)"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.dpe.primaire_energiefactor_elektriciteit",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.dpe.primaire_energiefactor_elektriciteit",
+   "omschrijving": "2 tools rekent met een waarde voor Primaire-energiefactor elektriciteit die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/dpe.js:47"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/dpe.js:47 (byte-identieke kopie)"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.apparaatverbruik_per_jaar",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.apparaatverbruik_per_jaar",
+   "omschrijving": "2 tools rekent met een waarde voor Apparaatverbruik per jaar die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:17-23"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:6"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.graaddagen_per_klimaatzone",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.graaddagen_per_klimaatzone",
+   "omschrijving": "4 tools rekent met een waarde voor Graaddagen en referentietemperatuur per klimaatzone die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/dpe.js:28-33"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/dpe.js:28-33 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:6-11"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:4"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.houtenergie_per_stere",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.houtenergie_per_stere",
+   "omschrijving": "1 tool rekent met een waarde voor Energie-inhoud hout per stere die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.koeldagen_en_zwembadtemperatuur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.koeldagen_en_zwembadtemperatuur",
+   "omschrijving": "2 tools rekent met een waarde voor Koeldagen en zwembadtemperatuur per klimaatzone die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:6-11"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:4"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.omrekenfactoren_kwh",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.omrekenfactoren_kwh",
+   "omschrijving": "5 tools rekent met een waarde voor Omrekenfactoren naar kWh per eenheid die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:28"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:28 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:28"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:10"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.pv_opbrengst_per_klimaatzone",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.pv_opbrengst_per_klimaatzone",
+   "omschrijving": "4 tools rekent met een waarde voor PV-opbrengst per klimaatzone die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:14"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:14 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:14"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:5"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.referentieprijzen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.referentieprijzen",
+   "omschrijving": "1 tool rekent met een waarde voor Referentie-energieprijzen met peildatum die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "api/prices.js:15-22"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.standaardprijzen_invoer",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.standaardprijzen_invoer",
+   "omschrijving": "4 tools rekent met een waarde voor Standaard energieprijzen als invulwaarde die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:26"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:26 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:26"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:8"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.u_waarden_isolatieniveau",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.u_waarden_isolatieniveau",
+   "omschrijving": "4 tools rekent met een waarde voor U-waarden per isolatieniveau die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "engine/engine.js:62-66"
+    },
+    {
+     "repo": "if-mobiel",
+     "cockpit_onderdeel": "IF, mobiele schil",
+     "locatie": "engine/engine.js:62-66 (byte-identieke kopie)"
+    },
+    {
+     "repo": "warmteverlies-calculator",
+     "cockpit_onderdeel": "IF, warmteverlies",
+     "locatie": "engine/engine.js:63-66"
+    },
+    {
+     "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+     "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+     "locatie": "script.js:15"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.energie.verouderingsdrempel_prijzen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.energie.verouderingsdrempel_prijzen",
+   "omschrijving": "1 tool rekent met een waarde voor Verouderingsdrempel voor de energieprijzen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energieportaal",
+     "cockpit_onderdeel": "IF, EnergiePortaal",
+     "locatie": "api/prices.js:7"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.erf.reserve_hereditaire",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.erf.reserve_hereditaire",
+   "omschrijving": "1 tool rekent met een waarde voor Reserve hereditaire per aantal kinderen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:54"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.gite.degressieve_reeks",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.gite.degressieve_reeks",
+   "omschrijving": "1 tool rekent met een waarde voor Degressieve reeks per bezitsjaar in GiteKompas die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:1177-1179"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.gite.minimumheffing_niet_residenten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.gite.minimumheffing_niet_residenten",
+   "omschrijving": "1 tool rekent met een waarde voor Minimumheffing niet-residenten, bandbreedte die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:1226-1227"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.handel.forfaitaire_incassokosten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.handel.forfaitaire_incassokosten",
+   "omschrijving": "1 tool rekent met een waarde voor Forfaitaire incassokosten bij te late betaling die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/werkgever/factuur/niveau-3.json:32"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.huur.boete_late_teruggave_borg",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.huur.boete_late_teruggave_borg",
+   "omschrijving": "3 tools rekent met een waarde voor Boete bij te late teruggave van de huurborg die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/verhuurder/borg/niveau-2.json:29"
+    },
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/verhuurder/borg/niveau-3.json:33 en 83"
+    },
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "KLIKSTROMEN.md:233"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ifi.drempel",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ifi.drempel",
+   "omschrijving": "2 tools rekent met een waarde voor IFI-drempel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:217"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:110"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ifi.schijven",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ifi.schijven",
+   "omschrijving": "1 tool rekent met een waarde voor IFI-schijven en tarieven die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:218-242"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.abattement_65plus",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.abattement_65plus",
+   "omschrijving": "1 tool rekent met een waarde voor Abattement voor 65-plussers die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:180-183"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.abattement_micro_diensten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.abattement_micro_diensten",
+   "omschrijving": "1 tool rekent met een waarde voor Abattement micro op winst uit diensten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:185"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.abattement_micro_verhuur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.abattement_micro_verhuur",
+   "omschrijving": "1 tool rekent met een waarde voor Abattement micro op winst uit verhuur die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:186"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+   "omschrijving": "1 tool rekent met een waarde voor Boete niet-aangifte buitenlandse rekening die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:10"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.credit_hulp_aan_huis_percentage",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.credit_hulp_aan_huis_percentage",
+   "omschrijving": "2 tools rekent met een waarde voor Credit d impot hulp aan huis, percentage die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:245"
+    },
+    {
+     "repo": "ouderenzorg-fr",
+     "cockpit_onderdeel": "IF, Ouderenzorg",
+     "locatie": "if-dossier/dossier-skelet.md:127"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.credit_hulp_aan_huis_plafond",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.credit_hulp_aan_huis_plafond",
+   "omschrijving": "2 tools rekent met een waarde voor Credit d impot hulp aan huis, plafond die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:246"
+    },
+    {
+     "repo": "ouderenzorg-fr",
+     "cockpit_onderdeel": "IF, Ouderenzorg",
+     "locatie": "if-dossier/dossier-skelet.md:127"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.decote",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.decote",
+   "omschrijving": "2 tools rekent met een waarde voor Decote: drempels, forfaits en percentage die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:206-210"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.pfu_tarief",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.pfu_tarief",
+   "omschrijving": "2 tools rekent met een waarde voor PFU, inkomstenbelastingdeel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:187"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:143"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.quotient_plafond_per_halve_part",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.quotient_plafond_per_halve_part",
+   "omschrijving": "1 tool rekent met een waarde voor Plafond gezinsquotient per halve part die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:188"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ir.schijven",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ir.schijven",
+   "omschrijving": "2 tools rekent met een waarde voor Schijven en tarieven impot sur le revenu die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:157-177"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:55"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.lmp.drempel",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.lmp.drempel",
+   "omschrijving": "1 tool rekent met een waarde voor LMP-drempel die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:103"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.markt.dvf_transactieprijzen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.markt.dvf_transactieprijzen",
+   "omschrijving": "3 tools rekent met een waarde voor DVF, werkelijke transactieprijzen onroerend goed die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "index.html, invoerveld aankoopprijs"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx, aankoopprijs"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts, aankoopprijs"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.abattement_per_categorie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.abattement_per_categorie",
+   "omschrijving": "1 tool rekent met een waarde voor Abattement micro per categorie die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:85"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.bic_verhuur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.bic_verhuur",
+   "omschrijving": "2 tools rekent met een waarde voor Micro-BIC verhuur: plafond en abattement per type die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:67-69"
+    },
+    {
+     "repo": "gitekompas-fr",
+     "cockpit_onderdeel": "IF, GiteKompas",
+     "locatie": "index.html:864-867"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.micro.plafonds",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.micro.plafonds",
+   "omschrijving": "1 tool rekent met een waarde voor Omzetplafonds micro-entreprise per categorie die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/ondernemen.ts:89"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.notaris.debours_forfait",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.debours_forfait",
+   "omschrijving": "1 tool rekent met een waarde voor Debours, forfaitaire schatting die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js:134"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.notaris.vuistregel_kosten_ancien",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.vuistregel_kosten_ancien",
+   "omschrijving": "3 tools rekent met een waarde voor Vuistregel notariskosten bestaande bouw die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts:52"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ps.opbouw",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ps.opbouw",
+   "omschrijving": "1 tool rekent met een waarde voor Opbouw van de prelevements sociaux die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.ps.taux_roerend",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.ps.taux_roerend",
+   "omschrijving": "1 tool rekent met een waarde voor Prelevements sociaux op roerend inkomen in de tool die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:81"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.besparing_per_graad",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.besparing_per_graad",
+   "omschrijving": "1 tool rekent met een waarde voor Besparing per graad lagere binnentemperatuur die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:286"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.ecoptz_maximum",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.ecoptz_maximum",
+   "omschrijving": "1 tool rekent met een waarde voor Eco-PTZ, maximum leenbedrag die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:233-234"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.maprimeadapt_maximum",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.maprimeadapt_maximum",
+   "omschrijving": "1 tool rekent met een waarde voor MaPrimeAdapt, maximaal aandeel van de kosten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "ouderenzorg-fr",
+     "cockpit_onderdeel": "IF, Ouderenzorg",
+     "locatie": "if-dossier/dossier-skelet.md:128"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.maprimerenov_budget",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.maprimerenov_budget",
+   "omschrijving": "1 tool rekent met een waarde voor MaPrimeRenov, budget en achterstand die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:237"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.maprimerenov_plafond",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.maprimerenov_plafond",
+   "omschrijving": "1 tool rekent met een waarde voor MaPrimeRenov, plafondbedrag in de pagina die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "index.html:35"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.ouderdomsgrens_woning",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.ouderdomsgrens_woning",
+   "omschrijving": "1 tool rekent met een waarde voor Ouderdomsgrens van de woning voor verlaagd tarief en Eco-PTZ die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.richtprijzen_maatregelen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.richtprijzen_maatregelen",
+   "omschrijving": "1 tool rekent met een waarde voor Richtprijzen renovatiemaatregelen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:272-279"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.retraite.gemiddeld_salaris_referentie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.retraite.gemiddeld_salaris_referentie",
+   "omschrijving": "1 tool rekent met een waarde voor Referentiesalaris voor de pensioenraming die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:9"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.retraite.jaren_vereist",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.retraite.jaren_vereist",
+   "omschrijving": "1 tool rekent met een waarde voor Vereiste pensioenjaren Frankrijk die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:10"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.retraite.opbouwpercentage",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.retraite.opbouwpercentage",
+   "omschrijving": "1 tool rekent met een waarde voor Pensioenopbouwpercentage Frankrijk die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:11"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.brss_consult_medecin_traitant",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.brss_consult_medecin_traitant",
+   "omschrijving": "2 tools rekent met een waarde voor Base de remboursement consult huisarts die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:19-21"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:59"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.brss_kine_per_sessie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.brss_kine_per_sessie",
+   "omschrijving": "1 tool rekent met een waarde voor Base de remboursement kinesitherapie per sessie die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:62 en 106"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.brss_specialist_apc",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.brss_specialist_apc",
+   "omschrijving": "1 tool rekent met een waarde voor Base de remboursement specialist, APC die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:81"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.forfait_journalier",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.forfait_journalier",
+   "omschrijving": "2 tools rekent met een waarde voor Forfait journalier hospitalier die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarios.js:100 en 155"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:60"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.franchise_medicale",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.franchise_medicale",
+   "omschrijving": "2 tools rekent met een waarde voor Franchise medicale per medicijn die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:146-147"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.franchise_transport",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.franchise_transport",
+   "omschrijving": "1 tool rekent met een waarde voor Franchise medisch transport die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:117"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.participation_forfaitaire",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.participation_forfaitaire",
+   "omschrijving": "2 tools rekent met een waarde voor Participation forfaitaire per consult die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/verzekeren.ts:117"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/audit/prompts/zorg.ts:67-68"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_had_en_infirmiere",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.vergoeding_had_en_infirmiere",
+   "omschrijving": "1 tool rekent met een waarde voor Vergoeding thuisziekenhuis en verpleging aan huis die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:112-113"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_kine_en_medicatie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.vergoeding_kine_en_medicatie",
+   "omschrijving": "1 tool rekent met een waarde voor Vergoeding kinesitherapie en medicatie die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarioEngine.js:89-90"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.vergoeding_zonder_medecin_traitant",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.vergoeding_zonder_medecin_traitant",
+   "omschrijving": "2 tools rekent met een waarde voor Vergoeding buiten het parcours de soins die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarioEngine.js:96"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:88"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.secu.vergoedingspercentage_standaard",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.secu.vergoedingspercentage_standaard",
+   "omschrijving": "1 tool rekent met een waarde voor Standaard vergoedingspercentage Securite sociale die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "zorgkompas-frankrijk",
+     "cockpit_onderdeel": "IF, ZorgKompas",
+     "locatie": "scenarioEngine.js:80"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_pensioen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.sociaal.lasten_pensioen",
+   "omschrijving": "1 tool rekent met een waarde voor Sociale lasten op Frans pensioen, totaal die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:76"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_salaris",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.sociaal.lasten_salaris",
+   "omschrijving": "1 tool rekent met een waarde voor Sociale lasten op salaris in Frankrijk die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:77"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_winst_diensten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.sociaal.lasten_winst_diensten",
+   "omschrijving": "2 tools rekent met een waarde voor Sociale lasten op winst uit diensten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:78"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:84-85"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.sociaal.lasten_winst_verhuur",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.sociaal.lasten_winst_verhuur",
+   "omschrijving": "1 tool rekent met een waarde voor Sociale lasten op winst uit verhuur die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:79"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_broers_zussen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_broers_zussen",
+   "omschrijving": "1 tool rekent met een waarde voor Vrijstelling en tarief broers en zussen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_niet_verwanten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_niet_verwanten",
+   "omschrijving": "2 tools rekent met een waarde voor Vrijstelling en tarief niet-verwanten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_stiefkind",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_stiefkind",
+   "omschrijving": "1 tool rekent met een waarde voor Vrijstelling stiefkinderen bij overlijden die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:351"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.adoption_simple",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.adoption_simple",
+   "omschrijving": "1 tool rekent met een waarde voor Barema en abattement bij adoption simple die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:369"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.hernieuwingstermijn",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.hernieuwingstermijn",
+   "omschrijving": "1 tool rekent met een waarde voor Hernieuwingstermijn van de schenkingsvrijstelling die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:57"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.tarief_stiefkind",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.tarief_stiefkind",
+   "omschrijving": "1 tool rekent met een waarde voor Tarief erfbelasting stiefkind die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:346 en 360"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.telecom.max_verbrekingsvergoeding",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.telecom.max_verbrekingsvergoeding",
+   "omschrijving": "1 tool rekent met een waarde voor Maximale verbrekingsvergoeding telecom die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/telecom/opzeg/niveau-1.json:25"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.telecom.minimale_looptijd_binding",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.telecom.minimale_looptijd_binding",
+   "omschrijving": "1 tool rekent met een waarde voor Minimale looptijd voor opzegging met binding die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/telecom/opzeg/niveau-1.json:25"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.tva.tarief_algemeen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.tva.tarief_algemeen",
+   "omschrijving": "1 tool rekent met een waarde voor Btw-tarief Frankrijk, algemeen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js:104"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.tva.tarief_renovatie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.tva.tarief_renovatie",
+   "omschrijving": "2 tools rekent met een waarde voor Btw-tarief energetische renovatiewerken die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193-206"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:234"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.urssaf.drempel_chambres_hotes",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.urssaf.drempel_chambres_hotes",
+   "omschrijving": "1 tool rekent met een waarde voor Urssaf-drempel chambres d hotes die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:75-76"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.urssaf.drempel_meuble_tourisme",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.urssaf.drempel_meuble_tourisme",
+   "omschrijving": "1 tool rekent met een waarde voor Urssaf-drempel verhuur meuble de tourisme die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:75-76"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.vastgoed.houdbaarheidstermijn_tarieven",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.vastgoed.houdbaarheidstermijn_tarieven",
+   "omschrijving": "1 tool rekent met een waarde voor Eigen houdbaarheidstermijn van de tarieven in de tool die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "calc.js:61-62"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.zorg.beschermingsmaatregel_kosten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.zorg.beschermingsmaatregel_kosten",
+   "omschrijving": "1 tool rekent met een waarde voor Rechterlijke beschermingsmaatregel, doorlooptijd en kosten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:151"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.zorg.mandat_protection_future_kosten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.zorg.mandat_protection_future_kosten",
+   "omschrijving": "1 tool rekent met een waarde voor Mandat de protection future, kosten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.zorg.teleassistentie_maandprijs",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.zorg.teleassistentie_maandprijs",
+   "omschrijving": "1 tool rekent met een waarde voor Teleassistentie, maandprijs die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/zorg.ts:115"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.aow.bruto_alleenstaand",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.aow.bruto_alleenstaand",
+   "omschrijving": "1 tool rekent met een waarde voor AOW bruto per jaar, alleenstaand die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:7"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.aow.bruto_partner",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.aow.bruto_partner",
+   "omschrijving": "1 tool rekent met een waarde voor AOW bruto per jaar, per partner die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:8"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.box3.heffingsvrij_alleenstaand",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.box3.heffingsvrij_alleenstaand",
+   "omschrijving": "1 tool rekent met een waarde voor Heffingsvrij vermogen box 3, alleenstaand die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:46"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.box3.heffingsvrij_partners",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.box3.heffingsvrij_partners",
+   "omschrijving": "1 tool rekent met een waarde voor Heffingsvrij vermogen box 3, partners die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:47"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.box3.rendement_beleggingen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.box3.rendement_beleggingen",
+   "omschrijving": "1 tool rekent met een waarde voor Forfaitair rendement beleggingen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:50"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.box3.rendement_schulden",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.box3.rendement_schulden",
+   "omschrijving": "1 tool rekent met een waarde voor Forfaitair rendement schulden die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:51"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.box3.rendement_spaargeld",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.box3.rendement_spaargeld",
+   "omschrijving": "1 tool rekent met een waarde voor Forfaitair rendement spaargeld die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:49"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.box3.tarief",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.box3.tarief",
+   "omschrijving": "1 tool rekent met een waarde voor Tarief box 3 die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:48"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.ak_afbouw_factor",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.ak_afbouw_factor",
+   "omschrijving": "1 tool rekent met een waarde voor Afbouwfactor arbeidskorting die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:43"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.ak_afbouw_start",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.ak_afbouw_start",
+   "omschrijving": "1 tool rekent met een waarde voor Startpunt afbouw arbeidskorting die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:42"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.algemene_heffingskorting_max",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.algemene_heffingskorting_max",
+   "omschrijving": "1 tool rekent met een waarde voor Algemene heffingskorting, maximum die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:37"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.arbeidskorting_max",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.arbeidskorting_max",
+   "omschrijving": "1 tool rekent met een waarde voor Arbeidskorting, maximum die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:38"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.grens_schijf_1",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.grens_schijf_1",
+   "omschrijving": "1 tool rekent met een waarde voor Grens eerste schijf box 1 die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:35"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.grens_schijf_2",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.grens_schijf_2",
+   "omschrijving": "1 tool rekent met een waarde voor Grens tweede schijf box 1 die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:36"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.hk_afbouw_factor",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.hk_afbouw_factor",
+   "omschrijving": "1 tool rekent met een waarde voor Afbouwfactor algemene heffingskorting die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:41"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.hk_afbouw_start",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.hk_afbouw_start",
+   "omschrijving": "1 tool rekent met een waarde voor Startpunt afbouw algemene heffingskorting die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:40"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.mkb_winstvrijstelling",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.mkb_winstvrijstelling",
+   "omschrijving": "1 tool rekent met een waarde voor MKB-winstvrijstelling die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:39"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.tarieven_boven_aow",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.tarieven_boven_aow",
+   "omschrijving": "1 tool rekent met een waarde voor Tarieven box 1 boven de AOW-leeftijd die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:26-30"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.ib.tarieven_onder_aow",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.ib.tarieven_onder_aow",
+   "omschrijving": "1 tool rekent met een waarde voor Tarieven box 1 onder de AOW-leeftijd die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "financieel-kompas-ai",
+     "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+     "locatie": "config.json:21-25"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.nl.leges.paspoort_verlengen_buitenland",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.nl.leges.paspoort_verlengen_buitenland",
+   "omschrijving": "1 tool rekent met een waarde voor Nederlands paspoort verlengen in Frankrijk die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/bureaucratie.ts:44"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.xb.deruyter.csg_crds_geschrapt",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.xb.deruyter.csg_crds_geschrapt",
+   "omschrijving": "2 tools rekent met een waarde voor CSG en CRDS die bij De Ruyter vervallen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "ARGUMENTATIE.md:19"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108"
+    }
+   ]
+  }
+ ],
+ "soorten": {
+  "gaat_veranderen": "aangekondigde wijziging binnen 90 dagen, geldigheid die binnen 90 dagen afloopt, of een raming die klaarstaat naast een vastgestelde waarde",
+  "verouderd": "verificatiedatum voorbij de houdbaarheid, een gepasseerd ijkmoment zonder nieuwe verificatie, of een tool die rekent met een niet-vastgestelde of vervallen waarde",
+  "afwijkend": "tools gebruiken verschillende waarden voor dezelfde parameter",
+  "veranderd": "veld aanwezig maar leeg; de Peil-run vult dit in een volgende taak"
+ },
+ "niveaus": {
+  "rood": "een tool rekent nu met een afwijkende, verouderde of niet-vastgestelde waarde",
+  "oranje": "aandacht nodig, geen tool rekent er nu fout mee",
+  "grijs": "plaatshouder"
+ }
+}

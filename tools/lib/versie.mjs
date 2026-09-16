@@ -1,5 +1,5 @@
 // Versie, peildatum en licentieregels van Peil. Een plek, overal gebruikt.
-export const VERSIE = '1.0.0';
+export const VERSIE = '1.0.1';
 export const PEILDATUM = '2026-09-16';
 export const LICENTIE_DATA = 'CC BY 4.0';
 export const LICENTIE_CODE = 'MIT';

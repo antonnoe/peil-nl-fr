@@ -1,13 +1,13 @@
 {
  "meta": {
   "titel": "Peil, openbaar parameterregister NL-FR",
-  "versie": "1.0.0",
+  "versie": "1.0.1",
   "versiedatum": "2026-09-16",
   "peildatum": "2026-09-16",
   "licentie": "CC BY 4.0",
-  "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+  "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
   "laag": "3, parameters",
-  "afgeleid_uit": "data/inventarisatie.json (taak 0) en de bronvelden van de aangesloten repo s",
+  "afgeleid_uit": "data/inventarisatie.json (taak 0) en de bronvelden van de aangesloten repo's",
   "aangesloten_repos": [
    "financieel-kompas-ai",
    "cafeclaude",
@@ -38,13 +38,13 @@
   {
    "id": "p.fr.acre.reductie_en_duur",
    "naam_nl": "ACRE: reductie en duur",
-   "naam_fr": "ACRE: taux et duree",
-   "naam_officieel": "Aide a la creation ou reprise d entreprise",
+   "naam_fr": "ACRE: taux et durée",
+   "naam_officieel": "Aide à la création ou reprise d'entreprise",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.acre",
-    "naam": "Aide a la creation ou reprise d entreprise",
+    "naam": "Aide à la création ou reprise d'entreprise",
     "belastingtype": null,
     "socialelastentype": "zelfstandigenbijdrage",
     "vrijstellingstype": null,
@@ -84,7 +84,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/ondernemen.ts:98-100",
      "waarde_in_tool": "50 procent gedurende 12 maanden",
      "afwijkend": false
@@ -98,13 +98,13 @@
   {
    "id": "p.fr.apa.bedrag_per_maand",
    "naam_nl": "APA-bedrag per maand",
-   "naam_fr": "Montant de l APA par mois",
-   "naam_officieel": "Allocation personnalisee d autonomie, plafonds par GIR",
+   "naam_fr": "Montant de l'APA par mois",
+   "naam_officieel": "Allocation personnalisée d'autonomie, plafonds par GIR",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.apa",
-    "naam": "Allocation personnalisee d autonomie",
+    "naam": "Allocation personnalisée d'autonomie",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -155,12 +155,12 @@
    "id": "p.fr.aspa.maximum_alleenstaand",
    "naam_nl": "ASPA maximum voor een alleenstaande",
    "naam_fr": "ASPA, montant maximal pour une personne seule",
-   "naam_officieel": "Allocation de solidarite aux personnes agees",
+   "naam_officieel": "Allocation de solidarité aux personnes âgées",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.aspa",
-    "naam": "Allocation de solidarite aux personnes agees",
+    "naam": "Allocation de solidarité aux personnes âgées",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -234,7 +234,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2123",
    "bron_kenmerk": "art. L211-1 Code des assurances",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere de l economie",
+   "instantie": "Ministère de l'économie",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -258,8 +258,8 @@
   {
    "id": "p.fr.assur.bonus_malus_auto",
    "naam_nl": "Bonus-malus autoverzekering",
-   "naam_fr": "Coefficient de reduction-majoration",
-   "naam_officieel": "Annexe a l art. A121-1 Code des assurances",
+   "naam_fr": "Coefficient de réduction-majoration",
+   "naam_officieel": "Annexe à l'art. A121-1 Code des assurances",
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
@@ -300,7 +300,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:86",
      "waarde_in_tool": "start 1,00; min 5 procent per schadevrij jaar tot 0,50; plus 25 procent per ongeval tot 3,50",
      "afwijkend": false
@@ -338,7 +338,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2129",
    "bron_kenmerk": "art. L242-1 Code des assurances",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere de l economie",
+   "instantie": "Ministère de l'économie",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -356,13 +356,13 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Verplicht voor wie als particulier laat bouwen of ingrijpend laat verbouwen, en een reele kostenpost bij elke renovatie. Ontbreekt in de renovatietools.",
+   "opmerkingen": "Verplicht voor wie als particulier laat bouwen of ingrijpend laat verbouwen, en een reële kostenpost bij elke renovatie. Ontbreekt in de renovatietools.",
    "kandidaat": true
   },
   {
    "id": "p.fr.assur.garantie_decennale",
-   "naam_nl": "Garantie decennale van de aannemer",
-   "naam_fr": "Garantie decennale",
+   "naam_nl": "Garantie décennale van de aannemer",
+   "naam_fr": "Garantie décennale",
    "naam_officieel": "Art. 1792 Code civil",
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
@@ -386,7 +386,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2034",
    "bron_kenmerk": "art. 1792 Code civil",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere de la justice",
+   "instantie": "Ministère de la justice",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -434,7 +434,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2123",
    "bron_kenmerk": "service-public.fr, assurance habitation; art. 7 g loi 89-462",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere de l economie",
+   "instantie": "Ministère de l'économie",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -452,7 +452,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Voor een huurder wettelijk verplicht, voor een eigenaar in een copropriete eveneens. Staat in geen enkele tool.",
+   "opmerkingen": "Voor een huurder wettelijk verplicht, voor een eigenaar in een copropriété eveneens. Staat in geen enkele tool.",
    "kandidaat": true
   },
   {
@@ -464,7 +464,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.av",
-    "naam": "Assurance vie, fiscalite",
+    "naam": "Assurance vie, fiscalité",
     "belastingtype": "erf_en_schenkbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -500,7 +500,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/verzekeren.ts:62-65",
      "waarde_in_tool": "152500 per begunstigde tot 70 jaar; 30500 globaal na 70 jaar; IR-abattement 4600 alleen of 9200 paar na 8 jaar",
      "afwijkend": false
@@ -517,12 +517,12 @@
    "id": "p.fr.bouw.drempels_bijgebouw",
    "naam_nl": "Oppervlaktedrempels voor een vrijstaand bijgebouw",
    "naam_fr": "Seuils de surface pour une annexe",
-   "naam_officieel": "Art. R421-2 en R421-9 Code de l urbanisme",
+   "naam_officieel": "Art. R421-2 en R421-9 Code de l'urbanisme",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.bouw",
-    "naam": "Code de l urbanisme, autorisations",
+    "naam": "Code de l'urbanisme, autorisations",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -560,25 +560,25 @@
      "repo": "bouwvergunningwijzer-frankrijk",
      "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
      "locatie": "docs/rule-matrix-v0.1.md:22-24",
-     "waarde_in_tool": "tot 5 m2 geen formaliteit; 5 tot 20 m2 declaration prealable; boven 20 m2 permis de construire",
+     "waarde_in_tool": "tot 5 m2 geen formaliteit; 5 tot 20 m2 déclaration préalable; boven 20 m2 permis de construire",
      "afwijkend": false
     }
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het brondocument meldt zelf dat de koppeling aan Legifrance-artikelen nog moet gebeuren.",
+   "opmerkingen": "Het brondocument meldt zelf dat de koppeling aan Légifrance-artikelen nog moet gebeuren.",
    "kandidaat": false
   },
   {
    "id": "p.fr.bouw.drempels_uitbreiding",
    "naam_nl": "Oppervlaktedrempels voor een uitbreiding",
    "naam_fr": "Seuils de surface pour une extension",
-   "naam_officieel": "Art. R421-14 en R431-2 Code de l urbanisme",
+   "naam_officieel": "Art. R421-14 en R431-2 Code de l'urbanisme",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.bouw",
-    "naam": "Code de l urbanisme, autorisations",
+    "naam": "Code de l'urbanisme, autorisations",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -627,14 +627,14 @@
   },
   {
    "id": "p.fr.cfe.minimum",
-   "naam_nl": "Cotisation fonciere des entreprises, minimumbijdrage",
+   "naam_nl": "Cotisation foncière des entreprises, minimumbijdrage",
    "naam_fr": "CFE, base minimum",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.cfe",
-    "naam": "Cotisation fonciere des entreprises",
+    "naam": "Cotisation foncière des entreprises",
     "belastingtype": "lokale_belasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -650,7 +650,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.impots.gouv.fr",
-   "bron_kenmerk": "impots.gouv.fr, cotisation fonciere des entreprises",
+   "bron_kenmerk": "impots.gouv.fr, cotisation foncière des entreprises",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "DGFiP en gemeenten",
    "verificatiedatum": null,
@@ -676,7 +676,7 @@
   {
    "id": "p.fr.csg.opslag_per_halve_part",
    "naam_nl": "Opslag per halve part boven drie parts",
-   "naam_fr": "Majoration par demi-part au-dela de trois parts",
+   "naam_fr": "Majoration par demi-part au-delà de trois parts",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "sociaal",
@@ -736,7 +736,7 @@
   {
    "id": "p.fr.csg.rfr_grenzen_per_part",
    "naam_nl": "RFR-grenzen per part voor het CSG-regime",
-   "naam_fr": "Seuils de revenu fiscal de reference par part",
+   "naam_fr": "Seuils de revenu fiscal de référence par part",
    "naam_officieel": "Seuils de RFR pour le taux de CSG applicable",
    "land": "FR",
    "lastensoort": "sociaal",
@@ -813,14 +813,14 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het tarief voor 2026 hangt af van het revenu fiscal de reference over 2024.",
+   "opmerkingen": "Het tarief voor 2026 hangt af van het revenu fiscal de référence over 2024.",
    "kandidaat": false
   },
   {
    "id": "p.fr.csg.tarief_per_regime",
    "naam_nl": "CSG, CRDS en CASA per regime op pensioen",
    "naam_fr": "CSG, CRDS et CASA par taux sur les pensions",
-   "naam_officieel": "Taux zero, taux reduit, taux median, taux normal",
+   "naam_officieel": "Taux zéro, taux réduit, taux médian, taux normal",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
@@ -835,7 +835,7 @@
    "effect": "verhoogt_last",
    "waarde": [
     {
-     "naam": "taux zero",
+     "naam": "taux zéro",
      "csg": 0,
      "crds": 0,
      "casa": 0,
@@ -843,7 +843,7 @@
      "csg_aftrekbaar": 0
     },
     {
-     "naam": "taux reduit",
+     "naam": "taux réduit",
      "csg": 0.038,
      "crds": 0.005,
      "casa": 0,
@@ -851,7 +851,7 @@
      "csg_aftrekbaar": 0.038
     },
     {
-     "naam": "taux median",
+     "naam": "taux médian",
      "csg": 0.066,
      "crds": 0.005,
      "casa": 0.003,
@@ -867,14 +867,14 @@
      "csg_aftrekbaar": 0.059
     }
    ],
-   "waarde_weergave": "0 procent, 4,3 procent, 7,4 procent of 9,1 procent, afhankelijk van het revenu fiscal de reference",
+   "waarde_weergave": "0 procent, 4,3 procent, 7,4 procent of 9,1 procent, afhankelijk van het revenu fiscal de référence",
    "eenheid": "fractie",
    "geldig_jaar": "2026",
    "geldig_van": null,
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2971",
-   "bron_kenmerk": "service-public.fr, fiche F2971, CSG et CRDS sur les revenus d activite et de remplacement; art. L136-1 en L136-8 CSS",
+   "bron_kenmerk": "service-public.fr, fiche F2971, CSG et CRDS sur les revenus d'activité et de remplacement; art. L136-1 en L136-8 CSS",
    "bronsoort": "secundair: samenvattende fiche van service-public.fr, de wetsartikelen niet zelf gelezen",
    "instantie": "Urssaf en DGFiP",
    "verificatiedatum": "2026-06-01",
@@ -906,21 +906,21 @@
     "toelichting": "25.000 maal 0,091."
    },
    "uitzonderingen": [
-    "Overgang naar een hoger tarief geldt pas na twee opeenvolgende jaren overschrijding. Die overgangsregel is bewust niet ingebouwd. Wie in het overgangsjaar zit, legt de eigen avis d imposition voor aan een belastingadviseur."
+    "Overgang naar een hoger tarief geldt pas na twee opeenvolgende jaren overschrijding. Die overgangsregel is bewust niet ingebouwd. Wie in het overgangsjaar zit, legt de eigen avis d'imposition voor aan een belastingadviseur."
    ],
    "opmerkingen": "Van de CSG is per regime slechts een deel aftrekbaar voor de inkomstenbelasting: 0, 3,8, 4,2 of 5,9 procent. CRDS en CASA zijn niet aftrekbaar. Bij CAK-gerechtigdheid is er geen CSG en dus ook geen aftrek.",
    "kandidaat": false
   },
   {
    "id": "p.fr.csi.tarief_en_minimum",
-   "naam_nl": "Contribution de securite immobiliere, tarief en minimum",
-   "naam_fr": "Contribution de securite immobiliere",
+   "naam_nl": "Contribution de sécurité immobilière, tarief en minimum",
+   "naam_fr": "Contribution de sécurité immobilière",
    "naam_officieel": "Art. 879, 881 F en 881 K CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.csi",
-    "naam": "Contribution de securite immobiliere",
+    "naam": "Contribution de sécurité immobilière",
     "belastingtype": "heffing_bijzonder",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -941,7 +941,7 @@
    "bron_url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022335681",
    "bron_kenmerk": "art. 879 CGI (verschuldigdheid), art. 881 K CGI (tarief), art. 881 F CGI (ondergrens)",
    "bronsoort": "primair",
-   "instantie": "Service de la publicite fonciere",
+   "instantie": "Service de la publicité foncière",
    "verificatiedatum": "2026-08-12",
    "verificatie_door": "Vastgoedtransactie, bronnen.json",
    "publicatiemoment": null,
@@ -974,12 +974,12 @@
    "id": "p.fr.cvae.drempel",
    "naam_nl": "CVAE-drempel",
    "naam_fr": "Seuil de la CVAE",
-   "naam_officieel": "Cotisation sur la valeur ajoutee des entreprises",
+   "naam_officieel": "Cotisation sur la valeur ajoutée des entreprises",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.cvae",
-    "naam": "Cotisation sur la valeur ajoutee des entreprises",
+    "naam": "Cotisation sur la valeur ajoutée des entreprises",
     "belastingtype": "lokale_belasting",
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -1019,7 +1019,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/ondernemen.ts:72",
      "waarde_in_tool": "152500 euro omzet",
      "afwijkend": false
@@ -1032,9 +1032,9 @@
   },
   {
    "id": "p.fr.diagnostics.geldigheid_diagnostic_electrique",
-   "naam_nl": "Geldigheid van het diagnostic electrique",
-   "naam_fr": "Duree de validite du diagnostic electrique",
-   "naam_officieel": "Art. R271-5 Code de la construction et de l habitation",
+   "naam_nl": "Geldigheid van het diagnostic électrique",
+   "naam_fr": "Durée de validité du diagnostic électrique",
+   "naam_officieel": "Art. R271-5 Code de la construction et de l'habitation",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
@@ -1061,7 +1061,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F18692",
    "bron_kenmerk": "service-public.fr, fiche F18692",
    "bronsoort": "secundair: samenvattende fiche van service-public.fr, het wetsartikel niet zelf gelezen",
-   "instantie": "Ministere de la transition ecologique",
+   "instantie": "Ministère de la transition écologique",
    "verificatiedatum": "2026-07-04",
    "verificatie_door": "dossier-elektriciteit-if, verificatie/normverificatie.md",
    "publicatiemoment": null,
@@ -1093,7 +1093,7 @@
   {
    "id": "p.fr.diagnostics.verplichte_diagnoses_kosten",
    "naam_nl": "Kosten van het verplichte diagnosepakket",
-   "naam_fr": "Cout du dossier de diagnostic technique",
+   "naam_fr": "Coût du dossier de diagnostic technique",
    "naam_officieel": "Art. L271-4 Code de la construction",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -1117,7 +1117,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F16096",
    "bron_kenmerk": "service-public.fr, dossier de diagnostic technique",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere de la transition ecologique",
+   "instantie": "Ministère de la transition écologique",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -1135,7 +1135,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De verkoper betaalt het volledige diagnosepakket. Alleen het diagnostic electrique staat nu in het register, en dan nog alleen de geldigheidsduur.",
+   "opmerkingen": "De verkoper betaalt het volledige diagnosepakket. Alleen het diagnostic électrique staat nu in het register, en dan nog alleen de geldigheidsduur.",
    "kandidaat": true,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-04-15"
@@ -1143,13 +1143,13 @@
   {
    "id": "p.fr.dmto.abattement_bijzondere_departementen",
    "naam_nl": "Bijzondere DMTO-regelingen per departement",
-   "naam_fr": "Regimes departementaux particuliers",
+   "naam_fr": "Régimes départementaux particuliers",
    "naam_officieel": "Art. 1594 F ter, F sexies en F septies CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.dmto",
-    "naam": "Droits de mutation a titre onereux",
+    "naam": "Droits de mutation à titre onéreux",
     "belastingtype": "overdrachtsbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1165,7 +1165,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/3_partenaire/notaires/dmto/dmto_2026-06.pdf",
-   "bron_kenmerk": "DGFiP, bareme DMTO; art. 1594 F ter, F sexies en F septies CGI",
+   "bron_kenmerk": "DGFiP, barème DMTO; art. 1594 F ter, F sexies en F septies CGI",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "DGFiP",
    "verificatiedatum": null,
@@ -1190,14 +1190,14 @@
   },
   {
    "id": "p.fr.dmto.departementaal_primo",
-   "naam_nl": "Departementaal DMTO-tarief, primo-accedant",
-   "naam_fr": "Taux departemental des DMTO, primo-accedant",
+   "naam_nl": "Departementaal DMTO-tarief, primo-accédant",
+   "naam_fr": "Taux départemental des DMTO, primo-accédant",
    "naam_officieel": "Art. 116 II van wet 2025-127",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.dmto",
-    "naam": "Droits de mutation a titre onereux",
+    "naam": "Droits de mutation à titre onéreux",
     "belastingtype": "overdrachtsbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1251,13 +1251,13 @@
   {
    "id": "p.fr.dmto.departementaal_standaard",
    "naam_nl": "Departementaal DMTO-tarief, standaard",
-   "naam_fr": "Taux departemental des DMTO, regime general",
+   "naam_fr": "Taux départemental des DMTO, régime général",
    "naam_officieel": "Art. 1594 D CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.dmto",
-    "naam": "Droits de mutation a titre onereux",
+    "naam": "Droits de mutation à titre onéreux",
     "belastingtype": "overdrachtsbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1283,7 +1283,7 @@
    "instantie": "DGFiP",
    "verificatiedatum": "2026-06-01",
    "verificatie_door": "Vastgoedtransactie, bronnen.json",
-   "publicatiemoment": "DGFiP publiceert de departementale tarieven jaarlijks in mei of juni; departementen besluiten voor 30 april",
+   "publicatiemoment": "DGFiP publiceert de départementale tarieven jaarlijks in mei of juni; departementen besluiten voor 30 april",
    "aangekondigde_wijziging": null,
    "levensduur_a": {
     "aanpassingsfrequentie": "jaarlijks",
@@ -1313,14 +1313,14 @@
   },
   {
    "id": "p.fr.dmto.frais_assiette",
-   "naam_nl": "Frais d assiette over het departementale deel",
-   "naam_fr": "Frais d assiette et de recouvrement",
+   "naam_nl": "Frais d'assiette over het départementale deel",
+   "naam_fr": "Frais d'assiette et de recouvrement",
    "naam_officieel": "Art. 1647 V-a CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.dmto",
-    "naam": "Droits de mutation a titre onereux",
+    "naam": "Droits de mutation à titre onéreux",
     "belastingtype": "overdrachtsbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1329,7 +1329,7 @@
    "variabiliteitsklasse": "overheid_vastgesteld",
    "effect": "verhoogt_last",
    "waarde": 2.37,
-   "waarde_weergave": "2,37 procent bovenop het departementale deel",
+   "waarde_weergave": "2,37 procent bovenop het départementale deel",
    "eenheid": "procent",
    "geldig_jaar": "2026",
    "geldig_van": null,
@@ -1376,7 +1376,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.dmto",
-    "naam": "Droits de mutation a titre onereux",
+    "naam": "Droits de mutation à titre onéreux",
     "belastingtype": "overdrachtsbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1426,7 +1426,7 @@
   {
    "id": "p.fr.don.barema_lijn_directe",
    "naam_nl": "Barema schenkingsrechten in rechte lijn",
-   "naam_fr": "Bareme des droits de donation en ligne directe",
+   "naam_fr": "Barème des droits de donation en ligne directe",
    "naam_officieel": "Art. 777 CGI, tableau I",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -1511,7 +1511,7 @@
   {
    "id": "p.fr.don.vrijstelling_geldschenking",
    "naam_nl": "Extra vrijstelling geldschenking",
-   "naam_fr": "Don familial de somme d argent",
+   "naam_fr": "Don familial de somme d'argent",
    "naam_officieel": "Art. 790 G CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -1567,13 +1567,13 @@
   {
    "id": "p.fr.dpe.co2_emissiefactoren",
    "naam_nl": "CO2-emissiefactoren per energiedrager",
-   "naam_fr": "Facteurs d emission de CO2 par energie",
+   "naam_fr": "Facteurs d'émission de CO2 par énergie",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.dpe",
-    "naam": "Diagnostic de performance energetique",
+    "naam": "Diagnostic de performance énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1630,13 +1630,13 @@
   {
    "id": "p.fr.dpe.klassegrenzen",
    "naam_nl": "DPE-klassegrenzen voor energie en CO2",
-   "naam_fr": "Seuils des classes DPE, energie et CO2",
-   "naam_officieel": "Etiquettes du diagnostic de performance energetique",
+   "naam_fr": "Seuils des classes DPE, énergie et CO2",
+   "naam_officieel": "Étiquettes du diagnostic de performance énergétique",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.dpe",
-    "naam": "Diagnostic de performance energetique",
+    "naam": "Diagnostic de performance énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -1693,13 +1693,13 @@
   {
    "id": "p.fr.dpe.primaire_energiefactor_elektriciteit",
    "naam_nl": "Primaire-energiefactor elektriciteit",
-   "naam_fr": "Coefficient d energie primaire, electricite",
-   "naam_officieel": "Coefficient de conversion en energie primaire",
+   "naam_fr": "Coefficient d'énergie primaire, électricité",
+   "naam_officieel": "Coefficient de conversion en énergie primaire",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.dpe",
-    "naam": "Diagnostic de performance energetique",
+    "naam": "Diagnostic de performance énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1715,9 +1715,9 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": null,
-   "bron_kenmerk": "arrete du 13 aout 2025, in werking per 1 januari 2026",
-   "bronsoort": "secundair: het arrete is in de repo genoemd maar niet als vindplaats vastgelegd",
-   "instantie": "Ministere de la transition ecologique",
+   "bron_kenmerk": "arrêté du 13 août 2025, in werking per 1 januari 2026",
+   "bronsoort": "secundair: het arrêté is in de repo genoemd maar niet als vindplaats vastgelegd",
+   "instantie": "Ministère de la transition écologique",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -1750,19 +1750,19 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het arrete staat genoemd, maar er is geen verificatiedatum en geen vindplaats. Peil waardeert dat niet stilzwijgend op tot een vastgestelde waarde.",
+   "opmerkingen": "Het arrêté staat genoemd, maar er is geen verificatiedatum en geen vindplaats. Peil waardeert dat niet stilzwijgend op tot een vastgestelde waarde.",
    "kandidaat": false
   },
   {
    "id": "p.fr.efact.datum_ontvangstplicht",
    "naam_nl": "Invoeringsdatum ontvangstplicht e-facturatie",
-   "naam_fr": "Date d entree en vigueur de l obligation de reception",
-   "naam_officieel": "Facturation electronique, calendrier legal",
+   "naam_fr": "Date d'entrée en vigueur de l'obligation de réception",
+   "naam_officieel": "Facturation électronique, calendrier légal",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.efact",
-    "naam": "Facturation electronique obligatoire",
+    "naam": "Facturation électronique obligatoire",
     "belastingtype": "omzetbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1778,7 +1778,7 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
-   "bron_kenmerk": "impots.gouv.fr, facturation electronique, gecontroleerd 8 juli 2026",
+   "bron_kenmerk": "impots.gouv.fr, facturation électronique, gecontroleerd 8 juli 2026",
    "bronsoort": "primair",
    "instantie": "DGFiP",
    "verificatiedatum": "2026-07-08",
@@ -1812,13 +1812,13 @@
   {
    "id": "p.fr.efact.datum_uitgifteplicht_pme",
    "naam_nl": "Invoeringsdatum uitgifteplicht PME en TPE",
-   "naam_fr": "Date d entree en vigueur de l obligation d emission, PME et TPE",
+   "naam_fr": "Date d'entrée en vigueur de l'obligation d'émission, PME et TPE",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.efact",
-    "naam": "Facturation electronique obligatoire",
+    "naam": "Facturation électronique obligatoire",
     "belastingtype": "omzetbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1834,7 +1834,7 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
-   "bron_kenmerk": "impots.gouv.fr, facturation electronique, gecontroleerd 8 juli 2026",
+   "bron_kenmerk": "impots.gouv.fr, facturation électronique, gecontroleerd 8 juli 2026",
    "bronsoort": "primair",
    "instantie": "DGFiP",
    "verificatiedatum": "2026-07-08",
@@ -1843,7 +1843,7 @@
    "aangekondigde_wijziging": {
     "datum": "2027-09-01",
     "omschrijving": "Uitgifteplicht gaat gelden voor PME en TPE",
-    "bron": "impots.gouv.fr, facturation electronique"
+    "bron": "impots.gouv.fr, facturation électronique"
    },
    "levensduur_a": {
     "aanpassingsfrequentie": "onregelmatig",
@@ -1872,13 +1872,13 @@
   {
    "id": "p.fr.efact.grens_tpe",
    "naam_nl": "Grens voor een TPE",
-   "naam_fr": "Seuil de la tres petite entreprise",
-   "naam_officieel": "Categories d entreprises, INSEE",
+   "naam_fr": "Seuil de la très petite entreprise",
+   "naam_officieel": "Catégories d'entreprises, INSEE",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.efact",
-    "naam": "Facturation electronique obligatoire",
+    "naam": "Facturation électronique obligatoire",
     "belastingtype": "omzetbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -1897,7 +1897,7 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": null,
-   "bron_kenmerk": "INSEE, categories d entreprises; gecontroleerd 8 juli 2026",
+   "bron_kenmerk": "INSEE, catégories d'entreprises; gecontroleerd 8 juli 2026",
    "bronsoort": "secundair: definitie van de INSEE, het decreet niet zelf gelezen",
    "instantie": "INSEE",
    "verificatiedatum": "2026-07-08",
@@ -1937,7 +1937,7 @@
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -1991,12 +1991,12 @@
    "id": "p.fr.elec.consuel_contre_visite",
    "naam_nl": "Consuel contre-visite",
    "naam_fr": "Consuel, contre-visite",
-   "naam_officieel": "Bareme Consuel",
+   "naam_officieel": "Barème Consuel",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2013,7 +2013,7 @@
    "status": "vastgesteld",
    "bron_url": null,
    "bron_kenmerk": "barema van Consuel, geverifieerd op 4 juli 2026",
-   "bronsoort": "secundair: barema van Consuel, het arrete zelf niet gelezen",
+   "bronsoort": "secundair: barema van Consuel, het arrêté zelf niet gelezen",
    "instantie": "Consuel",
    "verificatiedatum": "2026-07-04",
    "verificatie_door": "dossier-elektriciteit-if, hoofdstukken en verificatie",
@@ -2046,13 +2046,13 @@
   {
    "id": "p.fr.elec.consuel_geel_elektronisch",
    "naam_nl": "Consuel-tarief attestation geel, elektronisch",
-   "naam_fr": "Tarif Consuel, attestation jaune, voie electronique",
-   "naam_officieel": "Bareme Consuel",
+   "naam_fr": "Tarif Consuel, attestation jaune, voie électronique",
+   "naam_officieel": "Barème Consuel",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2068,8 +2068,8 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": null,
-   "bron_kenmerk": "barema bij arrete van 4 augustus 2015, geindexeerd met 0,64 procent per 2 september 2025",
-   "bronsoort": "secundair: barema van Consuel, het arrete zelf niet gelezen",
+   "bron_kenmerk": "barema bij arrêté van 4 augustus 2015, geïndexeerd met 0,64 procent per 2 september 2025",
+   "bronsoort": "secundair: barema van Consuel, het arrêté zelf niet gelezen",
    "instantie": "Consuel",
    "verificatiedatum": "2026-07-04",
    "verificatie_door": "dossier-elektriciteit-if, hoofdstukken en verificatie",
@@ -2102,13 +2102,13 @@
   {
    "id": "p.fr.elec.consuel_indexering",
    "naam_nl": "Indexering van het Consuel-barema",
-   "naam_fr": "Indexation du bareme Consuel",
+   "naam_fr": "Indexation du barème Consuel",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2159,12 +2159,12 @@
    "id": "p.fr.elec.consuel_overige_formulieren",
    "naam_nl": "Consuel-tarieven overige formulieren",
    "naam_fr": "Tarifs Consuel, autres attestations",
-   "naam_officieel": "Bareme Consuel",
+   "naam_officieel": "Barème Consuel",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2186,7 +2186,7 @@
    "status": "vastgesteld",
    "bron_url": null,
    "bron_kenmerk": "barema van Consuel, geverifieerd op 4 juli 2026",
-   "bronsoort": "secundair: barema van Consuel, het arrete zelf niet gelezen",
+   "bronsoort": "secundair: barema van Consuel, het arrêté zelf niet gelezen",
    "instantie": "Consuel",
    "verificatiedatum": "2026-07-04",
    "verificatie_door": "dossier-elektriciteit-if, hoofdstukken en verificatie",
@@ -2219,13 +2219,13 @@
   {
    "id": "p.fr.elec.tariefoptiewissel_zonder_linky",
    "naam_nl": "Tariefoptiewissel zonder Linky",
-   "naam_fr": "Changement d option tarifaire sans Linky",
+   "naam_fr": "Changement d'option tarifaire sans Linky",
    "naam_officieel": "TURPE, prestation Enedis",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2281,7 +2281,7 @@
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2346,7 +2346,7 @@
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.elec",
-    "naam": "Raccordement et tarifs electricite",
+    "naam": "Raccordement et tarifs électricité",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -2461,7 +2461,7 @@
   {
    "id": "p.fr.energie.graaddagen_per_klimaatzone",
    "naam_nl": "Graaddagen en referentietemperatuur per klimaatzone",
-   "naam_fr": "Degres-jours et temperature de reference par zone",
+   "naam_fr": "Degrés-jours et température de référence par zone",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -2539,8 +2539,8 @@
   },
   {
    "id": "p.fr.energie.houtenergie_per_stere",
-   "naam_nl": "Energie-inhoud hout per stere",
-   "naam_fr": "Contenu energetique du bois par stere",
+   "naam_nl": "Energie-inhoud hout per stère",
+   "naam_fr": "Contenu énergétique du bois par stère",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -2598,7 +2598,7 @@
   {
    "id": "p.fr.energie.koeldagen_en_zwembadtemperatuur",
    "naam_nl": "Koeldagen en zwembadtemperatuur per klimaatzone",
-   "naam_fr": "Degres-jours de refroidissement et temperature de piscine",
+   "naam_fr": "Degrés-jours de refroidissement et température de piscine",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -2735,7 +2735,7 @@
      "repo": "nlfr-ai-agent",
      "cockpit_onderdeel": "NLFR, AI-agent",
      "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:156",
-     "waarde_in_tool": "hout 1800 kWh per stere",
+     "waarde_in_tool": "hout 1800 kWh per stère",
      "afwijkend": false
     }
    ],
@@ -2749,7 +2749,7 @@
   {
    "id": "p.fr.energie.pv_opbrengst_per_klimaatzone",
    "naam_nl": "PV-opbrengst per klimaatzone",
-   "naam_fr": "Productible photovoltaique par zone",
+   "naam_fr": "Productible photovoltaïque par zone",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -2828,7 +2828,7 @@
   {
    "id": "p.fr.energie.referentieprijzen",
    "naam_nl": "Referentie-energieprijzen met peildatum",
-   "naam_fr": "Prix de reference de l energie",
+   "naam_fr": "Prix de référence de l'énergie",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -2850,7 +2850,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": null,
-   "bron_kenmerk": "CRE voor elektriciteit en gas, DGEC Pegase voor propaan en stookolie",
+   "bron_kenmerk": "CRE voor elektriciteit en gas, DGEC Pégase voor propaan en stookolie",
    "bronsoort": "secundair: waarden in de tool met een refDate per waarde, niet per waarde tegen de publicatie gelegd",
    "instantie": "CRE en DGEC",
    "verificatiedatum": null,
@@ -2886,7 +2886,7 @@
   {
    "id": "p.fr.energie.standaardprijzen_invoer",
    "naam_nl": "Standaard energieprijzen als invulwaarde",
-   "naam_fr": "Prix de l energie par defaut",
+   "naam_fr": "Prix de l'énergie par défaut",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -2965,7 +2965,7 @@
   {
    "id": "p.fr.energie.u_waarden_isolatieniveau",
    "naam_nl": "U-waarden per isolatieniveau",
-   "naam_fr": "Coefficients U par niveau d isolation",
+   "naam_fr": "Coefficients U par niveau d'isolation",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -3044,7 +3044,7 @@
   {
    "id": "p.fr.energie.verouderingsdrempel_prijzen",
    "naam_nl": "Verouderingsdrempel voor de energieprijzen",
-   "naam_fr": "Seuil d obsolescence des prix",
+   "naam_fr": "Seuil d'obsolescence des prix",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -3101,14 +3101,14 @@
   },
   {
    "id": "p.fr.erf.reserve_hereditaire",
-   "naam_nl": "Reserve hereditaire per aantal kinderen",
-   "naam_fr": "Reserve hereditaire selon le nombre d enfants",
+   "naam_nl": "Réserve héréditaire per aantal kinderen",
+   "naam_fr": "Réserve héréditaire selon le nombre d'enfants",
    "naam_officieel": "Art. 913 Code civil",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.erf",
-    "naam": "Code civil, devolution successorale",
+    "naam": "Code civil, dévolution successorale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -3144,7 +3144,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:54",
      "waarde_in_tool": "1 kind 50 procent, 2 kinderen twee derde, 3 of meer kinderen drie kwart",
      "afwijkend": false
@@ -3158,13 +3158,13 @@
   {
    "id": "p.fr.gite.degressieve_reeks",
    "naam_nl": "Degressieve reeks per bezitsjaar in GiteKompas",
-   "naam_fr": "Serie degressive par annee de detention",
+   "naam_fr": "Série dégressive par année de détention",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.gite",
-    "naam": "Location meublee de tourisme",
+    "naam": "Location meublée de tourisme",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "degressieve_aftrek",
@@ -3216,13 +3216,13 @@
   {
    "id": "p.fr.gite.minimumheffing_niet_residenten",
    "naam_nl": "Minimumheffing niet-residenten, bandbreedte",
-   "naam_fr": "Taux minimum d imposition des non-residents",
+   "naam_fr": "Taux minimum d'imposition des non-résidents",
    "naam_officieel": "Taux minimum, art. 197 A CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.gite",
-    "naam": "Location meublee de tourisme",
+    "naam": "Location meublée de tourisme",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -3276,7 +3276,7 @@
   {
    "id": "p.fr.handel.forfaitaire_incassokosten",
    "naam_nl": "Forfaitaire incassokosten bij te late betaling",
-   "naam_fr": "Indemnite forfaitaire de recouvrement",
+   "naam_fr": "Indemnité forfaitaire de recouvrement",
    "naam_officieel": "Art. L441-10 Code de commerce",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -3332,7 +3332,7 @@
   {
    "id": "p.fr.huur.boete_late_teruggave_borg",
    "naam_nl": "Boete bij te late teruggave van de huurborg",
-   "naam_fr": "Majoration en cas de restitution tardive du depot de garantie",
+   "naam_fr": "Majoration en cas de restitution tardive du dépôt de garantie",
    "naam_officieel": "Art. 22 al. 5 loi 89-462",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -3402,13 +3402,13 @@
   {
    "id": "p.fr.ifi.drempel",
    "naam_nl": "IFI-drempel",
-   "naam_fr": "Seuil d assujettissement a l IFI",
+   "naam_fr": "Seuil d'assujettissement à l'IFI",
    "naam_officieel": "Seuil de 1.300.000 euros, art. 964 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ifi",
-    "naam": "Impot sur la fortune immobiliere",
+    "naam": "Impôt sur la fortune immobilière",
     "belastingtype": "vermogensbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -3458,7 +3458,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:110",
      "waarde_in_tool": "1,3 miljoen euro",
      "afwijkend": false
@@ -3472,13 +3472,13 @@
   {
    "id": "p.fr.ifi.schijven",
    "naam_nl": "IFI-schijven en tarieven",
-   "naam_fr": "Bareme de l IFI",
-   "naam_officieel": "Tarif de l IFI, art. 977 CGI",
+   "naam_fr": "Barème de l'IFI",
+   "naam_officieel": "Tarif de l'IFI, art. 977 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ifi",
-    "naam": "Impot sur la fortune immobiliere",
+    "naam": "Impôt sur la fortune immobilière",
     "belastingtype": "vermogensbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -3528,13 +3528,13 @@
   {
    "id": "p.fr.ir.abattement_65plus",
    "naam_nl": "Abattement voor 65-plussers",
-   "naam_fr": "Abattement pour personnes agees de plus de 65 ans",
-   "naam_officieel": "Abattement special, art. 157 bis CGI",
+   "naam_fr": "Abattement pour personnes âgées de plus de 65 ans",
+   "naam_officieel": "Abattement spécial, art. 157 bis CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -3592,12 +3592,12 @@
    "id": "p.fr.ir.abattement_loon",
    "naam_nl": "Abattement op loon: tarief, minimum en maximum",
    "naam_fr": "Abattement de 10 pour cent sur les salaires",
-   "naam_officieel": "Deduction forfaitaire pour frais professionnels",
+   "naam_officieel": "Déduction forfaitaire pour frais professionnels",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -3617,7 +3617,7 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F1989",
-   "bron_kenmerk": "service-public.fr, fiche F1989, Impot sur le revenu: frais professionnels, forfait ou frais reels",
+   "bron_kenmerk": "service-public.fr, fiche F1989, Impôt sur le revenu: frais professionnels, forfait ou frais réels",
    "bronsoort": "secundair: samenvattende fiche van service-public.fr, het wetsartikel niet zelf gelezen",
    "instantie": "DGFiP",
    "verificatiedatum": "2026-04-15",
@@ -3645,7 +3645,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [
-    "Wie hogere werkelijke beroepskosten heeft, kan kiezen voor frais reels. Die keuze vraagt een eigen afweging en bewijsstukken; leg die voor aan een belastingadviseur."
+    "Wie hogere werkelijke beroepskosten heeft, kan kiezen voor frais réels. Die keuze vraagt een eigen afweging en bewijsstukken; leg die voor aan een belastingadviseur."
    ],
    "opmerkingen": "Anders dan bij pensioen gelden minimum en maximum hier per lid van het fiscale huishouden.",
    "kandidaat": false
@@ -3659,7 +3659,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -3709,13 +3709,13 @@
   {
    "id": "p.fr.ir.abattement_micro_verhuur",
    "naam_nl": "Abattement micro op winst uit verhuur",
-   "naam_fr": "Abattement micro, location meublee",
+   "naam_fr": "Abattement micro, location meublée",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -3771,7 +3771,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -3791,7 +3791,7 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F415",
-   "bron_kenmerk": "service-public.fr, fiche F415, Impot sur le revenu: declarer les pensions de retraite",
+   "bron_kenmerk": "service-public.fr, fiche F415, Impôt sur le revenu: déclarer les pensions de retraite",
    "bronsoort": "secundair: samenvattende fiche van service-public.fr, art. 158-5 CGI niet zelf gelezen",
    "instantie": "DGFiP",
    "verificatiedatum": "2026-04-15",
@@ -3825,13 +3825,13 @@
   {
    "id": "p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
    "naam_nl": "Boete niet-aangifte buitenlandse rekening",
-   "naam_fr": "Amende pour compte etranger non declare",
+   "naam_fr": "Amende pour compte étranger non déclaré",
    "naam_officieel": "Amende, art. 1736 IV CGI, formulaire 3916",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -3867,7 +3867,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:10",
      "waarde_in_tool": "1500 euro per jaar",
      "afwijkend": false
@@ -3887,7 +3887,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -3923,19 +3923,19 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Komt bovenop de gewone schijven vanaf een revenu fiscal de reference van enkele honderdduizenden euro s. Ontbreekt in alle tools.",
+   "opmerkingen": "Komt bovenop de gewone schijven vanaf een revenu fiscal de référence van enkele honderdduizenden euro's. Ontbreekt in alle tools.",
    "kandidaat": true
   },
   {
    "id": "p.fr.ir.credit_hulp_aan_huis_percentage",
-   "naam_nl": "Credit d impot hulp aan huis, percentage",
-   "naam_fr": "Credit d impot services a la personne, taux",
-   "naam_officieel": "Credit d impot, art. 199 sexdecies CGI",
+   "naam_nl": "Crédit d'impôt hulp aan huis, percentage",
+   "naam_fr": "Crédit d'impôt services à la personne, taux",
+   "naam_officieel": "Crédit d'impôt, art. 199 sexdecies CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "belastingkrediet",
@@ -3991,14 +3991,14 @@
   },
   {
    "id": "p.fr.ir.credit_hulp_aan_huis_plafond",
-   "naam_nl": "Credit d impot hulp aan huis, plafond",
-   "naam_fr": "Credit d impot services a la personne, plafond",
-   "naam_officieel": "Plafond de depenses, art. 199 sexdecies CGI",
+   "naam_nl": "Crédit d'impôt hulp aan huis, plafond",
+   "naam_fr": "Crédit d'impôt services à la personne, plafond",
+   "naam_officieel": "Plafond de dépenses, art. 199 sexdecies CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "plafond",
@@ -4051,19 +4051,19 @@
    "uitzonderingen": [
     "Het plafond kent verhogingen per kind ten laste en bij handicap. Welke variant in een concreet geval geldt, hoort bij een belastingadviseur."
    ],
-   "opmerkingen": "De twee tools gebruiken verschillende plafonds voor dezelfde grootheid. Het percentage is wel gelijk. Welk plafond bedoeld is, basisplafond of een verhoogde variant, staat in geen van beide repo s.",
+   "opmerkingen": "De twee tools gebruiken verschillende plafonds voor dezelfde grootheid. Het percentage is wel gelijk. Welk plafond bedoeld is, basisplafond of een verhoogde variant, staat in geen van beide repo's.",
    "kandidaat": false
   },
   {
    "id": "p.fr.ir.decote",
-   "naam_nl": "Decote: drempels, forfaits en percentage",
-   "naam_fr": "Decote de l impot sur le revenu",
-   "naam_officieel": "Decote, art. 197 I-4 CGI",
+   "naam_nl": "Décote: drempels, forfaits en percentage",
+   "naam_fr": "Décote de l'impôt sur le revenu",
+   "naam_officieel": "Décote, art. 197 I-4 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "heffingskorting",
@@ -4079,7 +4079,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": null,
-   "bron_kenmerk": "economie.gouv.fr, Pouvez-vous beneficier de la decote de l impot sur le revenu (inkomsten 2025, aanslag 2026); wettelijke grondslag art. 197 CGI",
+   "bron_kenmerk": "economie.gouv.fr, Pouvez-vous bénéficier de la décote de l'impôt sur le revenu (inkomsten 2025, aanslag 2026); wettelijke grondslag art. 197 CGI",
    "bronsoort": "secundair: voorlichtingspagina van economie.gouv.fr, art. 197 CGI niet zelf gelezen",
    "instantie": "DGFiP",
    "verificatiedatum": null,
@@ -4106,7 +4106,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:55",
      "waarde_in_tool": "celibataire 1982 (897 min 45,25 procent), couple 3277 (1483 min 45,25 procent)",
      "afwijkend": false
@@ -4120,13 +4120,13 @@
   {
    "id": "p.fr.ir.pfu_tarief",
    "naam_nl": "PFU, inkomstenbelastingdeel",
-   "naam_fr": "Prelevement forfaitaire unique, part impot sur le revenu",
-   "naam_officieel": "Prelevement forfaitaire unique, art. 200 A CGI",
+   "naam_fr": "Prélèvement forfaitaire unique, part impôt sur le revenu",
+   "naam_officieel": "Prélèvement forfaitaire unique, art. 200 A CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4176,7 +4176,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:143",
      "waarde_in_tool": "12,8 procent, totaal 30 procent",
      "afwijkend": false
@@ -4184,7 +4184,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Samen met de prelevements sociaux van 17,2 procent komt het totaal op 30 procent. Dat totaal is een rekenuitkomst, geen eigen parameter.",
+   "opmerkingen": "Samen met de prélèvements sociaux van 17,2 procent komt het totaal op 30 procent. Dat totaal is een rekenuitkomst, geen eigen parameter.",
    "kandidaat": false
   },
   {
@@ -4196,7 +4196,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "plafond",
@@ -4252,14 +4252,14 @@
   },
   {
    "id": "p.fr.ir.schijven",
-   "naam_nl": "Schijven en tarieven impot sur le revenu",
-   "naam_fr": "Bareme de l impot sur le revenu",
-   "naam_officieel": "Bareme progressif, art. 197 CGI",
+   "naam_nl": "Schijven en tarieven impôt sur le revenu",
+   "naam_fr": "Barème de l'impôt sur le revenu",
+   "naam_officieel": "Barème progressif, art. 197 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4309,7 +4309,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:55",
      "waarde_in_tool": "11600 / 29579 / 84577 / 181917",
      "afwijkend": false
@@ -4322,14 +4322,14 @@
   },
   {
    "id": "p.fr.ir.seuil_declaration",
-   "naam_nl": "Aangiftedrempel impot sur le revenu",
-   "naam_fr": "Seuil de declaration de revenus",
+   "naam_nl": "Aangiftedrempel impôt sur le revenu",
+   "naam_fr": "Seuil de déclaration de revenus",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -4345,7 +4345,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.impots.gouv.fr",
-   "bron_kenmerk": "impots.gouv.fr, obligation de declarer",
+   "bron_kenmerk": "impots.gouv.fr, obligation de déclarer",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "DGFiP",
    "verificatiedatum": null,
@@ -4365,19 +4365,19 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Bepaalt of er uberhaupt aangifte moet worden gedaan. Voor een niet-resident met alleen Frans vastgoedinkomen is dat de eerste vraag.",
+   "opmerkingen": "Bepaalt of er überhaupt aangifte moet worden gedaan. Voor een niet-resident met alleen Frans vastgoedinkomen is dat de eerste vraag.",
    "kandidaat": true
   },
   {
    "id": "p.fr.ir.taux_minimum_non_residents",
    "naam_nl": "Minimumtarief voor niet-residenten",
-   "naam_fr": "Taux minimum d imposition des non-residents",
+   "naam_fr": "Taux minimum d'imposition des non-résidents",
    "naam_officieel": "Art. 197 A CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.ir",
-    "naam": "Impot sur le revenu",
+    "naam": "Impôt sur le revenu",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4393,7 +4393,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.impots.gouv.fr/particulier/non-resident",
-   "bron_kenmerk": "impots.gouv.fr, non-residents; art. 197 A CGI",
+   "bron_kenmerk": "impots.gouv.fr, non-résidents; art. 197 A CGI",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "DGFiP",
    "verificatiedatum": null,
@@ -4419,13 +4419,13 @@
   {
    "id": "p.fr.lmp.drempel",
    "naam_nl": "LMP-drempel",
-   "naam_fr": "Seuil du statut de loueur en meuble professionnel",
+   "naam_fr": "Seuil du statut de loueur en meublé professionnel",
    "naam_officieel": "Art. 155 IV CGI",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.lmp",
-    "naam": "Loueur en meuble professionnel, seuil d affiliation",
+    "naam": "Loueur en meublé professionnel, seuil d'affiliation",
     "belastingtype": null,
     "socialelastentype": "zelfstandigenbijdrage",
     "vrijstellingstype": "drempel",
@@ -4461,7 +4461,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/ondernemen.ts:103",
      "waarde_in_tool": "23000 euro",
      "afwijkend": false
@@ -4475,8 +4475,8 @@
   {
    "id": "p.fr.markt.dvf_transactieprijzen",
    "naam_nl": "DVF, werkelijke transactieprijzen onroerend goed",
-   "naam_fr": "DVF, demandes de valeurs foncieres",
-   "naam_officieel": "Demandes de valeurs foncieres, DGFiP, open data",
+   "naam_fr": "DVF, demandes de valeurs foncières",
+   "naam_officieel": "Demandes de valeurs foncières, DGFiP, open data",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
@@ -4497,7 +4497,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/",
-   "bron_kenmerk": "Demandes de valeurs foncieres (DVF), open data van de DGFiP op data.gouv.fr",
+   "bron_kenmerk": "Demandes de valeurs foncières (DVF), open data van de DGFiP op data.gouv.fr",
    "bronsoort": "primair",
    "instantie": "DGFiP, via data.gouv.fr",
    "verificatiedatum": null,
@@ -4539,7 +4539,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geidentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. De niet-aangesloten repo s vastgoed-analyse en vastgoed-in-frankrijk halen DVF rechtstreeks op; die tellen hier niet mee.",
+   "opmerkingen": "Peil legt de bron en de rekenwijze vast, niet de prijzen zelf. Rekenwijze: mediaan van de prijs per vierkante meter over de transacties van de laatste twaalf maanden, per gemeente en per woningtype, waarbij transacties zonder oppervlakte en transacties met een prijs onder 10.000 euro buiten beschouwing blijven. Granulariteit: gemeente, geïdentificeerd met de INSEE-code, niet met de postcode, omdat een postcode meer dan een gemeente kan omvatten. De niet-aangesloten repo's vastgoed-analyse en vastgoed-in-frankrijk halen DVF rechtstreeks op; die tellen hier niet mee.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-04-01"
@@ -4547,13 +4547,13 @@
   {
    "id": "p.fr.micro.abattement_per_categorie",
    "naam_nl": "Abattement micro per categorie",
-   "naam_fr": "Abattement micro par categorie",
+   "naam_fr": "Abattement micro par catégorie",
    "naam_officieel": "Abattement forfaitaire, art. 50-0 en 102 ter CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.micro",
-    "naam": "Regime micro-entreprise",
+    "naam": "Régime micro-entreprise",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -4589,9 +4589,9 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:85",
-     "waarde_in_tool": "71 procent ventes, 50 procent prestations de services, 30 procent meuble non classe",
+     "waarde_in_tool": "71 procent ventes, 50 procent prestations de services, 30 procent meublé non classé",
      "afwijkend": false
     }
    ],
@@ -4604,12 +4604,12 @@
    "id": "p.fr.micro.bic_verhuur",
    "naam_nl": "Micro-BIC verhuur: plafond en abattement per type",
    "naam_fr": "Micro-BIC location: plafond et abattement par type",
-   "naam_officieel": "Art. 50-0 CGI, meubles de tourisme et chambres d hotes",
+   "naam_officieel": "Art. 50-0 CGI, meublés de tourisme et chambres d'hôtes",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.micro",
-    "naam": "Regime micro-entreprise",
+    "naam": "Régime micro-entreprise",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -4645,16 +4645,16 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:67-69",
-     "waarde_in_tool": "meuble niet geclassificeerd 15000 bij 30 procent; geclassificeerd en chambres d hotes 77700 bij 50 procent",
+     "waarde_in_tool": "meublé niet geclassificeerd 15000 bij 30 procent; geclassificeerd en chambres d'hôtes 77700 bij 50 procent",
      "afwijkend": false
     },
     {
      "repo": "gitekompas-fr",
      "cockpit_onderdeel": "IF, GiteKompas",
      "locatie": "index.html:864-867",
-     "waarde_in_tool": "meuble non classe 30 procent bij 15000; meuble classe 50 procent bij 77700; chambre d hotes 50 procent bij 77700; verhuur eigen woning 30 procent bij 15000",
+     "waarde_in_tool": "meublé non classé 30 procent bij 15000; meublé classé 50 procent bij 77700; chambre d'hôtes 50 procent bij 77700; verhuur eigen woning 30 procent bij 15000",
      "afwijkend": false
     }
    ],
@@ -4666,13 +4666,13 @@
   {
    "id": "p.fr.micro.plafonds",
    "naam_nl": "Omzetplafonds micro-entreprise per categorie",
-   "naam_fr": "Plafonds de chiffre d affaires du regime micro",
-   "naam_officieel": "Seuils du regime micro, art. 50-0 CGI",
+   "naam_fr": "Plafonds de chiffre d'affaires du régime micro",
+   "naam_officieel": "Seuils du régime micro, art. 50-0 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.micro",
-    "naam": "Regime micro-entreprise",
+    "naam": "Régime micro-entreprise",
     "belastingtype": "inkomstenbelasting",
     "socialelastentype": null,
     "vrijstellingstype": "plafond",
@@ -4708,7 +4708,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/ondernemen.ts:89",
      "waarde_in_tool": "ventes 188700, prestations de services BIC 77700, BNC 77700",
      "afwijkend": false
@@ -4721,14 +4721,14 @@
   },
   {
    "id": "p.fr.mutuelle.premie_indicatie",
-   "naam_nl": "Premie-indicatie complementaire sante",
-   "naam_fr": "Prix indicatif d une mutuelle",
+   "naam_nl": "Premie-indicatie complémentaire santé",
+   "naam_fr": "Prix indicatif d'une mutuelle",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.mutuelle",
-    "naam": "Complementaire sante",
+    "naam": "Complémentaire santé",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4764,21 +4764,21 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "ZorgKompas rekent met vergoedingspercentages van de Securite sociale maar kent geen premie voor de aanvullende verzekering. Zonder die premie is het beeld van de zorgkosten onvolledig. Dit is een marktgegeven en krijgt bij vulling klasse marktindex met een verantwoordelijke en een houdbaarheidsdatum.",
+   "opmerkingen": "ZorgKompas rekent met vergoedingspercentages van de Sécurité sociale maar kent geen premie voor de aanvullende verzekering. Zonder die premie is het beeld van de zorgkosten onvolledig. Dit is een marktgegeven en krijgt bij vulling klasse marktindex met een verantwoordelijke en een houdbaarheidsdatum.",
    "kandidaat": true,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-04-15"
   },
   {
    "id": "p.fr.notaris.debours_forfait",
-   "naam_nl": "Debours, forfaitaire schatting",
-   "naam_fr": "Debours, estimation forfaitaire",
+   "naam_nl": "Débours, forfaitaire schatting",
+   "naam_fr": "Débours, estimation forfaitaire",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.notaris",
-    "naam": "Emoluments et debours du notaire",
+    "naam": "Émoluments et débours du notaire",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4830,13 +4830,13 @@
   {
    "id": "p.fr.notaris.emolumenten_schaal",
    "naam_nl": "Emolumenten notaris, trancheschaal",
-   "naam_fr": "Emoluments du notaire, bareme par tranche",
-   "naam_officieel": "Tableau 5 numero 17, art. A444-91 Code de commerce",
+   "naam_fr": "Émoluments du notaire, barème par tranche",
+   "naam_officieel": "Tableau 5 numéro 17, art. A444-91 Code de commerce",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.notaris",
-    "naam": "Emoluments et debours du notaire",
+    "naam": "Émoluments et débours du notaire",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4869,12 +4869,12 @@
    "geldig_tot": "2028-02-29",
    "status": "vastgesteld",
    "bron_url": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/achat-dun-bien-immobilier-quels-frais-de-notaire-devez-vous-payer",
-   "bron_kenmerk": "art. A444-91 Code de commerce, tabel 5 nr. 17, tarieven verlengd bij arrete van 25 februari 2026",
-   "bronsoort": "secundair: voorlichtingspagina van economie.gouv.fr, het arrete zelf niet gelezen",
-   "instantie": "Ministere de l economie en Conseil superieur du notariat",
+   "bron_kenmerk": "art. A444-91 Code de commerce, tabel 5 nr. 17, tarieven verlengd bij arrêté van 25 februari 2026",
+   "bronsoort": "secundair: voorlichtingspagina van economie.gouv.fr, het arrêté zelf niet gelezen",
+   "instantie": "Ministère de l'économie en Conseil supérieur du notariat",
    "verificatiedatum": "2026-08-12",
    "verificatie_door": "Vastgoedtransactie, bronnen.json",
-   "publicatiemoment": "arrete, laatstelijk 25 februari 2026, geldig tot 29 februari 2028",
+   "publicatiemoment": "arrêté, laatstelijk 25 februari 2026, geldig tot 29 februari 2028",
    "aangekondigde_wijziging": null,
    "levensduur_a": {
     "aanpassingsfrequentie": "meerjaarlijks",
@@ -4907,13 +4907,13 @@
   {
    "id": "p.fr.notaris.remise_drempel_en_maximum",
    "naam_nl": "Wettelijke korting op de emolumenten",
-   "naam_fr": "Remise sur les emoluments du notaire",
+   "naam_fr": "Remise sur les émoluments du notaire",
    "naam_officieel": "Remise, art. A444-174 Code de commerce",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.notaris",
-    "naam": "Emoluments et debours du notaire",
+    "naam": "Émoluments et débours du notaire",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -4934,7 +4934,7 @@
    "bron_url": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/achat-dun-bien-immobilier-quels-frais-de-notaire-devez-vous-payer",
    "bron_kenmerk": "wettelijke korting op de emolumenten, maximaal 20 procent vanaf 100.000 euro",
    "bronsoort": "secundair: voorlichtingspagina van economie.gouv.fr, het wetsartikel niet zelf gelezen",
-   "instantie": "Ministere de l economie",
+   "instantie": "Ministère de l'économie",
    "verificatiedatum": "2026-08-12",
    "verificatie_door": "Vastgoedtransactie, bronnen.json",
    "publicatiemoment": null,
@@ -4966,13 +4966,13 @@
   {
    "id": "p.fr.notaris.tarief_hypotheekakte",
    "naam_nl": "Emolumenten en heffingen bij een hypotheekakte",
-   "naam_fr": "Frais d acte de pret et taxe de publicite fonciere",
+   "naam_fr": "Frais d'acte de prêt et taxe de publicité foncière",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.notaris",
-    "naam": "Emoluments et debours du notaire",
+    "naam": "Émoluments et débours du notaire",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -4990,7 +4990,7 @@
    "bron_url": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/achat-dun-bien-immobilier-quels-frais-de-notaire-devez-vous-payer",
    "bron_kenmerk": "tabel 5 Code de commerce en art. 844 CGI",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere de l economie",
+   "instantie": "Ministère de l'économie",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -5014,13 +5014,13 @@
   {
    "id": "p.fr.notaris.vuistregel_kosten_ancien",
    "naam_nl": "Vuistregel notariskosten bestaande bouw",
-   "naam_fr": "Regle empirique des frais de notaire, ancien",
+   "naam_fr": "Règle empirique des frais de notaire, ancien",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
    "regeling": {
     "code": "fr.notaris",
-    "naam": "Emoluments et debours du notaire",
+    "naam": "Émoluments et débours du notaire",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -5056,7 +5056,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:46",
      "waarde_in_tool": "7 tot 8 procent ancien, 2 tot 3 procent neuf",
      "afwijkend": true
@@ -5078,21 +5078,21 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Drie tools hanteren een vuistregel waar Vastgoedtransactie de kosten daadwerkelijk opbouwt uit emolumenten, DMTO per departement, taxe communale en frais d assiette. De 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste van de drie. Wie een bedrag nodig heeft, gebruikt de opgebouwde berekening.",
+   "opmerkingen": "Drie tools hanteren een vuistregel waar Vastgoedtransactie de kosten daadwerkelijk opbouwt uit emolumenten, DMTO per departement, taxe communale en frais d'assiette. De 8 procent zonder onderscheid tussen nieuwbouw en bestaande bouw is de zwakste van de drie. Wie een bedrag nodig heeft, gebruikt de opgebouwde berekening.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
   },
   {
    "id": "p.fr.ps.opbouw",
-   "naam_nl": "Opbouw van de prelevements sociaux",
-   "naam_fr": "Composition des prelevements sociaux",
+   "naam_nl": "Opbouw van de prélèvements sociaux",
+   "naam_fr": "Composition des prélèvements sociaux",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.ps",
-    "naam": "Prelevements sociaux sur les revenus du patrimoine",
+    "naam": "Prélèvements sociaux sur les revenus du patrimoine",
     "belastingtype": null,
     "socialelastentype": "prelevement_social",
     "vrijstellingstype": null,
@@ -5128,9 +5128,9 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:108",
-     "waarde_in_tool": "CSG 9,2 plus CRDS 0,5 plus solidarite 7,5 is 17,2 procent",
+     "waarde_in_tool": "CSG 9,2 plus CRDS 0,5 plus solidarité 7,5 is 17,2 procent",
      "afwijkend": false
     }
    ],
@@ -5141,14 +5141,14 @@
   },
   {
    "id": "p.fr.ps.taux_global",
-   "naam_nl": "Prelevements sociaux op vermogen, totaaltarief",
-   "naam_fr": "Prelevements sociaux sur les revenus du patrimoine",
-   "naam_officieel": "Prelevements sociaux, taux global",
+   "naam_nl": "Prélèvements sociaux op vermogen, totaaltarief",
+   "naam_fr": "Prélèvements sociaux sur les revenus du patrimoine",
+   "naam_officieel": "Prélèvements sociaux, taux global",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.ps",
-    "naam": "Prelevements sociaux sur les revenus du patrimoine",
+    "naam": "Prélèvements sociaux sur les revenus du patrimoine",
     "belastingtype": null,
     "socialelastentype": "prelevement_social",
     "vrijstellingstype": null,
@@ -5164,7 +5164,7 @@
    "geldig_tot": null,
    "status": "vastgesteld",
    "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
-   "bron_kenmerk": "impots.gouv.fr, plus-value immobiliere, bijgewerkt 7 juli 2026; opbouw CSG 9,2 plus CRDS 0,5 plus prelevement de solidarite 7,5",
+   "bron_kenmerk": "impots.gouv.fr, plus-value immobilière, bijgewerkt 7 juli 2026; opbouw CSG 9,2 plus CRDS 0,5 plus prélèvement de solidarité 7,5",
    "bronsoort": "primair",
    "instantie": "DGFiP",
    "verificatiedatum": "2026-08-12",
@@ -5212,7 +5212,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:108",
      "waarde_in_tool": "17,2",
      "afwijkend": false
@@ -5220,25 +5220,25 @@
    ],
    "testvoorbeeld": {
     "invoer": "belastbare meerwaarde 100.000 euro",
-    "verwachte_uitkomst": "17.200 euro prelevements sociaux",
+    "verwachte_uitkomst": "17.200 euro prélèvements sociaux",
     "toelichting": "Zonder toepassing van De Ruyter en zonder aftrek voor bezitsduur."
    },
    "uitzonderingen": [
-    "Voor wie onder het arrest De Ruyter valt, blijft alleen het prelevement de solidarite van 7,5 procent over. Zie p.xb.deruyter.prelevement_solidarite."
+    "Voor wie onder het arrest De Ruyter valt, blijft alleen het prélèvement de solidarité van 7,5 procent over. Zie p.xb.deruyter.prelevement_solidarite."
    ],
    "opmerkingen": "De meest verspreide parameter van het netwerk van platforms: vier aangesloten tools rekenen hiermee, allemaal met dezelfde waarde.",
    "kandidaat": false
   },
   {
    "id": "p.fr.ps.taux_roerend",
-   "naam_nl": "Prelevements sociaux op roerend inkomen in de tool",
-   "naam_fr": "Prelevements sociaux sur les revenus mobiliers",
+   "naam_nl": "Prélèvements sociaux op roerend inkomen in de tool",
+   "naam_fr": "Prélèvements sociaux sur les revenus mobiliers",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.ps",
-    "naam": "Prelevements sociaux sur les revenus du patrimoine",
+    "naam": "Prélèvements sociaux sur les revenus du patrimoine",
     "belastingtype": null,
     "socialelastentype": "prelevement_social",
     "vrijstellingstype": null,
@@ -5288,13 +5288,13 @@
   {
    "id": "p.fr.pv.abattement_ir_per_jaar",
    "naam_nl": "Aftrek inkomstenbelasting per bezitsjaar",
-   "naam_fr": "Abattement pour duree de detention, impot sur le revenu",
+   "naam_fr": "Abattement pour durée de détention, impôt sur le revenu",
    "naam_officieel": "Art. 150 VC CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": "degressieve_aftrek",
@@ -5354,14 +5354,14 @@
   },
   {
    "id": "p.fr.pv.abattement_ps_per_jaar",
-   "naam_nl": "Aftrek prelevements sociaux per bezitsjaar",
-   "naam_fr": "Abattement pour duree de detention, prelevements sociaux",
+   "naam_nl": "Aftrek prélèvements sociaux per bezitsjaar",
+   "naam_fr": "Abattement pour durée de détention, prélèvements sociaux",
    "naam_officieel": "Art. 150 VC CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": "degressieve_aftrek",
@@ -5423,13 +5423,13 @@
   {
    "id": "p.fr.pv.exoneration_residence_principale",
    "naam_nl": "Vrijstelling meerwaarde hoofdverblijf",
-   "naam_fr": "Exoneration de la residence principale",
+   "naam_fr": "Exonération de la résidence principale",
    "naam_officieel": "Art. 150 U II 1 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": "vrijstelling",
@@ -5471,13 +5471,13 @@
   {
    "id": "p.fr.pv.forfait_aankoopkosten",
    "naam_nl": "Forfait aankoopkosten bij de meerwaarde",
-   "naam_fr": "Forfait des frais d acquisition",
+   "naam_fr": "Forfait des frais d'acquisition",
    "naam_officieel": "Art. 150 VB II-3 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -5542,7 +5542,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": "abattement",
@@ -5599,13 +5599,13 @@
   {
    "id": "p.fr.pv.surtaxe_barema",
    "naam_nl": "Surtaxe op hoge meerwaarden",
-   "naam_fr": "Taxe sur les plus-values immobilieres elevees",
+   "naam_fr": "Taxe sur les plus-values immobilières élevées",
    "naam_officieel": "Art. 1609 nonies G CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -5685,13 +5685,13 @@
   {
    "id": "p.fr.pv.tarief_ir",
    "naam_nl": "Tarief inkomstenbelasting op de meerwaarde",
-   "naam_fr": "Taux d impot sur le revenu sur la plus-value",
+   "naam_fr": "Taux d'impôt sur le revenu sur la plus-value",
    "naam_officieel": "Art. 200 B CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -5741,7 +5741,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:47",
      "waarde_in_tool": "19 procent",
      "afwijkend": false
@@ -5759,13 +5759,13 @@
   {
    "id": "p.fr.pv.terugname_afschrijvingen_vanaf",
    "naam_nl": "Terugname afgetrokken afschrijvingen bij gemeubileerde verhuur",
-   "naam_fr": "Reintegration des amortissements en location meublee",
+   "naam_fr": "Réintégration des amortissements en location meublée",
    "naam_officieel": "Art. 150 VB III CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -5817,13 +5817,13 @@
   {
    "id": "p.fr.pv.vrijstelling_eu_eer",
    "naam_nl": "Vrijstelling meerwaarde voor onderdanen van de EU of EER",
-   "naam_fr": "Exoneration pour les ressortissants UE ou EEE",
+   "naam_fr": "Exonération pour les ressortissants UE ou EEE",
    "naam_officieel": "Art. 150 U II 2 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.pv",
-    "naam": "Plus-value immobiliere des particuliers",
+    "naam": "Plus-value immobilière des particuliers",
     "belastingtype": "meerwaardeheffing",
     "socialelastentype": null,
     "vrijstellingstype": "vrijstelling",
@@ -5875,13 +5875,13 @@
   {
    "id": "p.fr.renov.besparing_per_graad",
    "naam_nl": "Besparing per graad lagere binnentemperatuur",
-   "naam_fr": "Economie par degre de moins",
+   "naam_fr": "Économie par degré de moins",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -5933,13 +5933,13 @@
   {
    "id": "p.fr.renov.ecoptz_maximum",
    "naam_nl": "Eco-PTZ, maximum leenbedrag",
-   "naam_fr": "Eco-pret a taux zero, montant maximal",
+   "naam_fr": "Éco-prêt à taux zéro, montant maximal",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "plafond",
@@ -5989,13 +5989,13 @@
   {
    "id": "p.fr.renov.maprimeadapt_maximum",
    "naam_nl": "MaPrimeAdapt, maximaal aandeel van de kosten",
-   "naam_fr": "MaPrimeAdapt, part maximale des couts",
+   "naam_fr": "MaPrimeAdapt, part maximale des coûts",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "plafond",
@@ -6044,14 +6044,14 @@
   },
   {
    "id": "p.fr.renov.maprimerenov_budget",
-   "naam_nl": "MaPrimeRenov, budget en achterstand",
-   "naam_fr": "MaPrimeRenov, budget et arrieres",
+   "naam_nl": "MaPrimeRénov, budget en achterstand",
+   "naam_fr": "MaPrimeRénov, budget et arriérés",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6102,14 +6102,14 @@
   },
   {
    "id": "p.fr.renov.maprimerenov_plafond",
-   "naam_nl": "MaPrimeRenov, plafondbedrag in de pagina",
-   "naam_fr": "MaPrimeRenov, plafond",
+   "naam_nl": "MaPrimeRénov, plafondbedrag in de pagina",
+   "naam_fr": "MaPrimeRénov, plafond",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "plafond",
@@ -6159,13 +6159,13 @@
   {
    "id": "p.fr.renov.ouderdomsgrens_woning",
    "naam_nl": "Ouderdomsgrens van de woning voor verlaagd tarief en Eco-PTZ",
-   "naam_fr": "Anciennete du logement requise",
+   "naam_fr": "Ancienneté du logement requise",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": "drempel",
@@ -6215,13 +6215,13 @@
   {
    "id": "p.fr.renov.richtprijzen_maatregelen",
    "naam_nl": "Richtprijzen renovatiemaatregelen",
-   "naam_fr": "Prix indicatifs des travaux de renovation",
+   "naam_fr": "Prix indicatifs des travaux de rénovation",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.renov",
-    "naam": "Aides a la renovation energetique",
+    "naam": "Aides à la rénovation énergétique",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6273,13 +6273,13 @@
   {
    "id": "p.fr.retraite.gemiddeld_salaris_referentie",
    "naam_nl": "Referentiesalaris voor de pensioenraming",
-   "naam_fr": "Salaire moyen de reference pour l estimation",
+   "naam_fr": "Salaire moyen de référence pour l'estimation",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.retraite",
-    "naam": "Retraite de base du regime general",
+    "naam": "Retraite de base du régime général",
     "belastingtype": null,
     "socialelastentype": "premie_werknemersverzekering",
     "vrijstellingstype": null,
@@ -6331,13 +6331,13 @@
   {
    "id": "p.fr.retraite.jaren_vereist",
    "naam_nl": "Vereiste pensioenjaren Frankrijk",
-   "naam_fr": "Duree d assurance requise",
-   "naam_officieel": "Duree d assurance pour le taux plein",
+   "naam_fr": "Durée d'assurance requise",
+   "naam_officieel": "Durée d'assurance pour le taux plein",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.retraite",
-    "naam": "Retraite de base du regime general",
+    "naam": "Retraite de base du régime général",
     "belastingtype": null,
     "socialelastentype": "premie_werknemersverzekering",
     "vrijstellingstype": null,
@@ -6393,7 +6393,7 @@
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.retraite",
-    "naam": "Retraite de base du regime general",
+    "naam": "Retraite de base du régime général",
     "belastingtype": null,
     "socialelastentype": "premie_werknemersverzekering",
     "vrijstellingstype": null,
@@ -6443,13 +6443,13 @@
   {
    "id": "p.fr.secu.brss_consult_medecin_traitant",
    "naam_nl": "Base de remboursement consult huisarts",
-   "naam_fr": "Base de remboursement, consultation du medecin traitant",
+   "naam_fr": "Base de remboursement, consultation du médecin traitant",
    "naam_officieel": "Tarif conventionnel secteur 1",
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6492,7 +6492,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:59",
      "waarde_in_tool": "26,50 sinds november 2024",
      "afwijkend": true
@@ -6506,13 +6506,13 @@
   {
    "id": "p.fr.secu.brss_kine_per_sessie",
    "naam_nl": "Base de remboursement kinesitherapie per sessie",
-   "naam_fr": "Base de remboursement, seance de kinesitherapie",
+   "naam_fr": "Base de remboursement, séance de kinésithérapie",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6568,7 +6568,7 @@
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6624,7 +6624,7 @@
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6667,7 +6667,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:60",
      "waarde_in_tool": "23 euro ziekenhuis en 17 euro psychiatrie sinds 1 maart 2026",
      "afwijkend": true
@@ -6680,14 +6680,14 @@
   },
   {
    "id": "p.fr.secu.franchise_medicale",
-   "naam_nl": "Franchise medicale per medicijn",
-   "naam_fr": "Franchise medicale par boite de medicaments",
+   "naam_nl": "Franchise médicale per medicijn",
+   "naam_fr": "Franchise médicale par boîte de médicaments",
    "naam_officieel": "Art. L160-13 III CSS",
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6723,14 +6723,14 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/zorg.ts:67-68",
      "waarde_in_tool": "0,50 euro per medicijn",
      "afwijkend": true
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/zorg.ts:146-147",
      "waarde_in_tool": "1 euro per doosje, verdubbeld per 1 mei 2024",
      "afwijkend": true
@@ -6750,7 +6750,7 @@
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6786,7 +6786,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:117",
      "waarde_in_tool": "4,00 euro per transport",
      "afwijkend": false
@@ -6806,7 +6806,7 @@
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6842,14 +6842,14 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:117",
      "waarde_in_tool": "2,00 euro per artsbezoek",
      "afwijkend": false
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/audit/prompts/zorg.ts:67-68",
      "waarde_in_tool": "2 euro per consult",
      "afwijkend": false
@@ -6863,13 +6863,13 @@
   {
    "id": "p.fr.secu.vergoeding_had_en_infirmiere",
    "naam_nl": "Vergoeding thuisziekenhuis en verpleging aan huis",
-   "naam_fr": "Taux de remboursement, HAD et infirmiere liberale",
+   "naam_fr": "Taux de remboursement, HAD et infirmière libérale",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6905,9 +6905,9 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/zorg.ts:112-113",
-     "waarde_in_tool": "HAD 80 procent of 100 procent bij ALD; infirmiere 70 procent Secu plus 30 procent mutuelle",
+     "waarde_in_tool": "HAD 80 procent of 100 procent bij ALD; infirmière 70 procent Secu plus 30 procent mutuelle",
      "afwijkend": false
     }
    ],
@@ -6919,13 +6919,13 @@
   {
    "id": "p.fr.secu.vergoeding_kine_en_medicatie",
    "naam_nl": "Vergoeding kinesitherapie en medicatie",
-   "naam_fr": "Taux de remboursement, kinesitherapie et medicaments",
+   "naam_fr": "Taux de remboursement, kinésithérapie et médicaments",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -6981,7 +6981,7 @@
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -7024,7 +7024,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/zorg.ts:88",
      "waarde_in_tool": "30 procent in plaats van 70 procent",
      "afwijkend": false
@@ -7037,14 +7037,14 @@
   },
   {
    "id": "p.fr.secu.vergoedingspercentage_standaard",
-   "naam_nl": "Standaard vergoedingspercentage Securite sociale",
+   "naam_nl": "Standaard vergoedingspercentage Sécurité sociale",
    "naam_fr": "Taux de remboursement de droit commun",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "verzekering_overheidsgekaderd",
    "regeling": {
     "code": "fr.secu",
-    "naam": "Assurance maladie, Securite sociale",
+    "naam": "Assurance maladie, Sécurité sociale",
     "belastingtype": null,
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -7276,7 +7276,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:84-85",
      "waarde_in_tool": "21,2 procent per 1 januari 2026",
      "afwijkend": false
@@ -7284,13 +7284,13 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het handboek beschrijft de verhoging van 12,3 naar 21,2 procent per 1 januari 2026. Geen van beide repo s noemt een verificatiedatum bij de waarde.",
+   "opmerkingen": "Het handboek beschrijft de verhoging van 12,3 naar 21,2 procent per 1 januari 2026. Geen van beide repo's noemt een verificatiedatum bij de waarde.",
    "kandidaat": false
   },
   {
    "id": "p.fr.sociaal.lasten_winst_verhuur",
    "naam_nl": "Sociale lasten op winst uit verhuur",
-   "naam_fr": "Charges sociales sur revenus locatifs meubles",
+   "naam_fr": "Charges sociales sur revenus locatifs meublés",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "sociaal",
@@ -7345,8 +7345,8 @@
   },
   {
    "id": "p.fr.sociaal.pass",
-   "naam_nl": "Plafond annuel de la securite sociale",
-   "naam_fr": "Plafond annuel de la securite sociale",
+   "naam_nl": "Plafond annuel de la sécurité sociale",
+   "naam_fr": "Plafond annuel de la sécurité sociale",
    "naam_officieel": "PASS",
    "land": "FR",
    "lastensoort": "sociaal",
@@ -7368,7 +7368,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.urssaf.fr",
-   "bron_kenmerk": "Urssaf, plafond de la securite sociale",
+   "bron_kenmerk": "Urssaf, plafond de la sécurité sociale",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "Urssaf",
    "verificatiedatum": null,
@@ -7388,7 +7388,7 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het PASS is de rekeneenheid achter tientallen Franse drempels, waaronder de Urssaf-drempel voor chambres d hotes die nu als los bedrag in een handboek staat.",
+   "opmerkingen": "Het PASS is de rekeneenheid achter tientallen Franse drempels, waaronder de Urssaf-drempel voor chambres d'hôtes die nu als los bedrag in een handboek staat.",
    "kandidaat": true
   },
   {
@@ -7418,7 +7418,7 @@
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2300",
    "bron_kenmerk": "service-public.fr, fiche F2300",
    "bronsoort": "nog niet geraadpleegd",
-   "instantie": "Ministere du travail",
+   "instantie": "Ministère du travail",
    "verificatiedatum": null,
    "verificatie_door": null,
    "publicatiemoment": null,
@@ -7442,7 +7442,7 @@
   {
    "id": "p.fr.succ.abattement_broers_zussen",
    "naam_nl": "Vrijstelling en tarief broers en zussen",
-   "naam_fr": "Abattement et taux, freres et soeurs",
+   "naam_fr": "Abattement et taux, frères et soeurs",
    "naam_officieel": "Art. 777 en 779 IV CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -7484,7 +7484,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:56",
      "waarde_in_tool": "15932 euro bij 35 tot 45 procent",
      "afwijkend": false
@@ -7498,7 +7498,7 @@
   {
    "id": "p.fr.succ.abattement_handicap",
    "naam_nl": "Extra vrijstelling bij handicap",
-   "naam_fr": "Abattement supplementaire, personne handicapee",
+   "naam_fr": "Abattement supplémentaire, personne handicapée",
    "naam_officieel": "Art. 779 II CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -7588,7 +7588,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:56",
      "waarde_in_tool": "1594 euro vrijstelling, daarna 60 procent",
      "afwijkend": true
@@ -7603,7 +7603,7 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Het onderscheid tussen een stiefkind en een niet-verwante derde is bepalend en wordt niet in beide repo s gemaakt. Zie p.fr.succ.abattement_stiefkind.",
+   "opmerkingen": "Het onderscheid tussen een stiefkind en een niet-verwante derde is bepalend en wordt niet in beide repo's gemaakt. Zie p.fr.succ.abattement_stiefkind.",
    "kandidaat": false
   },
   {
@@ -7658,7 +7658,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:56",
      "waarde_in_tool": "100000 per ouder",
      "afwijkend": false
@@ -7783,7 +7783,7 @@
   {
    "id": "p.fr.succ.adoption_simple",
    "naam_nl": "Barema en abattement bij adoption simple",
-   "naam_fr": "Bareme et abattement en cas d adoption simple",
+   "naam_fr": "Barème et abattement en cas d'adoption simple",
    "naam_officieel": "Art. 786 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -7841,7 +7841,7 @@
   {
    "id": "p.fr.succ.barema_lijn_directe",
    "naam_nl": "Barema successierechten in rechte lijn",
-   "naam_fr": "Bareme des droits de succession en ligne directe",
+   "naam_fr": "Barème des droits de succession en ligne directe",
    "naam_officieel": "Art. 777 CGI, tableau I",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -7926,7 +7926,7 @@
   {
    "id": "p.fr.succ.hernieuwingstermijn",
    "naam_nl": "Hernieuwingstermijn van de schenkingsvrijstelling",
-   "naam_fr": "Delai de rappel fiscal des donations",
+   "naam_fr": "Délai de rappel fiscal des donations",
    "naam_officieel": "Art. 784 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -7968,7 +7968,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/wonen.ts:57",
      "waarde_in_tool": "15 jaar",
      "afwijkend": false
@@ -8038,7 +8038,7 @@
   {
    "id": "p.fr.succ.vrijstelling_echtgenoot",
    "naam_nl": "Vrijstelling echtgenoot en PACS-partner",
-   "naam_fr": "Exoneration du conjoint survivant et du partenaire pacse",
+   "naam_fr": "Exonération du conjoint survivant et du partenaire pacsé",
    "naam_officieel": "Art. 796-0 bis CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
@@ -8086,7 +8086,7 @@
   {
    "id": "p.fr.telecom.max_verbrekingsvergoeding",
    "naam_nl": "Maximale verbrekingsvergoeding telecom",
-   "naam_fr": "Indemnite de resiliation maximale",
+   "naam_fr": "Indemnité de résiliation maximale",
    "naam_officieel": "Art. L224-39 Code de la consommation",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -8142,7 +8142,7 @@
   {
    "id": "p.fr.telecom.minimale_looptijd_binding",
    "naam_nl": "Minimale looptijd voor opzegging met binding",
-   "naam_fr": "Duree minimale avant resiliation",
+   "naam_fr": "Durée minimale avant résiliation",
    "naam_officieel": "Art. L224-28 Code de la consommation",
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -8204,7 +8204,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.tf",
-    "naam": "Taxe fonciere sur les proprietes baties",
+    "naam": "Taxe foncière sur les propriétés bâties",
     "belastingtype": "lokale_belasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8240,19 +8240,19 @@
    "gebruikt_in": [],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "De grondslag van taxe fonciere en taxe d habitation wordt jaarlijks bij wet geindexeerd. Zonder die factor is een meerjarige raming van de vaste lasten onmogelijk.",
+   "opmerkingen": "De grondslag van taxe foncière en taxe d'habitation wordt jaarlijks bij wet geïndexeerd. Zonder die factor is een meerjarige raming van de vaste lasten onmogelijk.",
    "kandidaat": true
   },
   {
    "id": "p.fr.tf.taxe_fonciere",
-   "naam_nl": "Taxe fonciere",
-   "naam_fr": "Taxe fonciere sur les proprietes baties",
+   "naam_nl": "Taxe foncière",
+   "naam_fr": "Taxe foncière sur les propriétés bâties",
    "naam_officieel": "TFPB",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.tf",
-    "naam": "Taxe fonciere sur les proprietes baties",
+    "naam": "Taxe foncière sur les propriétés bâties",
     "belastingtype": "lokale_belasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8268,7 +8268,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F59",
-   "bron_kenmerk": "service-public.fr, taxe fonciere sur les proprietes baties",
+   "bron_kenmerk": "service-public.fr, taxe foncière sur les propriétés bâties",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "DGFiP en gemeenten",
    "verificatiedatum": null,
@@ -8293,14 +8293,14 @@
   },
   {
    "id": "p.fr.th.taxe_habitation_residence_secondaire",
-   "naam_nl": "Taxe d habitation op een tweede woning",
-   "naam_fr": "Taxe d habitation sur les residences secondaires",
+   "naam_nl": "Taxe d'habitation op een tweede woning",
+   "naam_fr": "Taxe d'habitation sur les résidences secondaires",
    "naam_officieel": "THRS",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.th",
-    "naam": "Taxe d habitation sur les residences secondaires",
+    "naam": "Taxe d'habitation sur les résidences secondaires",
     "belastingtype": "lokale_belasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8316,7 +8316,7 @@
    "geldig_tot": null,
    "status": "te_verifieren",
    "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F42",
-   "bron_kenmerk": "service-public.fr, taxe d habitation sur les residences secondaires",
+   "bron_kenmerk": "service-public.fr, taxe d'habitation sur les résidences secondaires",
    "bronsoort": "nog niet geraadpleegd",
    "instantie": "DGFiP en gemeenten",
    "verificatiedatum": null,
@@ -8348,7 +8348,7 @@
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.tva",
-    "naam": "Taxe sur la valeur ajoutee",
+    "naam": "Taxe sur la valeur ajoutée",
     "belastingtype": "omzetbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8398,13 +8398,13 @@
   {
    "id": "p.fr.tva.tarief_renovatie",
    "naam_nl": "Btw-tarief energetische renovatiewerken",
-   "naam_fr": "Taux de TVA sur les travaux de renovation energetique",
+   "naam_fr": "Taux de TVA sur les travaux de rénovation énergétique",
    "naam_officieel": "Art. 278-0 bis A CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.tva",
-    "naam": "Taxe sur la valeur ajoutee",
+    "naam": "Taxe sur la valeur ajoutée",
     "belastingtype": "omzetbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8463,13 +8463,13 @@
   {
    "id": "p.fr.tva.tarif_intermediaire",
    "naam_nl": "Btw-tarief, tussentarief",
-   "naam_fr": "Taux intermediaire de TVA",
+   "naam_fr": "Taux intermédiaire de TVA",
    "naam_officieel": "Art. 279 CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.tva",
-    "naam": "Taxe sur la valeur ajoutee",
+    "naam": "Taxe sur la valeur ajoutée",
     "belastingtype": "omzetbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8510,14 +8510,14 @@
   },
   {
    "id": "p.fr.urssaf.drempel_chambres_hotes",
-   "naam_nl": "Urssaf-drempel chambres d hotes",
-   "naam_fr": "Seuil Urssaf, chambres d hotes",
-   "naam_officieel": "Seuil d affiliation, 13 procent du PASS",
+   "naam_nl": "Urssaf-drempel chambres d'hôtes",
+   "naam_fr": "Seuil Urssaf, chambres d'hôtes",
+   "naam_officieel": "Seuil d'affiliation, 13 procent du PASS",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.urssaf",
-    "naam": "Urssaf, seuils d affiliation",
+    "naam": "Urssaf, seuils d'affiliation",
     "belastingtype": null,
     "socialelastentype": "zelfstandigenbijdrage",
     "vrijstellingstype": "drempel",
@@ -8553,7 +8553,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:75-76",
      "waarde_in_tool": "6123 euro belastbaar",
      "afwijkend": false
@@ -8561,21 +8561,21 @@
    ],
    "testvoorbeeld": null,
    "uitzonderingen": [],
-   "opmerkingen": "Afgeleid van 13 procent van het plafond annuel de la securite sociale. Het handboek noemt het PASS-jaar 2025, terwijl de rest van het handboek 2026 is. Het PASS zelf staat nog niet in Peil.",
+   "opmerkingen": "Afgeleid van 13 procent van het plafond annuel de la sécurité sociale. Het handboek noemt het PASS-jaar 2025, terwijl de rest van het handboek 2026 is. Het PASS zelf staat nog niet in Peil.",
    "kandidaat": false,
    "verantwoordelijke": "Anton Noe, Communities Abroad",
    "houdbaarheidsdatum": "2027-09-16"
   },
   {
    "id": "p.fr.urssaf.drempel_meuble_tourisme",
-   "naam_nl": "Urssaf-drempel verhuur meuble de tourisme",
-   "naam_fr": "Seuil Urssaf, meuble de tourisme",
-   "naam_officieel": "Seuil d affiliation, recettes brutes",
+   "naam_nl": "Urssaf-drempel verhuur meublé de tourisme",
+   "naam_fr": "Seuil Urssaf, meublé de tourisme",
+   "naam_officieel": "Seuil d'affiliation, recettes brutes",
    "land": "FR",
    "lastensoort": "sociaal",
    "regeling": {
     "code": "fr.urssaf",
-    "naam": "Urssaf, seuils d affiliation",
+    "naam": "Urssaf, seuils d'affiliation",
     "belastingtype": null,
     "socialelastentype": "zelfstandigenbijdrage",
     "vrijstellingstype": "drempel",
@@ -8611,7 +8611,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:75-76",
      "waarde_in_tool": "23000 euro bruto",
      "afwijkend": false
@@ -8625,7 +8625,7 @@
   {
    "id": "p.fr.vastgoed.houdbaarheidstermijn_tarieven",
    "naam_nl": "Eigen houdbaarheidstermijn van de tarieven in de tool",
-   "naam_fr": "Duree de validite interne des taux",
+   "naam_fr": "Durée de validité interne des taux",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -8682,14 +8682,14 @@
   },
   {
    "id": "p.fr.vefa.tpf_tarief",
-   "naam_nl": "Taxe de publicite fonciere bij VEFA",
-   "naam_fr": "Taxe de publicite fonciere en VEFA",
+   "naam_nl": "Taxe de publicité foncière bij VEFA",
+   "naam_fr": "Taxe de publicité foncière en VEFA",
    "naam_officieel": "Art. 1594 F quinquies CGI",
    "land": "FR",
    "lastensoort": "fiscaal",
    "regeling": {
     "code": "fr.vefa",
-    "naam": "Vente en l etat futur d achevement, taxe de publicite fonciere",
+    "naam": "Vente en l'état futur d'achèvement, taxe de publicité foncière",
     "belastingtype": "overdrachtsbelasting",
     "socialelastentype": null,
     "vrijstellingstype": null,
@@ -8698,7 +8698,7 @@
    "variabiliteitsklasse": "overheid_vastgesteld",
    "effect": "verhoogt_last",
    "waarde": 0.715,
-   "waarde_weergave": "0,715 procent, 0,70 procent basis maal 2,14 procent frais d assiette",
+   "waarde_weergave": "0,715 procent, 0,70 procent basis maal 2,14 procent frais d'assiette",
    "eenheid": "procent",
    "geldig_jaar": "2026",
    "geldig_van": "2026-07-01",
@@ -8739,7 +8739,7 @@
   {
    "id": "p.fr.zorg.beschermingsmaatregel_kosten",
    "naam_nl": "Rechterlijke beschermingsmaatregel, doorlooptijd en kosten",
-   "naam_fr": "Mesure de protection judiciaire, delai et cout",
+   "naam_fr": "Mesure de protection judiciaire, délai et coût",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -8781,7 +8781,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/zorg.ts:151",
      "waarde_in_tool": "3 tot 6 maanden, 200 tot 500 euro",
      "afwijkend": false
@@ -8797,7 +8797,7 @@
   {
    "id": "p.fr.zorg.mandat_protection_future_kosten",
    "naam_nl": "Mandat de protection future, kosten",
-   "naam_fr": "Mandat de protection future, cout",
+   "naam_fr": "Mandat de protection future, coût",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -8839,7 +8839,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/zorg.ts:146",
      "waarde_in_tool": "sous seing prive gratis tot 100 euro; notarie 300 tot 500 euro",
      "afwijkend": false
@@ -8855,7 +8855,7 @@
   {
    "id": "p.fr.zorg.teleassistentie_maandprijs",
    "naam_nl": "Teleassistentie, maandprijs",
-   "naam_fr": "Teleassistance, prix mensuel",
+   "naam_fr": "Téléassistance, prix mensuel",
    "naam_officieel": null,
    "land": "FR",
    "lastensoort": "overig_transactiekosten",
@@ -8897,7 +8897,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/zorg.ts:115",
      "waarde_in_tool": "20 tot 40 euro per maand",
      "afwijkend": false
@@ -9087,7 +9087,7 @@
   {
    "id": "p.nl.box3.heffingsvrij_alleenstaand",
    "naam_nl": "Heffingsvrij vermogen box 3, alleenstaand",
-   "naam_fr": "Patrimoine exonere box 3, personne seule",
+   "naam_fr": "Patrimoine exonéré box 3, personne seule",
    "naam_officieel": "Heffingsvrij vermogen",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9150,7 +9150,7 @@
   {
    "id": "p.nl.box3.heffingsvrij_partners",
    "naam_nl": "Heffingsvrij vermogen box 3, partners",
-   "naam_fr": "Patrimoine exonere box 3, couple",
+   "naam_fr": "Patrimoine exonéré box 3, couple",
    "naam_officieel": "Heffingsvrij vermogen fiscale partners",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9325,7 +9325,7 @@
   {
    "id": "p.nl.box3.rendement_spaargeld",
    "naam_nl": "Forfaitair rendement spaargeld",
-   "naam_fr": "Rendement forfaitaire sur l epargne",
+   "naam_fr": "Rendement forfaitaire sur l'épargne",
    "naam_officieel": "Forfaitair rendementspercentage banktegoeden",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9636,7 +9636,7 @@
   {
    "id": "p.nl.ib.aftrektarief_hypotheekrente",
    "naam_nl": "Maximaal aftrektarief hypotheekrente",
-   "naam_fr": "Taux maximal de deduction des interets",
+   "naam_fr": "Taux maximal de déduction des intérêts",
    "naam_officieel": "Tariefaanpassing aftrekposten",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9684,7 +9684,7 @@
   {
    "id": "p.nl.ib.ak_afbouw_factor",
    "naam_nl": "Afbouwfactor arbeidskorting",
-   "naam_fr": "Taux de degressivite du credit d impot sur le travail",
+   "naam_fr": "Taux de dégressivité du crédit d'impôt sur le travail",
    "naam_officieel": "Afbouwpercentage arbeidskorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9740,7 +9740,7 @@
   {
    "id": "p.nl.ib.ak_afbouw_start",
    "naam_nl": "Startpunt afbouw arbeidskorting",
-   "naam_fr": "Debut de la degressivite du credit d impot sur le travail",
+   "naam_fr": "Début de la dégressivité du crédit d'impôt sur le travail",
    "naam_officieel": "Afbouwgrens arbeidskorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9796,7 +9796,7 @@
   {
    "id": "p.nl.ib.algemene_heffingskorting_max",
    "naam_nl": "Algemene heffingskorting, maximum",
-   "naam_fr": "Credit d impot general, maximum",
+   "naam_fr": "Crédit d'impôt général, maximum",
    "naam_officieel": "Algemene heffingskorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9859,7 +9859,7 @@
   {
    "id": "p.nl.ib.alleenstaande_ouderenkorting",
    "naam_nl": "Alleenstaande ouderenkorting",
-   "naam_fr": "Credit d impot, personne agee seule",
+   "naam_fr": "Crédit d'impôt, personne âgée seule",
    "naam_officieel": "Alleenstaande ouderenkorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9907,7 +9907,7 @@
   {
    "id": "p.nl.ib.aow_leeftijd",
    "naam_nl": "AOW-leeftijd",
-   "naam_fr": "Age de la retraite AOW",
+   "naam_fr": "Âge de la retraite AOW",
    "naam_officieel": "AOW-leeftijd per geboortejaar",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -9955,7 +9955,7 @@
   {
    "id": "p.nl.ib.arbeidskorting_max",
    "naam_nl": "Arbeidskorting, maximum",
-   "naam_fr": "Credit d impot sur le travail, maximum",
+   "naam_fr": "Crédit d'impôt sur le travail, maximum",
    "naam_officieel": "Arbeidskorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10066,7 +10066,7 @@
   {
    "id": "p.nl.ib.grens_schijf_1",
    "naam_nl": "Grens eerste schijf box 1",
-   "naam_fr": "Limite de la premiere tranche box 1",
+   "naam_fr": "Limite de la première tranche box 1",
    "naam_officieel": "Einde eerste schijf box 1",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10129,7 +10129,7 @@
   {
    "id": "p.nl.ib.grens_schijf_2",
    "naam_nl": "Grens tweede schijf box 1",
-   "naam_fr": "Limite de la deuxieme tranche box 1",
+   "naam_fr": "Limite de la deuxième tranche box 1",
    "naam_officieel": "Einde tweede schijf box 1",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10185,7 +10185,7 @@
   {
    "id": "p.nl.ib.hk_afbouw_factor",
    "naam_nl": "Afbouwfactor algemene heffingskorting",
-   "naam_fr": "Taux de degressivite du credit d impot general",
+   "naam_fr": "Taux de dégressivité du crédit d'impôt général",
    "naam_officieel": "Afbouwpercentage algemene heffingskorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10248,7 +10248,7 @@
   {
    "id": "p.nl.ib.hk_afbouw_start",
    "naam_nl": "Startpunt afbouw algemene heffingskorting",
-   "naam_fr": "Debut de la degressivite du credit d impot general",
+   "naam_fr": "Début de la dégressivité du crédit d'impôt général",
    "naam_officieel": "Afbouwgrens algemene heffingskorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10311,7 +10311,7 @@
   {
    "id": "p.nl.ib.mkb_winstvrijstelling",
    "naam_nl": "MKB-winstvrijstelling",
-   "naam_fr": "Exoneration des benefices PME",
+   "naam_fr": "Exonération des bénéfices PME",
    "naam_officieel": "MKB-winstvrijstelling",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10367,7 +10367,7 @@
   {
    "id": "p.nl.ib.ouderenkorting",
    "naam_nl": "Ouderenkorting",
-   "naam_fr": "Credit d impot pour personnes agees",
+   "naam_fr": "Crédit d'impôt pour personnes âgées",
    "naam_officieel": "Ouderenkorting",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10463,7 +10463,7 @@
   {
    "id": "p.nl.ib.tarieven_boven_aow",
    "naam_nl": "Tarieven box 1 boven de AOW-leeftijd",
-   "naam_fr": "Taux box 1 apres l age AOW",
+   "naam_fr": "Taux box 1 après l'âge AOW",
    "naam_officieel": "Gecombineerd tarief zonder AOW-premie",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10526,7 +10526,7 @@
   {
    "id": "p.nl.ib.tarieven_onder_aow",
    "naam_nl": "Tarieven box 1 onder de AOW-leeftijd",
-   "naam_fr": "Taux box 1 avant l age AOW",
+   "naam_fr": "Taux box 1 avant l'âge AOW",
    "naam_officieel": "Gecombineerd tarief inkomstenbelasting en premie volksverzekeringen",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -10589,7 +10589,7 @@
   {
    "id": "p.nl.leges.paspoort_verlengen_buitenland",
    "naam_nl": "Nederlands paspoort verlengen in Frankrijk",
-   "naam_fr": "Renouvellement du passeport neerlandais en France",
+   "naam_fr": "Renouvellement du passeport néerlandais en France",
    "naam_officieel": "Consulaire leges paspoort",
    "land": "NL",
    "lastensoort": "overig_transactiekosten",
@@ -10631,7 +10631,7 @@
    "gebruikt_in": [
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/bureaucratie.ts:44",
      "waarde_in_tool": "83,37",
      "afwijkend": false
@@ -10741,7 +10741,7 @@
   {
    "id": "p.nl.wlz.max_bijdrage_inkomen",
    "naam_nl": "Maximumbijdrage-inkomen Wlz",
-   "naam_fr": "Revenu maximal soumis a la cotisation Wlz",
+   "naam_fr": "Revenu maximal soumis à la cotisation Wlz",
    "naam_officieel": "Maximum bijdrage-inkomen Wlz",
    "land": "NL",
    "lastensoort": "sociaal",
@@ -10797,7 +10797,7 @@
   {
    "id": "p.nl.wlz.max_bijdrage_inkomen_voor_1946",
    "naam_nl": "Maximumbijdrage-inkomen Wlz, geboortejaar 1945 of eerder",
-   "naam_fr": "Revenu maximal Wlz, nes en 1945 ou avant",
+   "naam_fr": "Revenu maximal Wlz, nés en 1945 ou avant",
    "naam_officieel": "Maximum bijdrage-inkomen Wlz voor geboortejaren tot en met 1945",
    "land": "NL",
    "lastensoort": "sociaal",
@@ -10909,7 +10909,7 @@
   {
    "id": "p.nl.zorg.eigen_risico",
    "naam_nl": "Verplicht eigen risico Zvw",
-   "naam_fr": "Franchise obligatoire de l assurance maladie",
+   "naam_fr": "Franchise obligatoire de l'assurance maladie",
    "naam_officieel": "Verplicht eigen risico",
    "land": "NL",
    "lastensoort": "verzekering_overheidsgekaderd",
@@ -10957,7 +10957,7 @@
   {
    "id": "p.nl.zorg.nominale_premie",
    "naam_nl": "Nominale zorgpremie per volwassene per jaar",
-   "naam_fr": "Prime nominale d assurance maladie par adulte et par an",
+   "naam_fr": "Prime nominale d'assurance maladie par adulte et par an",
    "naam_officieel": "Standaardpremie Wet op de zorgtoeslag",
    "land": "NL",
    "lastensoort": "verzekering_overheidsgekaderd",
@@ -11063,7 +11063,7 @@
   {
    "id": "p.nl.zorgtoeslag.afbouwpercentage",
    "naam_nl": "Afbouwpercentage zorgtoeslag",
-   "naam_fr": "Taux de degressivite de l allocation sante",
+   "naam_fr": "Taux de dégressivité de l'allocation santé",
    "naam_officieel": "Afbouwpercentage boven het drempelinkomen",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -11119,7 +11119,7 @@
   {
    "id": "p.nl.zorgtoeslag.drempelinkomen",
    "naam_nl": "Drempelinkomen zorgtoeslag",
-   "naam_fr": "Revenu de seuil pour l allocation sante",
+   "naam_fr": "Revenu de seuil pour l'allocation santé",
    "naam_officieel": "Drempelinkomen zorgtoeslag",
    "land": "NL",
    "lastensoort": "fiscaal",
@@ -11399,7 +11399,7 @@
   {
    "id": "p.nl.zvw.max_bijdrage_inkomen",
    "naam_nl": "Maximumbijdrage-inkomen Zvw",
-   "naam_fr": "Revenu maximal soumis a la cotisation Zvw",
+   "naam_fr": "Revenu maximal soumis à la cotisation Zvw",
    "naam_officieel": "Maximum bijdrage-inkomen Zvw",
    "land": "NL",
    "lastensoort": "sociaal",
@@ -11510,7 +11510,7 @@
   {
    "id": "p.nl.zvw.percentage_laag",
    "naam_nl": "Zvw inkomensafhankelijke bijdrage, lage percentage",
-   "naam_fr": "Cotisation Zvw dependante du revenu, taux reduit",
+   "naam_fr": "Cotisation Zvw dépendante du revenu, taux réduit",
    "naam_officieel": "Lage percentage inkomensafhankelijke bijdrage Zvw",
    "land": "NL",
    "lastensoort": "sociaal",
@@ -11643,7 +11643,7 @@
   {
    "id": "p.xb.cak.nominale_zvw_bijdrage_jaar",
    "naam_nl": "Nominale Zvw-bijdrage verdragsgerechtigden per jaar",
-   "naam_fr": "Cotisation Zvw nominale annuelle, beneficiaires conventionnes",
+   "naam_fr": "Cotisation Zvw nominale annuelle, bénéficiaires conventionnés",
    "naam_officieel": "Nominale Zvw-bijdrage, voor toepassing van de woonlandfactor",
    "land": "XB",
    "lastensoort": "sociaal",
@@ -11666,7 +11666,7 @@
    "status": "vastgesteld",
    "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
    "bron_kenmerk": "Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen",
-   "bronsoort": "secundair: publicatiepagina van het CAK, de onderliggende ministeriele regeling niet zelf gelezen",
+   "bronsoort": "secundair: publicatiepagina van het CAK, de onderliggende ministeriële regeling niet zelf gelezen",
    "instantie": "Het CAK",
    "verificatiedatum": "2026-09-15",
    "verificatie_door": "financieel-kompas-ai, config.json",
@@ -11692,7 +11692,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:79",
      "waarde_in_tool": "157,00 euro per maand",
      "afwijkend": false
@@ -11706,7 +11706,7 @@
   {
    "id": "p.xb.cak.rekenwijze_verdragsbijdrage",
    "naam_nl": "Rekenwijze van de CAK-verdragsbijdrage",
-   "naam_fr": "Methode de calcul de la cotisation conventionnelle",
+   "naam_fr": "Méthode de calcul de la cotisation conventionnelle",
    "naam_officieel": null,
    "land": "XB",
    "lastensoort": "sociaal",
@@ -11754,7 +11754,7 @@
   {
    "id": "p.xb.cak.woonlandfactor_fr",
    "naam_nl": "Woonlandfactor Frankrijk",
-   "naam_fr": "Coefficient pays de residence, France",
+   "naam_fr": "Coefficient pays de résidence, France",
    "naam_officieel": "Woonlandfactor Frankrijk, Zvw- en Wlz-bijdrage verdragsgerechtigden",
    "land": "XB",
    "lastensoort": "sociaal",
@@ -11777,7 +11777,7 @@
    "status": "vastgesteld",
    "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
    "bron_kenmerk": "Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen, bron bijgewerkt 29 december 2025",
-   "bronsoort": "secundair: publicatiepagina van het CAK, de onderliggende ministeriele regeling niet zelf gelezen",
+   "bronsoort": "secundair: publicatiepagina van het CAK, de onderliggende ministeriële regeling niet zelf gelezen",
    "instantie": "Het CAK",
    "verificatiedatum": "2026-09-15",
    "verificatie_door": "financieel-kompas-ai, config.json",
@@ -11810,7 +11810,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/verzekeren.ts:79",
      "waarde_in_tool": "0,8304",
      "afwijkend": false
@@ -11828,7 +11828,7 @@
   {
    "id": "p.xb.deruyter.csg_crds_geschrapt",
    "naam_nl": "CSG en CRDS die bij De Ruyter vervallen",
-   "naam_fr": "CSG et CRDS ecartees dans la situation De Ruyter",
+   "naam_fr": "CSG et CRDS écartées dans la situation De Ruyter",
    "naam_officieel": "CSG 9,2 procent en CRDS 0,5 procent",
    "land": "XB",
    "lastensoort": "sociaal",
@@ -11877,7 +11877,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:108",
      "waarde_in_tool": "CSG 9,2 plus CRDS 0,5",
      "afwijkend": false
@@ -11890,9 +11890,9 @@
   },
   {
    "id": "p.xb.deruyter.prelevement_solidarite",
-   "naam_nl": "Prelevement de solidarite bij De Ruyter",
-   "naam_fr": "Prelevement de solidarite, situation De Ruyter",
-   "naam_officieel": "Prelevement de solidarite",
+   "naam_nl": "Prélèvement de solidarité bij De Ruyter",
+   "naam_fr": "Prélèvement de solidarité, situation De Ruyter",
+   "naam_officieel": "Prélèvement de solidarité",
    "land": "XB",
    "lastensoort": "sociaal",
    "regeling": {
@@ -11918,7 +11918,7 @@
    "instantie": "DGFiP",
    "verificatiedatum": "2026-08-12",
    "verificatie_door": "Vastgoedtransactie, bronnen.json",
-   "publicatiemoment": "wijziging alleen bij een loi de financement de la securite sociale",
+   "publicatiemoment": "wijziging alleen bij een loi de financement de la sécurité sociale",
    "aangekondigde_wijziging": null,
    "levensduur_a": {
     "aanpassingsfrequentie": "zelden",
@@ -11947,7 +11947,7 @@
     },
     {
      "repo": "cafeclaude",
-     "cockpit_onderdeel": "CC, Cafe Claude",
+     "cockpit_onderdeel": "CC, Café Claude",
      "locatie": "lib/domains/prompts/geld.ts:107-108",
      "waarde_in_tool": "7,5",
      "afwijkend": false
@@ -11964,13 +11964,13 @@
    "uitzonderingen": [
     "Wie voor ziektekosten onder een Frans verplicht stelsel valt, komt hier niet voor in aanmerking en betaalt de volle 17,2 procent. Of iemand onder de uitzondering valt, is een vraag voor een belastingadviseur of de eigen ziektekostenverzekeraar."
    ],
-   "opmerkingen": "Wie voor ziektekosten onder de wetgeving van een ander land van de EER of Zwitserland valt en niet ten laste komt van een Frans verplicht stelsel, is geen CSG en CRDS verschuldigd. Alleen het prelevement de solidarite blijft over.",
+   "opmerkingen": "Wie voor ziektekosten onder de wetgeving van een ander land van de EER of Zwitserland valt en niet ten laste komt van een Frans verplicht stelsel, is geen CSG en CRDS verschuldigd. Alleen het prélèvement de solidarité blijft over.",
    "kandidaat": false
   },
   {
    "id": "p.xb.ehic.geldigheidsduur",
    "naam_nl": "Europese ziekteverzekeringskaart, geldigheidsduur",
-   "naam_fr": "Carte europeenne d assurance maladie, duree",
+   "naam_fr": "Carte européenne d'assurance maladie, durée",
    "naam_officieel": null,
    "land": "XB",
    "lastensoort": "verzekering_overheidsgekaderd",
@@ -12018,7 +12018,7 @@
   {
    "id": "p.xb.s1.recht_en_geldigheid",
    "naam_nl": "S1, recht en geldigheidsduur",
-   "naam_fr": "Formulaire S1, droit et duree de validite",
+   "naam_fr": "Formulaire S1, droit et durée de validité",
    "naam_officieel": "Art. 24 en 25 Vo. 883/2004",
    "land": "XB",
    "lastensoort": "verzekering_overheidsgekaderd",
@@ -12066,7 +12066,7 @@
   {
    "id": "p.xb.verdrag.artikel_dividend",
    "naam_nl": "Bronheffing op dividend onder het verdrag",
-   "naam_fr": "Retenue a la source sur les dividendes",
+   "naam_fr": "Retenue à la source sur les dividendes",
    "naam_officieel": "Art. 10 verdrag NL-FR 1973",
    "land": "XB",
    "lastensoort": "fiscaal",
@@ -12258,7 +12258,7 @@
   {
    "id": "p.xb.verdrag.voorkomingsmethode",
    "naam_nl": "Methode ter voorkoming van dubbele belasting",
-   "naam_fr": "Methode d elimination de la double imposition",
+   "naam_fr": "Méthode d'élimination de la double imposition",
    "naam_officieel": "Art. 24 verdrag NL-FR 1973",
    "land": "XB",
    "lastensoort": "fiscaal",
@@ -12306,7 +12306,7 @@
   {
    "id": "p.xb.vo883.aanwijsregel",
    "naam_nl": "Aanwijsregel van de toepasselijke socialezekerheidswetgeving",
-   "naam_fr": "Regle de determination de la legislation applicable",
+   "naam_fr": "Règle de détermination de la législation applicable",
    "naam_officieel": "Titel II, art. 11 tot en met 16 Vo. 883/2004",
    "land": "XB",
    "lastensoort": "sociaal",

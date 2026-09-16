@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.nl.ib.grens_schijf_2",
+  "naam_nl": "Grens tweede schijf box 1",
+  "naam_fr": "Limite de la deuxieme tranche box 1",
+  "naam_officieel": "Einde tweede schijf box 1",
+  "land": "NL",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "nl.ib",
+   "naam": "Inkomstenbelasting box 1",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": "drempel",
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_grondslag",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": "Belastingdienst, half december",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:36",
+    "waarde_in_tool": "78426",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

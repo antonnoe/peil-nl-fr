@@ -63,7 +63,7 @@ Statisch, onder `/api/v1/`. Elk antwoord bevat versie, versiedatum, licentie CC 
 
 `index.json`, `parameters.json`, `parameters/<id>.json`, `land/<code>.json`, `lastensoort/<soort>.json`, `regeling/<slug>.json`, `tool/<repo>.json`, `rekenregels.json`, `duidingsregels.json`, `documenten.json`, `ijkkalender.json`, `state.json`, `changelog.json` en `register.csv`.
 
-Elke publicatie krijgt een versienummer; eerdere versies blijven opvraagbaar onder `/api/versies/<versie>/` met dezelfde padstructuur. De paden zijn zo gekozen dat een latere laag met sleutels ze ongewijzigd kan bedienen.
+Elke publicatie krijgt een versienummer; eerdere versies blijven opvraagbaar onder `/api/versies/<versie>/` met dezelfde padstructuur. De bevroren kopie van een afgesloten versie staat in de repo onder `bevroren/<versie>/`, omdat GitHub Pages bij elke publicatie de hele site vervangt. De paden zijn zo gekozen dat een latere laag met sleutels ze ongewijzigd kan bedienen.
 
 ## Signalen voor de Cockpit
 
@@ -92,7 +92,7 @@ Kort: open een issue met het sjabloon `correctie parameter`, of wijzig `data/reg
 ## Bouwen en testen
 
 ```
-npm test     # schemavalidatie, id's, verwijzingen, taalregels
+npm test     # schemavalidatie, id's, verwijzingen, taal- en accentregels, hoogte van de startpagina
 npm run bouw # site en API naar dist/
 ```
 
@@ -111,6 +111,7 @@ Geen afhankelijkheden, geen `npm install`. De validator en de build staan in `to
 | `data/inventarisatie.json` | De inventarisatie uit taak 0 |
 | `peil/state.json` | Signalen voor de Cockpit |
 | `tools/` | Afleiding, build, validator |
+| `bevroren/` | De API van elke afgesloten versie, zoals die toen is uitgeleverd |
 | `docs/volledigheid.md` | Welke grootheden nodig zijn, en de gatenlijst |
 | `docs/levensduur.md` | Levensduur per categorie |
 | `docs/over-peil.md` | Doel, harde regels, licentie, correctieprocedure, API |

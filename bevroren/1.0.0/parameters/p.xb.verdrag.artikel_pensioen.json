@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.xb.verdrag.artikel_pensioen",
+  "naam_nl": "Verdragstoewijzing pensioen en lijfrente",
+  "naam_fr": "Attribution conventionnelle des pensions",
+  "naam_officieel": "Art. 18 en 19 verdrag NL-FR 1973",
+  "land": "XB",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "xb.verdrag",
+   "naam": "Belastingverdrag Nederland-Frankrijk 1973",
+   "belastingtype": "inkomstenbelasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "tekst",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://wetten.overheid.nl/BWBV0003649",
+  "bron_kenmerk": "Verdrag tussen Nederland en Frankrijk tot het vermijden van dubbele belasting, 16 maart 1973, art. 18 en 19",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "Ministerie van Financien",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Bepaalt of Nederland of Frankrijk mag heffen over een pensioen. Dit is de eerste vraag bij elke emigratie en er is in het hele netwerk van platforms geen enkele vastlegging van.",
+  "kandidaat": true
+ }
+}

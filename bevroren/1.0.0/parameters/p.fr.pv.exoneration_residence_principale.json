@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.pv.exoneration_residence_principale",
+  "naam_nl": "Vrijstelling meerwaarde hoofdverblijf",
+  "naam_fr": "Exoneration de la residence principale",
+  "naam_officieel": "Art. 150 U II 1 CGI",
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.pv",
+   "naam": "Plus-value immobiliere des particuliers",
+   "belastingtype": "meerwaardeheffing",
+   "socialelastentype": null,
+   "vrijstellingstype": "vrijstelling",
+   "transactionele_basis": "meerwaarde"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "tekst",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-vends-mon-bien-immobilier-vais-je-payer-de-la-plus-value-immobiliere",
+  "bron_kenmerk": "art. 150 U II 1 CGI; impots.gouv.fr",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "DGFiP",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De meest gebruikte vrijstelling van allemaal, en de enige reden waarom de meeste verkopen onbelast blijven. Vastgoedtransactie kent wel de vrijstelling voor de voormalige hoofdwoning van een niet-resident, maar niet deze.",
+  "kandidaat": true
+ }
+}

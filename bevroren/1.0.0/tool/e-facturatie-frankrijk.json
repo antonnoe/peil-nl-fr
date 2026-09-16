@@ -1,0 +1,101 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "e-facturatie-frankrijk",
+ "cockpit_onderdeel": "IF / CA, e-facturatie",
+ "aantal": 3,
+ "waarschuwingen": [],
+ "parameters": [
+  {
+   "id": "p.fr.efact.datum_ontvangstplicht",
+   "naam_nl": "Invoeringsdatum ontvangstplicht e-facturatie",
+   "naam_fr": "Date d entree en vigueur de l obligation de reception",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.efact",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "1 september 2026",
+   "eenheid": "datum",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-08",
+   "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
+   "gebruikt_in": [
+    "e-facturatie-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.efact.datum_ontvangstplicht.json",
+   "locaties": [
+    {
+     "repo": "e-facturatie-frankrijk",
+     "cockpit_onderdeel": "IF / CA, e-facturatie",
+     "locatie": "data/rules.ts:44-49",
+     "waarde_in_tool": "1 september 2026",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.efact.datum_uitgifteplicht_pme",
+   "naam_nl": "Invoeringsdatum uitgifteplicht PME en TPE",
+   "naam_fr": "Date d entree en vigueur de l obligation d emission, PME et TPE",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.efact",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "1 september 2027",
+   "eenheid": "datum",
+   "geldig_jaar": "2027",
+   "verificatiedatum": "2026-07-08",
+   "bron_url": "https://www.impots.gouv.fr/facturation-electronique",
+   "gebruikt_in": [
+    "e-facturatie-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.efact.datum_uitgifteplicht_pme.json",
+   "locaties": [
+    {
+     "repo": "e-facturatie-frankrijk",
+     "cockpit_onderdeel": "IF / CA, e-facturatie",
+     "locatie": "data/rules.ts:54-56",
+     "waarde_in_tool": "1 september 2027",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.efact.grens_tpe",
+   "naam_nl": "Grens voor een TPE",
+   "naam_fr": "Seuil de la tres petite entreprise",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.efact",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "minder dan 10 medewerkers en maximaal 2 miljoen euro omzet of balanstotaal",
+   "eenheid": "EUR en aantal",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-07-08",
+   "bron_url": null,
+   "gebruikt_in": [
+    "e-facturatie-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.efact.grens_tpe.json",
+   "locaties": [
+    {
+     "repo": "e-facturatie-frankrijk",
+     "cockpit_onderdeel": "IF / CA, e-facturatie",
+     "locatie": "data/rules.ts:103",
+     "waarde_in_tool": "minder dan 10 medewerkers en maximaal 2 miljoen euro",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

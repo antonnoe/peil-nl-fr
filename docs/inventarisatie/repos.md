@@ -9,7 +9,7 @@ Motiveringen zijn ingekort tot ten hoogste 60 tekens; de volledige onderbouwing 
 | Repo | Rekenfunctie | Par. | Vermoedelijk Cockpit-onderdeel | Motivering | Besluit Anton |
 |---|---|---|---|---|---|
 | `financieel-kompas-ai` | **ja** | 59 | CC / IF, Financieel Kompas (AI-versie) | Volledig parameterbestand config.json met NL- | **ja** |
-| `cafeclaude` | **ja** | 34 | CC, Cafe Claude | Domein- en auditprompts bevatten harde 2026-bedragen | **ja** |
+| `cafeclaude` | **ja** | 34 | CC, Café Claude | Domein- en auditprompts bevatten harde 2026-bedragen | **ja** |
 | `financieel-kompas` | **ja** | 20 | IF, Financieel Kompas (voorganger) | Oudere config.json met dezelfde structuur maar afwijkende | **nee** |
 | `Vastgoedtransactie` | **ja** | 20 | Vastgoedtransacties, transactiekostentool | Rekenkern calc.js met emolumenten | **ja** |
 | `energieportaal` | **ja** | 10 | IF, EnergiePortaal | Rekenengine met klimaatzones | **ja** |
@@ -74,7 +74,7 @@ Motiveringen zijn ingekort tot ten hoogste 60 tekens; de volledige onderbouwing 
 | `fr-auto-import-tool` | **nee** | 0 | IF, import | Importtool voor artikelen | **nee** |
 | `france-M2` | **nee** | 0 | IF, M2 | Eén pagina | **nee** |
 | `france-newsdesk` | **nee** | 0 | NLFR / IF, newsdesk | Nieuwsverwerking en RSS-uitvoer | **nee** |
-| `Frankrijk-legal` | **nee** | 0 | IF, legal | Juridische pagina's zonder bedragen | **nee** |
+| `Frankrijk-legal` | **nee** | 0 | IF, légal | Juridische pagina's zonder bedragen | **nee** |
 | `frankrijknieuws` | **nee** | 0 | IF, nieuws | Nieuwsfeed | **nee** |
 | `franse-huizen-checker` | **nee** | 0 | IF, huizenchecker | Checker zonder rekenparameters | **nee** |
 | `Franse-taal-in-contextuele-module` | **nee** | 0 | IF, taalmodule | Taalmodule; percentages zijn opmaak of voorbeelden | **nee** |

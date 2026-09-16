@@ -1,0 +1,73 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "nl.erf",
+  "naam": "Successiewet 1956, erfbelasting",
+  "belastingtype": "erf_en_schenkbelasting",
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "nalatenschap"
+ },
+ "aantal": 3,
+ "parameters": [
+  {
+   "id": "p.nl.erf.tarieven",
+   "naam_nl": "Tarieven erfbelasting",
+   "naam_fr": "Taux des droits de succession",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.erf",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.belastingdienst.nl",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.erf.tarieven.json"
+  },
+  {
+   "id": "p.nl.erf.vrijstelling_kind",
+   "naam_nl": "Vrijstelling erfbelasting kind",
+   "naam_fr": "Abattement, enfant",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.erf",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.belastingdienst.nl",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.erf.vrijstelling_kind.json"
+  },
+  {
+   "id": "p.nl.erf.vrijstelling_partner",
+   "naam_nl": "Vrijstelling erfbelasting partner",
+   "naam_fr": "Abattement sur les droits de succession, partenaire",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.erf",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.belastingdienst.nl",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.erf.vrijstelling_partner.json"
+  }
+ ]
+}

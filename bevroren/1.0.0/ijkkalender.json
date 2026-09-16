@@ -1,0 +1,394 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "ijkmomenten": [
+  {
+   "sleutel": "nl_december",
+   "naam": "IJkmoment NL en CAK",
+   "maand": 12,
+   "dag": 15,
+   "domein": [
+    "NL fiscaal",
+    "NL sociaal",
+    "CAK en woonlandfactor"
+   ],
+   "omschrijving": "Half december staan het Belastingplan, de premiepercentages, de heffingskortingen, de zorgtoeslagpercentages en de woonlandfactor van het CAK vast voor het komende jaar. Alles wat per 1 januari ingaat, wordt hier geijkt."
+  },
+  {
+   "sleutel": "fr_april",
+   "naam": "IJkmoment FR",
+   "maand": 4,
+   "dag": 15,
+   "domein": [
+    "FR fiscaal",
+    "FR sociaal"
+   ],
+   "omschrijving": "Half april zijn de fiches van service-public.fr en de aangiftecampagne van impots.gouv.fr bijgewerkt naar het lopende jaar. De Franse abattements, schijven, decote en CSG-grenzen worden hier geijkt."
+  }
+ ],
+ "maanden": [
+  {
+   "maand": 1,
+   "naam": "januari",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Ingangsdatum van vrijwel alle Nederlandse fiscale en sociale waarden",
+     "instantie": "Belastingdienst en Ministerie van VWS",
+     "parameters": [
+      "p.nl.aow.bruto_alleenstaand",
+      "p.nl.aow.bruto_partner",
+      "p.nl.box2.tarieven",
+      "p.nl.box3.heffingsvrij_alleenstaand",
+      "p.nl.box3.heffingsvrij_partners",
+      "p.nl.box3.rendement_beleggingen",
+      "p.nl.box3.rendement_schulden",
+      "p.nl.box3.rendement_spaargeld",
+      "p.nl.box3.tarief",
+      "p.nl.btw.tarieven",
+      "p.nl.erf.tarieven",
+      "p.nl.erf.vrijstelling_kind",
+      "p.nl.erf.vrijstelling_partner",
+      "p.nl.ib.aftrektarief_hypotheekrente",
+      "p.nl.ib.ak_afbouw_factor",
+      "p.nl.ib.ak_afbouw_start",
+      "p.nl.ib.algemene_heffingskorting_max",
+      "p.nl.ib.alleenstaande_ouderenkorting",
+      "p.nl.ib.aow_leeftijd",
+      "p.nl.ib.arbeidskorting_max",
+      "p.nl.ib.eigenwoningforfait",
+      "p.nl.ib.grens_schijf_1",
+      "p.nl.ib.grens_schijf_2",
+      "p.nl.ib.hk_afbouw_factor",
+      "p.nl.ib.hk_afbouw_start",
+      "p.nl.ib.mkb_winstvrijstelling",
+      "p.nl.ib.ouderenkorting",
+      "p.nl.ib.premie_volksverzekeringen",
+      "p.nl.ib.tarieven_boven_aow",
+      "p.nl.ib.tarieven_onder_aow",
+      "p.nl.leges.paspoort_verlengen_buitenland",
+      "p.nl.ovb.tarieven",
+      "p.nl.schenk.vrijstelling_jaarlijks_kind",
+      "p.nl.wlz.max_bijdrage_inkomen",
+      "p.nl.wlz.max_bijdrage_inkomen_voor_1946",
+      "p.nl.wlz.percentage",
+      "p.nl.zorg.eigen_risico",
+      "p.nl.zorg.nominale_premie",
+      "p.nl.zorg.nominale_premie_raming",
+      "p.nl.zorgtoeslag.afbouwpercentage",
+      "p.nl.zorgtoeslag.drempelinkomen",
+      "p.nl.zorgtoeslag.normpercentage_met_partner",
+      "p.nl.zorgtoeslag.normpercentage_zonder_partner",
+      "p.nl.zorgtoeslag.vermogensgrens_met_partner",
+      "p.nl.zorgtoeslag.vermogensgrens_zonder_partner",
+      "p.nl.zvw.max_bijdrage_inkomen",
+      "p.nl.zvw.percentage_hoog",
+      "p.nl.zvw.percentage_laag"
+     ]
+    },
+    {
+     "omschrijving": "Ingangsdatum van de CAK-woonlandfactor en de verdragsbijdrage",
+     "instantie": "Het CAK",
+     "parameters": [
+      "p.xb.cak.bijdrage_gemiddeld_oud",
+      "p.xb.cak.nominale_zvw_bijdrage_jaar",
+      "p.xb.cak.rekenwijze_verdragsbijdrage",
+      "p.xb.cak.woonlandfactor_fr"
+     ]
+    },
+    {
+     "omschrijving": "Ingangsdatum van het Franse barema en de Franse abattements uit de loi de finances",
+     "instantie": "DGFiP",
+     "parameters": [
+      "p.fr.ifi.drempel",
+      "p.fr.ifi.schijven",
+      "p.fr.ir.abattement_65plus",
+      "p.fr.ir.abattement_loon",
+      "p.fr.ir.abattement_micro_diensten",
+      "p.fr.ir.abattement_micro_verhuur",
+      "p.fr.ir.abattement_pensioen",
+      "p.fr.ir.boete_niet_aangifte_buitenlandse_rekening",
+      "p.fr.ir.contribution_haut_revenus",
+      "p.fr.ir.credit_hulp_aan_huis_percentage",
+      "p.fr.ir.credit_hulp_aan_huis_plafond",
+      "p.fr.ir.decote",
+      "p.fr.ir.pfu_tarief",
+      "p.fr.ir.quotient_plafond_per_halve_part",
+      "p.fr.ir.schijven",
+      "p.fr.ir.seuil_declaration",
+      "p.fr.ir.taux_minimum_non_residents",
+      "p.fr.micro.abattement_per_categorie",
+      "p.fr.micro.bic_verhuur",
+      "p.fr.micro.plafonds"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 2,
+   "naam": "februari",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Publicatie van de loi de finances en van aanpassingen in de plus-value-regeling",
+     "instantie": "Legifrance en DGFiP",
+     "parameters": [
+      "p.fr.pv.abattement_ir_per_jaar",
+      "p.fr.pv.abattement_ps_per_jaar",
+      "p.fr.pv.exoneration_residence_principale",
+      "p.fr.pv.forfait_aankoopkosten",
+      "p.fr.pv.forfait_werkzaamheden",
+      "p.fr.pv.surtaxe_barema",
+      "p.fr.pv.tarief_ir",
+      "p.fr.pv.terugname_afschrijvingen_vanaf",
+      "p.fr.pv.vrijstelling_eu_eer"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 3,
+   "naam": "maart",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Aanpassing van de forfait journalier en andere tarieven van de assurance maladie",
+     "instantie": "Assurance maladie",
+     "parameters": [
+      "p.fr.secu.brss_consult_medecin_traitant",
+      "p.fr.secu.brss_kine_per_sessie",
+      "p.fr.secu.brss_specialist_apc",
+      "p.fr.secu.forfait_journalier",
+      "p.fr.secu.franchise_medicale",
+      "p.fr.secu.franchise_transport",
+      "p.fr.secu.participation_forfaitaire",
+      "p.fr.secu.vergoeding_had_en_infirmiere",
+      "p.fr.secu.vergoeding_kine_en_medicatie",
+      "p.fr.secu.vergoeding_zonder_medecin_traitant",
+      "p.fr.secu.vergoedingspercentage_standaard"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 4,
+   "naam": "april",
+   "ijkmoment": "fr_april",
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Bijwerking van de fiches van service-public.fr: abattements op pensioen en loon, decote, CSG-grenzen",
+     "instantie": "service-public.fr en DGFiP",
+     "parameters": [
+      "p.fr.csg.opslag_per_halve_part",
+      "p.fr.csg.rfr_grenzen_per_part",
+      "p.fr.csg.tarief_per_regime",
+      "p.fr.ir.abattement_loon",
+      "p.fr.ir.abattement_pensioen",
+      "p.fr.ir.decote"
+     ]
+    },
+    {
+     "omschrijving": "Publicatie van de eerste DVF-levering van het jaar",
+     "instantie": "DGFiP via data.gouv.fr",
+     "parameters": [
+      "p.fr.markt.dvf_transactieprijzen"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 5,
+   "naam": "mei",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": []
+  },
+  {
+   "maand": 6,
+   "naam": "juni",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Publicatie van de departementale DMTO-tarieven; departementen besluiten voor 30 april",
+     "instantie": "DGFiP",
+     "parameters": [
+      "p.fr.dmto.abattement_bijzondere_departementen",
+      "p.fr.dmto.departementaal_primo",
+      "p.fr.dmto.departementaal_standaard",
+      "p.fr.dmto.frais_assiette",
+      "p.fr.dmto.taxe_communale"
+     ]
+    },
+    {
+     "omschrijving": "Halfjaarlijkse aanpassing van de AOW-bedragen bij het wettelijk minimumloon",
+     "instantie": "SVB en Rijksoverheid",
+     "parameters": [
+      "p.nl.aow.bruto_alleenstaand",
+      "p.nl.aow.bruto_partner"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 7,
+   "naam": "juli",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Ingang van wijzigingen in de taxe de publicite fonciere en de frais d assiette",
+     "instantie": "DGFiP",
+     "parameters": [
+      "p.fr.dmto.frais_assiette",
+      "p.fr.vefa.tpf_tarief"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 8,
+   "naam": "augustus",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Jaarlijkse bijstelling van het TURPE-tarief door de CRE",
+     "instantie": "CRE en Enedis",
+     "parameters": [
+      "p.fr.elec.beheerbijdrage_weigeren_linky",
+      "p.fr.elec.tariefoptiewissel_zonder_linky",
+      "p.fr.elec.wijziging_puissance_souscrite"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 9,
+   "naam": "september",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Indexering van het Consuel-barema",
+     "instantie": "Consuel",
+     "parameters": [
+      "p.fr.elec.consuel_contre_visite",
+      "p.fr.elec.consuel_geel_elektronisch",
+      "p.fr.elec.consuel_indexering",
+      "p.fr.elec.consuel_overige_formulieren"
+     ]
+    },
+    {
+     "omschrijving": "Prinsjesdag: ramingen in de ontwerpbegroting VWS, nog geen vastgestelde waarden",
+     "instantie": "Ministerie van VWS",
+     "parameters": [
+      "p.nl.zorg.nominale_premie_raming"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 10,
+   "naam": "oktober",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Publicatie van de tweede DVF-levering van het jaar",
+     "instantie": "DGFiP via data.gouv.fr",
+     "parameters": [
+      "p.fr.markt.dvf_transactieprijzen"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 11,
+   "naam": "november",
+   "ijkmoment": null,
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Vaststelling van de percentages van de inkomensafhankelijke bijdrage Zvw",
+     "instantie": "Ministerie van VWS en Belastingdienst",
+     "parameters": [
+      "p.nl.zvw.max_bijdrage_inkomen",
+      "p.nl.zvw.percentage_hoog",
+      "p.nl.zvw.percentage_laag"
+     ]
+    }
+   ]
+  },
+  {
+   "maand": 12,
+   "naam": "december",
+   "ijkmoment": "nl_december",
+   "verwachte_wijzigingen": [
+    {
+     "omschrijving": "Belastingplan definitief: tarieven, schijven, heffingskortingen en box 3",
+     "instantie": "Belastingdienst",
+     "parameters": [
+      "p.nl.box3.heffingsvrij_alleenstaand",
+      "p.nl.box3.heffingsvrij_partners",
+      "p.nl.box3.rendement_beleggingen",
+      "p.nl.box3.rendement_schulden",
+      "p.nl.box3.rendement_spaargeld",
+      "p.nl.box3.tarief",
+      "p.nl.ib.aftrektarief_hypotheekrente",
+      "p.nl.ib.ak_afbouw_factor",
+      "p.nl.ib.ak_afbouw_start",
+      "p.nl.ib.algemene_heffingskorting_max",
+      "p.nl.ib.alleenstaande_ouderenkorting",
+      "p.nl.ib.aow_leeftijd",
+      "p.nl.ib.arbeidskorting_max",
+      "p.nl.ib.eigenwoningforfait",
+      "p.nl.ib.grens_schijf_1",
+      "p.nl.ib.grens_schijf_2",
+      "p.nl.ib.hk_afbouw_factor",
+      "p.nl.ib.hk_afbouw_start",
+      "p.nl.ib.mkb_winstvrijstelling",
+      "p.nl.ib.ouderenkorting",
+      "p.nl.ib.premie_volksverzekeringen",
+      "p.nl.ib.tarieven_boven_aow",
+      "p.nl.ib.tarieven_onder_aow"
+     ]
+    },
+    {
+     "omschrijving": "Vaststelling van de standaardpremie en van de zorgtoeslagpercentages",
+     "instantie": "Ministerie van VWS en Belastingdienst Toeslagen",
+     "parameters": [
+      "p.nl.zorg.eigen_risico",
+      "p.nl.zorg.nominale_premie",
+      "p.nl.zorg.nominale_premie_raming",
+      "p.nl.zorgtoeslag.afbouwpercentage",
+      "p.nl.zorgtoeslag.drempelinkomen",
+      "p.nl.zorgtoeslag.normpercentage_met_partner",
+      "p.nl.zorgtoeslag.normpercentage_zonder_partner",
+      "p.nl.zorgtoeslag.vermogensgrens_met_partner",
+      "p.nl.zorgtoeslag.vermogensgrens_zonder_partner"
+     ]
+    },
+    {
+     "omschrijving": "Publicatie van de woonlandfactor en de Zvw- en Wlz-bijdragen voor het komende jaar",
+     "instantie": "Het CAK",
+     "parameters": [
+      "p.nl.wlz.max_bijdrage_inkomen",
+      "p.nl.wlz.max_bijdrage_inkomen_voor_1946",
+      "p.nl.wlz.percentage",
+      "p.xb.cak.bijdrage_gemiddeld_oud",
+      "p.xb.cak.nominale_zvw_bijdrage_jaar",
+      "p.xb.cak.rekenwijze_verdragsbijdrage",
+      "p.xb.cak.woonlandfactor_fr"
+     ]
+    },
+    {
+     "omschrijving": "Halfjaarlijkse aanpassing van de AOW-bedragen bij het wettelijk minimumloon",
+     "instantie": "SVB en Rijksoverheid",
+     "parameters": [
+      "p.nl.aow.bruto_alleenstaand",
+      "p.nl.aow.bruto_partner"
+     ]
+    }
+   ]
+  }
+ ],
+ "toelichting": "Wat hier staat is het normale publicatieritme van de instanties, afgeleid uit het veld publicatiemoment in het register. Het is een verwachting, geen toezegging van een instantie."
+}

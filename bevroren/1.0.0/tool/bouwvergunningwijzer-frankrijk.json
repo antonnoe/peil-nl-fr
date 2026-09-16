@@ -1,0 +1,103 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "bouwvergunningwijzer-frankrijk",
+ "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+ "aantal": 2,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.bouw.drempels_bijgebouw",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.bouw.drempels_bijgebouw",
+   "omschrijving": "1 tool rekent met een waarde voor Oppervlaktedrempels voor een vrijstaand bijgebouw die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "bouwvergunningwijzer-frankrijk",
+     "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+     "locatie": "docs/rule-matrix-v0.1.md:22-24"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.bouw.drempels_uitbreiding",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.bouw.drempels_uitbreiding",
+   "omschrijving": "1 tool rekent met een waarde voor Oppervlaktedrempels voor een uitbreiding die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "bouwvergunningwijzer-frankrijk",
+     "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+     "locatie": "docs/rule-matrix-v0.1.md:27-29"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.bouw.drempels_bijgebouw",
+   "naam_nl": "Oppervlaktedrempels voor een vrijstaand bijgebouw",
+   "naam_fr": "Seuils de surface pour une annexe",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.bouw",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "m2",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "bouwvergunningwijzer-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.bouw.drempels_bijgebouw.json",
+   "locaties": [
+    {
+     "repo": "bouwvergunningwijzer-frankrijk",
+     "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+     "locatie": "docs/rule-matrix-v0.1.md:22-24",
+     "waarde_in_tool": "tot 5 m2 geen formaliteit; 5 tot 20 m2 declaration prealable; boven 20 m2 permis de construire",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.bouw.drempels_uitbreiding",
+   "naam_nl": "Oppervlaktedrempels voor een uitbreiding",
+   "naam_fr": "Seuils de surface pour une extension",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.bouw",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "m2",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "bouwvergunningwijzer-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.bouw.drempels_uitbreiding.json",
+   "locaties": [
+    {
+     "repo": "bouwvergunningwijzer-frankrijk",
+     "cockpit_onderdeel": "IF, Bouwvergunningwijzer",
+     "locatie": "docs/rule-matrix-v0.1.md:27-29",
+     "waarde_in_tool": "buiten zone U tot 20 m2 DP; in zone U tot 40 m2 DP; boven 20 tot 40 m2 architectenplicht toetsen",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

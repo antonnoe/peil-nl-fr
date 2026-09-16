@@ -1,0 +1,237 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.energie",
+  "naam": "Energiekentallen en energieprijzen",
+  "belastingtype": null,
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "verbruik"
+ },
+ "aantal": 10,
+ "parameters": [
+  {
+   "id": "p.fr.energie.apparaatverbruik_per_jaar",
+   "naam_nl": "Apparaatverbruik per jaar",
+   "naam_fr": "Consommation annuelle par appareil",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "kWh/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.energie.apparaatverbruik_per_jaar.json"
+  },
+  {
+   "id": "p.fr.energie.graaddagen_per_klimaatzone",
+   "naam_nl": "Graaddagen en referentietemperatuur per klimaatzone",
+   "naam_fr": "Degres-jours et temperature de reference par zone",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "HDD en graden C",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal",
+    "if-mobiel",
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.graaddagen_per_klimaatzone.json"
+  },
+  {
+   "id": "p.fr.energie.houtenergie_per_stere",
+   "naam_nl": "Energie-inhoud hout per stere",
+   "naam_fr": "Contenu energetique du bois par stere",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "kWh/stere",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.houtenergie_per_stere.json"
+  },
+  {
+   "id": "p.fr.energie.koeldagen_en_zwembadtemperatuur",
+   "naam_nl": "Koeldagen en zwembadtemperatuur per klimaatzone",
+   "naam_fr": "Degres-jours de refroidissement et temperature de piscine",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "CDD en graden C",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.koeldagen_en_zwembadtemperatuur.json"
+  },
+  {
+   "id": "p.fr.energie.omrekenfactoren_kwh",
+   "naam_nl": "Omrekenfactoren naar kWh per eenheid",
+   "naam_fr": "Facteurs de conversion en kWh",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "afgeleid",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "kWh per eenheid",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal",
+    "if-mobiel",
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.omrekenfactoren_kwh.json"
+  },
+  {
+   "id": "p.fr.energie.pv_opbrengst_per_klimaatzone",
+   "naam_nl": "PV-opbrengst per klimaatzone",
+   "naam_fr": "Productible photovoltaique par zone",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "kWh per kWp per jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal",
+    "if-mobiel",
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.pv_opbrengst_per_klimaatzone.json"
+  },
+  {
+   "id": "p.fr.energie.referentieprijzen",
+   "naam_nl": "Referentie-energieprijzen met peildatum",
+   "naam_fr": "Prix de reference de l energie",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "marktindex",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR per eenheid",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.referentieprijzen.json"
+  },
+  {
+   "id": "p.fr.energie.standaardprijzen_invoer",
+   "naam_nl": "Standaard energieprijzen als invulwaarde",
+   "naam_fr": "Prix de l energie par defaut",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "gebruikersinvoer",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR per eenheid",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal",
+    "if-mobiel",
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.energie.standaardprijzen_invoer.json"
+  },
+  {
+   "id": "p.fr.energie.u_waarden_isolatieniveau",
+   "naam_nl": "U-waarden per isolatieniveau",
+   "naam_fr": "Coefficients U par niveau d isolation",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "W/m2K",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal",
+    "if-mobiel",
+    "warmteverlies-calculator",
+    "Energiecalculator-Frankrijk-door-Nederlanders.fr"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.energie.u_waarden_isolatieniveau.json"
+  },
+  {
+   "id": "p.fr.energie.verouderingsdrempel_prijzen",
+   "naam_nl": "Verouderingsdrempel voor de energieprijzen",
+   "naam_fr": "Seuil d obsolescence des prix",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.energie",
+   "variabiliteitsklasse": "afgeleid",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "dagen",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energieportaal"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.energie.verouderingsdrempel_prijzen.json"
+  }
+ ]
+}

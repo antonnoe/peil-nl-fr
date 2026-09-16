@@ -1,0 +1,87 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.energie.graaddagen_per_klimaatzone",
+  "naam_nl": "Graaddagen en referentietemperatuur per klimaatzone",
+  "naam_fr": "Degres-jours et temperature de reference par zone",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.energie",
+   "naam": "Energiekentallen en energieprijzen",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verbruik"
+  },
+  "variabiliteitsklasse": "indicatief",
+  "effect": "bepaalt_grondslag",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "HDD en graden C",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "energieportaal",
+    "cockpit_onderdeel": "IF, EnergiePortaal",
+    "locatie": "engine/dpe.js:28-33",
+    "waarde_in_tool": "med 1400/12, ouest 1900/10, paris 2200/7, centre 2500/6, est 2800/5, mont 3400/2",
+    "afwijkend": false
+   },
+   {
+    "repo": "if-mobiel",
+    "cockpit_onderdeel": "IF, mobiele schil",
+    "locatie": "engine/dpe.js:28-33 (byte-identieke kopie)",
+    "waarde_in_tool": "identiek",
+    "afwijkend": false
+   },
+   {
+    "repo": "warmteverlies-calculator",
+    "cockpit_onderdeel": "IF, warmteverlies",
+    "locatie": "engine/engine.js:6-11",
+    "waarde_in_tool": "identiek, met koeldagen en zwembadtemperatuur erbij",
+    "afwijkend": false
+   },
+   {
+    "repo": "Energiecalculator-Frankrijk-door-Nederlanders.fr",
+    "cockpit_onderdeel": "NLFR, energiecalculator (oud)",
+    "locatie": "script.js:4",
+    "waarde_in_tool": "identiek",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Vier aangesloten tools, identieke waarden. if-mobiel bevat een byte-identieke kopie van de hele engine van energieportaal; dat is een kopie, geen verwijzing, en dus een onderhoudsrisico.",
+  "kandidaat": false,
+  "verantwoordelijke": "Anton Noe, Communities Abroad",
+  "houdbaarheidsdatum": "2027-09-16"
+ }
+}

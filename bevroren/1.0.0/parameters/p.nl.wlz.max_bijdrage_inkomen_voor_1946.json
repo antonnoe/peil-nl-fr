@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.nl.wlz.max_bijdrage_inkomen_voor_1946",
+  "naam_nl": "Maximumbijdrage-inkomen Wlz, geboortejaar 1945 of eerder",
+  "naam_fr": "Revenu maximal Wlz, nes en 1945 ou avant",
+  "naam_officieel": "Maximum bijdrage-inkomen Wlz voor geboortejaren tot en met 1945",
+  "land": "NL",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "nl.wlz",
+   "naam": "Wet langdurige zorg",
+   "belastingtype": null,
+   "socialelastentype": "premie_volksverzekering",
+   "vrijstellingstype": "plafond",
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": 41123,
+  "waarde_weergave": "41.123 euro per jaar",
+  "eenheid": "EUR/jaar",
+  "geldig_jaar": "2026",
+  "geldig_van": "2026-01-01",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+  "bron_kenmerk": "Het CAK, pagina Woonlandfactor, Zvw- en Wlz-bijdragen",
+  "bronsoort": "secundair: pagina van het CAK, de onderliggende regeling niet zelf gelezen",
+  "instantie": "Het CAK",
+  "verificatiedatum": "2026-09-15",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "CAK, eind december",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:254",
+    "waarde_in_tool": "41123",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

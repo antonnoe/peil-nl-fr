@@ -1,6 +1,6 @@
 {
   "name": "peil-nl-fr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Openbaar parameterregister NL-FR van Communities Abroad",
   "type": "module",
   "private": true,

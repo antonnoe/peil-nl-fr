@@ -10,7 +10,7 @@ Peildatum 16 september 2026. Versie 1.0.0. Alles op `main`.
 |---|---|
 | vastgesteld | 52 |
 | raming | 1 |
-| te verifieren | 156 |
+| te verifiëren | 156 |
 | vervallen | 1 |
 | **totaal** | **210** |
 
@@ -78,12 +78,12 @@ Uit `docs/volledigheid.md`, in volgorde van gewicht.
 
 1. **Vrijwel niets is geverifieerd.** 52 van de 210 parameters hebben status `vastgesteld`. De overige 156 hebben geen bron met verificatiedatum, en 110 daarvan worden op dit moment wel door een tool gebruikt.
 2. **De Franse inkomstenbelasting is ongeverifieerd.** Het barema, het abattement voor 65-plussers, het plafond van het gezinsquotient, het PFU-tarief en de IFI staan zonder bron in de tools.
-3. **De decote heeft een bron zonder datum.** Financieel Kompas noteert dat uitdrukkelijk zelf. Peil waardeert dat niet stilzwijgend op.
-4. **De base de remboursement van een huisartsconsult klopt niet.** ZorgKompas rekent met 30,00 euro, Cafe Claude noemt 26,50 euro sinds november 2024.
+3. **De décote heeft een bron zonder datum.** Financieel Kompas noteert dat uitdrukkelijk zelf. Peil waardeert dat niet stilzwijgend op.
+4. **De base de remboursement van een huisartsconsult klopt niet.** ZorgKompas rekent met 30,00 euro, Café Claude noemt 26,50 euro sinds november 2024.
 5. **De forfait journalier loopt achter.** ZorgKompas gebruikt 20,00 euro, het handboek 23 euro sinds 1 maart 2026, met een apart bedrag voor psychiatrie.
 6. **De surtaxe wordt in twee tools verschillend berekend.** Plus-Value-Calculator mist de afvlakkingsformule van art. 1609 nonies G CGI.
-7. **De franchise medicale staat binnen een repo op twee waarden**, 0,50 en 1 euro.
-8. **Het plafond van de credit d'impot hulp aan huis verschilt**, 12.000 tegenover 6.000 tot 10.000 euro.
+7. **De franchise médicale staat binnen een repo op twee waarden**, 0,50 en 1 euro.
+8. **Het plafond van de credit d'impôt hulp aan huis verschilt**, 12.000 tegenover 6.000 tot 10.000 euro.
 9. **De energie-engine bestaat vier keer**, waarvan een byte-identieke kopie in `if-mobiel` en twee varianten met afwijkende U-waarden.
 10. **De referentie-energieprijzen dragen per waarde een eigen datum**, van 2025 tot april 2026. De parameter moet worden gesplitst per energiedrager.
 11. **Drie tools gebruiken een vuistregel voor de notariskosten** waar een opgebouwde berekening bestaat.
@@ -91,9 +91,9 @@ Uit `docs/volledigheid.md`, in volgorde van gewicht.
 13. **Bij Calvados en Savoie staan bijzondere DMTO-regelingen** die uit de platte tekst van de DGFiP-tabel niet aan een kolom te koppelen zijn.
 14. **Laag 1 is leeg en laag 2 is een kiem.** De negen grensoverschrijdende regels staan nu als parameter in laag 3.
 15. **Het documentenregister is leeg.**
-16. **Belgie is niet gedekt.** De afbakening is NL-FR.
+16. **België is niet gedekt.** De afbakening is NL-FR.
 
-Daarnaast zijn 46 ontbrekende grootheden aan het register toegevoegd als kandidaat met status `te_verifieren` en met een bron-URL of bronomschrijving. De zwaarste daarvan: de aanwijsregel van verordening 883/2004 en de verdragsartikelen van het verdrag NL-FR 1973, de AOW-leeftijd, de gesplitste premiepercentages volksverzekeringen, de Nederlandse erf- en schenkbelasting in haar geheel, de taxe fonciere en de taxe d habitation, de vrijstelling van de meerwaarde op het hoofdverblijf, de volledige vrijstelling van de langstlevende echtgenoot in Frankrijk, het PASS en de premie van de complementaire sante.
+Daarnaast zijn 46 ontbrekende grootheden aan het register toegevoegd als kandidaat met status `te_verifieren` en met een bron-URL of bronomschrijving. De zwaarste daarvan: de aanwijsregel van verordening 883/2004 en de verdragsartikelen van het verdrag NL-FR 1973, de AOW-leeftijd, de gesplitste premiepercentages volksverzekeringen, de Nederlandse erf- en schenkbelasting in haar geheel, de taxe foncière en de taxe d'habitation, de vrijstelling van de meerwaarde op het hoofdverblijf, de volledige vrijstelling van de langstlevende echtgenoot in Frankrijk, het PASS en de premie van de complémentaire santé.
 
 ## 3. Tien parameters met de hoogste prioriteit voor verificatie
 
@@ -151,19 +151,19 @@ Zodra Pages aanstaat:
 
 **Niet gedaan, omdat het buiten de opdracht viel**
 
-- De Peil-run met Haiku, de adapters per tool, de inventarisatie van de handboeken en PDF's van Cafe Claude, en de API met sleutels. Dat zijn taak 2 en taak 3. Het veld `veranderd` in `state.json` is wel aangemaakt en staat leeg klaar; de API-paden zijn zo gekozen dat er een laag met sleutels voor kan worden gezet zonder dat een pad verandert.
+- De Peil-run met Haiku, de adapters per tool, de inventarisatie van de handboeken en PDF's van Café Claude, en de API met sleutels. Dat zijn taak 2 en taak 3. Het veld `veranderd` in `state.json` is wel aangemaakt en staat leeg klaar; de API-paden zijn zo gekozen dat er een laag met sleutels voor kan worden gezet zonder dat een pad verandert.
 - Duidingsregels. Laag 1 is alleen als schema opgeleverd, zoals gevraagd. De negen grensoverschrijdende regels die eigenlijk in laag 1 horen, staan voorlopig als parameter in laag 3, met in de opmerkingen dat zij verhuizen zodra laag 1 wordt gevuld.
 - Het documentenregister is leeg opgeleverd, met alleen het schema.
 
 **Keuzes bij twijfel**
 
-*De decote is niet vastgesteld.* Financieel Kompas noemt bij de decote een bron en zet in het veld `VERIFIE_LE` dat de bron geen datum van verificatie draagt. Dat is bron zonder datum. De harde regel zegt bron **en** datum, dus de status blijft `te_verifieren`. Dat kost een van de best onderbouwde Franse grootheden zijn groene vinkje, en dat is de bedoeling van de regel.
+*De décote is niet vastgesteld.* Financieel Kompas noemt bij de décote een bron en zet in het veld `VERIFIE_LE` dat de bron geen datum van verificatie draagt. Dat is bron zonder datum. De harde regel zegt bron **en** datum, dus de status blijft `te_verifieren`. Dat kost een van de best onderbouwde Franse grootheden zijn groene vinkje, en dat is de bedoeling van de regel.
 
 *"Geraadpleegd" telt als verificatiedatum, "editie 2026" niet.* Bij het CAK-blok staat `GERAADPLEEGD: 15 september 2026` met een volledige URL. Dat is een datum waarop iemand de bron heeft bekeken, dus een verificatiedatum. `EDITIE: 2026` bij de AOW-bedragen is dat niet: dat zegt alleen voor welk jaar de waarde bedoeld is.
 
 *Waarden zonder bron zijn niet overgenomen als registerwaarde.* Van de 234 gevonden waarden staan er 156 zonder waarde in het register, met alleen de waarde die de tool gebruikt in `gebruikt_in[].waarde_in_tool`. Het register ziet er daardoor leger uit dan het aanvoelt. Dat is juist: wat er staat, klopt aantoonbaar; de rest is zichtbaar open.
 
-*De 101 departementale DMTO-tarieven staan niet als 101 waarden.* Peil legt de verdeling vast (5,00 procent in 89 departementen, 4,50 in 11, 3,80 in 1), de bron, de peildatum en de granulariteit. De volledige tabel staat in `Vastgoedtransactie/dmto.json` en hoeft niet te worden gedupliceerd; dupliceren zou juist een tweede plek maken die kan verouderen.
+*De 101 départementale DMTO-tarieven staan niet als 101 waarden.* Peil legt de verdeling vast (5,00 procent in 89 departementen, 4,50 in 11, 3,80 in 1), de bron, de peildatum en de granulariteit. De volledige tabel staat in `Vastgoedtransactie/dmto.json` en hoeft niet te worden gedupliceerd; dupliceren zou juist een tweede plek maken die kan verouderen.
 
 *De referentie-energieprijzen zijn niet vastgesteld, ondanks een bron.* De parameter bundelt zeven energiedragers met elk een eigen peildatum, van 2025 tot april 2026. Aan zo'n bundel is geen enkele verificatiedatum te hangen zonder te doen alsof. De parameter staat op `te_verifieren` met de datums in de opmerkingen en het splitsen staat in de gatenlijst.
 

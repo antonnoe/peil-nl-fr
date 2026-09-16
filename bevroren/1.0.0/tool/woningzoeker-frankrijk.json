@@ -1,0 +1,152 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "woningzoeker-frankrijk",
+ "cockpit_onderdeel": "IF, Woningzoeker",
+ "aantal": 2,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.notaris.vuistregel_kosten_ancien",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.vuistregel_kosten_ancien",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Vuistregel notariskosten bestaande bouw: cafeclaude 7 tot 8 procent ancien, 2 tot 3 procent neuf; if-tools-api circa 7 tot 8 procent bij bestaande bouw; woningzoeker-frankrijk circa 8 procent, zonder onderscheid.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts:52"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.markt.dvf_transactieprijzen",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.markt.dvf_transactieprijzen",
+   "omschrijving": "3 tools rekent met een waarde voor DVF, werkelijke transactieprijzen onroerend goed die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "Vastgoedtransactie",
+     "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+     "locatie": "index.html, invoerveld aankoopprijs"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx, aankoopprijs"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts, aankoopprijs"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.notaris.vuistregel_kosten_ancien",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.notaris.vuistregel_kosten_ancien",
+   "omschrijving": "3 tools rekent met een waarde voor Vuistregel notariskosten bestaande bouw die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:46"
+    },
+    {
+     "repo": "if-tools-api",
+     "cockpit_onderdeel": "IF, tools-API",
+     "locatie": "src/app/api/woning-analyse/route.ts:52"
+    },
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.markt.dvf_transactieprijzen",
+   "naam_nl": "DVF, werkelijke transactieprijzen onroerend goed",
+   "naam_fr": "DVF, demandes de valeurs foncieres",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.markt",
+   "variabiliteitsklasse": "marktindex",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en EUR/m2",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/",
+   "gebruikt_in": [
+    "Vastgoedtransactie",
+    "woningzoeker-frankrijk",
+    "if-tools-api"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.markt.dvf_transactieprijzen.json",
+   "locaties": [
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx, aankoopprijs",
+     "waarde_in_tool": "gebruikersinvoer",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.notaris.vuistregel_kosten_ancien",
+   "naam_nl": "Vuistregel notariskosten bestaande bouw",
+   "naam_fr": "Regle empirique des frais de notaire, ancien",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.notaris",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "if-tools-api",
+    "woningzoeker-frankrijk"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.notaris.vuistregel_kosten_ancien.json",
+   "locaties": [
+    {
+     "repo": "woningzoeker-frankrijk",
+     "cockpit_onderdeel": "IF, Woningzoeker",
+     "locatie": "components/steps/StepBudget.tsx:52, 129 en 146",
+     "waarde_in_tool": "circa 8 procent, zonder onderscheid",
+     "afwijkend": true
+    }
+   ]
+  }
+ ]
+}

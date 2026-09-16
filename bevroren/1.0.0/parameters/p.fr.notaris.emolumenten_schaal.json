@@ -1,0 +1,85 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.notaris.emolumenten_schaal",
+  "naam_nl": "Emolumenten notaris, trancheschaal",
+  "naam_fr": "Emoluments du notaire, bareme par tranche",
+  "naam_officieel": "Tableau 5 numero 17, art. A444-91 Code de commerce",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.notaris",
+   "naam": "Emoluments et debours du notaire",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "akte"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": [
+   {
+    "tot": 6500,
+    "tarief": 3.87
+   },
+   {
+    "tot": 17000,
+    "tarief": 1.596
+   },
+   {
+    "tot": 60000,
+    "tarief": 1.064
+   },
+   {
+    "tot": null,
+    "tarief": 0.799
+   }
+  ],
+  "waarde_weergave": "tot 6.500 euro 3,870 procent; tot 17.000 euro 1,596 procent; tot 60.000 euro 1,064 procent; daarboven 0,799 procent",
+  "eenheid": "EUR en procent",
+  "geldig_jaar": "2026",
+  "geldig_van": "2026-03-01",
+  "geldig_tot": "2028-02-29",
+  "status": "vastgesteld",
+  "bron_url": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/investir-dans-limmobilier/achat-dun-bien-immobilier-quels-frais-de-notaire-devez-vous-payer",
+  "bron_kenmerk": "art. A444-91 Code de commerce, tabel 5 nr. 17, tarieven verlengd bij arrete van 25 februari 2026",
+  "bronsoort": "secundair: voorlichtingspagina van economie.gouv.fr, het arrete zelf niet gelezen",
+  "instantie": "Ministere de l economie en Conseil superieur du notariat",
+  "verificatiedatum": "2026-08-12",
+  "verificatie_door": "Vastgoedtransactie, bronnen.json",
+  "publicatiemoment": "arrete, laatstelijk 25 februari 2026, geldig tot 29 februari 2028",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "meerjaarlijks",
+   "laatste_wijziging": "2026-02-25",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "Vastgoedtransactie",
+    "cockpit_onderdeel": "Vastgoedtransacties, transactiekostentool",
+    "locatie": "calc.js:96-100",
+    "waarde_in_tool": "trancheschaal 3,870 / 1,596 / 1,064 / 0,799 procent",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": {
+   "invoer": "koopsom 250.000 euro",
+   "verwachte_uitkomst": "emolumenten 2.460,74 euro exclusief btw",
+   "toelichting": "6.500 maal 3,870 procent, plus 10.500 maal 1,596 procent, plus 43.000 maal 1,064 procent, plus 190.000 maal 0,799 procent."
+  },
+  "uitzonderingen": [],
+  "opmerkingen": null,
+  "kandidaat": false
+ }
+}

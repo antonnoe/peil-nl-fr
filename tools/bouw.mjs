@@ -3,7 +3,7 @@
 // plus een bevroren kopie van deze versie onder /api/versies/<versie>/.
 // Geen frameworks, geen externe scripts, geen externe fonts.
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, cpSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, cpSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { bouwApi } from './lib/api.mjs';
@@ -40,6 +40,19 @@ for (const [pad, inhoud] of api) schrijf(pad, inhoud);
 
 // bevroren kopie van deze versie
 for (const [pad, inhoud] of api) schrijf(pad.replace(/^api\/v1\//, `api/versies/${VERSIE}/`), inhoud);
+
+// Eerder gepubliceerde versies. Pages vervangt de hele site bij elke publicatie,
+// dus de kopie van een oude versie moet uit de repo komen. Zie bevroren/README.md.
+const BEVROREN = join(WORTEL, 'bevroren');
+if (existsSync(BEVROREN)) {
+  for (const oudeVersie of readdirSync(BEVROREN)) {
+    const bron = join(BEVROREN, oudeVersie);
+    if (!statSync(bron).isDirectory() || oudeVersie === VERSIE) continue;
+    mkdirSync(join(DIST, 'api', 'versies', oudeVersie), { recursive: true });
+    cpSync(bron, join(DIST, 'api', 'versies', oudeVersie), { recursive: true });
+  }
+}
+
 schrijf('api/versies/index.json', JSON.stringify({
   versies: CHANGELOG.map((v) => ({ versie: v.versie, datum: v.datum, pad: `/api/versies/${v.versie}/index.json` })),
   huidig: VERSIE, huidig_pad: '/api/v1/index.json',
@@ -77,4 +90,4 @@ mkdirSync(join(DIST, 'schema'), { recursive: true });
 cpSync(join(WORTEL, 'schema'), join(DIST, 'schema'), { recursive: true });
 cpSync(join(WORTEL, 'peil', 'state.json'), join(DIST, 'peil', 'state.json'), { force: true });
 
-console.log('dist gebouwd:', api.size, 'API-bestanden,', register.parameters.length + 8, 'pagina s');
+console.log('dist gebouwd:', api.size, 'API-bestanden,', register.parameters.length + 8, 'pagina\'s');

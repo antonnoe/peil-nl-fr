@@ -1,0 +1,159 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.renov",
+  "naam": "Aides a la renovation energetique",
+  "belastingtype": null,
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "verrichting"
+ },
+ "aantal": 7,
+ "parameters": [
+  {
+   "id": "p.fr.renov.besparing_per_graad",
+   "naam_nl": "Besparing per graad lagere binnentemperatuur",
+   "naam_fr": "Economie par degre de moins",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.besparing_per_graad.json"
+  },
+  {
+   "id": "p.fr.renov.ecoptz_maximum",
+   "naam_nl": "Eco-PTZ, maximum leenbedrag",
+   "naam_fr": "Eco-pret a taux zero, montant maximal",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.ecoptz_maximum.json"
+  },
+  {
+   "id": "p.fr.renov.maprimeadapt_maximum",
+   "naam_nl": "MaPrimeAdapt, maximaal aandeel van de kosten",
+   "naam_fr": "MaPrimeAdapt, part maximale des couts",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "ouderenzorg-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.maprimeadapt_maximum.json"
+  },
+  {
+   "id": "p.fr.renov.maprimerenov_budget",
+   "naam_nl": "MaPrimeRenov, budget en achterstand",
+   "naam_fr": "MaPrimeRenov, budget et arrieres",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en aantal",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.maprimerenov_budget.json"
+  },
+  {
+   "id": "p.fr.renov.maprimerenov_plafond",
+   "naam_nl": "MaPrimeRenov, plafondbedrag in de pagina",
+   "naam_fr": "MaPrimeRenov, plafond",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energiebesparing-subsidie-en-fiscale-regelingen"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.maprimerenov_plafond.json"
+  },
+  {
+   "id": "p.fr.renov.ouderdomsgrens_woning",
+   "naam_nl": "Ouderdomsgrens van de woning voor verlaagd tarief en Eco-PTZ",
+   "naam_fr": "Anciennete du logement requise",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "jaren",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energiebesparing-subsidie-en-fiscale-regelingen"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.ouderdomsgrens_woning.json"
+  },
+  {
+   "id": "p.fr.renov.richtprijzen_maatregelen",
+   "naam_nl": "Richtprijzen renovatiemaatregelen",
+   "naam_fr": "Prix indicatifs des travaux de renovation",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "indicatief",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.richtprijzen_maatregelen.json"
+  }
+ ]
+}

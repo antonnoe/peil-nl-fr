@@ -25,7 +25,7 @@ Twee edities naast elkaar. De AI-versie noemt bron en verificatiedatum en meldt 
 
 Verschil van circa 2,3 procent. Geen van beide repo's noemt een bron of peildatum bij dit bedrag.
 
-### D03, Schijven impot sur le revenu (FR)
+### D03, Schijven impôt sur le revenu (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Verschil van circa 2,3 procent. Geen van beide repo's noemt een bron of peildatu
 | `financieel-kompas-ai` | `config.json` | 157-177 | 11600 / 29579 / 84577 / 181917 |
 | `cafeclaude` | `lib/domains/prompts/geld.ts` | 55 | 11600 / 29579 / 84577 / 181917 |
 
-De AI-versie en Cafe Claude zijn onderling gelijk; de oude repo loopt een editie achter. De tarieven (0, 11, 30, 41 en 45 procent) zijn in alle drie gelijk.
+De AI-versie en Café Claude zijn onderling gelijk; de oude repo loopt een editie achter. De tarieven (0, 11, 30, 41 en 45 procent) zijn in alle drie gelijk.
 
 ### D04, Structuur box 1 en box 3 (NL)
 
@@ -78,7 +78,7 @@ Editieverschil. Geen van beide noemt hier een bron.
 | `zorgkompas-frankrijk` | `scenarios.js` | 100 en 155 | 20,00 euro per dag |
 | `cafeclaude` | `lib/domains/prompts/verzekeren.ts` | 60 | 23 euro per dag ziekenhuis, 17 euro psychiatrie |
 
-ZorgKompas gebruikt een tarief 2024/2025 en kent geen onderscheid tussen ziekenhuis en psychiatrie. Cafe Claude noemt 1 maart 2026 als ingangsdatum. De rekentool loopt dus achter op het handboek.
+ZorgKompas gebruikt een tarief 2024/2025 en kent geen onderscheid tussen ziekenhuis en psychiatrie. Café Claude noemt 1 maart 2026 als ingangsdatum. De rekentool loopt dus achter op het handboek.
 
 ### D09, Base de remboursement consult huisarts (FR)
 
@@ -89,7 +89,7 @@ ZorgKompas gebruikt een tarief 2024/2025 en kent geen onderscheid tussen ziekenh
 
 Twee verschillende bedragen voor dezelfde grootheid, allebei zonder primaire bronverwijzing. Dit is de meest directe tegenspraak tussen een rekentool en een handboek.
 
-### D10, Franchise medicale en participation forfaitaire (FR)
+### D10, Franchise médicale en participation forfaitaire (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -133,7 +133,7 @@ Binnen dezelfde repo staan een invulwaarde en een referentiewaarde met bron naas
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
 | `energieportaal` | `engine/engine.js` | 26 | 1,80 EUR per liter |
-| `energieportaal` | `api/prices.js` | 20 | 1,90 EUR per liter, DGEC Pegase GPL, Q1 2026 |
+| `energieportaal` | `api/prices.js` | 20 | 1,90 EUR per liter, DGEC Pégase GPL, Q1 2026 |
 | `warmteverlies-calculator` | `engine/engine.js` | 26 | 1,80 EUR per liter |
 | `Energiecalculator-Frankrijk-door-Nederlanders.fr` | `script.js` | 8 | 1,80 EUR per liter |
 
@@ -158,7 +158,7 @@ De oudste versie hanteert andere U-waarden voor dak, vloer en raam. Alleen de mu
 
 Vier van de zeven posten wijken af en de indeling verschilt. Koelkast (250) en wassen (220) zijn gelijk.
 
-### D17, Plafond credit d'impot hulp aan huis (FR)
+### D17, Plafond credit d'impôt hulp aan huis (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -179,7 +179,7 @@ Twee bedragen voor wat op het eerste gezicht dezelfde categorie is. Het ondersch
 
 ## Gelijk
 
-### D19, Prelevements sociaux op vermogen (FR)
+### D19, Prélèvements sociaux op vermogen (FR)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -192,7 +192,7 @@ Twee bedragen voor wat op het eerste gezicht dezelfde categorie is. Het ondersch
 
 Zes repo's, dezelfde waarde. De meest verspreide parameter van het hele netwerk en daarmee de eerste kandidaat voor het register.
 
-### D20, Prelevement de solidarite (De Ruyter) (grensoverschrijdend)
+### D20, Prélèvement de solidarité (De Ruyter) (grensoverschrijdend)
 
 | Repo | Bestand | Regel | Waarde |
 |---|---|---|---|
@@ -259,7 +259,7 @@ Vier repo's, identieke waarden. if-mobiel bevat een byte-identieke kopie van de 
 | `energieportaal` | `engine/engine.js` | 28 | gas 10, fioul 10, pellet 5, hout 1800, propaan 7,1, petroleum 10 |
 | `warmteverlies-calculator` | `engine/engine.js` | 28 | identiek |
 | `Energiecalculator-Frankrijk-door-Nederlanders.fr` | `script.js` | 10 | identiek |
-| `nlfr-ai-agent` | `knowledge/experts/energieportaal-ai-adviseur.md` | 156 | hout 1800 kWh per stere |
+| `nlfr-ai-agent` | `knowledge/experts/energieportaal-ai-adviseur.md` | 156 | hout 1800 kWh per stère |
 
 Gelijk. Het kennisbestand van de AI-adviseur herhaalt de waarde uit de engine en noemt die expliciet als de waarde die de tool gebruikt.
 

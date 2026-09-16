@@ -19,7 +19,7 @@ Wijzig `data/register.json` en open een pull request.
 
 1. Zoek de parameter op zijn id. De parameters staan op id gesorteerd.
 2. Vul `bron_url`, `bron_kenmerk`, `bronsoort`, `instantie`, `verificatiedatum` en `verificatie_door` in.
-3. `bronsoort` is precies `primair` wanneer u de wettekst of de officiele publicatie zelf hebt gelezen. In elk ander geval beschrijft u de route, bijvoorbeeld `secundair: samenvattende fiche van service-public.fr, het wetsartikel niet zelf gelezen`. Een secundaire route wordt nooit stilzwijgend tot primair opgewaardeerd.
+3. `bronsoort` is precies `primair` wanneer u de wettekst of de officiële publicatie zelf hebt gelezen. In elk ander geval beschrijft u de route, bijvoorbeeld `secundair: samenvattende fiche van service-public.fr, het wetsartikel niet zelf gelezen`. Een secundaire route wordt nooit stilzwijgend tot primair opgewaardeerd.
 4. Zet `status` pas op `vastgesteld` als bron en verificatiedatum er allebei staan en `waarde` gevuld is.
 5. Een raming komt nooit in een vastgestelde parameter. Maak er een eigen parameter voor met status `raming` en het achtervoegsel `_raming` in het id.
 6. Vul bij een wijziging de oude waarde bij in `levensduur_a.wijzigingshistorie` en zet `levensduur_a.laatste_wijziging` op de ingangsdatum van de nieuwe waarde.
@@ -37,6 +37,8 @@ Wijzig `data/register.json` en open een pull request.
 ## Taal en vorm
 
 Nederlands, zakelijk. Geen lange liggende streepjes in lopende tekst; gebruik komma's. Voor het geheel van de platforms geldt een vast woord: `netwerk van platforms`. Het verzamelwoord uit de biologie dat daar elders voor wordt gebruikt, is niet toegestaan. Het werk van Christian von Klosterlein heet `Klussen in Frankrijk`, afgekort KIF, en nooit anders. `npm test` controleert deze regels op de documentatie en op de gegenereerde site.
+
+Diakritische tekens horen in elke tekst die een lezer ziet: `Café Claude`, `crédit d'impôt`, `Sécurité sociale`, `taux réduit`, `revenu fiscal de référence`, `décote`, `taxe foncière`, `te verifiëren`, `België`. In een id, een statussleutel, een bestandsnaam, een API-pad of een URL blijft de vorm zonder accent juist staan, zodat geen permalink breekt: de sleutel is `te_verifieren`, op het scherm staat "te verifiëren". `npm test` wijst weergavetekst af waarin een veelvoorkomend woord zonder accent staat; de bewaakte lijst staat in `tools/lib/accenten.mjs`.
 
 ## Wat niet wordt overgenomen
 

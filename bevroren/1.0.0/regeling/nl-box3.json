@@ -1,0 +1,139 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "nl.box3",
+  "naam": "Inkomstenbelasting box 3",
+  "belastingtype": "vermogensbelasting",
+  "socialelastentype": null,
+  "vrijstellingstype": "vrijstelling",
+  "transactionele_basis": "vermogen"
+ },
+ "aantal": 6,
+ "parameters": [
+  {
+   "id": "p.nl.box3.heffingsvrij_alleenstaand",
+   "naam_nl": "Heffingsvrij vermogen box 3, alleenstaand",
+   "naam_fr": "Patrimoine exonere box 3, personne seule",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.box3",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.box3.heffingsvrij_alleenstaand.json"
+  },
+  {
+   "id": "p.nl.box3.heffingsvrij_partners",
+   "naam_nl": "Heffingsvrij vermogen box 3, partners",
+   "naam_fr": "Patrimoine exonere box 3, couple",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.box3",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.box3.heffingsvrij_partners.json"
+  },
+  {
+   "id": "p.nl.box3.rendement_beleggingen",
+   "naam_nl": "Forfaitair rendement beleggingen",
+   "naam_fr": "Rendement forfaitaire sur les placements",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.box3",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.box3.rendement_beleggingen.json"
+  },
+  {
+   "id": "p.nl.box3.rendement_schulden",
+   "naam_nl": "Forfaitair rendement schulden",
+   "naam_fr": "Rendement forfaitaire sur les dettes",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.box3",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.box3.rendement_schulden.json"
+  },
+  {
+   "id": "p.nl.box3.rendement_spaargeld",
+   "naam_nl": "Forfaitair rendement spaargeld",
+   "naam_fr": "Rendement forfaitaire sur l epargne",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.box3",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.box3.rendement_spaargeld.json"
+  },
+  {
+   "id": "p.nl.box3.tarief",
+   "naam_nl": "Tarief box 3",
+   "naam_fr": "Taux box 3",
+   "land": "NL",
+   "lastensoort": "fiscaal",
+   "regeling": "nl.box3",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.box3.tarief.json"
+  }
+ ]
+}

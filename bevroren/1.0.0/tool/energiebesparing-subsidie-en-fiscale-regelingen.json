@@ -1,0 +1,153 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "energiebesparing-subsidie-en-fiscale-regelingen",
+ "cockpit_onderdeel": "IF, subsidiewijzer",
+ "aantal": 3,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.maprimerenov_plafond",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.maprimerenov_plafond",
+   "omschrijving": "1 tool rekent met een waarde voor MaPrimeRenov, plafondbedrag in de pagina die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "index.html:35"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.renov.ouderdomsgrens_woning",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.renov.ouderdomsgrens_woning",
+   "omschrijving": "1 tool rekent met een waarde voor Ouderdomsgrens van de woning voor verlaagd tarief en Eco-PTZ die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.tva.tarief_renovatie",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.tva.tarief_renovatie",
+   "omschrijving": "2 tools rekent met een waarde voor Btw-tarief energetische renovatiewerken die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193-206"
+    },
+    {
+     "repo": "nlfr-ai-agent",
+     "cockpit_onderdeel": "NLFR, AI-agent",
+     "locatie": "knowledge/experts/energieportaal-ai-adviseur.md:234"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.renov.maprimerenov_plafond",
+   "naam_nl": "MaPrimeRenov, plafondbedrag in de pagina",
+   "naam_fr": "MaPrimeRenov, plafond",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energiebesparing-subsidie-en-fiscale-regelingen"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.maprimerenov_plafond.json",
+   "locaties": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "index.html:35",
+     "waarde_in_tool": "24500",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.renov.ouderdomsgrens_woning",
+   "naam_nl": "Ouderdomsgrens van de woning voor verlaagd tarief en Eco-PTZ",
+   "naam_fr": "Anciennete du logement requise",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.renov",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "jaren",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energiebesparing-subsidie-en-fiscale-regelingen"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.renov.ouderdomsgrens_woning.json",
+   "locaties": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193",
+     "waarde_in_tool": "2 jaar",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.tva.tarief_renovatie",
+   "naam_nl": "Btw-tarief energetische renovatiewerken",
+   "naam_fr": "Taux de TVA sur les travaux de renovation energetique",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.tva",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "energiebesparing-subsidie-en-fiscale-regelingen",
+    "nlfr-ai-agent"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.tva.tarief_renovatie.json",
+   "locaties": [
+    {
+     "repo": "energiebesparing-subsidie-en-fiscale-regelingen",
+     "cockpit_onderdeel": "IF, subsidiewijzer",
+     "locatie": "script.js:193-206",
+     "waarde_in_tool": "5,5 procent, naast 10 procent",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "briefhulp-fr",
+ "cockpit_onderdeel": "IF, Briefhulp",
+ "aantal": 6,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.handel.forfaitaire_incassokosten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.handel.forfaitaire_incassokosten",
+   "omschrijving": "1 tool rekent met een waarde voor Forfaitaire incassokosten bij te late betaling die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/werkgever/factuur/niveau-3.json:32"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.huur.boete_late_teruggave_borg",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.huur.boete_late_teruggave_borg",
+   "omschrijving": "3 tools rekent met een waarde voor Boete bij te late teruggave van de huurborg die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/verhuurder/borg/niveau-2.json:29"
+    },
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/verhuurder/borg/niveau-3.json:33 en 83"
+    },
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "KLIKSTROMEN.md:233"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.telecom.max_verbrekingsvergoeding",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.telecom.max_verbrekingsvergoeding",
+   "omschrijving": "1 tool rekent met een waarde voor Maximale verbrekingsvergoeding telecom die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/telecom/opzeg/niveau-1.json:25"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.telecom.minimale_looptijd_binding",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.telecom.minimale_looptijd_binding",
+   "omschrijving": "1 tool rekent met een waarde voor Minimale looptijd voor opzegging met binding die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/telecom/opzeg/niveau-1.json:25"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.xb.deruyter.csg_crds_geschrapt",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.xb.deruyter.csg_crds_geschrapt",
+   "omschrijving": "2 tools rekent met een waarde voor CSG en CRDS die bij De Ruyter vervallen die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "ARGUMENTATIE.md:19"
+    },
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/geld.ts:108"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.handel.forfaitaire_incassokosten",
+   "naam_nl": "Forfaitaire incassokosten bij te late betaling",
+   "naam_fr": "Indemnite forfaitaire de recouvrement",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.handel",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.handel.forfaitaire_incassokosten.json",
+   "locaties": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/werkgever/factuur/niveau-3.json:32",
+     "waarde_in_tool": "40 euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.huur.boete_late_teruggave_borg",
+   "naam_nl": "Boete bij te late teruggave van de huurborg",
+   "naam_fr": "Majoration en cas de restitution tardive du depot de garantie",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.huur",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr",
+    "briefhulp-fr",
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.huur.boete_late_teruggave_borg.json",
+   "locaties": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/verhuurder/borg/niveau-2.json:29",
+     "waarde_in_tool": "10 procent van de kale maandhuur per begonnen maand",
+     "afwijkend": false
+    },
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/verhuurder/borg/niveau-3.json:33 en 83",
+     "waarde_in_tool": "identiek",
+     "afwijkend": false
+    },
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "KLIKSTROMEN.md:233",
+     "waarde_in_tool": "10 procent per maand vertraging",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.telecom.max_verbrekingsvergoeding",
+   "naam_nl": "Maximale verbrekingsvergoeding telecom",
+   "naam_fr": "Indemnite de resiliation maximale",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.telecom",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.telecom.max_verbrekingsvergoeding.json",
+   "locaties": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/telecom/opzeg/niveau-1.json:25",
+     "waarde_in_tool": "25 procent van het restant",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.telecom.minimale_looptijd_binding",
+   "naam_nl": "Minimale looptijd voor opzegging met binding",
+   "naam_fr": "Duree minimale avant resiliation",
+   "land": "FR",
+   "lastensoort": "overig_transactiekosten",
+   "regeling": "fr.telecom",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "maanden",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.telecom.minimale_looptijd_binding.json",
+   "locaties": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/telecom/opzeg/niveau-1.json:25",
+     "waarde_in_tool": "12 maanden",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.xb.deruyter.csg_crds_geschrapt",
+   "naam_nl": "CSG en CRDS die bij De Ruyter vervallen",
+   "naam_fr": "CSG et CRDS ecartees dans la situation De Ruyter",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.deruyter",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "briefhulp-fr",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.deruyter.csg_crds_geschrapt.json",
+   "locaties": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "ARGUMENTATIE.md:19",
+     "waarde_in_tool": "CSG 9,2 procent en CRDS 0,5 procent",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.xb.deruyter.prelevement_solidarite",
+   "naam_nl": "Prelevement de solidarite bij De Ruyter",
+   "naam_fr": "Prelevement de solidarite, situation De Ruyter",
+   "land": "XB",
+   "lastensoort": "sociaal",
+   "regeling": "xb.deruyter",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "7,5 procent",
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-08-12",
+   "bron_url": null,
+   "gebruikt_in": [
+    "financieel-kompas-ai",
+    "Vastgoedtransactie",
+    "cafeclaude",
+    "briefhulp-fr"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.xb.deruyter.prelevement_solidarite.json",
+   "locaties": [
+    {
+     "repo": "briefhulp-fr",
+     "cockpit_onderdeel": "IF, Briefhulp",
+     "locatie": "cache/belasting/bezwaar/niveau-1.json:58",
+     "waarde_in_tool": "7,5",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

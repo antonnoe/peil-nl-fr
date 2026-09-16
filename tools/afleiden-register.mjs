@@ -153,7 +153,7 @@ const register = {
     licentie: LICENTIE_DATA,
     bronregel: BRONREGEL,
     laag: '3, parameters',
-    afgeleid_uit: 'data/inventarisatie.json (taak 0) en de bronvelden van de aangesloten repo s',
+    afgeleid_uit: 'data/inventarisatie.json (taak 0) en de bronvelden van de aangesloten repo\'s',
     aangesloten_repos: AANGESLOTEN,
     voorbehoud: VOORBEHOUD,
   },

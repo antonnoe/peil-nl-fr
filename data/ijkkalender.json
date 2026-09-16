@@ -1,11 +1,11 @@
 {
  "meta": {
   "titel": "Peil, ijkkalender",
-  "versie": "1.0.0",
+  "versie": "1.0.1",
   "versiedatum": "2026-09-16",
   "peildatum": "2026-09-16",
   "licentie": "CC BY 4.0",
-  "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+  "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.1, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
   "toelichting": "Wat hier staat is het normale publicatieritme van de instanties, afgeleid uit het veld publicatiemoment in het register. Het is een verwachting, geen toezegging van een instantie."
  },
  "ijkmomenten": [
@@ -30,7 +30,7 @@
     "FR fiscaal",
     "FR sociaal"
    ],
-   "omschrijving": "Half april zijn de fiches van service-public.fr en de aangiftecampagne van impots.gouv.fr bijgewerkt naar het lopende jaar. De Franse abattements, schijven, decote en CSG-grenzen worden hier geijkt."
+   "omschrijving": "Half april zijn de fiches van service-public.fr en de aangiftecampagne van impots.gouv.fr bijgewerkt naar het lopende jaar. De Franse abattements, schijven, décote en CSG-grenzen worden hier geijkt."
   }
  ],
  "maanden": [
@@ -138,7 +138,7 @@
    "verwachte_wijzigingen": [
     {
      "omschrijving": "Publicatie van de loi de finances en van aanpassingen in de plus-value-regeling",
-     "instantie": "Legifrance en DGFiP",
+     "instantie": "Légifrance en DGFiP",
      "parameters": [
       "p.fr.pv.abattement_ir_per_jaar",
       "p.fr.pv.abattement_ps_per_jaar",
@@ -183,7 +183,7 @@
    "ijkmoment": "fr_april",
    "verwachte_wijzigingen": [
     {
-     "omschrijving": "Bijwerking van de fiches van service-public.fr: abattements op pensioen en loon, decote, CSG-grenzen",
+     "omschrijving": "Bijwerking van de fiches van service-public.fr: abattements op pensioen en loon, décote, CSG-grenzen",
      "instantie": "service-public.fr en DGFiP",
      "parameters": [
       "p.fr.csg.opslag_per_halve_part",
@@ -215,7 +215,7 @@
    "ijkmoment": null,
    "verwachte_wijzigingen": [
     {
-     "omschrijving": "Publicatie van de departementale DMTO-tarieven; departementen besluiten voor 30 april",
+     "omschrijving": "Publicatie van de départementale DMTO-tarieven; departementen besluiten voor 30 april",
      "instantie": "DGFiP",
      "parameters": [
       "p.fr.dmto.abattement_bijzondere_departementen",
@@ -241,7 +241,7 @@
    "ijkmoment": null,
    "verwachte_wijzigingen": [
     {
-     "omschrijving": "Ingang van wijzigingen in de taxe de publicite fonciere en de frais d assiette",
+     "omschrijving": "Ingang van wijzigingen in de taxe de publicité foncière en de frais d'assiette",
      "instantie": "DGFiP",
      "parameters": [
       "p.fr.dmto.frais_assiette",

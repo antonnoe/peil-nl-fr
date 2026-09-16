@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.cfe.minimum",
+  "naam_nl": "Cotisation fonciere des entreprises, minimumbijdrage",
+  "naam_fr": "CFE, base minimum",
+  "naam_officieel": null,
+  "land": "FR",
+  "lastensoort": "fiscaal",
+  "regeling": {
+   "code": "fr.cfe",
+   "naam": "Cotisation fonciere des entreprises",
+   "belastingtype": "lokale_belasting",
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "omzet"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.impots.gouv.fr",
+  "bron_kenmerk": "impots.gouv.fr, cotisation fonciere des entreprises",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "DGFiP en gemeenten",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Elke micro-entrepreneur krijgt hiermee te maken na het eerste jaar. De CVAE-drempel staat wel in het register, de CFE niet.",
+  "kandidaat": true
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.assur.garantie_decennale",
+  "naam_nl": "Garantie decennale van de aannemer",
+  "naam_fr": "Garantie decennale",
+  "naam_officieel": "Art. 1792 Code civil",
+  "land": "FR",
+  "lastensoort": "verzekering_overheidsgekaderd",
+  "regeling": {
+   "code": "fr.assur",
+   "naam": "Assurances obligatoires, Code des assurances",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "polis"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "jaren",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2034",
+  "bron_kenmerk": "art. 1792 Code civil",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "Ministere de la justice",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De tienjarige aansprakelijkheid van de aannemer. Bepalend bij elke aankoop van een recent verbouwd pand.",
+  "kandidaat": true
+ }
+}

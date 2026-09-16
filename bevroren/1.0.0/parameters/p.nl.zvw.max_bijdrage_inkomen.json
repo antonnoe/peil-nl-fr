@@ -1,0 +1,71 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.nl.zvw.max_bijdrage_inkomen",
+  "naam_nl": "Maximumbijdrage-inkomen Zvw",
+  "naam_fr": "Revenu maximal soumis a la cotisation Zvw",
+  "naam_officieel": "Maximum bijdrage-inkomen Zvw",
+  "land": "NL",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "nl.zvw",
+   "naam": "Zorgverzekeringswet, inkomensafhankelijke bijdrage",
+   "belastingtype": null,
+   "socialelastentype": "zorgbijdrage",
+   "vrijstellingstype": "plafond",
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verlaagt_last",
+  "waarde": 79409,
+  "waarde_weergave": "79.409 euro per jaar",
+  "eenheid": "EUR/jaar",
+  "geldig_jaar": "2026",
+  "geldig_van": "2026-01-01",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": null,
+  "bron_kenmerk": "Regeling van 3 november 2025, kenmerk 4240020-1089850-Z, Ministerie van VWS, Staatscourant 2025, 38055",
+  "bronsoort": "primair",
+  "instantie": "Ministerie van VWS en Belastingdienst",
+  "verificatiedatum": "2026-09-15",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "Belastingdienst, begin november",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:15",
+    "waarde_in_tool": "79409",
+    "afwijkend": false
+   },
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:252 (CAK-blok)",
+    "waarde_in_tool": "79409",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Geldt per persoon.",
+  "kandidaat": false
+ }
+}

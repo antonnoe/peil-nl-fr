@@ -23,7 +23,7 @@ const ijkmomenten = [
     omschrijving: 'Half december staan het Belastingplan, de premiepercentages, de heffingskortingen, de zorgtoeslagpercentages en de woonlandfactor van het CAK vast voor het komende jaar. Alles wat per 1 januari ingaat, wordt hier geijkt.' },
   { sleutel: 'fr_april', naam: 'IJkmoment FR', maand: 4, dag: 15,
     domein: ['FR fiscaal', 'FR sociaal'],
-    omschrijving: 'Half april zijn de fiches van service-public.fr en de aangiftecampagne van impots.gouv.fr bijgewerkt naar het lopende jaar. De Franse abattements, schijven, decote en CSG-grenzen worden hier geijkt.' },
+    omschrijving: 'Half april zijn de fiches van service-public.fr en de aangiftecampagne van impots.gouv.fr bijgewerkt naar het lopende jaar. De Franse abattements, schijven, décote en CSG-grenzen worden hier geijkt.' },
 ];
 
 const maanden = [
@@ -33,22 +33,22 @@ const maanden = [
     { omschrijving: 'Ingangsdatum van het Franse barema en de Franse abattements uit de loi de finances', instantie: 'DGFiP', parameters: metRegeling('fr.ir', 'fr.micro', 'fr.ifi') },
   ] },
   { maand: 2, verwachte_wijzigingen: [
-    { omschrijving: 'Publicatie van de loi de finances en van aanpassingen in de plus-value-regeling', instantie: 'Legifrance en DGFiP', parameters: metRegeling('fr.pv') },
+    { omschrijving: 'Publicatie van de loi de finances en van aanpassingen in de plus-value-regeling', instantie: 'Légifrance en DGFiP', parameters: metRegeling('fr.pv') },
   ] },
   { maand: 3, verwachte_wijzigingen: [
     { omschrijving: 'Aanpassing van de forfait journalier en andere tarieven van de assurance maladie', instantie: 'Assurance maladie', parameters: metRegeling('fr.secu') },
   ] },
   { maand: 4, verwachte_wijzigingen: [
-    { omschrijving: 'Bijwerking van de fiches van service-public.fr: abattements op pensioen en loon, decote, CSG-grenzen', instantie: 'service-public.fr en DGFiP', parameters: metRegeling('fr.csg').concat(['p.fr.ir.abattement_pensioen', 'p.fr.ir.abattement_loon', 'p.fr.ir.decote']) },
+    { omschrijving: 'Bijwerking van de fiches van service-public.fr: abattements op pensioen en loon, décote, CSG-grenzen', instantie: 'service-public.fr en DGFiP', parameters: metRegeling('fr.csg').concat(['p.fr.ir.abattement_pensioen', 'p.fr.ir.abattement_loon', 'p.fr.ir.decote']) },
     { omschrijving: 'Publicatie van de eerste DVF-levering van het jaar', instantie: 'DGFiP via data.gouv.fr', parameters: ['p.fr.markt.dvf_transactieprijzen'] },
   ] },
   { maand: 5, verwachte_wijzigingen: [] },
   { maand: 6, verwachte_wijzigingen: [
-    { omschrijving: 'Publicatie van de departementale DMTO-tarieven; departementen besluiten voor 30 april', instantie: 'DGFiP', parameters: metRegeling('fr.dmto') },
+    { omschrijving: 'Publicatie van de départementale DMTO-tarieven; departementen besluiten voor 30 april', instantie: 'DGFiP', parameters: metRegeling('fr.dmto') },
     { omschrijving: 'Halfjaarlijkse aanpassing van de AOW-bedragen bij het wettelijk minimumloon', instantie: 'SVB en Rijksoverheid', parameters: metRegeling('nl.aow') },
   ] },
   { maand: 7, verwachte_wijzigingen: [
-    { omschrijving: 'Ingang van wijzigingen in de taxe de publicite fonciere en de frais d assiette', instantie: 'DGFiP', parameters: ['p.fr.vefa.tpf_tarief', 'p.fr.dmto.frais_assiette'] },
+    { omschrijving: 'Ingang van wijzigingen in de taxe de publicité foncière en de frais d\'assiette', instantie: 'DGFiP', parameters: ['p.fr.vefa.tpf_tarief', 'p.fr.dmto.frais_assiette'] },
   ] },
   { maand: 8, verwachte_wijzigingen: [
     { omschrijving: 'Jaarlijkse bijstelling van het TURPE-tarief door de CRE', instantie: 'CRE en Enedis', parameters: ['p.fr.elec.beheerbijdrage_weigeren_linky', 'p.fr.elec.tariefoptiewissel_zonder_linky', 'p.fr.elec.wijziging_puissance_souscrite'] },

@@ -1,0 +1,56 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.xb.s1.recht_en_geldigheid",
+  "naam_nl": "S1, recht en geldigheidsduur",
+  "naam_fr": "Formulaire S1, droit et duree de validite",
+  "naam_officieel": "Art. 24 en 25 Vo. 883/2004",
+  "land": "XB",
+  "lastensoort": "verzekering_overheidsgekaderd",
+  "regeling": {
+   "code": "xb.s1",
+   "naam": "Formulier S1, inschrijving in het woonland",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "polis"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "tekst",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": "https://www.hetcak.nl",
+  "bron_kenmerk": "Het CAK, verdragsgerechtigden en formulier S1; art. 24 en 25 Vo. 883/2004",
+  "bronsoort": "nog niet geraadpleegd",
+  "instantie": "Het CAK en CPAM",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Het S1 is de sleutel tot inschrijving bij de CPAM en tot de CAK-bijdrage in plaats van CSG. De woonlandfactor staat wel in het register, de voorwaarde eronder niet.",
+  "kandidaat": true
+ }
+}

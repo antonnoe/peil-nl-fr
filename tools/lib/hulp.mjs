@@ -19,7 +19,7 @@ export function datumNl(iso) {
 export const STATUSLABEL = {
   vastgesteld: 'vastgesteld',
   raming: 'raming',
-  te_verifieren: 'te verifieren',
+  te_verifieren: 'te verifiëren',
   vervallen: 'vervallen',
 };
 

@@ -1,0 +1,248 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "tool": "erfrecht-en-testament",
+ "cockpit_onderdeel": "IF, erfrecht (artikel)",
+ "aantal": 5,
+ "waarschuwingen": [
+  {
+   "veranderd": null,
+   "sleutel": "afwijkend:p.fr.succ.abattement_niet_verwanten",
+   "soort": "afwijkend",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_niet_verwanten",
+   "omschrijving": "Tools gebruiken verschillende waarden voor Vrijstelling en tarief niet-verwanten: cafeclaude 1594 euro vrijstelling, daarna 60 procent; erfrecht-en-testament partner zonder huwelijk of PACS: vrijstelling 1594 euro.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_niet_verwanten",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_niet_verwanten",
+   "omschrijving": "2 tools rekent met een waarde voor Vrijstelling en tarief niet-verwanten die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "cafeclaude",
+     "cockpit_onderdeel": "CC, Cafe Claude",
+     "locatie": "lib/domains/prompts/wonen.ts:56"
+    },
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.abattement_stiefkind",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.abattement_stiefkind",
+   "omschrijving": "1 tool rekent met een waarde voor Vrijstelling stiefkinderen bij overlijden die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:351"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.adoption_simple",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.adoption_simple",
+   "omschrijving": "1 tool rekent met een waarde voor Barema en abattement bij adoption simple die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:369"
+    }
+   ]
+  },
+  {
+   "veranderd": null,
+   "sleutel": "verouderd:niet_vastgesteld:p.fr.succ.tarief_stiefkind",
+   "soort": "verouderd",
+   "niveau": "rood",
+   "parameter": "p.fr.succ.tarief_stiefkind",
+   "omschrijving": "1 tool rekent met een waarde voor Tarief erfbelasting stiefkind die geen bron met verificatiedatum heeft.",
+   "geraakt": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:346 en 360"
+    }
+   ]
+  }
+ ],
+ "parameters": [
+  {
+   "id": "p.fr.succ.abattement_niet_verwanten",
+   "naam_nl": "Vrijstelling en tarief niet-verwanten",
+   "naam_fr": "Abattement et taux, non-parents",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR en procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.succ.abattement_niet_verwanten.json",
+   "locaties": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:554",
+     "waarde_in_tool": "partner zonder huwelijk of PACS: vrijstelling 1594 euro",
+     "afwijkend": true
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.abattement_per_kind",
+   "naam_nl": "Abattement per kind per ouder",
+   "naam_fr": "Abattement par enfant et par parent",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "100.000 euro per kind per ouder",
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2025-12-18",
+   "bron_url": "https://www.impots.gouv.fr/particulier/questions/je-beneficie-dun-abattement-sur-les-donations-et-successions",
+   "gebruikt_in": [
+    "erf-en-schenkingsrecht-nl-fr",
+    "cafeclaude",
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.abattement_per_kind.json",
+   "locaties": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:369",
+     "waarde_in_tool": "100000",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.abattement_stiefkind",
+   "naam_nl": "Vrijstelling stiefkinderen bij overlijden",
+   "naam_fr": "Abattement pour les enfants du conjoint",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.abattement_stiefkind.json",
+   "locaties": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:351",
+     "waarde_in_tool": "verhoogd van 1594 naar 15932 euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.adoption_simple",
+   "naam_nl": "Barema en abattement bij adoption simple",
+   "naam_fr": "Bareme et abattement en cas d adoption simple",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent en EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.adoption_simple.json",
+   "locaties": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:369",
+     "waarde_in_tool": "5 tot 45 procent, abattement 100000 euro",
+     "afwijkend": false
+    }
+   ]
+  },
+  {
+   "id": "p.fr.succ.tarief_stiefkind",
+   "naam_nl": "Tarief erfbelasting stiefkind",
+   "naam_fr": "Taux applicable aux enfants du conjoint",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.succ",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "erfrecht-en-testament"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.succ.tarief_stiefkind.json",
+   "locaties": [
+    {
+     "repo": "erfrecht-en-testament",
+     "cockpit_onderdeel": "IF, erfrecht (artikel)",
+     "locatie": "index.html:346 en 360",
+     "waarde_in_tool": "60 procent boven de vrijstelling",
+     "afwijkend": false
+    }
+   ]
+  }
+ ]
+}

@@ -8,6 +8,8 @@ import { laadSchemas } from '../tools/lib/valideer.mjs';
 import { AANGESLOTEN, ALLEEN_SCHEMA } from '../tools/lib/aangesloten.mjs';
 import { REGELINGEN } from '../tools/lib/regelingen.mjs';
 import { VERSIE, PEILDATUM, LICENTIE_DATA } from '../tools/lib/versie.mjs';
+import { ZONDER_ACCENT, zoekZonderAccent, tekstUitHtml, tekstUitMarkdown, weergaveTeksten } from '../tools/lib/accenten.mjs';
+import { meetHoogte, vindChromium } from '../tools/lib/hoogte.mjs';
 
 const WORTEL = join(dirname(fileURLToPath(import.meta.url)), '..');
 const lees = (...p) => JSON.parse(readFileSync(join(WORTEL, ...p), 'utf8'));
@@ -75,16 +77,16 @@ toets('de validator weigert een vastgestelde waarde zonder bron', () => {
 
 console.log('\nId\'s en verwijzingen');
 
-toets('alle parameter-id s zijn uniek', () => {
+toets('alle parameter-id\'s zijn uniek', () => {
   const gezien = new Set(); const dubbel = [];
   for (const p of ps) { if (gezien.has(p.id)) dubbel.push(p.id); gezien.add(p.id); }
-  eisLeeg(dubbel, 'dubbele id s');
+  eisLeeg(dubbel, 'dubbele id\'s');
 });
-toets('alle rekenregel-id s zijn uniek en botsen niet met parameter-id s', () => {
+toets('alle rekenregel-id\'s zijn uniek en botsen niet met parameter-id\'s', () => {
   const ids = rekenregels.rekenregels.map((r) => r.id);
-  eis(new Set(ids).size === ids.length, 'dubbele rekenregel-id s');
+  eis(new Set(ids).size === ids.length, 'dubbele rekenregel-id\'s');
   const alle = new Set([...ps.map((p) => p.id), ...ids, ...duidingsregels.duidingsregels.map((d) => d.id)]);
-  eis(alle.size === ps.length + ids.length + duidingsregels.duidingsregels.length, 'id s botsen tussen de lagen');
+  eis(alle.size === ps.length + ids.length + duidingsregels.duidingsregels.length, 'id\'s botsen tussen de lagen');
 });
 toets('het id past bij land en regeling', () => {
   const fout = ps.filter((p) => p.id !== `p.${p.regeling.code}.${p.id.split('.').slice(3).join('.')}`
@@ -162,11 +164,11 @@ toets('geen dode regels: gebruikt_in of kandidaat', () => {
     .filter((x) => !x.kandidaat && x.gebruikt_in.length === 0).map((x) => x.id);
   eisLeeg(fout, 'dode regels');
 });
-toets('gebruikt_in verwijst alleen naar aangesloten repo s', () => {
+toets('gebruikt_in verwijst alleen naar aangesloten repo\'s', () => {
   const fout = [...new Set([...ps, ...rekenregels.rekenregels].flatMap((x) => x.gebruikt_in.map((g) => g.repo)))]
     .filter((r) => !AANGESLOTEN.includes(r) || ALLEEN_SCHEMA.includes(r));
-  eisLeeg(fout, 'niet-aangesloten repo s in gebruikt_in');
-  return AANGESLOTEN.length + ' aangesloten repo s';
+  eisLeeg(fout, 'niet-aangesloten repo\'s in gebruikt_in');
+  return AANGESLOTEN.length + ' aangesloten repo\'s';
 });
 toets('klassen buiten overheid_vastgesteld hebben verantwoordelijke en houdbaarheidsdatum', () => {
   const fout = ps.filter((p) => p.variabiliteitsklasse !== 'overheid_vastgesteld'
@@ -227,6 +229,32 @@ toets('het werk van Christian von Klosterlein heet Klussen in Frankrijk', () => 
   eisLeeg(fout, 'bestanden die het KIF-werk een corpus noemen');
 });
 
+toets('geen weergaveveld in de gegevens mist een diakritisch teken', () => {
+  const fout = [];
+  for (const [naam, data] of [['data/register.json', register], ['data/rekenregels.json', rekenregels],
+    ['data/duidingsregels.json', duidingsregels], ['data/documenten.json', documenten],
+    ['data/ijkkalender.json', ijkkalender], ['peil/state.json', state],
+    ['data/inventarisatie.json', lees('data', 'inventarisatie.json')]]) {
+    for (const [pad, tekst] of weergaveTeksten(data)) {
+      const raak = zoekZonderAccent(tekst);
+      if (raak.length) fout.push(`${naam} ${pad}: ${raak.join(', ')}`);
+    }
+  }
+  eisLeeg(fout, 'weergavetekst zonder accent');
+  return ZONDER_ACCENT.length + ' woorden bewaakt';
+});
+
+toets('geen lopende tekst in de documentatie mist een diakritisch teken', () => {
+  const fout = [];
+  for (const [naam, t] of teksten) {
+    if (!naam.endsWith('.md')) continue;
+    const raak = zoekZonderAccent(tekstUitMarkdown(t));
+    if (raak.length) fout.push(`${naam}: ${raak.join(', ')}`);
+  }
+  eisLeeg(fout, 'documentatie zonder accent');
+  return teksten.filter(([n]) => n.endsWith('.md')).length + ' documenten gecontroleerd';
+});
+
 if (existsSync(join(WORTEL, 'dist'))) {
   console.log('\nBuild');
   const distBestanden = [];
@@ -285,7 +313,7 @@ if (existsSync(join(WORTEL, 'dist'))) {
       }
     }
     eisLeeg([...new Set(fout)], 'gebroken interne links');
-    return distBestanden.filter((x) => x.endsWith('.html')).length + ' pagina s gecontroleerd';
+    return distBestanden.filter((x) => x.endsWith('.html')).length + ' pagina\'s gecontroleerd';
   });
   toets('geen externe scripts, stylesheets of fonts', () => {
     const fout = [];
@@ -336,13 +364,74 @@ if (existsSync(join(WORTEL, 'dist'))) {
       if (!html.includes('16 september 2026')) fout.push(`${p}: geen peildatum`);
       if (!html.includes('Peil geeft waarden met bron, geen advies')) fout.push(`${p}: geen voorbehoudsregel`);
     }
-    eisLeeg([...new Set(fout)], 'pagina s zonder verplichte regels');
+    eisLeeg([...new Set(fout)], 'pagina\'s zonder verplichte regels');
+  });
+  toets('geen zichtbare tekst op de site mist een diakritisch teken', () => {
+    const fout = [];
+    for (const p of distBestanden.filter((x) => x.endsWith('.html'))) {
+      const raak = zoekZonderAccent(tekstUitHtml(readFileSync(join(WORTEL, 'dist', p), 'utf8')));
+      if (raak.length) fout.push(`${p}: ${raak.join(', ')}`);
+    }
+    eisLeeg(fout, 'zichtbare tekst zonder accent');
+    return distBestanden.filter((x) => x.endsWith('.html')).length + ' pagina\'s gecontroleerd';
+  });
+  toets('de CSV draagt een BOM en levert de accenten in UTF-8', () => {
+    const ruw = readFileSync(join(WORTEL, 'dist', 'api', 'v1', 'register.csv'));
+    eis(ruw[0] === 0xef && ruw[1] === 0xbb && ruw[2] === 0xbf, 'geen UTF-8-BOM, Excel leest de accenten dan verkeerd');
+    const csv = ruw.toString('utf8');
+    eis(csv.includes('impôt') && csv.includes('Sécurité'), 'de accenten komen niet door in de CSV');
+  });
+  toets('de API levert de accenten letterlijk in UTF-8', () => {
+    const json = readFileSync(join(WORTEL, 'dist', 'api', 'v1', 'parameters.json'), 'utf8');
+    eis(json.includes('impôt'), 'geen letterlijke accenten in /api/v1/parameters.json');
+    eis(!/\\u00[0-9a-f]{2}/i.test(json), 'accenten staan als escape in plaats van als UTF-8');
+  });
+  toets('elke pagina verklaart zich als UTF-8', () => {
+    const fout = distBestanden.filter((x) => x.endsWith('.html'))
+      .filter((p) => !readFileSync(join(WORTEL, 'dist', p), 'utf8').includes('<meta charset="utf-8">'));
+    eisLeeg(fout, 'pagina\'s zonder charset utf-8');
   });
   toets('de CSV heeft evenveel regels als er parameters zijn', () => {
     const csv = readFileSync(join(WORTEL, 'dist', 'api', 'v1', 'register.csv'), 'utf8');
     const regels = csv.replace(/^\ufeff/, '').trim().split('\r\n');
     eis(regels.length === ps.length + 1, `${regels.length - 1} regels tegenover ${ps.length} parameters`);
     return regels.length - 1 + ' regels';
+  });
+  const startHtml = readFileSync(join(WORTEL, 'dist', 'index.html'), 'utf8');
+  toets('de kantelingen op de startpagina staan in een details en zijn dicht', () => {
+    const vouwen = startHtml.match(/<details class="kanteling"[^>]*>/g) || [];
+    eis(vouwen.length === 3, `${vouwen.length} kantelingen in plaats van 3`);
+    eisLeeg(vouwen.filter((v) => /\bopen\b/.test(v)), 'kantelingen die open beginnen');
+    const samenvattingen = startHtml.match(/<summary>[\s\S]*?<\/summary>/g) || [];
+    eisLeeg(samenvattingen.filter((t) => !/\d+ parameters/.test(t)), 'samenvattingen zonder aantal parameters');
+    return vouwen.length + ' kantelingen, dicht, met het aantal parameters in de samenvatting';
+  });
+
+  const meting = await meetHoogte(join(WORTEL, 'dist', 'index.html'), 390);
+  toets('de startpagina blijft op 390 px onder 3.000 px', () => {
+    if (!meting) {
+      // Geen bruikbare browser: terugvallen op de structurele eis die de hoogte bepaalt.
+      const dicht = (startHtml.match(/<details class="kanteling"(?![^>]*\bopen\b)/g) || []).length;
+      eis(dicht === 3, `zonder browser gemeten: ${dicht} gesloten kantelingen in plaats van 3`);
+      return 'niet gemeten (geen browser' + (vindChromium() ? ' bruikbaar' : ' aanwezig') + '), structureel gecontroleerd';
+    }
+    eis(meting.breedte <= 390, `de pagina is ${meting.breedte} px breed en loopt dus horizontaal over`);
+    eis(meting.hoogte <= 3000, `de startpagina is ${meting.hoogte} px hoog op 390 px breed`);
+    return meting.hoogte + ' px hoog op 390 px breed';
+  });
+
+  toets('elke versie uit de changelog blijft opvraagbaar', () => {
+    const versies = JSON.parse(readFileSync(join(WORTEL, 'dist', 'api', 'versies', 'index.json'), 'utf8'));
+    eis(versies.huidig === VERSIE, `de versie-index noemt ${versies.huidig} als huidig in plaats van ${VERSIE}`);
+    const fout = [];
+    for (const v of versies.versies) {
+      const pad = `api/versies/${v.versie}/index.json`;
+      if (!bestaat.has(pad)) { fout.push(pad + ' ontbreekt'); continue; }
+      const d = JSON.parse(readFileSync(join(WORTEL, 'dist', ...pad.split('/')), 'utf8'));
+      if (d.versie !== v.versie) fout.push(`${pad} draagt versie ${d.versie}`);
+    }
+    eisLeeg(fout, 'ontbrekende of verkeerde bevroren versies');
+    return versies.versies.map((v) => v.versie).join(', ');
   });
   toets('de bevroren versie is gelijk aan de huidige', () => {
     const nu = readFileSync(join(WORTEL, 'dist', 'api', 'v1', 'index.json'), 'utf8');

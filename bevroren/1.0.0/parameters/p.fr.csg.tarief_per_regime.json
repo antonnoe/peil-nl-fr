@@ -1,0 +1,103 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.csg.tarief_per_regime",
+  "naam_nl": "CSG, CRDS en CASA per regime op pensioen",
+  "naam_fr": "CSG, CRDS et CASA par taux sur les pensions",
+  "naam_officieel": "Taux zero, taux reduit, taux median, taux normal",
+  "land": "FR",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "fr.csg",
+   "naam": "CSG, CRDS et CASA sur les pensions",
+   "belastingtype": null,
+   "socialelastentype": "csg_crds_casa",
+   "vrijstellingstype": null,
+   "transactionele_basis": "inkomen"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": [
+   {
+    "naam": "taux zero",
+    "csg": 0,
+    "crds": 0,
+    "casa": 0,
+    "totaal": 0,
+    "csg_aftrekbaar": 0
+   },
+   {
+    "naam": "taux reduit",
+    "csg": 0.038,
+    "crds": 0.005,
+    "casa": 0,
+    "totaal": 0.043,
+    "csg_aftrekbaar": 0.038
+   },
+   {
+    "naam": "taux median",
+    "csg": 0.066,
+    "crds": 0.005,
+    "casa": 0.003,
+    "totaal": 0.074,
+    "csg_aftrekbaar": 0.042
+   },
+   {
+    "naam": "taux normal",
+    "csg": 0.083,
+    "crds": 0.005,
+    "casa": 0.003,
+    "totaal": 0.091,
+    "csg_aftrekbaar": 0.059
+   }
+  ],
+  "waarde_weergave": "0 procent, 4,3 procent, 7,4 procent of 9,1 procent, afhankelijk van het revenu fiscal de reference",
+  "eenheid": "fractie",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": "https://www.service-public.fr/particuliers/vosdroits/F2971",
+  "bron_kenmerk": "service-public.fr, fiche F2971, CSG et CRDS sur les revenus d activite et de remplacement; art. L136-1 en L136-8 CSS",
+  "bronsoort": "secundair: samenvattende fiche van service-public.fr, de wetsartikelen niet zelf gelezen",
+  "instantie": "Urssaf en DGFiP",
+  "verificatiedatum": "2026-06-01",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "service-public.fr werkt de fiche bij in het voorjaar",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:87-116",
+    "waarde_in_tool": "vier regimes, 0 / 0,043 / 0,074 / 0,091",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": {
+   "invoer": "pensioen 25.000 euro, taux normal",
+   "verwachte_uitkomst": "2.275 euro CSG, CRDS en CASA",
+   "toelichting": "25.000 maal 0,091."
+  },
+  "uitzonderingen": [
+   "Overgang naar een hoger tarief geldt pas na twee opeenvolgende jaren overschrijding. Die overgangsregel is bewust niet ingebouwd. Wie in het overgangsjaar zit, legt de eigen avis d imposition voor aan een belastingadviseur."
+  ],
+  "opmerkingen": "Van de CSG is per regime slechts een deel aftrekbaar voor de inkomstenbelasting: 0, 3,8, 4,2 of 5,9 procent. CRDS en CASA zijn niet aftrekbaar. Bij CAK-gerechtigdheid is er geen CSG en dus ook geen aftrek.",
+  "kandidaat": false
+ }
+}

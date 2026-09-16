@@ -1,0 +1,79 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "nl.wlz",
+  "naam": "Wet langdurige zorg",
+  "belastingtype": null,
+  "socialelastentype": "premie_volksverzekering",
+  "vrijstellingstype": "plafond",
+  "transactionele_basis": "inkomen"
+ },
+ "aantal": 3,
+ "parameters": [
+  {
+   "id": "p.nl.wlz.max_bijdrage_inkomen",
+   "naam_nl": "Maximumbijdrage-inkomen Wlz",
+   "naam_fr": "Revenu maximal soumis a la cotisation Wlz",
+   "land": "NL",
+   "lastensoort": "sociaal",
+   "regeling": "nl.wlz",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "38.883 euro per jaar",
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.wlz.max_bijdrage_inkomen.json"
+  },
+  {
+   "id": "p.nl.wlz.max_bijdrage_inkomen_voor_1946",
+   "naam_nl": "Maximumbijdrage-inkomen Wlz, geboortejaar 1945 of eerder",
+   "naam_fr": "Revenu maximal Wlz, nes en 1945 ou avant",
+   "land": "NL",
+   "lastensoort": "sociaal",
+   "regeling": "nl.wlz",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "41.123 euro per jaar",
+   "eenheid": "EUR/jaar",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.wlz.max_bijdrage_inkomen_voor_1946.json"
+  },
+  {
+   "id": "p.nl.wlz.percentage",
+   "naam_nl": "Wlz-premiepercentage",
+   "naam_fr": "Taux de cotisation Wlz",
+   "land": "NL",
+   "lastensoort": "sociaal",
+   "regeling": "nl.wlz",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "vastgesteld",
+   "waarde_weergave": "9,65 procent",
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": "2026-09-15",
+   "bron_url": "https://www.hetcak.nl/zorgverzekering-buitenland/pensioen-uitkering/financiele-informatie/woonlandfactor-zvw-wlz-bijdragen/",
+   "gebruikt_in": [
+    "financieel-kompas-ai"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.nl.wlz.percentage.json"
+  }
+ ]
+}

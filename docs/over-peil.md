@@ -14,11 +14,11 @@ Het is een meetbron voor Anton's Cockpit. Peil stuurt zelf geen mails, opent gee
 
 Peil kent drie lagen in een gedeelde id-ruimte, met een laagprefix in het id.
 
-**Laag 3, parameters** (`p.`). Losse grootheden met een waarde, een bron en een levensduur. Bijvoorbeeld `p.fr.ps.taux_global`, het totaaltarief van de prelevements sociaux.
+**Laag 3, parameters** (`p.`). Losse grootheden met een waarde, een bron en een levensduur. Bijvoorbeeld `p.fr.ps.taux_global`, het totaaltarief van de prélèvements sociaux.
 
 **Laag 2, rekenregels** (`r.`). Hoe parameters tot een uitkomst leiden, en in welke volgorde. Bijvoorbeeld `r.fr.pv.surtaxe`. Rekenregels verwijzen naar parameter-id's. Deze laag is nu een kiem: de regels zijn beschreven en voorzien van testvoorbeelden, maar niet uitvoerbaar vastgelegd.
 
-**Laag 1, duidingsregels** (`d.`). Welke situatie van toepassing is voordat er gerekend wordt: verdragstoewijzing, verzekeringsplicht, kwalificatie van een inkomensbestanddeel. Bijvoorbeeld `d.xb.s1_status`. Duidingsregels verwijzen naar rekenregels en naar parameters. Deze laag is nu alleen een schema; de vulling wordt later geindexeerd over de handboeken van Cafe Claude.
+**Laag 1, duidingsregels** (`d.`). Welke situatie van toepassing is voordat er gerekend wordt: verdragstoewijzing, verzekeringsplicht, kwalificatie van een inkomensbestanddeel. Bijvoorbeeld `d.xb.s1_status`. Duidingsregels verwijzen naar rekenregels en naar parameters. Deze laag is nu alleen een schema; de vulling wordt later geïndexeerd over de handboeken van Café Claude.
 
 Alle drie de lagen kennen `gebruikt_in`: de tools en de locaties waar de regel of de waarde daadwerkelijk wordt gebruikt.
 
@@ -35,7 +35,7 @@ Alle drie de lagen kennen `gebruikt_in`: de tools en de locaties waar de regel o
 
 - **Groen, vastgesteld.** Bron en verificatiedatum aanwezig in een aangesloten repo. Deze waarde mag worden overgenomen, met de bronregel erbij.
 - **Oranje, raming.** Een raming, geen vastgestelde waarde. Niet mee rekenen.
-- **Grijs, te verifieren.** Geen rekenwaarde. Wat de tools gebruiken staat wel bij `gebruikt_in`, maar Peil stelt het niet vast.
+- **Grijs, te verifiëren.** Geen rekenwaarde. Wat de tools gebruiken staat wel bij `gebruikt_in`, maar Peil stelt het niet vast.
 - **Doorgestreept, vervallen.** De grootheid bestaat niet meer. Het veld `opgevolgd_door` wijst waar zij naartoe is gegaan.
 
 ## Correctieprocedure
@@ -73,6 +73,6 @@ Elke publicatie krijgt een versienummer. Eerdere versies blijven opvraagbaar ond
 
 ## Licentie
 
-De gegevens staan onder **CC BY 4.0**. Overnemen mag, met bronvermelding. Op elke detailpagina staat een kant-en-klare bronregel en een knop om die met de waarde mee te kopieren.
+De gegevens staan onder **CC BY 4.0**. Overnemen mag, met bronvermelding. Op elke detailpagina staat een kant-en-klare bronregel en een knop om die met de waarde mee te kopiëren.
 
 De code staat onder **MIT**.

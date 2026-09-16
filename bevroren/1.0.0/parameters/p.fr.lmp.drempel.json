@@ -1,0 +1,64 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.lmp.drempel",
+  "naam_nl": "LMP-drempel",
+  "naam_fr": "Seuil du statut de loueur en meuble professionnel",
+  "naam_officieel": "Art. 155 IV CGI",
+  "land": "FR",
+  "lastensoort": "sociaal",
+  "regeling": {
+   "code": "fr.lmp",
+   "naam": "Loueur en meuble professionnel, seuil d affiliation",
+   "belastingtype": null,
+   "socialelastentype": "zelfstandigenbijdrage",
+   "vrijstellingstype": "drempel",
+   "transactionele_basis": "omzet"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_toepasselijkheid",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "zelden",
+   "laatste_wijziging": null,
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Cafe Claude",
+    "locatie": "lib/audit/prompts/ondernemen.ts:103",
+    "waarde_in_tool": "23000 euro",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De tweede voorwaarde, dat de huuropbrengst de overige beroepsinkomsten overtreft, staat niet als aparte grootheid in de repo.",
+  "kandidaat": false
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.cfe",
+  "naam": "Cotisation fonciere des entreprises",
+  "belastingtype": "lokale_belasting",
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "omzet"
+ },
+ "aantal": 1,
+ "parameters": [
+  {
+   "id": "p.fr.cfe.minimum",
+   "naam_nl": "Cotisation fonciere des entreprises, minimumbijdrage",
+   "naam_fr": "CFE, base minimum",
+   "land": "FR",
+   "lastensoort": "fiscaal",
+   "regeling": "fr.cfe",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": "https://www.impots.gouv.fr",
+   "gebruikt_in": [],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.cfe.minimum.json"
+  }
+ ]
+}

@@ -61,7 +61,7 @@ const merkje = (status) => `<span class="merkje ${status}">${esc(STATUSLABEL[sta
 function waardeBlok(p) {
   const t = waardeTekst(p);
   if (p.status === 'te_verifieren') {
-    return `<p class="waarde te_verifieren">geen rekenwaarde, eerst verifieren</p>`;
+    return `<p class="waarde te_verifieren">geen rekenwaarde, eerst verifiëren</p>`;
   }
   return `<p class="waarde ${p.status}">${esc(t ?? 'geen waarde')}${p.eenheid && !String(t).includes(p.eenheid) ? ' <span style="font-weight:400;font-size:.8em">' + esc(p.eenheid) + '</span>' : ''}</p>`;
 }
@@ -81,13 +81,22 @@ function bronTekst(p) {
 }
 
 // ------------------------------------------------------------------ startpagina
-function kanteling(titel, rijen, kolommen, telFn) {
+// Een kanteling staat in een details-element en is standaard dicht. Zo blijft de
+// startpagina op een telefoon kort; open- en dichtklappen werkt zonder JavaScript.
+function vouw(titel, aantal, noot, inhoud) {
+  return `<details class="kanteling"><summary><span class="vouwtitel">${esc(titel)}</span>`
+    + `<span class="vouwtel">${aantal} parameters${noot ? ', ' + esc(noot) : ''}</span></summary>`
+    + `<div class="vouwinhoud">${inhoud}</div></details>`;
+}
+
+function kanteling(titel, aantal, noot, rijen, kolommen, telFn) {
   const kop = kolommen.map((k) => `<th scope="col">${esc(k.label)}</th>`).join('');
   const body = rijen.map((r) => {
     const cellen = kolommen.map((k) => `<td data-kop="${esc(k.label)}">${telFn(r, k)}</td>`).join('');
     return `<tr><th scope="row" data-kop="">${esc(r.label)}</th>${cellen}</tr>`;
   }).join('');
-  return `<h3>${esc(titel)}</h3><div class="tabelhuls"><table class="kaartbaar"><thead><tr><th scope="col">&nbsp;</th>${kop}</tr></thead><tbody>${body}</tbody></table></div>`;
+  return vouw(titel, aantal, noot,
+    `<div class="tabelhuls"><table class="kaartbaar"><thead><tr><th scope="col">&nbsp;</th>${kop}</tr></thead><tbody>${body}</tbody></table></div>`);
 }
 
 export function paginaStart(register, state) {
@@ -111,24 +120,27 @@ ${statussen.map((s) => `<div class="teller"><b>${tel((p) => p.status === s)}</b>
 <div class="teller"><b>${state.waarschuwingen.filter((w) => w.niveau === 'rood').length}</b><span>waarschuwingen rood</span></div>
 </div>`;
 
-  const kant1 = kanteling('Per land', landen.map((l) => ({ label: LANDLABEL[l], key: l })),
+  const kant1 = kanteling('Per land', ps.length, landen.length + ' landen',
+    landen.map((l) => ({ label: LANDLABEL[l], key: l })),
     statussen.map((s) => ({ label: STATUSLABEL[s], key: s })),
     (r, k) => tel((p) => p.land === r.key && p.status === k.key));
 
-  const kant2 = kanteling('Per lastensoort', lasten.map((l) => ({ label: LASTENSOORTLABEL[l], key: l })),
+  const kant2 = kanteling('Per lastensoort', ps.length, lasten.length + ' lastensoorten',
+    lasten.map((l) => ({ label: LASTENSOORTLABEL[l], key: l })),
     statussen.map((s) => ({ label: STATUSLABEL[s], key: s })),
     (r, k) => tel((p) => p.lastensoort === r.key && p.status === k.key));
 
-  const kant3 = `<h3>Per regeling</h3><div class="tabelhuls"><table class="kaartbaar"><thead><tr>
-<th scope="col">Regeling</th><th scope="col">Parameters</th><th scope="col">Vastgesteld</th><th scope="col">Te verifieren</th><th scope="col">Afwijkend</th></tr></thead><tbody>
+  const kant3 = vouw('Per regeling', ps.length, regelingen.length + ' regelingen',
+    `<div class="tabelhuls"><table class="kaartbaar"><thead><tr>
+<th scope="col">Regeling</th><th scope="col">Parameters</th><th scope="col">Vastgesteld</th><th scope="col">Te verifiëren</th><th scope="col">Afwijkend</th></tr></thead><tbody>
 ${regelingen.map((code) => {
     const lijst = ps.filter((p) => p.regeling.code === code);
     return `<tr><th scope="row" data-kop="Regeling"><a href="api/v1/regeling/${esc(slug(code))}.json">${esc(code)}</a>, ${esc(lijst[0].regeling.naam)}</th>
 <td data-kop="Parameters">${lijst.length}</td>
 <td data-kop="Vastgesteld">${lijst.filter((p) => p.status === 'vastgesteld').length}</td>
-<td data-kop="Te verifieren">${lijst.filter((p) => p.status === 'te_verifieren').length}</td>
+<td data-kop="Te verifiëren">${lijst.filter((p) => p.status === 'te_verifieren').length}</td>
 <td data-kop="Afwijkend">${lijst.filter((p) => p.gebruikt_in.some((g) => g.afwijkend)).length}</td></tr>`;
-  }).join('')}</tbody></table></div>`;
+  }).join('')}</tbody></table></div>`);
 
   const inhoud = `
 <div class="zoekblok">
@@ -146,6 +158,7 @@ ${regelingen.map((code) => {
 <div class="voorbehoud">${esc(VOORBEHOUD)}</div>
 ${tellers}
 <h2>Kantelingen</h2>
+<p class="leidend">Tik een kanteling open om de verdeling te zien. Alles staat dicht, zodat de pagina op een telefoon kort blijft.</p>
 ${kant1}
 ${kant2}
 ${kant3}
@@ -166,11 +179,11 @@ ${kant3}
  var veld=document.getElementById('q');
  var doel=document.getElementById('resultaat');
  var formulier=document.getElementById('zoekformulier');
- var STATUS={vastgesteld:'vastgesteld',raming:'raming',te_verifieren:'te verifieren',vervallen:'vervallen'};
+ var STATUS={vastgesteld:'vastgesteld',raming:'raming',te_verifieren:'te verifiëren',vervallen:'vervallen'};
  var BRONREGEL=${JSON.stringify(BRONREGEL)};
  function ontsnap(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
  function kaart(r){
-  var w=r.s==='te_verifieren'?'<p class="waarde te_verifieren">geen rekenwaarde, eerst verifieren</p>'
+  var w=r.s==='te_verifieren'?'<p class="waarde te_verifieren">geen rekenwaarde, eerst verifiëren</p>'
     :'<p class="waarde '+r.s+'">'+ontsnap(r.w||'geen waarde')+'</p>';
   var bron=r.b?'<a href="'+ontsnap(r.b)+'" rel="nofollow noopener">'+ontsnap(r.k||r.b)+'</a>':(r.k?ontsnap(r.k):'<em>nog geen bron vastgelegd</em>');
   return '<article class="kaart"><h3><a href="parameter/'+ontsnap(r.i)+'.html">'+ontsnap(r.n)+'</a></h3>'
@@ -201,16 +214,16 @@ ${kant3}
   if(!id)return;
   var r=rijen.filter(function(x){return x.i===id;})[0];
   var url=location.href.replace(/[^/]*$/,'')+'parameter/'+id+'.html';
-  var tekst=d?url:(r.n+': '+(r.s==='te_verifieren'?'geen rekenwaarde, eerst verifieren':(r.w||'geen waarde'))
+  var tekst=d?url:(r.n+': '+(r.s==='te_verifieren'?'geen rekenwaarde, eerst verifiëren':(r.w||'geen waarde'))
    +' ('+STATUS[r.s]+(r.j?', jaar '+r.j:'')+'). Bron: '+(r.k||r.b||'nog geen bron vastgelegd')+'. '+BRONREGEL+' '+url);
   var knop=k||d;
   var oud=knop.textContent;
   function klaar(t){knop.textContent=t;setTimeout(function(){knop.textContent=oud;},2000);}
   if(navigator.clipboard&&navigator.clipboard.writeText){
-   navigator.clipboard.writeText(tekst).then(function(){klaar('Gekopieerd');},function(){klaar('Kopieren lukte niet');});
+   navigator.clipboard.writeText(tekst).then(function(){klaar('Gekopieerd');},function(){klaar('Kopiëren lukte niet');});
   }else{
    var h=document.createElement('textarea');h.value=tekst;document.body.appendChild(h);h.select();
-   try{document.execCommand('copy');klaar('Gekopieerd');}catch(x){klaar('Kopieren lukte niet');}
+   try{document.execCommand('copy');klaar('Gekopieerd');}catch(x){klaar('Kopiëren lukte niet');}
    document.body.removeChild(h);
   }
  });
@@ -385,7 +398,7 @@ ${p.houdbaarheidsdatum !== undefined ? rij('Houdbaar tot', of(datumNl(p.houdbaar
 
 <h2>Waarde en geldigheid</h2>
 <dl class="velden">
-${rij('Registerwaarde', p.status === 'te_verifieren' ? '<em>geen, eerst verifieren</em>' : esc(waardeTekst(p) ?? ''))}
+${rij('Registerwaarde', p.status === 'te_verifieren' ? '<em>geen, eerst verifiëren</em>' : esc(waardeTekst(p) ?? ''))}
 ${rij('Eenheid', of(p.eenheid))}
 ${rij('Geldigheid', esc(geldigheidTekst(p)))}
 ${rij('Status', esc(STATUSLABEL[p.status]))}
@@ -439,7 +452,7 @@ ${p.opmerkingen ? `<h2>Opmerkingen</h2><p>${esc(p.opmerkingen)}</p>` : ''}
 </div>
 <p class="leidend">Vaste permalink: <code>parameter/${esc(p.id)}.html</code></p>`;
 
-  const tekst = `${p.naam_nl}: ${p.status === 'te_verifieren' ? 'geen rekenwaarde, eerst verifieren' : (waardeTekst(p) ?? 'geen waarde')} (${STATUSLABEL[p.status]}${p.geldig_jaar ? ', jaar ' + p.geldig_jaar : ''}). Bron: ${p.bron_kenmerk || p.bron_url || 'nog geen bron vastgelegd'}. ${BRONREGEL}`;
+  const tekst = `${p.naam_nl}: ${p.status === 'te_verifieren' ? 'geen rekenwaarde, eerst verifiëren' : (waardeTekst(p) ?? 'geen waarde')} (${STATUSLABEL[p.status]}${p.geldig_jaar ? ', jaar ' + p.geldig_jaar : ''}). Bron: ${p.bron_kenmerk || p.bron_url || 'nog geen bron vastgelegd'}. ${BRONREGEL}`;
 
   const script = `<script>
 (function(){
@@ -448,10 +461,10 @@ ${p.opmerkingen ? `<h2>Opmerkingen</h2><p>${esc(p.opmerkingen)}</p>` : ''}
   var oud=knop.textContent;
   function klaar(t){knop.textContent=t;setTimeout(function(){knop.textContent=oud;},2000);}
   if(navigator.clipboard&&navigator.clipboard.writeText){
-   navigator.clipboard.writeText(waarde).then(function(){klaar('Gekopieerd');},function(){klaar('Kopieren lukte niet');});
+   navigator.clipboard.writeText(waarde).then(function(){klaar('Gekopieerd');},function(){klaar('Kopiëren lukte niet');});
   }else{
    var h=document.createElement('textarea');h.value=waarde;document.body.appendChild(h);h.select();
-   try{document.execCommand('copy');klaar('Gekopieerd');}catch(x){klaar('Kopieren lukte niet');}
+   try{document.execCommand('copy');klaar('Gekopieerd');}catch(x){klaar('Kopiëren lukte niet');}
    document.body.removeChild(h);
   }
  }
@@ -465,7 +478,7 @@ ${p.opmerkingen ? `<h2>Opmerkingen</h2><p>${esc(p.opmerkingen)}</p>` : ''}
 
   return pagina({
     titel: p.naam_nl,
-    beschrijving: `${p.naam_nl}: ${p.status === 'te_verifieren' ? 'nog te verifieren' : (waardeTekst(p) ?? '')}. Bron, verificatiedatum, levensduur en de tools die ermee rekenen.`,
+    beschrijving: `${p.naam_nl}: ${p.status === 'te_verifieren' ? 'nog te verifiëren' : (waardeTekst(p) ?? '')}. Bron, verificatiedatum, levensduur en de tools die ermee rekenen.`,
     actief: 'tabel.html', diepte: 1, inhoud, script,
   });
 }
@@ -498,12 +511,12 @@ export function paginaLevensduur(register, levensduurMd) {
 <h1>Levensduur</h1>
 <p class="leidend">Levensduur A is hoe vaak een waarde verandert. Levensduur B is hoe lang de grootheid als zodanig bestaat. Beide staan bij elke parameter in het register.</p>
 <h2>Aanpassingsfrequentie, levensduur A</h2>
-<div class="tabelhuls"><table class="kaartbaar"><thead><tr><th scope="col">Frequentie</th><th scope="col">Parameters</th><th scope="col">Vastgesteld</th><th scope="col">Te verifieren</th></tr></thead><tbody>
+<div class="tabelhuls"><table class="kaartbaar"><thead><tr><th scope="col">Frequentie</th><th scope="col">Parameters</th><th scope="col">Vastgesteld</th><th scope="col">Te verifiëren</th></tr></thead><tbody>
 ${freqs.map((f) => {
     const l = ps.filter((p) => p.levensduur_a.aanpassingsfrequentie === f);
     return `<tr><th scope="row" data-kop="Frequentie">${esc(f)}</th><td data-kop="Parameters">${l.length}</td>
 <td data-kop="Vastgesteld">${l.filter((p) => p.status === 'vastgesteld').length}</td>
-<td data-kop="Te verifieren">${l.filter((p) => p.status === 'te_verifieren').length}</td></tr>`;
+<td data-kop="Te verifiëren">${l.filter((p) => p.status === 'te_verifieren').length}</td></tr>`;
   }).join('')}</tbody></table></div>
 <h2>Levensduur B, geboorte en sterfte</h2>
 <div class="tellers">
@@ -525,9 +538,9 @@ ${documenten.documenten.length === 0
     ? `<div class="melding grijs">Het documentenregister is nog leeg. Het schema staat vast in <code>schema/document.schema.json</code>: uitgever, titel, kenmerk, publicatiedatum, bron-URL, gebruikt in welk handboek, verwacht vervangingsmoment, vervangen door en status.</div>`
     : ''}
 <h2>Wat hier komt te staan</h2>
-<p>Officiele documenten waar handboeken en tools op steunen: brochures, arretes, circulaires en fiches. Per document wordt bijgehouden wanneer het naar verwachting wordt vervangen en door welk document, zodat een handboek dat nog naar een ingetrokken brochure verwijst zichtbaar wordt.</p>
-<p>De inventarisatie van de handboeken en PDF's van Cafe Claude valt buiten de opdracht waarmee dit register is gebouwd.</p>`;
-  return pagina({ titel: 'Documenten', beschrijving: 'Documentenregister van Peil: officiele documenten waar handboeken en tools op steunen.', actief: 'documenten.html', inhoud });
+<p>Officiële documenten waar handboeken en tools op steunen: brochures, arrêtés, circulaires en fiches. Per document wordt bijgehouden wanneer het naar verwachting wordt vervangen en door welk document, zodat een handboek dat nog naar een ingetrokken brochure verwijst zichtbaar wordt.</p>
+<p>De inventarisatie van de handboeken en PDF's van Café Claude valt buiten de opdracht waarmee dit register is gebouwd.</p>`;
+  return pagina({ titel: 'Documenten', beschrijving: 'Documentenregister van Peil: officiële documenten waar handboeken en tools op steunen.', actief: 'documenten.html', inhoud });
 }
 
 export function paginaChangelog(changelog) {

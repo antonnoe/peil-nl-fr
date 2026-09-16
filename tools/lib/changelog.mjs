@@ -1,11 +1,26 @@
 export const CHANGELOG = [
   {
+    versie: '1.0.1',
+    datum: '2026-09-16',
+    samenvatting: 'Herstel van de diakritische tekens in alle weergavetekst en een inklapbare startpagina. Geen waarde, status of bron gewijzigd.',
+    wijzigingen: [
+      'Diakritische tekens hersteld in namen, omschrijvingen, opmerkingen, uitzonderingen, instantienamen, paginateksten en documentatie: Café Claude, crédit d\'impôt, Sécurité sociale, taux réduit, revenu fiscal de référence, décote, taxe foncière, franchise médicale, te verifiëren, België.',
+      'Weggevallen apostrofs in Franse elisies teruggezet, zoals crédit d\'impôt, chambres d\'hôtes en Ministère de l\'économie, en de Nederlandse meervouden repo\'s, id\'s en pagina\'s.',
+      'Id\'s, statussleutels, bestandsnamen, API-paden en URL\'s zijn niet gewijzigd, zodat geen permalink breekt; de interface toont ze wel goed gespeld, bijvoorbeeld te verifiëren bij de sleutel te_verifieren.',
+      'Test toegevoegd die weergavetekst afwijst waarin een veelvoorkomend Frans of Nederlands woord zonder accent staat, en die de UTF-8-codering van de site, de API en de CSV met BOM controleert.',
+      'De kantelingen per land, per lastensoort en per regeling op de startpagina staan nu in details en summary, standaard dicht, met het aantal parameters in de samenvatting. Open- en dichtklappen werkt zonder JavaScript.',
+      'De startpagina is op 390 px breed teruggebracht van ruim 21.000 px naar ongeveer 1.800 px. Zoekveld, tellers en voorbehoud staan onveranderd bovenaan.',
+      'Headless controle van de hoogte van de startpagina op 390 px, met een structurele terugval als er geen browser beschikbaar is.',
+      'Versie 1.0.0 blijft bevroren opvraagbaar onder /api/versies/1.0.0/.',
+    ],
+  },
+  {
     versie: '1.0.0',
     datum: '2026-09-16',
     samenvatting: 'Eerste publicatie van het register: datamodel, schema voor drie lagen, 210 parameters, ijkkalender, signaalbestand, statische API en site.',
     wijzigingen: [
       'Schema voor laag 3 (parameters), laag 2 (rekenregels) en laag 1 (duidingsregels), met een gedeelde id-ruimte en bronvelden die het feitenschema van Klussen in Frankrijk volgen.',
-      '210 parameters afgeleid uit de inventarisatie van taak 0, voor de 22 aangesloten repo s; dubbelingen samengevoegd tot een parameter met meerdere gebruikt_in.',
+      '210 parameters afgeleid uit de inventarisatie van taak 0, voor de 22 aangesloten repo\'s; dubbelingen samengevoegd tot een parameter met meerdere gebruikt_in.',
       '52 parameters met status vastgesteld, alle met bron en verificatiedatum uit een aangesloten repo.',
       '46 grootheden uit de volledigheidslijst toegevoegd als kandidaat met status te_verifieren.',
       'Waarden uit de voorganger financieel-kompas opgenomen als wijzigingshistorie, nooit als registerwaarde.',

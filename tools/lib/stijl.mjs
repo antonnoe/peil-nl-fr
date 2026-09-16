@@ -61,6 +61,17 @@ button.tweede,.knop.tweede{background:#fff;color:var(--accent)}
 .teller{border:1px solid var(--lijn);border-radius:10px;padding:10px 12px;background:var(--vlak)}
 .teller b{display:block;font-size:1.6rem;line-height:1.1}
 .teller span{font-size:.85rem;color:var(--zacht)}
+details.kanteling{border:1px solid var(--lijn);border-radius:10px;margin:10px 0;background:var(--achtergrond)}
+details.kanteling>summary{cursor:pointer;padding:10px 12px;display:flex;gap:6px 12px;flex-wrap:wrap;
+ align-items:baseline;justify-content:space-between;list-style:none}
+details.kanteling>summary::-webkit-details-marker{display:none}
+details.kanteling>summary::marker{content:""}
+.vouwtitel{font-weight:700}
+.vouwtitel::before{content:"\\25B8";display:inline-block;margin-right:8px;color:var(--zacht);font-weight:400}
+details.kanteling[open]>summary .vouwtitel::before{content:"\\25BE"}
+.vouwtel{font-size:.85rem;color:var(--zacht)}
+.vouwinhoud{padding:0 12px 4px;border-top:1px solid var(--lijn)}
+.vouwinhoud .tabelhuls{margin:10px 0}
 .tabelhuls{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0}
 table{border-collapse:collapse;width:100%;font-size:.92rem}
 th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--lijn);vertical-align:top}

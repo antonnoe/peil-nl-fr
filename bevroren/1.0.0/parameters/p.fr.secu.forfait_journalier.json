@@ -1,0 +1,71 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.secu.forfait_journalier",
+  "naam_nl": "Forfait journalier hospitalier",
+  "naam_fr": "Forfait journalier hospitalier",
+  "naam_officieel": "Art. L174-4 CSS",
+  "land": "FR",
+  "lastensoort": "verzekering_overheidsgekaderd",
+  "regeling": {
+   "code": "fr.secu",
+   "naam": "Assurance maladie, Securite sociale",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verrichting"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "EUR/dag",
+  "geldig_jaar": "2026",
+  "geldig_van": null,
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": null,
+  "bronsoort": null,
+  "instantie": null,
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "onregelmatig",
+   "laatste_wijziging": "2026-03-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "zorgkompas-frankrijk",
+    "cockpit_onderdeel": "IF, ZorgKompas",
+    "locatie": "scenarios.js:100 en 155",
+    "waarde_in_tool": "20,00 euro per dag, tarief 2024/2025",
+    "afwijkend": true
+   },
+   {
+    "repo": "cafeclaude",
+    "cockpit_onderdeel": "CC, Cafe Claude",
+    "locatie": "lib/domains/prompts/verzekeren.ts:60",
+    "waarde_in_tool": "23 euro ziekenhuis en 17 euro psychiatrie sinds 1 maart 2026",
+    "afwijkend": true
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "De rekentool loopt achter op het handboek en kent bovendien geen onderscheid tussen ziekenhuis en psychiatrie.",
+  "kandidaat": false
+ }
+}

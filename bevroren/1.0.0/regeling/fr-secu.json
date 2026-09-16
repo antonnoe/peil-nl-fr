@@ -1,0 +1,244 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "regeling": {
+  "code": "fr.secu",
+  "naam": "Assurance maladie, Securite sociale",
+  "belastingtype": null,
+  "socialelastentype": null,
+  "vrijstellingstype": null,
+  "transactionele_basis": "verrichting"
+ },
+ "aantal": 11,
+ "parameters": [
+  {
+   "id": "p.fr.secu.brss_consult_medecin_traitant",
+   "naam_nl": "Base de remboursement consult huisarts",
+   "naam_fr": "Base de remboursement, consultation du medecin traitant",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk",
+    "cafeclaude"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.secu.brss_consult_medecin_traitant.json"
+  },
+  {
+   "id": "p.fr.secu.brss_kine_per_sessie",
+   "naam_nl": "Base de remboursement kinesitherapie per sessie",
+   "naam_fr": "Base de remboursement, seance de kinesitherapie",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2025",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.brss_kine_per_sessie.json"
+  },
+  {
+   "id": "p.fr.secu.brss_specialist_apc",
+   "naam_nl": "Base de remboursement specialist, APC",
+   "naam_fr": "Base de remboursement, avis ponctuel de consultant",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2025",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.brss_specialist_apc.json"
+  },
+  {
+   "id": "p.fr.secu.forfait_journalier",
+   "naam_nl": "Forfait journalier hospitalier",
+   "naam_fr": "Forfait journalier hospitalier",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR/dag",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk",
+    "cafeclaude"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.secu.forfait_journalier.json"
+  },
+  {
+   "id": "p.fr.secu.franchise_medicale",
+   "naam_nl": "Franchise medicale per medicijn",
+   "naam_fr": "Franchise medicale par boite de medicaments",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "cafeclaude"
+   ],
+   "afwijkend": true,
+   "pad": "/api/v1/parameters/p.fr.secu.franchise_medicale.json"
+  },
+  {
+   "id": "p.fr.secu.franchise_transport",
+   "naam_nl": "Franchise medisch transport",
+   "naam_fr": "Franchise sur le transport sanitaire",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.franchise_transport.json"
+  },
+  {
+   "id": "p.fr.secu.participation_forfaitaire",
+   "naam_nl": "Participation forfaitaire per consult",
+   "naam_fr": "Participation forfaitaire",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "EUR",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.participation_forfaitaire.json"
+  },
+  {
+   "id": "p.fr.secu.vergoeding_had_en_infirmiere",
+   "naam_nl": "Vergoeding thuisziekenhuis en verpleging aan huis",
+   "naam_fr": "Taux de remboursement, HAD et infirmiere liberale",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "procent",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.vergoeding_had_en_infirmiere.json"
+  },
+  {
+   "id": "p.fr.secu.vergoeding_kine_en_medicatie",
+   "naam_nl": "Vergoeding kinesitherapie en medicatie",
+   "naam_fr": "Taux de remboursement, kinesitherapie et medicaments",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.vergoeding_kine_en_medicatie.json"
+  },
+  {
+   "id": "p.fr.secu.vergoeding_zonder_medecin_traitant",
+   "naam_nl": "Vergoeding buiten het parcours de soins",
+   "naam_fr": "Taux de remboursement hors parcours de soins",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk",
+    "cafeclaude"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.vergoeding_zonder_medecin_traitant.json"
+  },
+  {
+   "id": "p.fr.secu.vergoedingspercentage_standaard",
+   "naam_nl": "Standaard vergoedingspercentage Securite sociale",
+   "naam_fr": "Taux de remboursement de droit commun",
+   "land": "FR",
+   "lastensoort": "verzekering_overheidsgekaderd",
+   "regeling": "fr.secu",
+   "variabiliteitsklasse": "overheid_vastgesteld",
+   "status": "te_verifieren",
+   "waarde_weergave": null,
+   "eenheid": "fractie",
+   "geldig_jaar": "2026",
+   "verificatiedatum": null,
+   "bron_url": null,
+   "gebruikt_in": [
+    "zorgkompas-frankrijk"
+   ],
+   "afwijkend": false,
+   "pad": "/api/v1/parameters/p.fr.secu.vergoedingspercentage_standaard.json"
+  }
+ ]
+}

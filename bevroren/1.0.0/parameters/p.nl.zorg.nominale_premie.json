@@ -1,0 +1,66 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.nl.zorg.nominale_premie",
+  "naam_nl": "Nominale zorgpremie per volwassene per jaar",
+  "naam_fr": "Prime nominale d assurance maladie par adulte et par an",
+  "naam_officieel": "Standaardpremie Wet op de zorgtoeslag",
+  "land": "NL",
+  "lastensoort": "verzekering_overheidsgekaderd",
+  "regeling": {
+   "code": "nl.zorg",
+   "naam": "Zorgverzekering, nominale premie en eigen risico",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "polis"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "verhoogt_last",
+  "waarde": 2119,
+  "waarde_weergave": "2.119 euro per jaar",
+  "eenheid": "EUR/jaar",
+  "geldig_jaar": "2026",
+  "geldig_van": "2026-01-01",
+  "geldig_tot": null,
+  "status": "vastgesteld",
+  "bron_url": null,
+  "bron_kenmerk": "Regeling vaststelling standaardpremie en bestuursrechtelijke premies 2026, Ministerie van VWS, in werking per 1 januari 2026",
+  "bronsoort": "primair",
+  "instantie": "Ministerie van VWS",
+  "verificatiedatum": "2026-09-15",
+  "verificatie_door": "financieel-kompas-ai, config.json",
+  "publicatiemoment": "Ministerie van VWS, regeling half december",
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "jaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "financieel-kompas-ai",
+    "cockpit_onderdeel": "CC / IF, Financieel Kompas (AI-versie)",
+    "locatie": "config.json:54",
+    "waarde_in_tool": "2119",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [
+   "Het verplicht eigen risico zit niet in dit bedrag. Wie de werkelijke jaarlast wil weten, telt het eigen risico erbij op; de omvang daarvan hangt af van het zorggebruik."
+  ],
+  "opmerkingen": "Er circuleert ook 2143. Dat is een raming uit de ontwerpbegroting VWS van september 2025 en staat in Peil apart, als p.nl.zorg.nominale_premie_raming.",
+  "kandidaat": false
+ }
+}

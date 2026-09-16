@@ -1,0 +1,71 @@
+{
+ "versie": "1.0.0",
+ "versiedatum": "2026-09-16",
+ "peildatum": "2026-09-16",
+ "licentie": "CC BY 4.0",
+ "bronregel": "Peil, parameterregister NL-FR van Communities Abroad, versie 1.0.0, peildatum 16 september 2026, https://antonnoe.github.io/peil-nl-fr/, CC BY 4.0",
+ "voorbehoud": "Peil geeft waarden met bron, geen advies. Controleer bij twijfel de primaire bron of raadpleeg een professional.",
+ "parameter": {
+  "id": "p.fr.dpe.primaire_energiefactor_elektriciteit",
+  "naam_nl": "Primaire-energiefactor elektriciteit",
+  "naam_fr": "Coefficient d energie primaire, electricite",
+  "naam_officieel": "Coefficient de conversion en energie primaire",
+  "land": "FR",
+  "lastensoort": "overig_transactiekosten",
+  "regeling": {
+   "code": "fr.dpe",
+   "naam": "Diagnostic de performance energetique",
+   "belastingtype": null,
+   "socialelastentype": null,
+   "vrijstellingstype": null,
+   "transactionele_basis": "verbruik"
+  },
+  "variabiliteitsklasse": "overheid_vastgesteld",
+  "effect": "bepaalt_grondslag",
+  "waarde": null,
+  "waarde_weergave": null,
+  "eenheid": "factor",
+  "geldig_jaar": "2026",
+  "geldig_van": "2026-01-01",
+  "geldig_tot": null,
+  "status": "te_verifieren",
+  "bron_url": null,
+  "bron_kenmerk": "arrete du 13 aout 2025, in werking per 1 januari 2026",
+  "bronsoort": "secundair: het arrete is in de repo genoemd maar niet als vindplaats vastgelegd",
+  "instantie": "Ministere de la transition ecologique",
+  "verificatiedatum": null,
+  "verificatie_door": null,
+  "publicatiemoment": null,
+  "aangekondigde_wijziging": null,
+  "levensduur_a": {
+   "aanpassingsfrequentie": "meerjaarlijks",
+   "laatste_wijziging": "2026-01-01",
+   "wijzigingshistorie": []
+  },
+  "levensduur_b": {
+   "ingevoerd": null,
+   "vervallen": null,
+   "opgevolgd_door": null
+  },
+  "gebruikt_in": [
+   {
+    "repo": "energieportaal",
+    "cockpit_onderdeel": "IF, EnergiePortaal",
+    "locatie": "engine/dpe.js:47",
+    "waarde_in_tool": "1,9",
+    "afwijkend": false
+   },
+   {
+    "repo": "if-mobiel",
+    "cockpit_onderdeel": "IF, mobiele schil",
+    "locatie": "engine/dpe.js:47 (byte-identieke kopie)",
+    "waarde_in_tool": "1,9",
+    "afwijkend": false
+   }
+  ],
+  "testvoorbeeld": null,
+  "uitzonderingen": [],
+  "opmerkingen": "Het arrete staat genoemd, maar er is geen verificatiedatum en geen vindplaats. Peil waardeert dat niet stilzwijgend op tot een vastgestelde waarde.",
+  "kandidaat": false
+ }
+}
